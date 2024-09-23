@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+
+
+<!-- Mirrored from www.Advanced Excel for Data Analysis/examples/ifs.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 23 Sep 2024 07:35:55 GMT -->
+<head>
+
+<title>How to use the Excel IFS function (In Easy Steps)</title>
+<meta name="keywords" content="ifs function, excel, 2016, multiple conditions, TRUE, if function, boundaries">
+<meta name="description" content="Use the IFS function in Excel 2016 or later when you have multiple conditions to meet. The IFS function returns a value corresponding to the first TRUE condition.">
+
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="index, follow">
+<META content=EN-US name=LANGUAGE>
+<meta property="og:title" content="IFS function in Excel">
+<meta property="og:url" content="ifs.html">
+<meta property="og:type" content="article">
+<meta property="fb:admins" content="100003702321830">
+<meta property="og:description" content="Use the IFS function in Excel 2016 or later when you have multiple conditions to meet. The IFS function returns a value corresponding to the first TRUE condition.">
+<meta property="og:image" content="../smi/examples/ifs.png"/>
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@ExcelEasy">
+<meta name="twitter:image" content="../smi/examples/ifs.png">
+
+<link rel="preload" href="../css/style.css" as="style">
+<link rel="preload" href="images/ifs/first-ifs-function-value-1.png" as="image">
+<link rel="preload" href="../js/default.js" as="script">
+<link rel="preload" href="../js/init.js" as="script">
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f5ca7.txt?client=ca-pub-1987456081350047765" data-overlays="bottom" crossorigin="anonymous"></script>
+<link rel="preload" href="../css/style-medium.css" as="style" media="(max-width:961px)">
+<link rel="preload" href="../css/style-small.css" as="style" media="(max-width:620px)">
+<link rel="stylesheet" href="../css/style.css"/>
+<script src="../js/default.js" type="text/javascript"></script>
+<script src="../js/init.js" type="text/javascript"></script>
+<style type="text/css">
+.adslot { width: 336px; height: 280px; }
+@media (min-width:320px) { .adslot { width: 300px; height: 250px; } }
+@media (min-width:360px) and (orientation: portrait) { .adslot { width: 336px; height: 280px; } }
+@media (min-width:604px) { .adslot { width: 336px; height: 280px; } }
+</style>
+<noscript>
+    <link rel="stylesheet" href="../css/skel.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/adslot.css" />
+</noscript>
+<link rel="icon" href="../favicon-48x48.ico">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+</head>
+<body>
+<header id="header">
+	<div class="container">
+		<span class="notranslate">
+			<div id="logo">
+				<a href="../index.html"><img src="../layout/excel-guides.svg" onerror="this.src='../layout/excel-guides.png'" border="0" alt="Excel guides" title="Excel guides" width="1" height="1" /><h2>Excel</h2>&nbsp;&nbsp;<span class="easy">for Data Analysis</span></a>
+                <p>#1 <a href="../index.html">Excel guides</a> on the go</p>
+		  	</div>            
+			<nav id="nav">
+				  <ul>
+                  <li><a href="../index.html">Excel</a></li>
+                  <li><a href="../introduction.html">Introduction</a></li>
+				  <li><a href="../basics.html">Basics</a></li>
+				  <li><a href="../functions.html">Functions</a></li>
+				  <li><a href="../data-analysis.html">Data Analysis</a></li>
+                  <li><a href="../vba.html">VBA</a></li>
+                  <li class="current_page_item"><a href="../examples.html">300 Examples</a></li>
+                  <li><a href="../ask-us.html">Ask us</a></li>
+                  </ul>
+				</nav>
+			</span>
+		</div>
+	</header>
+	<!-- end #header -->
+	<div class="container">
+		<div class="row 100%">
+			<div class="8u 12u(medium)">
+				<div class="post">
+						<h1 class="title" style="float:left;">IFS</h1>
+						<div style="clear: both;">&nbsp;</div>
+<div class="entry">
+
+							<p>Use the <strong>IFS function</strong> in <strong>Excel 2016</strong> or later when you have multiple conditions to meet. The IFS function returns a value corresponding to the first TRUE condition.</p>
+                            <p>Note: if you don't have Excel 2016 or later, you can <a href="if.html#nested-if">nest the IF function</a>.</p>
+              <p>1a. If the value in cell A1 equals 1, the IFS function returns Bad.</p>
+              <p><img src="images/ifs/first-ifs-function-value-1.png" alt="First Ifs Function in Excel, Value 1" width="604" height="107" title="First Ifs Function in Excel, Value 1" ></p>
+              
+
+     
+     
+     
+              <p>1b. If the value in cell A1 equals 2, the IFS function returns Good.<br>
+              <p><img src="images/ifs/first-ifs-function-value-2.png" alt="First Ifs Function, Value 2" width="604" height="107" title="First Ifs Function, Value 2" ></p>
+              <p>1c. If the value in cell A1 equals 3, the IFS function returns Excellent.<br>
+              <p><img src="images/ifs/first-ifs-function-value-3.png" alt="First Ifs Function, Value 3" width="604" height="107" title="First Ifs Function, Value 3" ></p>
+              <p>1d. If the value in cell A1 equals another value, the IFS function returns No Valid Score.<br>
+              <p><img src="images/ifs/first-ifs-function-else.png" alt="First Ifs Function, Else" width="604" height="107" title="First Ifs Function, Else" ></p>
+              <p>Note: instead of TRUE, you can also use 1=1 or something else that is always TRUE.</p>
+              <p><a name="second-ifs-function" id="second-ifs-function"></a>Here's another example.</p>
+              <p>2a. If the value in cell A1 is less than 60, the IFS function returns F.</p>
+              <p><img src="images/ifs/second-ifs-function-value-41.png" loading="lazy" alt="Second Ifs Function in Excel, Value 41" width="604" height="107" title="Second Ifs Function in Excel, Value 41" /></p>
+              <p>2b. If the value in cell A1 is greater than or equal to 60 and less than 70, the IFS function returns D.</p>
+              <p><img src="images/ifs/second-ifs-function-value-60.png" loading="lazy" alt="Second Ifs Function, Value 60" width="604" height="107" title="Second Ifs Function, Value 60" /></p>
+              <p>2c. If the value in cell A1 is greater than or equal to 70 and less than 80, the IFS function returns C.</p>
+              <p><img src="images/ifs/second-ifs-function-value-73.png" loading="lazy" alt="Second Ifs Function, Value 73" width="604" height="107" title="Second Ifs Function, Value 73" /></p>
+              <p>2d. If the value in cell A1 is greater than or equal to 80 and less than 90, the IFS function returns B.</p>
+              <p><img src="images/ifs/second-ifs-function-value-82.png" loading="lazy" alt="Second Ifs Function, Value 82" width="604" height="107" title="Second Ifs Function, Value 82" /></p>
+              <p>2e. If the value in cell A1 is greater than or equal to 90, the IFS function returns A.</p>
+              <p><img src="images/ifs/second-ifs-function-value-95.png" loading="lazy" alt="Second Ifs Function, Value 95" width="604" height="107" title="Second Ifs Function, Value 95" /></p>
+              <p>Note: to slightly change the boundaries, you might want to use &quot;&lt;=&quot; instead of &quot;&lt;&quot; in your own function.</p>
+              <div class="ad"><!-- Advanced Excel Pages End -->
+
+     
+     
+     data-ad-slot="4005850092"></ins>
+</div>
+            </div>
+			   </div>
+				<span class="invtab"><div class="post">
+					<div style="clear: both;"></div>
+                    <div class="entrylearn">  
+                  <p align="left"><span class="buttonp"> <a href="contains-specific-text.html">6/11 Completed! Learn more about logical functions &gt;<br />
+                  </a></span>Go to Next Guide: <a href="../functions/cell-references.html">Cell References</a></div>
+                  </div></span>
+                  </div>
+                  <div class="4u 12u(medium)">
+              <div id="search">
+              <div class="cse-branding-right" style="background-color:#FFFFFF;color:#000000">
+                <div class="cse-branding-form" style="margin-right:0px;">
+                  <form action="https://www.Advanced Excel for Data Analysis/search.html" id="cse-search-box">
+                    <div>
+                      <input type="hidden" name="cx" value="partner-pub-1987061359047735:3934495699" />
+                      <input type="hidden" name="cof" value="FORID:10" />
+                      <input type="hidden" name="ie" value="UTF-8" />
+                      <input type="text" name="q" placeholder="Explore Entire Guide" class="field" disabled />
+                      <span class="notranslate"><input type="submit" name="sa" value="Go" class="button" disabled /></span>
+                    </div>
+                  </form>
+                </div>
+                <div class="cse-branding-logo"></div>
+                <div class="cse-branding-text"></div>
+              </div>
+              </div>
+              <div id="sidebar">
+					<ul>
+				  	  <li>
+                        <h3>Guide</h3>
+						  <ul>
+							<li><a href="../functions/logical-functions.html">Logical Functions</a></li>
+                    </ul>
+					  </li>
+				  </ul>
+			  </div>
+              <div id="sidebar">
+				  <ul><li>
+				      <h3><font color="#FF9900"><span class="notranslate">Learn more, it's easy</span></font></h3>
+				    </li>
+					  <li><ul>
+                        <li><a href="if.html">If</a></li>
+                        <li><a href="comparison-operators.html">Comparison Operators</a></li>
+                        <li><a href="or.html">Or</a></li>
+                        <li><a href="roll-the-dice.html">Roll the Dice</a></li>
+                        <li class="current_page_item"><a href="ifs.html">Ifs</a></li>
+                        <li><a href="contains-specific-text.html">Contains Specific Text</a></li>
+                        <li><a href="switch.html">Switch</a></li>
+                        <li><a href="if-cell-is-blank.html">If Cell is Blank</a></li>
+                        <li><a href="absolute-value.html">Absolute Value</a></li>
+						<li><a href="and.html">And</a></li>
+                        </ul>
+                    </li>
+                  </ul>
+			  </div>
+              <div id="sidebar">
+					<ul>
+				  	  <li>
+                        <h3><span class="notranslate"><font color="#8FAD22">Download Excel File</font></span></h3>
+						  <ul>
+							<li><a href="excel-files/ifs.xlsx">ifs.xlsx</a></li>
+                    </ul>
+					  </li>
+				  </ul>
+			  </div>
+              <div id="sidebar">
+					<ul>
+				  	  <li>
+                        <h3>Next Guide</h3>
+						  <ul>
+							<li><a href="../functions/cell-references.html">Cell References</a></li>
+                    </ul>
+					  </li>
+				  </ul>
+			  </div>
+              <div id="sidebar">
+		      <h3><span class="notranslate"></span></h3>
+              <p style="padding-top:7px;padding-bottom:1px"><a href="https://facebook.com/thecodedragon" target="blank" rel="nofollow"><img src="../layout/facebook-logo.png" onmouseover="this.src='../layout/facebook-logo-onmouseover.png'" onmouseout="this.src='../layout/facebook-logo.png'" width="30" height="30" border="0" alt="Advanced Excel on Facebook" title="Advanced Excel on Facebook" /></a> <a href="https://twitter.com/ceoofdss" target="blank" rel="nofollow"><img src="../layout/x-logo.png" onmouseover="this.src='../layout/x-logo-onmouseover.png'" onmouseout="this.src='../layout/x-logo.png'" width="30" height="30" border="0" alt="Advanced Excel on X" title="Advanced Excel on X" /></a> <a href="https://www.pinterest.com/julisunkan" target="blank" rel="nofollow"><img src="../layout/pinterest-logo.png" onmouseover="this.src='../layout/pinterest-logo-onmouseover.png'" onmouseout="this.src='../layout/pinterest-logo.png'" width="30" height="30" border="0" alt="Advanced Excel on Pinterest" title="Advanced Excel on Pinterest"></a> <a href="https://www.linkedin.com/in/digitalskeleton/" target="blank" rel="nofollow"><img src="../layout/linkedin-logo.png" onmouseover="this.src='../layout/linkedin-logo-onmouseover.png'" onmouseout="this.src='../layout/linkedin-logo.png'" width="30" height="30" border="0" alt="Advanced Excel on LinkedIn" title="Advanced Excel on LinkedIn"></a></p>
+              </div>
+              <div id="sidebar">
+					<ul>
+				  	  <li>
+                        <h3><span class="notranslate">Become an Excel Pro</span></h3>
+						  <ul>
+                            <li><a href="../examples.html">300 Examples</a></li>
+                          </ul>
+					  </li>
+				  </ul>
+			  </div>
+              <!-- end #sidebar -->
+			  <div style="clear: both;">&nbsp;</div>
+		  </div>
+		</div>
+	</div>
+	<!-- end #page -->
+</div>
+<div id="footer">
+	<p><a href="ifs.html">Ifs</a> &bull; &copy; AppMonster<br />
+	Excel is Awesome, we'll show you: <a href="../introduction.html">Introduction</a> &bull; <a href="../basics.html">Basics</a> &bull; <a href="../functions.html">Functions</a> &bull; <a href="../data-analysis.html">Data Analysis</a> &bull; <a href="../vba.html">VBA</a></p>
+</div>
+<!-- end #footer -->
+
+<script type="text/javascript">
+  
+  $(function() { (adsbygoogle = window.adsbygoogle || []).push({}); });
+  $(function() { (adsbygoogle = window.adsbygoogle || []).push({}); });
+  
+</script>
+
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"rayId":"8c78d25f38feb8d2","version":"2024.8.0","serverTiming":{"name":{"cfExtPri":true,"cfL4":true}},"token":"c707dde3711e49e3a0cbf0020eef6a91","b":1}' crossorigin="anonymous"></script>
+</body>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H0MBKVX9SV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-H0MBKVX9SV');
+</script>
+
+<!-- Mirrored from www.Advanced Excel for Data Analysis/examples/ifs.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 23 Sep 2024 07:35:58 GMT -->
+</html>

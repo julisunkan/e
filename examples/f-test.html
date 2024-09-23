@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+
+
+<!-- Mirrored from www.Advanced Excel for Data Analysis/examples/f-test.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 23 Sep 2024 07:43:05 GMT -->
+<head>
+
+<title>F-Test in Excel (In Easy Steps)</title>
+<meta name="keywords" content="f-test, excel, two-sample for variances, null hypothesis, variances, two populations, equal, analysis toolpak add-in, reject, f, f critical one-tail">
+<meta name="description" content="This example teaches you how to perform an F-Test in Excel. The F-Test is used to test the null hypothesis that the variances of two populations are equal.">
+
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="index, follow">
+<META content=EN-US name=LANGUAGE>
+<meta property="og:title" content="F-Test in Excel">
+<meta property="og:url" content="f-test.html">
+<meta property="og:type" content="article">
+<meta property="fb:admins" content="100003702321830">
+<meta property="og:description" content="This example teaches you how to perform an F-Test in Excel. The F-Test is used to test the null hypothesis that the variances of two populations are equal.">
+<meta property="og:image" content="../smi/examples/f-test.png"/>
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@ExcelEasy">
+<meta name="twitter:image" content="../smi/examples/f-test.png">
+
+<link rel="preload" href="../css/style.css" as="style">
+<link rel="preload" href="images/f-test/f-test-example.png" as="image">
+<link rel="preload" href="../js/default.js" as="script">
+<link rel="preload" href="../js/init.js" as="script">
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f5ca7.txt?client=ca-pub-1987456081350047765" data-overlays="bottom" crossorigin="anonymous"></script>
+<link rel="preload" href="../css/style-medium.css" as="style" media="(max-width:961px)">
+<link rel="preload" href="../css/style-small.css" as="style" media="(max-width:620px)">
+<link rel="stylesheet" href="../css/style.css"/>
+<script src="../js/default.js" type="text/javascript"></script>
+<script src="../js/init.js" type="text/javascript"></script>
+<style type="text/css">
+.adslot { width: 336px; height: 280px; }
+@media (min-width:320px) { .adslot { width: 300px; height: 250px; } }
+@media (min-width:360px) and (orientation: portrait) { .adslot { width: 336px; height: 280px; } }
+@media (min-width:604px) { .adslot { width: 336px; height: 280px; } }
+</style>
+<noscript>
+    <link rel="stylesheet" href="../css/skel.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/adslot.css" />
+</noscript>
+<style type="text/css">
+<!--
+-->
+
+td.upper_line { border-top:solid 1px black; }
+table.fraction { text-align: center; vertical-align: middle; margin-top:0.5em; margin-bottom:0.5em; line-height: 2em;}
+
+</style>
+<link rel="icon" href="../favicon-48x48.ico">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+</head>
+<body>
+<header id="header">
+	<div class="container">
+		<span class="notranslate">
+			<div id="logo">
+				<a href="../index.html"><img src="../layout/excel-guides.svg" onerror="this.src='../layout/excel-guides.png'" border="0" alt="Excel guides" title="Excel guides" width="1" height="1" /><h2>Excel</h2>&nbsp;&nbsp;<span class="easy">for Data Analysis</span></a>
+                <p>#1 <a href="../index.html">Excel guides</a> on the go</p>
+		  	</div>            
+			<nav id="nav">
+				  <ul>
+                  <li><a href="../index.html">Excel</a></li>
+                  <li><a href="../introduction.html">Introduction</a></li>
+				  <li><a href="../basics.html">Basics</a></li>
+				  <li><a href="../functions.html">Functions</a></li>
+				  <li><a href="../data-analysis.html">Data Analysis</a></li>
+                  <li><a href="../vba.html">VBA</a></li>
+                  <li class="current_page_item"><a href="../examples.html">300 Examples</a></li>
+                  <li><a href="../ask-us.html">Ask us</a></li>
+                  </ul>
+				</nav>
+			</span>
+		</div>
+	</header>
+	<!-- end #header -->
+	<div class="container">
+		<div class="row 100%">
+			<div class="8u 12u(medium)">
+				<div class="post">
+						<h1 class="title" style="float:left;">F-Test</h1>
+						<div style="clear: both;">&nbsp;</div>
+<div class="entry">
+<p>This example teaches you how to perform an <strong>F-Test</strong> in <strong>Excel</strong>. The F-Test is used to test the null hypothesis that the variances of two populations are equal.</p>
+<p>Below you can find the study hours of 6 female students and 5 male students.</p>
+<p>H<sub>0</sub>: &#963<sub>1</sub><sup>2</sup> = &#963<sub>2</sub><sup>2</sup><br />
+  H<sub>1</sub>: &#963<sub>1</sub><sup>2</sup> &ne; &#963<sub>2</sub><sup>2</sup>
+<p><img src="images/f-test/f-test-example.png" alt="F-Test in Excel" width="219" height="181" title="F-Test in Excel" /></p>
+
+
+     
+     
+     
+<p>To perform an F-Test, execute the following steps.</p>
+<p>1. On the Data tab, in the Analysis group, click Data Analysis.</p>
+<p><img src="images/f-test/click-data-analysis.png" alt="Click Data Analysis" width="487" height="100" title="Click Data Analysis" /></p>
+<p>Note: can't find the Data Analysis button? Click here to load the <a href="../data-analysis/analysis-toolpak.html">Analysis ToolPak add-in</a>.</p>
+<p>2. Select F-Test Two-Sample for Variances and click OK.</p>
+<p><img src="images/f-test/select-f-test-two-sample-for-variances.png" alt="Select F-Test Two-Sample for Variances" width="389" height="196" title="Select F-Test Two-Sample for Variances" /></p>
+<p>3. Click in the Variable <u>1</u> Range box and select the range A2:A7.</p>
+<p>4. Click in the Variable <u>2</u> Range box and select the range B2:B6.</p>
+<p>5. Click in the Output Range box and select cell E1.</p>
+<p><img src="images/f-test/f-test-parameters.png" loading="lazy" alt="F-Test Parameters" width="395" height="251" title="F-Test Parameters" /></p>
+<p>6. Click OK.</p>
+<p>Result:</p>
+<p><img src="images/f-test/f-test-result.png" loading="lazy" alt="F-Test Result in Excel" width="371" height="223" title="F-Test Result in Excel" /></p>
+<p>Important: be sure that the variance of Variable 1 is higher than the variance of Variable 2. This is the case, 160 &gt; 21.7. If not, swap your data. As a result, Excel calculates the correct F value, which is the ratio of Variance 1 to Variance 2 (F = 160 / 21.7 = 7.373).</p>
+<p>Conclusion: if F &gt; F Critical one-tail, we reject the null hypothesis. This is the case, 7.373 &gt; 6.256. Therefore, we reject the null hypothesis. The variances of the two populations are unequal.</p>
+<div class="ad"><!-- Advanced Excel Pages End -->
+
+     
+     
+     data-ad-slot="4005850092"></ins>
+</div>
+            </div>
+			   </div>
+				<span class="invtab"><div class="post">
+					<div style="clear: both;"></div>
+                    <div class="entrylearn">  
+                  <p align="left"><span class="buttonp"> <a href="t-test.html">5/10 Completed! Learn more about the analysis toolpak &gt;<br />
+                    </a></span>Go to Next Guide: <a href="../vba/create-a-macro.html">Create a Macro</a></div>
+                  </div></span>
+                  </div>
+                  <div class="4u 12u(medium)">
+              <div id="search">
+              <div class="cse-branding-right" style="background-color:#FFFFFF;color:#000000">
+                <div class="cse-branding-form" style="margin-right:0px;">
+                  <form action="https://www.Advanced Excel for Data Analysis/search.html" id="cse-search-box">
+                    <div>
+                      <input type="hidden" name="cx" value="partner-pub-1987061359047735:3934495699" />
+                      <input type="hidden" name="cof" value="FORID:10" />
+                      <input type="hidden" name="ie" value="UTF-8" />
+                      <input type="text" name="q" placeholder="Explore Entire Guide" class="field" disabled />
+                      <span class="notranslate"><input type="submit" name="sa" value="Go" class="button" disabled /></span>
+                    </div>
+                  </form>
+                </div>
+                <div class="cse-branding-logo"></div>
+                <div class="cse-branding-text"></div>
+              </div>
+              </div>
+              <div id="sidebar">
+					<ul>
+				  	  <li>
+                        <h3>Guide</h3>
+						  <ul>
+							<li><a href="../data-analysis/analysis-toolpak.html">Analysis ToolPak</a></li>
+                    </ul>
+					  </li>
+				  </ul>
+			  </div>
+              <div id="sidebar">
+				  <ul><li>
+				      <h3><font color="#FF9900"><span class="notranslate">Learn more, it's easy</span></font></h3>
+				    </li>
+					  <li><ul>
+                        <li><a href="histogram.html">Histogram</a></li>
+                        <li><a href="descriptive-statistics.html">Descriptive Statistics</a></li>
+                        <li><a href="anova.html">Anova</a></li>
+                        <li class="current_page_item"><a href="f-test.html">F-Test</a></li>
+                        <li><a href="t-test.html">t-Test</a></li>
+                        <li><a href="moving-average.html">Moving Average</a></li>
+                        <li><a href="exponential-smoothing.html">Exponential Smoothing</a></li>
+                        <li><a href="correlation.html">Correlation</a></li>
+                        <li><a href="regression.html">Regression</a></li>
+                        </ul>
+                    </li>
+                  </ul>
+			  </div>
+              <div id="sidebar">
+					<ul>
+				  	  <li>
+                        <h3><span class="notranslate"><font color="#8FAD22">Download Excel File</font></span></h3>
+						  <ul>
+							<li><a href="excel-files/f-test.xlsx">f-test.xlsx</a></li>
+                    </ul>
+					  </li>
+				  </ul>
+			  </div>
+              <div id="sidebar">
+					<ul>
+				  	  <li>
+                        <h3>Next Guide</h3>
+						  <ul>
+							<li><a href="../vba/create-a-macro.html">Create a Macro</a></li>
+                    </ul>
+					  </li>
+				  </ul>
+			  </div>
+              <div id="sidebar">
+		      <h3><span class="notranslate"></span></h3>
+              <p style="padding-top:7px;padding-bottom:1px"><a href="https://facebook.com/thecodedragon" target="blank" rel="nofollow"><img src="../layout/facebook-logo.png" onmouseover="this.src='../layout/facebook-logo-onmouseover.png'" onmouseout="this.src='../layout/facebook-logo.png'" width="30" height="30" border="0" alt="Advanced Excel on Facebook" title="Advanced Excel on Facebook" /></a> <a href="https://twitter.com/ceoofdss" target="blank" rel="nofollow"><img src="../layout/x-logo.png" onmouseover="this.src='../layout/x-logo-onmouseover.png'" onmouseout="this.src='../layout/x-logo.png'" width="30" height="30" border="0" alt="Advanced Excel on X" title="Advanced Excel on X" /></a> <a href="https://www.pinterest.com/julisunkan" target="blank" rel="nofollow"><img src="../layout/pinterest-logo.png" onmouseover="this.src='../layout/pinterest-logo-onmouseover.png'" onmouseout="this.src='../layout/pinterest-logo.png'" width="30" height="30" border="0" alt="Advanced Excel on Pinterest" title="Advanced Excel on Pinterest"></a> <a href="https://www.linkedin.com/in/digitalskeleton/" target="blank" rel="nofollow"><img src="../layout/linkedin-logo.png" onmouseover="this.src='../layout/linkedin-logo-onmouseover.png'" onmouseout="this.src='../layout/linkedin-logo.png'" width="30" height="30" border="0" alt="Advanced Excel on LinkedIn" title="Advanced Excel on LinkedIn"></a></p>
+              </div>
+              <div id="sidebar">
+					<ul>
+				  	  <li>
+                        <h3><span class="notranslate">Become an Excel Pro</span></h3>
+						  <ul>
+                            <li><a href="../examples.html">300 Examples</a></li>
+                          </ul>
+					  </li>
+				  </ul>
+			  </div>
+              <!-- end #sidebar -->
+			  <div style="clear: both;">&nbsp;</div>
+		  </div>
+		</div>
+	</div>
+	<!-- end #page -->
+</div>
+<div id="footer">
+	<p><a href="f-test.html">F-Test</a> &bull; &copy; AppMonster<br />
+	Excel is Awesome, we'll show you: <a href="../introduction.html">Introduction</a> &bull; <a href="../basics.html">Basics</a> &bull; <a href="../functions.html">Functions</a> &bull; <a href="../data-analysis.html">Data Analysis</a> &bull; <a href="../vba.html">VBA</a></p>
+</div>
+<!-- end #footer -->
+
+<script type="text/javascript">
+  
+  $(function() { (adsbygoogle = window.adsbygoogle || []).push({}); });
+  $(function() { (adsbygoogle = window.adsbygoogle || []).push({}); });
+  
+</script>
+
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"rayId":"8c78d34dbd07b8d2","version":"2024.8.0","serverTiming":{"name":{"cfExtPri":true,"cfL4":true}},"token":"c707dde3711e49e3a0cbf0020eef6a91","b":1}' crossorigin="anonymous"></script>
+</body>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H0MBKVX9SV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-H0MBKVX9SV');
+</script>
+
+<!-- Mirrored from www.Advanced Excel for Data Analysis/examples/f-test.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 23 Sep 2024 07:43:07 GMT -->
+</html>

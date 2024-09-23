@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+
+
+<!-- Mirrored from www.Advanced Excel for Data Analysis/functions/lookup-reference-functions.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 23 Sep 2024 07:46:32 GMT -->
+<head>
+
+<title>Lookup & Reference Functions in Excel (In Simple Steps)</title>
+<meta name="keywords" content="lookup, excel, vlookup, hlookup function, reference functions, lookup value, table array, range lookup, table address, copy vlookup function, match function, index function, choose function, offset">
+<meta name="description" content="Learn all about Excel's lookup & reference functions, such as VLOOKUP, HLOOKUP, MATCH, INDEX and CHOOSE.">
+
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="index, follow">
+<META content=EN-US name=LANGUAGE>
+<meta property="og:title" content="Lookup & Reference Functions in Excel">
+<meta property="og:url" content="lookup-reference-functions.html">
+<meta property="og:type" content="article">
+<meta property="fb:admins" content="100003702321830">
+<meta property="og:description" content="Learn all about Excel's lookup & reference functions, such as VLOOKUP, HLOOKUP, MATCH, INDEX and CHOOSE.">
+<meta property="og:image" content="../smi/functions/lookup-reference-functions.png"/>
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@ExcelEasy">
+<meta name="twitter:image" content="../smi/functions/lookup-reference-functions.png">
+
+<link rel="preload" href="../css/style.css" as="style">
+<link rel="preload" href="images/lookup-reference-functions/vlookup-function.png" as="image">
+<link rel="preload" href="../js/default.js" as="script">
+<link rel="preload" href="../js/init.js" as="script">
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f5ca7.txt?client=ca-pub-1987456081350047765" data-overlays="bottom" crossorigin="anonymous"></script>
+<link rel="preload" href="../css/style-medium.css" as="style" media="(max-width:961px)">
+<link rel="preload" href="../css/style-small.css" as="style" media="(max-width:620px)">
+<link rel="stylesheet" href="../css/style.css"/>
+<script src="../js/default.js" type="text/javascript"></script>
+<script src="../js/init.js" type="text/javascript"></script>
+<style type="text/css">
+.adslot { width: 336px; height: 280px; }
+@media (min-width:320px) { .adslot { width: 300px; height: 250px; } }
+@media (min-width:360px) and (orientation: portrait) { .adslot { width: 336px; height: 280px; } }
+@media (min-width:604px) { .adslot { width: 336px; height: 280px; } }
+</style>
+<noscript>
+    <link rel="stylesheet" href="../css/skel.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/adslot.css" />
+</noscript>
+<link rel="icon" href="../favicon-48x48.ico">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+</head>
+<body>
+<header id="header">
+	<div class="container">
+		<span class="notranslate">
+			<div id="logo">
+				<a href="../index.html"><img src="../layout/excel-guides.svg" onerror="this.src='../layout/excel-guides.png'" border="0" alt="Excel guides" title="Excel guides" width="1" height="1" /><h2>Excel</h2>&nbsp;&nbsp;<span class="easy">for Data Analysis</span></a>
+                <p>#1 <a href="../index.html">Excel guides</a> on the go</p>
+		  	</div>            
+			<nav id="nav">
+				  <ul>
+                  <li><a href="../index.html">Excel</a></li>
+                  <li><a href="../introduction.html">Introduction</a></li>
+				  <li><a href="../basics.html">Basics</a></li>
+				  <li class="current_page_item"><a href="../functions.html">Functions</a></li>
+				  <li><a href="../data-analysis.html">Data Analysis</a></li>
+                  <li><a href="../vba.html">VBA</a></li>
+                  <li class="pro"><a href="../examples.html">300 Examples</a></li>
+                  <li><a href="../ask-us.html">Ask us</a></li>
+                  </ul>
+				</nav>
+			</span>
+		</div>
+	</header>
+	<!-- end #header -->
+	<div class="container">
+		<div class="row 100%">
+			<div class="8u 12u(medium)">
+				<div class="post">
+						<h1 class="title" style="float:left;">Lookup & Reference Functions</h1>
+						<div style="clear: both;">&nbsp;</div>
+                      <div class="entry">
+                      <p class="spacing"><a href="#vlookup">Vlookup</a> | <a href="#hlookup">Hlookup</a> | <a href="#match">Match</a> | <a href="#index">Index</a> | <a href="#choose">Choose</a></p>
+                      <p>Learn all about <strong>Excel's lookup &amp; reference functions</strong>, such as <strong>VLOOKUP</strong>, HLOOKUP, MATCH, INDEX and CHOOSE.</p>
+                      <h3><a name="vlookup" id="vlookup"></a>Vlookup</h3>
+<p>The VLOOKUP (Vertical lookup) function looks for a value in the leftmost column of a table, and then returns a value in the same row from another column you specify.</p>
+<p>1. Insert the VLOOKUP function shown below.</p>
+<p><img src="images/lookup-reference-functions/vlookup-function.png" alt="Vlookup Function in Excel" width="604" height="307" title="Vlookup Function in Excel" /></p>
+
+
+     
+     
+     
+<p>Explanation: the VLOOKUP function looks for the ID (104) in the leftmost column of the range $E$4:$G$7 and returns the value in the same row from the third column (third argument is set to 3). The fourth argument is set to FALSE to return an exact match or a #N/A error if not found.</p>
+<p>2. Drag the VLOOKUP function in cell B2 down to cell B11.</p>
+<p><img src="images/lookup-reference-functions/copy-vlookup-function.png" alt="Copy Vlookup Function" width="604" height="327" title="Copy Vlookup Function" /></p>
+<p>Note: when we drag the VLOOKUP function down, the <a href="../examples/absolute-reference.html">absolute reference</a> ($E$4:$G$7) stays the same, while the relative reference (A2) changes to A3, A4, A5, etc. Visit our page about the <a href="../examples/vlookup.html">VLOOKUP function</a> for much more information and many examples.</p>
+<h3><a name="hlookup" id="hlookup"></a>Hlookup</h3>
+<p>In a similar way, you can use the HLOOKUP (Horizontal lookup) function.</p>
+<p><img src="images/lookup-reference-functions/hlookup-function.png" loading="lazy" alt="Hlookup Function" width="604" height="307" title="Hlookup Function" /></p>
+<p>Note: if you have Excel 365 or Excel 2021, you can also <a href="../examples/xlookup.html#horizontal-lookup">use XLOOKUP to perform a horizontal lookup</a>.</p>
+<h3><a name="match" id="match"></a>Match</h3>
+<p>The MATCH function returns the position of a value in a given range.</p>
+<p><img src="images/lookup-reference-functions/match-function.png" loading="lazy" alt="Match Function" width="604" height="227" title="Match Function" /></p>
+<p>Explanation: Yellow found at position 3 in the range E4:E7. The third argument is optional. Set this argument to 0 to return the position of the value that is exactly equal to lookup_value (A2) or a #N/A error if not found. Use <a href="../examples/index-match.html">INDEX and MATCH</a> in Excel and impress your boss.</p>
+<h3><a name="index" id="index"></a>Index</h3>
+<p>The INDEX function below returns a specific value in a two-dimensional range.</p>
+<p><img src="images/lookup-reference-functions/index-function-two-dimensional-range.png" loading="lazy" alt="Index Function, Two-dimensional Range" width="604" height="227" title="Index Function, Two-dimensional Range" /></p>
+<p>Explanation: 92 found at the intersection of row 3 and column 2 in the range E4:F7.</p>
+<p>The INDEX function below returns a specific value in a one-dimensional range.</p>
+<p><img src="images/lookup-reference-functions/index-function-one-dimensional-range.png" loading="lazy" alt="Index Function, One-dimensional Range" width="604" height="227" title="Index Function, One-dimensional Range" /></p>
+<p>Explanation: 97 found at position 3 in the range E4:E7. Use <a href="../examples/index-match.html">INDEX and MATCH</a> in Excel and impress your boss.</p>
+<h3><a name="choose" id="choose"></a>Choose</h3>
+<p>The CHOOSE function returns a value from a list of values, based on a position number.</p>
+<p><img src="images/lookup-reference-functions/choose-function.png" loading="lazy" alt="Choose Function" width="604" height="127" title="Choose Function" /></p>
+<p>Explanation: Boat found at position 3.</p>
+<div class="ad"><!-- Advanced Excel Pages End -->
+
+     
+     
+     data-ad-slot="4005850092"></ins>
+</div>
+            </div>
+			   </div>
+				<span class="invtab"><div class="post">
+					<div style="clear: both;"></div>
+                    <div class="entrylearn">  
+                  <p align="left"><span class="buttonp"> <a href="../examples/vlookup.html">1/15 Completed! Learn more about lookup & reference &gt;<br />
+                  </a></span>Go to Next Guide: <a href="financial-functions.html">Financial Functions</a></p></div>
+                  </div></span>
+                  
+			</div>
+            <div class="4u 12u(medium)">
+              <div id="search">
+              <div class="cse-branding-right" style="background-color:#FFFFFF;color:#000000">
+                <div class="cse-branding-form" style="margin-right:0px;">
+                  <form action="https://www.Advanced Excel for Data Analysis/search.html" id="cse-search-box">
+                    <div>
+                      <input type="hidden" name="cx" value="partner-pub-1987061359047735:3934495699" />
+                      <input type="hidden" name="cof" value="FORID:10" />
+                      <input type="hidden" name="ie" value="UTF-8" />
+                      <input type="text" name="q" placeholder="Explore Entire Guide" class="field" disabled />
+                      <span class="notranslate"><input type="submit" name="sa" value="Go" class="button" disabled /></span>
+                    </div>
+                  </form>
+                </div>
+                <div class="cse-branding-logo"></div>
+                <div class="cse-branding-text"></div>
+              </div>
+              </div>
+              <div id="sidebar">
+					<ul>
+				  	  <li>
+                        <h3>Guide</h3>
+						  <ul>
+							<li class="current_page_item"><a href="lookup-reference-functions.html">Lookup & Reference Functions</a></li>
+                    </ul>
+					  </li>
+				  </ul>
+			  </div>
+              <div id="sidebar">
+				  <ul><li>
+				      <h3><font color="#FF9900"><span class="notranslate">Learn more, it's easy</span></font></h3>
+				    </li>
+					  <li><ul>
+                        <li><a href="../examples/vlookup.html">Vlookup</a></li>
+                        <li><a href="../examples/tax-rates.html">Tax Rates</a></li>
+                        <li><a href="../examples/index-match.html">Index and Match</a></li>
+                        <li><a href="../examples/two-way-lookup.html">Two-way Lookup</a></li>
+                        <li><a href="../examples/offset.html">Offset</a></li>
+                        <li><a href="../examples/case-sensitive-lookup.html">Case-sensitive Lookup</a></li>
+                        <li><a href="../examples/left-lookup.html">Left Lookup</a></li>
+                        <li><a href="../examples/locate-maximum-value.html">Locate Maximum Value</a></li>
+                        <li><a href="../examples/indirect.html">Indirect</a></li>
+                        <li><a href="../examples/two-column-lookup.html">Two-column Lookup</a></li>
+                        <li><a href="../examples/closest-match.html">Closest Match</a></li>
+                        <li><a href="../examples/compare-two-columns.html">Compare Two Columns</a></li>
+                        <li><a href="../examples/xlookup.html">Xlookup</a></li>
+						<li><a href="../examples/xmatch.html">Xmatch</a></li>
+                        </ul>
+                    </li>
+                  </ul>
+			  </div>
+              <div id="sidebar">
+					<ul>
+				  	  <li>
+                        <h3><span class="notranslate"><font color="#8FAD22">Download Excel File</font></span></h3>
+						  <ul>
+							<li><a href="excel-files/lookup-reference-functions.xlsx">lookup-reference-functions.xlsx</a></li>
+                    </ul>
+					  </li>
+				  </ul>
+			  </div>
+              <div id="sidebar">
+					<ul>
+				  	  <li>
+                        <h3>Next Guide</h3>
+						  <ul>
+							<li><a href="financial-functions.html">Financial Functions</a></li>
+                    </ul>
+					  </li>
+				  </ul>
+			  </div>
+              <div id="sidebar">
+		      <h3><span class="notranslate"></span></h3>
+              <p style="padding-top:7px;padding-bottom:1px"><a href="https://facebook.com/thecodedragon" target="blank" rel="nofollow"><img src="../layout/facebook-logo.png" onmouseover="this.src='../layout/facebook-logo-onmouseover.png'" onmouseout="this.src='../layout/facebook-logo.png'" width="30" height="30" border="0" alt="Advanced Excel on Facebook" title="Advanced Excel on Facebook" /></a> <a href="https://twitter.com/ceoofdss" target="blank" rel="nofollow"><img src="../layout/x-logo.png" onmouseover="this.src='../layout/x-logo-onmouseover.png'" onmouseout="this.src='../layout/x-logo.png'" width="30" height="30" border="0" alt="Advanced Excel on X" title="Advanced Excel on X" /></a> <a href="https://www.pinterest.com/julisunkan" target="blank" rel="nofollow"><img src="../layout/pinterest-logo.png" onmouseover="this.src='../layout/pinterest-logo-onmouseover.png'" onmouseout="this.src='../layout/pinterest-logo.png'" width="30" height="30" border="0" alt="Advanced Excel on Pinterest" title="Advanced Excel on Pinterest"></a> <a href="https://www.linkedin.com/in/digitalskeleton/" target="blank" rel="nofollow"><img src="../layout/linkedin-logo.png" onmouseover="this.src='../layout/linkedin-logo-onmouseover.png'" onmouseout="this.src='../layout/linkedin-logo.png'" width="30" height="30" border="0" alt="Advanced Excel on LinkedIn" title="Advanced Excel on LinkedIn"></a></p>
+              </div>
+              <div id="sidebar">
+					<ul>
+				  	  <li>
+                        <h3><span class="notranslate">Become an Excel Pro</span></h3>
+						  <ul>
+                            <li><a href="../examples.html">300 Examples</a></li>
+                          </ul>
+					  </li>
+				  </ul>
+			  </div>
+              <!-- end #sidebar -->
+			  <div style="clear: both;">&nbsp;</div>
+		  </div>
+		</div>
+	</div>
+	<!-- end #page -->
+</div>
+<div id="footer">
+	<p><a href="lookup-reference-functions.html">Lookup & Reference Functions</a> &bull; &copy; AppMonster<br />
+	Excel is Awesome, we'll show you: <a href="../introduction.html">Introduction</a> &bull; <a href="../basics.html">Basics</a> &bull; <a href="../functions.html">Functions</a> &bull; <a href="../data-analysis.html">Data Analysis</a> &bull; <a href="../vba.html">VBA</a></p>
+</div>
+<!-- end #footer -->
+
+<script type="text/javascript">
+  
+  $(function() { (adsbygoogle = window.adsbygoogle || []).push({}); });
+  $(function() { (adsbygoogle = window.adsbygoogle || []).push({}); });
+  
+</script>
+
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"rayId":"8c78d4349a04b8d2","version":"2024.8.0","serverTiming":{"name":{"cfExtPri":true,"cfL4":true}},"token":"c707dde3711e49e3a0cbf0020eef6a91","b":1}' crossorigin="anonymous"></script>
+</body>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H0MBKVX9SV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-H0MBKVX9SV');
+</script>
+
+<!-- Mirrored from www.Advanced Excel for Data Analysis/functions/lookup-reference-functions.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 23 Sep 2024 07:46:34 GMT -->
+</html>

@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+
+
+<!-- Mirrored from www.Advanced Excel for Data Analysis/functions/formula-errors.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 23 Sep 2024 07:46:54 GMT -->
+<head>
+
+<title>Formula Errors in Excel (In Easy Steps)</title>
+<meta name="keywords" content="formula erros, name error, value error, div/0 error, ref error, na error, num error, null error, spill error, iserror, error code, formula auditing">
+<meta name="description" content="This Guide teaches you how to deal with some common formula errors in Excel. Let's start simple.">
+
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="index, follow">
+<META content=EN-US name=LANGUAGE>
+<meta property="og:title" content="Formula Errors in Excel">
+<meta property="og:url" content="formula-errors.html">
+<meta property="og:type" content="article">
+<meta property="fb:admins" content="100003702321830">
+<meta property="og:description" content="This Guide teaches you how to deal with some common formula errors in Excel. Let's start simple.">
+<meta property="og:image" content="../smi/functions/formula-errors-2.png"/>
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@ExcelEasy">
+<meta name="twitter:image" content="../smi/functions/formula-errors-2.png">
+
+<link rel="preload" href="../css/style.css" as="style">
+<link rel="preload" href="images/formula-errors/not-wide-enough-error.png" as="image">
+<link rel="preload" href="../js/default.js" as="script">
+<link rel="preload" href="../js/init.js" as="script">
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f5ca7.txt?client=ca-pub-1987456081350047765" data-overlays="bottom" crossorigin="anonymous"></script>
+<link rel="preload" href="../css/style-medium.css" as="style" media="(max-width:961px)">
+<link rel="preload" href="../css/style-small.css" as="style" media="(max-width:620px)">
+<link rel="stylesheet" href="../css/style.css"/>
+<script src="../js/default.js" type="text/javascript"></script>
+<script src="../js/init.js" type="text/javascript"></script>
+<style type="text/css">
+.adslot { width: 336px; height: 280px; }
+@media (min-width:320px) { .adslot { width: 300px; height: 250px; } }
+@media (min-width:360px) and (orientation: portrait) { .adslot { width: 336px; height: 280px; } }
+@media (min-width:604px) { .adslot { width: 336px; height: 280px; } }
+</style>
+<noscript>
+    <link rel="stylesheet" href="../css/skel.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/adslot.css" />
+</noscript>
+<link rel="icon" href="../favicon-48x48.ico">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+</head>
+<body>
+<header id="header">
+	<div class="container">
+		<span class="notranslate">
+			<div id="logo">
+				<a href="../index.html"><img src="../layout/excel-guides.svg" onerror="this.src='../layout/excel-guides.png'" border="0" alt="Excel guides" title="Excel guides" width="1" height="1" /><h2>Excel</h2>&nbsp;&nbsp;<span class="easy">for Data Analysis</span></a>
+                <p>#1 <a href="../index.html">Excel guides</a> on the go</p>
+		  	</div>            
+			<nav id="nav">
+				  <ul>
+                  <li><a href="../index.html">Excel</a></li>
+                  <li><a href="../introduction.html">Introduction</a></li>
+				  <li><a href="../basics.html">Basics</a></li>
+				  <li class="current_page_item"><a href="../functions.html">Functions</a></li>
+				  <li><a href="../data-analysis.html">Data Analysis</a></li>
+                  <li><a href="../vba.html">VBA</a></li>
+                  <li class="pro"><a href="../examples.html">300 Examples</a></li>
+                  <li><a href="../ask-us.html">Ask us</a></li>
+                  </ul>
+				</nav>
+			</span>
+		</div>
+	</header>
+	<!-- end #header -->
+	<div class="container">
+		<div class="row 100%">
+			<div class="8u 12u(medium)">
+				<div class="post">
+						<h1 class="title" style="float:left;">Formula Errors</h1>
+						<div style="clear: both;">&nbsp;</div>
+                      <div class="entry">
+                      <p class="spacing"><a href="#not-wide-enough-error">#####</a> | <a href="#name-error">#NAME?</a> | <a href="#value-error">#VALUE!</a> | <a href="#div-error">#DIV/0!</a> | <a href="#ref-error">#REF!</a> | <a href="#na-error">#N/A</a> | <a href="#num-error">#NUM!</a> | <a href="#null-error">#NULL!</a> | <a href="#spill-error">#SPILL!</a></p>
+                      <p>This Guide teaches you how to deal with some common <strong>formula errors</strong> in <strong>Excel</strong>. Let's start simple.</p>
+                      <h3><a name="not-wide-enough-error" id="not-wide-enough-error"></a>#####</h3>
+<p>When your cell contains this <strong>error code</strong>, the column isn't wide enough to display the value.</p>
+<p><img src="images/formula-errors/not-wide-enough-error.png" alt="##### error in Excel" width="411" height="147" title="##### error in Excel" /></p>
+
+
+     
+     
+     
+<p>1. Click on the right border of the column A header and increase the column width.</p>
+<p><img src="images/formula-errors/fix-not-wide-enough-error.png" alt="Fix the ##### error" width="426" height="147" title="Fix the ##### error" /></p>
+<p>Tip: double click the right border of the column A header to automatically fit the widest entry in column A.</p>
+<h3><a name="name-error" id="name-error"></a>#NAME?</h3>
+<p>The #NAME? error occurs when Excel does not recognize text in a formula.</p>
+<p><img src="images/formula-errors/name-error.png" alt="#NAME? error in Excel" width="411" height="167" title="#NAME? error in Excel" /></p>
+<p>1. Simply correct SU to SUM.</p>
+<p><img src="images/formula-errors/fix-name-error.png" loading="lazy" alt="Fix the #NAME? error" width="411" height="167" title="Fix the #NAME? error" /></p>
+<h3><a name="value-error" id="value-error"></a>#VALUE!</h3>
+<p>Excel displays the #VALUE! error when a formula has the wrong type of argument.</p>
+<p><img src="images/formula-errors/value-error.png" loading="lazy" alt="#VALUE! error" width="411" height="167" title="#VALUE! error" /></p>
+<p>1a. Change the value of cell A3 to a number.<br />
+  1b. Use a function to ignore cells that contain text.</p>
+<p><img src="images/formula-errors/fix-value-error.png" loading="lazy" alt="Fix the #VALUE! error" width="411" height="167" title="Fix the #VALUE! error" /></p>
+<h3><a name="div-error" id="div-error"></a>#DIV/0!</h3>
+<p>Excel displays the #DIV/0! error when a formula tries to divide a number by 0 or an empty cell.</p>
+<p><img src="images/formula-errors/div-error.png" loading="lazy" alt="#DIV/0! error" width="411" height="147" title="#DIV/0! error" /></p>
+<p>1a. Change the value of cell A2 to a value that is not equal to 0.<br />
+  1b. Prevent the error from being displayed by using the logical function IF.</p>
+<p><img src="images/formula-errors/fix-div-error.png" loading="lazy" alt="Fix the #DIV/0! error" width="411" height="147" title="Fix the #DIV/0! error" /></p>
+<p>Explanation: if cell A2 equals 0, an empty string (&quot;&quot;) is displayed. If not, the result of the formula A1/A2 is displayed.</p>
+<div class="ad"><!-- Advanced Excel Pages Middle -->
+
+     
+     
+     data-ad-slot="2529116896"></ins>
+</div>
+<h3><a name="ref-error" id="ref-error"></a>#REF!</h3>
+<p>Excel displays the #REF! error when a formula refers to a cell that is not valid.</p>
+<p>1. Cell C1 references cell A1 and cell B1.</p>
+<p><img src="images/formula-errors/ref-error-example.png" loading="lazy" alt="#REF! error Example" width="411" height="107" title="#REF! error Example" /></p>
+<p>2. Delete column B. To achieve this, right click the column B header and click Delete.</p>
+<p><img src="images/formula-errors/delete-column.png" loading="lazy" alt="Delete Column" width="411" height="321" title="Delete Column" /></p>
+<p>3. Select cell B1. The reference to cell B1 is not valid anymore.</p>
+<p><img src="images/formula-errors/ref-error-result.png" loading="lazy" alt="#REF! error Result" width="411" height="107" title="#REF! error Result" /></p>
+<p>4. To fix this error, you can either delete +#REF! in the formula of cell B1 or you can undo your action by pressing CTRL + z</p>
+<h3><a name="na-error" id="na-error"></a>#N/A</h3>
+<p>The #N/A error appears when the <a href="../examples/vlookup.html">VLOOKUP function</a> (or XLOOKUP, MATCH, etc.) can't find a match.</p>
+<p>1. In the example below, ID 28 cannot be found.</p>
+<p><img src="images/formula-errors/na-error.png" loading="lazy" alt="#N/A error in Excel" width="604" height="267" title="#N/A error in Excel" /></p>
+<p>2. Use the <a href="../examples/ifna.html">IFNA function</a> to replace the #N/A error with a friendly message.</p>
+<p><img src="images/formula-errors/ifna-function.png" loading="lazy" alt="IFNA function" width="604" height="267" title="IFNA function" /></p>
+<!--<div class="ad">Excel Pages Middle
+
+     
+     
+     data-ad-slot="2529116896"></ins>
+</div>-->
+<h3><a name="num-error" id="num-error"></a>#NUM!</h3>
+<p>Excel shows the #NUM! error when a formula contains invalid numeric values.</p>
+<p>1. For example, the SQRT function below cannot calculate the <a href="../examples/square-root.html">square root</a> of a negative number.</p>
+<p><img src="images/formula-errors/num-error.png" loading="lazy" alt="#NUM! error" width="604" height="107" title="#NUM! error" /></p>
+<p>2. Change the number in cell A1 to a positive number.</p>
+<p><img src="images/formula-errors/fix-num-error.png" loading="lazy" alt="Fix the #NUM! error" width="604" height="107" title="Fix the #NUM! error" /></p>
+<h3><a name="null-error" id="null-error"></a>#NULL!</h3>
+<p>The intersect operator (single space) returns the intersection of two ranges. When two ranges don't intersect, Excel displays the #NULL! error.</p>
+<p>1. The formula below returns #NULL! because the two ranges don't intersect.</p>
+<p><img src="images/formula-errors/null-error.png" loading="lazy" alt="#NULL! error" width="604" height="167" title="#NULL! error" /></p>
+<p>2. The formula below doesn't return the #NULL error.</p>
+<p><img src="images/formula-errors/fix-null-error.png" loading="lazy" alt="Fix the #NULL! error" width="604" height="167" title="Fix the #NULL! error" /></p>
+<p>Note: =SUM(F2:G2) produces the exact same result!</p>
+<h3><a name="spill-error" id="spill-error"></a>#SPILL!</h3>
+<p>If something is blocking a spill range, Excel displays the #SPILL! error.</p>
+<p><img src="images/formula-errors/spill-error.png" loading="lazy" alt="#SPILL! error in Excel" width="604" height="267" title="#SPILL! error in Excel" /></p>
+<p>1. Simply empty cell C6 to fix the #SPILL error.</p>
+<p><img src="images/formula-errors/fix-spill-error.png" loading="lazy" alt="Fix the #SPILL! error" width="604" height="267" title="Fix the #SPILL! error" /></p>
+<p>Note: this dynamic array function, entered into cell C1, fills multiple cells. Wow! This behavior in Excel 365/2021 is called <a href="../examples/dynamic-arrays.html">spilling</a>.</p>
+<div class="ad"><!-- Advanced Excel Pages End -->
+
+     
+     
+     data-ad-slot="4005850092"></ins>
+</div>
+            </div>
+			   </div>
+				<span class="invtab"><div class="post">
+					<div style="clear: both;"></div>
+                    <div class="entrylearn">  
+                  <p align="left"><span class="buttonp"> <a href="../examples/iferror.html">1/9 Completed! Learn much more about formula errors &gt;<br />
+                    </a></span>Go to Next Guide: <a href="array-formulas.html">Array Formulas</a></p></div>
+                  </div></span>
+                  
+			</div>
+            <div class="4u 12u(medium)">
+              <div id="search">
+              <div class="cse-branding-right" style="background-color:#FFFFFF;color:#000000">
+                <div class="cse-branding-form" style="margin-right:0px;">
+                  <form action="https://www.Advanced Excel for Data Analysis/search.html" id="cse-search-box">
+                    <div>
+                      <input type="hidden" name="cx" value="partner-pub-1987061359047735:3934495699" />
+                      <input type="hidden" name="cof" value="FORID:10" />
+                      <input type="hidden" name="ie" value="UTF-8" />
+                      <input type="text" name="q" placeholder="Explore Entire Guide" class="field" disabled />
+                      <span class="notranslate"><input type="submit" name="sa" value="Go" class="button" disabled /></span>
+                    </div>
+                  </form>
+                </div>
+                <div class="cse-branding-logo"></div>
+                <div class="cse-branding-text"></div>
+              </div>
+              </div>
+              <div id="sidebar">
+					<ul>
+				  	  <li>
+                        <h3>Guide</h3>
+						  <ul>
+							<li class="current_page_item"><a href="formula-errors.html">Formula Errors</a></li>
+                    </ul>
+					  </li>
+				  </ul>
+			  </div>
+              <div id="sidebar">
+				  <ul><li>
+				      <h3><font color="#FF9900"><span class="notranslate">Learn more, it's easy</span></font></h3>
+				    </li>
+					  <li><ul>
+                        <li><a href="../examples/iferror.html">IfError</a></li>
+                        <li><a href="../examples/iserror.html">IsError</a></li>
+                        <li><a href="../examples/aggregate.html">Aggregate</a></li>
+                        <li><a href="../examples/circular-reference.html">Circular Reference</a></li>
+                        <li><a href="../examples/formula-auditing.html">Formula Auditing</a></li>
+						<li><a href="../examples/sum-range-with-errors.html">Sum Range with Errors</a></li>
+                        <li><a href="../examples/floating-point-errors.html">Floating Point Errors</a></li>
+                        <li><a href="../examples/ifna.html">IFNA</a></li>
+                        </ul>
+                    </li>
+                  </ul>
+			  </div>
+			  <div id="sidebar">
+					<ul>
+				  	  <li>
+                        <h3><span class="notranslate"><font color="#8FAD22">Download Excel File</font></span></h3>
+						  <ul>
+							<li><a href="excel-files/formula-errors.xlsx">formula-errors.xlsx</a></li>
+                    </ul>
+					  </li>
+				  </ul>
+			  </div>
+              <div id="sidebar">
+					<ul>
+				  	  <li>
+                        <h3>Next Guide</h3>
+						  <ul>
+							<li><a href="array-formulas.html">Array Formulas</a></li>
+                    </ul>
+					  </li>
+				  </ul>
+			  </div>
+              <div id="sidebar">
+		      <h3><span class="notranslate"></span></h3>
+              <p style="padding-top:7px;padding-bottom:1px"><a href="https://facebook.com/thecodedragon" target="blank" rel="nofollow"><img src="../layout/facebook-logo.png" onmouseover="this.src='../layout/facebook-logo-onmouseover.png'" onmouseout="this.src='../layout/facebook-logo.png'" width="30" height="30" border="0" alt="Advanced Excel on Facebook" title="Advanced Excel on Facebook" /></a> <a href="https://twitter.com/ceoofdss" target="blank" rel="nofollow"><img src="../layout/x-logo.png" onmouseover="this.src='../layout/x-logo-onmouseover.png'" onmouseout="this.src='../layout/x-logo.png'" width="30" height="30" border="0" alt="Advanced Excel on X" title="Advanced Excel on X" /></a> <a href="https://www.pinterest.com/julisunkan" target="blank" rel="nofollow"><img src="../layout/pinterest-logo.png" onmouseover="this.src='../layout/pinterest-logo-onmouseover.png'" onmouseout="this.src='../layout/pinterest-logo.png'" width="30" height="30" border="0" alt="Advanced Excel on Pinterest" title="Advanced Excel on Pinterest"></a> <a href="https://www.linkedin.com/in/digitalskeleton/" target="blank" rel="nofollow"><img src="../layout/linkedin-logo.png" onmouseover="this.src='../layout/linkedin-logo-onmouseover.png'" onmouseout="this.src='../layout/linkedin-logo.png'" width="30" height="30" border="0" alt="Advanced Excel on LinkedIn" title="Advanced Excel on LinkedIn"></a></p>
+              </div>
+              <div id="sidebar">
+					<ul>
+				  	  <li>
+                        <h3><span class="notranslate">Become an Excel Pro</span></h3>
+						  <ul>
+                            <li><a href="../examples.html">300 Examples</a></li>
+                          </ul>
+					  </li>
+				  </ul>
+			  </div>
+              <!-- end #sidebar -->
+			  <div style="clear: both;">&nbsp;</div>
+		  </div>
+		</div>
+	</div>
+	<!-- end #page -->
+</div>
+<div id="footer">
+	<p><a href="formula-errors.html">Formula Errors</a> &bull; &copy; AppMonster<br />
+	Excel is Awesome, we'll show you: <a href="../introduction.html">Introduction</a> &bull; <a href="../basics.html">Basics</a> &bull; <a href="../functions.html">Functions</a> &bull; <a href="../data-analysis.html">Data Analysis</a> &bull; <a href="../vba.html">VBA</a></p>
+</div>
+<!-- end #footer -->
+
+<script type="text/javascript">
+  
+  $(function() { (adsbygoogle = window.adsbygoogle || []).push({}); });
+  $(function() { (adsbygoogle = window.adsbygoogle || []).push({}); });
+  //$(function() { (adsbygoogle = window.adsbygoogle || []).push({}); });
+  $(function() { (adsbygoogle = window.adsbygoogle || []).push({}); });
+  
+</script>
+
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"rayId":"8c78d43a2e1b9fc0","version":"2024.8.0","serverTiming":{"name":{"cfExtPri":true,"cfL4":true}},"token":"c707dde3711e49e3a0cbf0020eef6a91","b":1}' crossorigin="anonymous"></script>
+</body>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H0MBKVX9SV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-H0MBKVX9SV');
+</script>
+
+<!-- Mirrored from www.Advanced Excel for Data Analysis/functions/formula-errors.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 23 Sep 2024 07:47:02 GMT -->
+</html>

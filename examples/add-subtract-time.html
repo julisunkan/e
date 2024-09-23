@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+
+
+<!-- Mirrored from www.Advanced Excel for Data Analysis/examples/add-subtract-time.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 23 Sep 2024 07:37:02 GMT -->
+<head>
+
+<title>Add or Subtract Time in Excel (In Simple Steps)</title>
+<meta name="keywords" content="add time, subtract time, excel, time function, formula, hour, minute, second, calculate time, add, hours, seconds, add up times, sum time, subtract minutes, time difference formula, change time format, custom time format, subtract start time, end time">
+<meta name="description" content="Use the TIME function in Excel to add or subtract hours, minutes and seconds. To add up times in Excel, simply use the SUM function.">
+
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="index, follow">
+<META content=EN-US name=LANGUAGE>
+<meta property="og:title" content="Add or Subtract Time in Excel">
+<meta property="og:url" content="add-subtract-time.html">
+<meta property="og:type" content="article">
+<meta property="fb:admins" content="100003702321830">
+<meta property="og:description" content="Use the TIME function in Excel to add or subtract hours, minutes and seconds. To add up times in Excel, simply use the SUM function.">
+<meta property="og:image" content="../smi/examples/add-subtract-time.png"/>
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@ExcelEasy">
+<meta name="twitter:image" content="../smi/examples/add-subtract-time.png">
+
+<link rel="preload" href="../css/style.css" as="style">
+<link rel="preload" href="images/add-subtract-time/time.png" as="image">
+<link rel="preload" href="../js/default.js" as="script">
+<link rel="preload" href="../js/init.js" as="script">
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f5ca7.txt?client=ca-pub-1987456081350047765" data-overlays="bottom" crossorigin="anonymous"></script>
+<link rel="preload" href="../css/style-medium.css" as="style" media="(max-width:961px)">
+<link rel="preload" href="../css/style-small.css" as="style" media="(max-width:620px)">
+<link rel="stylesheet" href="../css/style.css"/>
+<script src="../js/default.js" type="text/javascript"></script>
+<script src="../js/init.js" type="text/javascript"></script>
+<style type="text/css">
+.adslot { width: 336px; height: 280px; }
+@media (min-width:320px) { .adslot { width: 300px; height: 250px; } }
+@media (min-width:360px) and (orientation: portrait) { .adslot { width: 336px; height: 280px; } }
+@media (min-width:604px) { .adslot { width: 336px; height: 280px; } }
+</style>
+<noscript>
+    <link rel="stylesheet" href="../css/skel.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/adslot.css" />
+</noscript>
+<link rel="icon" href="../favicon-48x48.ico">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+</head>
+<body>
+<header id="header">
+	<div class="container">
+		<span class="notranslate">
+			<div id="logo">
+				<a href="../index.html"><img src="../layout/excel-guides.svg" onerror="this.src='../layout/excel-guides.png'" border="0" alt="Excel guides" title="Excel guides" width="1" height="1" /><h2>Excel</h2>&nbsp;&nbsp;<span class="easy">for Data Analysis</span></a>
+                <p>#1 <a href="../index.html">Excel guides</a> on the go</p>
+		  	</div>            
+			<nav id="nav">
+				  <ul>
+                  <li><a href="../index.html">Excel</a></li>
+                  <li><a href="../introduction.html">Introduction</a></li>
+				  <li><a href="../basics.html">Basics</a></li>
+				  <li><a href="../functions.html">Functions</a></li>
+				  <li><a href="../data-analysis.html">Data Analysis</a></li>
+                  <li><a href="../vba.html">VBA</a></li>
+                  <li class="current_page_item"><a href="../examples.html">300 Examples</a></li>
+                  <li><a href="../ask-us.html">Ask us</a></li>
+                  </ul>
+				</nav>
+			</span>
+		</div>
+	</header>
+	<!-- end #header -->
+	<div class="container">
+		<div class="row 100%">
+			<div class="8u 12u(medium)">
+				<div class="post">
+						<h1 class="title" style="float:left;">Add or Subtract Time</h1>
+						<div style="clear: both;">&nbsp;</div>
+<div class="entry">
+<p class="spacing"><a href="#add-hours-minutes-seconds">Add Hours, Minutes and Seconds</a> | <a href="#add-up-times">Add Up Times</a> | <a href="#subtract-minutes">Subtract Minutes</a> | <a href="#time-difference">Time Difference</a></p>
+<p>Use the <strong>TIME function in Excel to add or subtract</strong> hours, minutes and seconds. To <strong>add up times in Excel</strong>, simply use the SUM function.</p>
+<h3><a name="add-hours-minutes-seconds" id="add-hours-minutes-seconds"></a>Add Hours, Minutes and Seconds</h3>
+<p>Remember, to enter a time, use the ":" (colon).</p>
+<p>1. Enter a time into cell A1.</p>
+<p><img src="images/add-subtract-time/time.png" alt="Time" width="604" height="61" title="Time" /></p>
+
+
+     
+     
+     
+<p>2. To add 2 hours and 30 minutes to this time, enter the formula shown below.</p>
+<p><img src="images/add-subtract-time/add-time.png" alt="Add Time in Excel" width="604" height="107" title="Add Time in Excel" /></p>
+<p>Explanation: the TIME function has 3 arguments. First, use HOUR, MINUTE and SECOND to create the time entered in cell A1. Next, add 2 hours and 30 minutes.</p>
+<p>To change the Time format, execute the following steps.</p>
+<p>3. Select cell B1.</p>
+<p>4. Right click, and then click <a href="../basics/format-cells.html">Format Cells</a> (or press CTRL + 1).</p>
+<p>5. In the Category list, select Time, and select a Time format.</p>
+<p><img src="images/add-subtract-time/change-time-format.png" alt="Change Time Format" width="532" height="484" title="Change Time Format" /></p>
+<p>6. Click OK.</p>
+<p><img src="images/add-subtract-time/add-hours-minutes.png" loading="lazy" alt="Add Hours and Minutes" width="604" height="107" title="Add Hours and Minutes" /></p>
+<p>7. Enter a time into cell A1 (use 2 colons to include seconds).</p>
+<p><img src="images/add-subtract-time/time-with-seconds.png" loading="lazy" alt="Time With Seconds" width="604" height="61" title="Time With Seconds" /></p>
+<p>8. To add 10 seconds to this time, enter the formula shown below.</p>
+<p><img src="images/add-subtract-time/add-seconds.png" loading="lazy" alt="Add Seconds" width="604" height="107" title="Add Seconds" /></p>
+<p>Note: we changed the Time format to 13:30:55 (see step 5).</p>
+<div class="ad"><!-- Advanced Excel Pages Middle -->
+
+     
+     
+     data-ad-slot="2529116896"></ins>
+</div>
+<h3><a name="add-up-times" id="add-up-times"></a>Add Up Times</h3>
+<p>To add up times in Excel, simply use the SUM function. To display a total of more than 24 hours, change the Time format.</p>
+<p>1. For example, task A requires 8 hours to complete, task B requires 4 hours and 30 minutes to complete, etc.</p>
+<p><img src="images/add-subtract-time/task-durations.png" loading="lazy" alt="Task Durations" width="604" height="141" title="Task Durations" /></p>
+<p>2. To calculate the total duration, simply use the SUM function.</p>
+<p><img src="images/add-subtract-time/total-duration.png" loading="lazy" alt="Total Duration" width="604" height="207" title="Total Duration" /></p>
+<p>3. Change the duration of task D from 5 hours to 7 hours.</p>
+<p><img src="images/add-subtract-time/total-exceeds-24-hours.png" loading="lazy" alt="Total Exceeds 24 Hours" width="604" height="207" title="Total Exceeds 24 Hours" /></p>
+<p>To display a total of more than 24 hours, execute the following steps.</p>
+<p>4. Select cell B6.</p>
+<p>5. Right click, and then click Format Cells (or press CTRL + 1).</p>
+<p>6. Select the Custom category.</p>
+<p>7. Type the following number format code: <span class="highlight">[h]:mm</span></p>
+<p><img src="images/add-subtract-time/custom-time-format.png" loading="lazy" alt="Custom Time Format" width="532" height="484" title="Custom Time Format" /></p>
+<p>8. Click OK.</p>
+<p><img src="images/add-subtract-time/add-up-times.png" loading="lazy" alt="Add Up Times in Excel" width="604" height="207" title="Add Up Times in Excel" /></p>
+<p>Note: visit our page about <a href="date-time-formats.html">Date and Time formats</a> to learn more about this topic.</p>
+<!--<div class="ad">Excel Pages Middle
+
+     
+     
+     data-ad-slot="2529116896"></ins>
+</div>-->
+<h3><a name="subtract-minutes" id="subtract-minutes"></a>Subtract Minutes</h3>
+<p>To subtract hours, minutes or seconds from a time, use the TIME function (and HOUR, MINUTE and SECOND).</p>
+<p>1. Enter a time into cell A1.</p>
+<p><img src="images/add-subtract-time/enter-time.png" loading="lazy" alt="Enter Time" width="604" height="61" title="Enter Time" /></p>
+<p>2. To subtract 33 minutes from this time, enter the formula shown below.</p>
+<p><img src="images/add-subtract-time/subtract-time.png" loading="lazy" alt="Subtract Time" width="604" height="107" title="Subtract Time" /></p>
+<h3><a name="time-difference" id="time-difference"></a>Time Difference</h3>
+<p>Calculating the difference between two times in Excel can be tricky.</p>
+<p>1. To calculate the difference between two times in the same day, simply <strong>subtract the start time from the end time</strong>.</p>
+<p><img src="images/add-subtract-time/calculate-difference-between-two-times.png" loading="lazy" alt="Calculate Difference Between Two Times in Excel" width="604" height="127" title="Calculate Difference Between Two Times in Excel" /></p>
+<p>Note: we changed the Time format to 13:30 (see step 5 under "<a href="add-subtract-time.html#add-hours-minutes-seconds">Add Hours, Minutes and Seconds</a>").</p></p>
+<p>2. This simple formula doesn't work if the start time is before midnight and the end time is after midnight. The <a href="time-difference.html">Time Difference</a> formula below always works.</p>
+<p><img src="images/add-subtract-time/time-difference-formula.png" loading="lazy" alt="Time Difference Formula" width="604" height="127" title="Time Difference Formula" /></p>
+<p>3. The formula below calculates the difference between two times in hours as a decimal value.</p>
+<p><img src="images/add-subtract-time/time-difference-in-hours-as-decimal-value.png" loading="lazy" alt="Time Difference in Hours as Decimal Value" width="604" height="127" title="Time Difference in Hours as Decimal Value" /></p>
+<p>Note: visit our page about <a href="time-difference.html">Time Difference</a> to understand the logic behind these formulas.</p>
+<div class="ad"><!-- Advanced Excel Pages End -->
+
+     
+     
+     data-ad-slot="4005850092"></ins>
+</div>
+            </div>
+			   </div>
+				<span class="invtab"><div class="post">
+					<div style="clear: both;"></div>
+                    <div class="entrylearn">  
+                  <p align="left"><span class="buttonp"> <a href="quarter.html">10/13 Completed! Learn more about date & time functions &gt;<br />
+                    </a></span>Go to Next Guide: <a href="../functions/text-functions.html">Text Functions</a></div>
+                  </div></span>
+                  </div>
+                  <div class="4u 12u(medium)">
+              <div id="search">
+              <div class="cse-branding-right" style="background-color:#FFFFFF;color:#000000">
+                <div class="cse-branding-form" style="margin-right:0px;">
+                  <form action="https://www.Advanced Excel for Data Analysis/search.html" id="cse-search-box">
+                    <div>
+                      <input type="hidden" name="cx" value="partner-pub-1987061359047735:3934495699" />
+                      <input type="hidden" name="cof" value="FORID:10" />
+                      <input type="hidden" name="ie" value="UTF-8" />
+                      <input type="text" name="q" placeholder="Explore Entire Guide" class="field" disabled />
+                      <span class="notranslate"><input type="submit" name="sa" value="Go" class="button" disabled /></span>
+                    </div>
+                  </form>
+                </div>
+                <div class="cse-branding-logo"></div>
+                <div class="cse-branding-text"></div>
+              </div>
+              </div>
+              <div id="sidebar">
+					<ul>
+				  	  <li>
+                        <h3>Guide</h3>
+						  <ul>
+							<li><a href="../functions/date-time-functions.html">Date & Time Functions</a></li>
+                    </ul>
+					  </li>
+				  </ul>
+			  </div>
+              <div id="sidebar">
+				  <ul><li>
+				      <h3><font color="#FF9900"><span class="notranslate">Learn more, it's easy</span></font></h3>
+				    </li>
+					  <li><ul>
+                        <li><a href="datedif.html">DateDif</a></li>
+                        <li><a href="todays-date.html">Today's Date</a></li>
+                        <li><a href="date-time-formats.html">Date and Time Formats</a></li>
+                        <li><a href="calculate-age.html">Calculate Age</a></li>
+                        <li><a href="time-difference.html">Time Difference</a></li>
+                        <li><a href="weekdays.html">Weekdays</a></li>
+                        <li><a href="days-until-birthday.html">Days until Birthday</a></li>
+                        <li><a href="last-day-of-the-month.html">Last Day of the Month</a></li>
+                        <li class="current_page_item"><a href="add-subtract-time.html">Add or Subtract Time</a></li>
+                        <li><a href="quarter.html">Quarter</a></li>                       
+                        <li><a href="day-of-the-year.html">Day of the Year</a></li>
+						<li><a href="days-between-dates.html">Days between Dates</a></li>
+                        </ul>
+                    </li>
+                  </ul>
+			  </div>
+              <div id="sidebar">
+					<ul>
+				  	  <li>
+                        <h3><span class="notranslate"><font color="#8FAD22">Download Excel File</font></span></h3>
+						  <ul>
+							<li><a href="excel-files/add-subtract-time.xlsx">add-subtract-time.xlsx</a></li>
+                    </ul>
+					  </li>
+				  </ul>
+			  </div>
+              <div id="sidebar">
+					<ul>
+				  	  <li>
+                        <h3>Next Guide</h3>
+						  <ul>
+							<li><a href="../functions/text-functions.html">Text Functions</a></li>
+                    </ul>
+					  </li>
+				  </ul>
+			  </div>
+              <div id="sidebar">
+		      <h3><span class="notranslate"></span></h3>
+              <p style="padding-top:7px;padding-bottom:1px"><a href="https://facebook.com/thecodedragon" target="blank" rel="nofollow"><img src="../layout/facebook-logo.png" onmouseover="this.src='../layout/facebook-logo-onmouseover.png'" onmouseout="this.src='../layout/facebook-logo.png'" width="30" height="30" border="0" alt="Advanced Excel on Facebook" title="Advanced Excel on Facebook" /></a> <a href="https://twitter.com/ceoofdss" target="blank" rel="nofollow"><img src="../layout/x-logo.png" onmouseover="this.src='../layout/x-logo-onmouseover.png'" onmouseout="this.src='../layout/x-logo.png'" width="30" height="30" border="0" alt="Advanced Excel on X" title="Advanced Excel on X" /></a> <a href="https://www.pinterest.com/julisunkan" target="blank" rel="nofollow"><img src="../layout/pinterest-logo.png" onmouseover="this.src='../layout/pinterest-logo-onmouseover.png'" onmouseout="this.src='../layout/pinterest-logo.png'" width="30" height="30" border="0" alt="Advanced Excel on Pinterest" title="Advanced Excel on Pinterest"></a> <a href="https://www.linkedin.com/in/digitalskeleton/" target="blank" rel="nofollow"><img src="../layout/linkedin-logo.png" onmouseover="this.src='../layout/linkedin-logo-onmouseover.png'" onmouseout="this.src='../layout/linkedin-logo.png'" width="30" height="30" border="0" alt="Advanced Excel on LinkedIn" title="Advanced Excel on LinkedIn"></a></p>
+              </div>
+              <div id="sidebar">
+					<ul>
+				  	  <li>
+                        <h3><span class="notranslate">Become an Excel Pro</span></h3>
+						  <ul>
+                            <li><a href="../examples.html">300 Examples</a></li>
+                          </ul>
+					  </li>
+				  </ul>
+			  </div>
+              <!-- end #sidebar -->
+			  <div style="clear: both;">&nbsp;</div>
+		  </div>
+		</div>
+	</div>
+	<!-- end #page -->
+</div>
+<div id="footer">
+	<p><a href="add-subtract-time.html">Add or Subtract Time</a> &bull; &copy; AppMonster<br />
+	Excel is Awesome, we'll show you: <a href="../introduction.html">Introduction</a> &bull; <a href="../basics.html">Basics</a> &bull; <a href="../functions.html">Functions</a> &bull; <a href="../data-analysis.html">Data Analysis</a> &bull; <a href="../vba.html">VBA</a></p>
+</div>
+<!-- end #footer -->
+
+<script type="text/javascript">
+  
+  $(function() { (adsbygoogle = window.adsbygoogle || []).push({}); });
+  $(function() { (adsbygoogle = window.adsbygoogle || []).push({}); });
+  //$(function() { (adsbygoogle = window.adsbygoogle || []).push({}); });
+  $(function() { (adsbygoogle = window.adsbygoogle || []).push({}); });
+  
+</script>
+
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"rayId":"8c78d28129be9fc0","version":"2024.8.0","serverTiming":{"name":{"cfExtPri":true,"cfL4":true}},"token":"c707dde3711e49e3a0cbf0020eef6a91","b":1}' crossorigin="anonymous"></script>
+</body>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H0MBKVX9SV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-H0MBKVX9SV');
+</script>
+
+<!-- Mirrored from www.Advanced Excel for Data Analysis/examples/add-subtract-time.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 23 Sep 2024 07:37:07 GMT -->
+</html>

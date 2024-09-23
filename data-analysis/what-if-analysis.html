@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+
+
+<!-- Mirrored from www.Advanced Excel for Data Analysis/data-analysis/what-if-analysis.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 23 Sep 2024 07:47:13 GMT -->
+<head>
+
+<title>What-If Analysis in Excel (In Simple Steps)</title>
+<meta name="keywords" content="excel what-if analysis, scenario summary, scenarios, goal seek, what-if analysis example, scenario manager, edit scenarios">
+<meta name="description" content="What-If Analysis in Excel allows you to try out different values (scenarios) for formulas. The following example helps you master what-if analysis quickly and easily.">
+
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="index, follow">
+<META content=EN-US name=LANGUAGE>
+<meta property="og:title" content="What-If Analysis in Excel">
+<meta property="og:url" content="what-if-analysis.html">
+<meta property="og:type" content="article">
+<meta property="fb:admins" content="100003702321830">
+<meta property="og:description" content="What-If Analysis in Excel allows you to try out different values (scenarios) for formulas. The following example helps you master what-if analysis quickly and easily.">
+<meta property="og:image" content="../smi/data-analysis/what-if-analysis.png"/>
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@ExcelEasy">
+<meta name="twitter:image" content="../smi/data-analysis/what-if-analysis.png">
+
+<link rel="preload" href="../css/style.css" as="style">
+<link rel="preload" href="images/what-if-analysis/what-if-analysis-example.png" as="image">
+<link rel="preload" href="../js/default.js" as="script">
+<link rel="preload" href="../js/init.js" as="script">
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f5ca7.txt?client=ca-pub-1987456081350047765" data-overlays="bottom" crossorigin="anonymous"></script>
+<link rel="preload" href="../css/style-medium.css" as="style" media="(max-width:961px)">
+<link rel="preload" href="../css/style-small.css" as="style" media="(max-width:620px)">
+<link rel="stylesheet" href="../css/style.css"/>
+<script src="../js/default.js" type="text/javascript"></script>
+<script src="../js/init.js" type="text/javascript"></script>
+<style type="text/css">
+.adslot { width: 336px; height: 280px; }
+@media (min-width:320px) { .adslot { width: 300px; height: 250px; } }
+@media (min-width:360px) and (orientation: portrait) { .adslot { width: 336px; height: 280px; } }
+@media (min-width:604px) { .adslot { width: 336px; height: 280px; } }
+</style>
+<noscript>
+    <link rel="stylesheet" href="../css/skel.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/adslot.css" />
+</noscript>
+<link rel="icon" href="../favicon-48x48.ico">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+</head>
+<body>
+<header id="header">
+	<div class="container">
+		<span class="notranslate">
+			<div id="logo">
+				<a href="../index.html"><img src="../layout/excel-guides.svg" onerror="this.src='../layout/excel-guides.png'" border="0" alt="Excel guides" title="Excel guides" width="1" height="1" /><h2>Excel</h2>&nbsp;&nbsp;<span class="easy">for Data Analysis</span></a>
+                <p>#1 <a href="../index.html">Excel guides</a> on the go</p>
+		  	</div>            
+			<nav id="nav">
+				  <ul>
+                  <li><a href="../index.html">Excel</a></li>
+                  <li><a href="../introduction.html">Introduction</a></li>
+				  <li><a href="../basics.html">Basics</a></li>
+				  <li><a href="../functions.html">Functions</a></li>
+				  <li class="current_page_item"><a href="../data-analysis.html">Data Analysis</a></li>
+                  <li><a href="../vba.html">VBA</a></li>
+                  <li class="pro"><a href="../examples.html">300 Examples</a></li>
+                  <li><a href="../ask-us.html">Ask us</a></li>
+                  </ul>
+				</nav>
+			</span>
+		</div>
+	</header>
+	<!-- end #header -->
+	<div class="container">
+		<div class="row 100%">
+			<div class="8u 12u(medium)">
+				<div class="post">
+						<h1 class="title" style="float:left;">What-If Analysis</h1>
+						<div style="clear: both;">&nbsp;</div>
+                      <div class="entry">
+                      <p class="spacing"><a href="#create-different-scenarios">Create Different Scenarios</a> | <a href="#scenario-summary">Scenario Summary</a> | <a href="#goal-seek">Goal Seek</a></p>
+                      <p><strong>What-If Analysis</strong> in <strong>Excel</strong> allows you to try out different values (scenarios) for formulas. The following example helps you master what-if analysis quickly and easily.</p>
+                      <p>Assume you own a book store and have 100 books in storage. You sell a certain % for the highest price of $50 and a certain % for the lower price of $20.</p>
+			  <p><img src="images/what-if-analysis/what-if-analysis-example.png" alt="Excel What-If Analysis Example" width="604" height="300" title="Excel What-If Analysis Example" /></p>
+              
+
+     
+     
+     
+			  <p>If you sell 60% for the highest price, cell D10 calculates a total profit of 60 * $50 + 40 * $20 = $3800.</p>            
+			  <h3><a name="create-different-scenarios" id="create-different-scenarios"></a>Create Different Scenarios</h3>
+			  <p>But what if you sell 70% for the highest price? And what if you sell 80% for the highest price? Or 90%, or even 100%? Each different percentage is a different <strong>scenario</strong>. You can use the Scenario Manager to create these scenarios.</p>
+			  <p>Note: You can simply type in a different percentage into cell C4 to see the corresponding result of a scenario in cell D10. However, what-if analysis enables you to easily compare the results of different scenarios. Read on.</p>
+			  <p>1. On the Data tab, in the Forecast group, click What-If Analysis.</p>
+              <p><img src="images/what-if-analysis/click-what-if-analysis.png" alt="Click What-If Analysis" width="567" height="100" title="Click What-If Analysis" /></p>
+              <p>2. Click Scenario Manager.</p>
+              <p><img src="images/what-if-analysis/click-scenario-manager.png" loading="lazy" alt="Click Scenario Manager" width="162" height="76" title="Click Scenario Manager" /></p>
+			  <p>The Scenario Manager dialog box appears.</p>
+			  <p>3. Add a scenario by clicking on Add.</p>
+			  <p><img src="images/what-if-analysis/add-scenario.png" loading="lazy" alt="Add a Scenario" width="376" height="360" title="Add a Scenario" /></p>
+			  <p>4. Type a name (60% highest), select cell C4 (% sold for the highest price) for the Changing cells and click on OK.</p>
+			  <p><img src="images/what-if-analysis/edit-scenario.png" loading="lazy" alt="Edit a Scenario" width="386" height="326" title="Edit a Scenario" /></p>
+			  <p>5. Enter the corresponding value 0.6 and click on OK again.</p>
+			  <p><img src="images/what-if-analysis/scenario-value.png" loading="lazy" alt="Enter a Scenario Value" width="305" height="128" title="Enter a Scenario Value" /></p>
+			  <p>6. Next, add 4 other scenarios (70%, 80%, 90% and 100%).</p>
+			  <p>Finally, your Scenario Manager should be consistent with the picture below:</p>
+			  <p><img src="images/what-if-analysis/all-scenarios.png" loading="lazy" alt="All Scenarios" width="350" height="360" title="All Scenarios" /></p>
+			  <p>Note: to see the result of a scenario, select the scenario and click on the Show button. Excel will  change the value of cell C4 accordingly for you to see the corresponding result on the sheet.</p>
+              <div class="ad"><!-- Advanced Excel Pages Middle -->
+
+     
+     
+     data-ad-slot="2529116896"></ins>
+</div>
+              <h3><a name="scenario-summary" id="scenario-summary"></a>Scenario Summary</h3>
+			  <p>To easily compare the results of these scenarios, execute the following steps.</p>
+			  <p>1. Click the Summary button in the Scenario Manager.</p>
+			  <p>2. Next, select cell D10 (total profit) for the result cell and click on OK.</p>
+			  <p><img src="images/what-if-analysis/create-scenario-summary.png" loading="lazy" alt="Create a Scenario Summary" width="224" height="179" title="Create a Scenario Summary" /></p>
+			  <p>Result:</p>
+			  <p><img src="images/what-if-analysis/scenario-summary.png" loading="lazy" alt="What-If Analysis Result" width="604" height="187" title="What-If Analysis Result" /></p>
+			  <p>Conclusion: if you sell 70% for the highest price, you obtain a total profit of $4100, if you sell 80% for the highest price, you obtain a total profit of $4400, etc. That's how easy what-if analysis in Excel can be.</p>
+              <h3><a name="goal-seek" id="goal-seek"></a>Goal Seek</h3>
+              <p>What if you want to know how many books you need to sell for the highest price, to obtain a total profit of exactly $4700? You can use <strong>Excel's Goal Seek</strong> feature to find the answer.</p>
+              <p>1. On the Data tab, in the Forecast group, click What-If Analysis.</p>
+              <p><img src="images/what-if-analysis/click-what-if-analysis.png" loading="lazy" alt="Click What-If Analysis" width="567" height="100" title="Click What-If Analysis" /></p>
+			  <p>2. Click Goal Seek.</p>
+			  <p><img src="images/what-if-analysis/click-goal-seek.png" loading="lazy" alt="Click Goal Seek" width="162" height="76" title="Click Goal Seek" /></p>
+			  <p>The Goal Seek dialog box appears.</p>
+			  <p>3. Select cell D10.</p>
+			  <p>4. Click in the 'To value' box and type 4700.</p>
+			  <p>5. Click in the 'By changing cell' box and select cell C4.</p>
+			  <p>6. Click OK.</p>
+			  <p><img src="images/what-if-analysis/goal-seek-parameters.png" loading="lazy" alt="Goal Seek Parameters" width="211" height="146" title="Goal Seek Parameters" /></p>
+			  <p>Result. You need to sell 90% of the books for the highest price to obtain a total profit of exactly $4700.</p>
+			  <p><img src="images/what-if-analysis/goal-seek-result.png" loading="lazy" alt="Goal Seek in Excel" width="604" height="300" title="Goal Seek in Excel" /></p>
+              <p>Note: visit our page about <a href="../examples/goal-seek.html">Goal Seek</a> for more examples and tips.</p>		  
+              <div class="ad"><!-- Advanced Excel Pages End -->
+
+     
+     
+     data-ad-slot="4005850092"></ins>
+</div>
+            </div>
+			   </div>
+				<span class="invtab"><div class="post">
+					<div style="clear: both;"></div>
+                    <div class="entrylearn">  
+                  <p align="left"><span class="buttonp"> <a href="../examples/data-tables.html">1/4 Completed! Learn more about what-if analysis &gt;<br />
+                    </a></span>Go to Next Guide: <a href="solver.html">Solver</a></p></div>
+                  </div></span>
+                  
+			</div>
+            <div class="4u 12u(medium)">
+              <div id="search">
+              <div class="cse-branding-right" style="background-color:#FFFFFF;color:#000000">
+                <div class="cse-branding-form" style="margin-right:0px;">
+                  <form action="https://www.Advanced Excel for Data Analysis/search.html" id="cse-search-box">
+                    <div>
+                      <input type="hidden" name="cx" value="partner-pub-1987061359047735:3934495699" />
+                      <input type="hidden" name="cof" value="FORID:10" />
+                      <input type="hidden" name="ie" value="UTF-8" />
+                      <input type="text" name="q" placeholder="Explore Entire Guide" class="field" disabled />
+                      <span class="notranslate"><input type="submit" name="sa" value="Go" class="button" disabled /></span>
+                    </div>
+                  </form>
+                </div>
+                <div class="cse-branding-logo"></div>
+                <div class="cse-branding-text"></div>
+              </div>
+              </div>
+              <div id="sidebar">
+					<ul>
+				  	  <li>
+                        <h3>Guide</h3>
+						  <ul>
+							<li class="current_page_item"><a href="what-if-analysis.html">What-If Analysis</a></li>
+                    </ul>
+					  </li>
+				  </ul>
+			  </div>
+              <div id="sidebar">
+				  <ul><li>
+				      <h3><font color="#FF9900"><span class="notranslate">Learn more, it's easy</span></font></h3>
+				    </li>
+					  <li><ul>
+                        <li><a href="../examples/data-tables.html">Data Tables</a></li>
+                        <li><a href="../examples/goal-seek.html">Goal Seek</a></li>
+                        <li><a href="../examples/quadratic-equation.html">Quadratic Equation</a></li>
+                        </ul>
+                    </li>
+                  </ul>
+			  </div>
+              <div id="sidebar">
+					<ul>
+				  	  <li>
+                        <h3><span class="notranslate"><font color="#8FAD22">Download Excel File</font></span></h3>
+						  <ul>
+							<li><a href="excel-files/what-if-analysis.xlsx">what-if-analysis.xlsx</a></li>
+                    </ul>
+					  </li>
+				  </ul>
+			  </div>
+              <div id="sidebar">
+					<ul>
+				  	  <li>
+                        <h3>Next Guide</h3>
+						  <ul>
+							<li><a href="solver.html">Solver</a></li>
+                    </ul>
+					  </li>
+				  </ul>
+			  </div>
+              <div id="sidebar">
+		      <h3><span class="notranslate"></span></h3>
+              <p style="padding-top:7px;padding-bottom:1px"><a href="https://facebook.com/thecodedragon" target="blank" rel="nofollow"><img src="../layout/facebook-logo.png" onmouseover="this.src='../layout/facebook-logo-onmouseover.png'" onmouseout="this.src='../layout/facebook-logo.png'" width="30" height="30" border="0" alt="Advanced Excel on Facebook" title="Advanced Excel on Facebook" /></a> <a href="https://twitter.com/ceoofdss" target="blank" rel="nofollow"><img src="../layout/x-logo.png" onmouseover="this.src='../layout/x-logo-onmouseover.png'" onmouseout="this.src='../layout/x-logo.png'" width="30" height="30" border="0" alt="Advanced Excel on X" title="Advanced Excel on X" /></a> <a href="https://www.pinterest.com/julisunkan" target="blank" rel="nofollow"><img src="../layout/pinterest-logo.png" onmouseover="this.src='../layout/pinterest-logo-onmouseover.png'" onmouseout="this.src='../layout/pinterest-logo.png'" width="30" height="30" border="0" alt="Advanced Excel on Pinterest" title="Advanced Excel on Pinterest"></a> <a href="https://www.linkedin.com/in/digitalskeleton/" target="blank" rel="nofollow"><img src="../layout/linkedin-logo.png" onmouseover="this.src='../layout/linkedin-logo-onmouseover.png'" onmouseout="this.src='../layout/linkedin-logo.png'" width="30" height="30" border="0" alt="Advanced Excel on LinkedIn" title="Advanced Excel on LinkedIn"></a></p>
+              </div>
+			  <div id="sidebar">
+              <ul><li></li>
+		        <li>
+		          <h3><span class="notranslate">Most Popular</span></h3>
+	            </li>
+		        <li><ul>
+                        <li><a href="pivot-tables.html">Pivot Tables</a></li>
+                        <li><a href="../examples/vlookup.html">Vlookup</a></li>
+                        <li><a href="../introduction/formulas-functions.html">Formulas and Functions</a></li>
+                        <li><a href="charts.html">Charts</a></li>
+                        <li><a href="conditional-formatting.html">Conditional Formatting</a></li>
+                        <li><a href="../examples/find-duplicates.html">Find Duplicates</a></li>
+                        <li><a href="../examples/if.html">If</a></li>
+                        <li><a href="../examples/drop-down-list.html">Drop-down List</a></li>
+						<li><a href="../examples/countif.html">Countif</a></li>
+                        <li><a href="../examples/index-match.html">Index and Match</a></li>
+                        </ul>
+			    </li>
+              </ul>
+              </div>
+              <div id="sidebar">
+					<ul>
+				  	  <li>
+                        <h3><span class="notranslate">Become an Excel Pro</span></h3>
+						  <ul>
+                            <li><a href="../examples.html">300 Examples</a></li>
+                          </ul>
+					  </li>
+				  </ul>
+			  </div>
+              <!-- end #sidebar -->
+			  <div style="clear: both;">&nbsp;</div>
+		  </div>
+		</div>
+	</div>
+	<!-- end #page -->
+</div>
+<div id="footer">
+	<p><a href="what-if-analysis.html">What-If Analysis</a> &bull; &copy; AppMonster<br />
+	Excel is Awesome, we'll show you: <a href="../introduction.html">Introduction</a> &bull; <a href="../basics.html">Basics</a> &bull; <a href="../functions.html">Functions</a> &bull; <a href="../data-analysis.html">Data Analysis</a> &bull; <a href="../vba.html">VBA</a></p>
+</div>
+<!-- end #footer -->
+
+<script type="text/javascript">
+  
+  $(function() { (adsbygoogle = window.adsbygoogle || []).push({}); });
+  $(function() { (adsbygoogle = window.adsbygoogle || []).push({}); });
+  $(function() { (adsbygoogle = window.adsbygoogle || []).push({}); });
+  
+</script>
+
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"rayId":"8c78d4410fc09fc0","version":"2024.8.0","serverTiming":{"name":{"cfExtPri":true,"cfL4":true}},"token":"c707dde3711e49e3a0cbf0020eef6a91","b":1}' crossorigin="anonymous"></script>
+</body>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H0MBKVX9SV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-H0MBKVX9SV');
+</script>
+
+<!-- Mirrored from www.Advanced Excel for Data Analysis/data-analysis/what-if-analysis.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 23 Sep 2024 07:47:16 GMT -->
+</html>

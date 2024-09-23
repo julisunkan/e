@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+
+
+<!-- Mirrored from www.Advanced Excel for Data Analysis/vba/examples/complex-calculations.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 23 Sep 2024 07:44:26 GMT -->
+<head>
+
+<title>Complex Calculations in Excel VBA (In Easy Steps)</title>
+<meta name="keywords" content="complex calculations, excel vba, kth term, mathematical series, formula, first term, substituting, calculates, summation, terms, select case, step">
+<meta name="description" content="Below we will look at a program in Excel VBA that calculates any term Tk and summation of terms up to N.">
+
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="index, follow">
+<META content=EN-US name=LANGUAGE>
+<meta property="og:title" content="Complex Calculations in Excel VBA">
+<meta property="og:url" content="complex-calculations.html">
+<meta property="og:type" content="article">
+<meta property="fb:admins" content="100003702321830">
+<meta property="og:description" content="Learn how to create a program in Excel VBA that calculates any term Tk and summation of terms up to N.">
+<meta property="og:image" content="../../smi/vba/examples/complex-calculations-2.png"/>
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@ExcelEasy">
+<meta name="twitter:image" content="../../smi/vba/examples/complex-calculations-2.png">
+
+<link rel="preload" href="../../css/style.css" as="style">
+<link rel="preload" href="images/complex-calculations/complex-calculations-example.png" as="image">
+<link rel="preload" href="../../js/default.js" as="script">
+<link rel="preload" href="../../js/init.js" as="script">
+<script async src="../../../pagead2.googlesyndication.com/pagead/js/f5ca7.txt?client=ca-pub-1987456081350047765" data-overlays="bottom" crossorigin="anonymous"></script>
+<link rel="preload" href="../../css/style-medium.css" as="style" media="(max-width:961px)">
+<link rel="preload" href="../../css/style-small.css" as="style" media="(max-width:620px)">
+<link rel="stylesheet" href="../../css/style.css"/>
+<script src="../../js/default.js" type="text/javascript"></script>
+<script src="../../js/init.js" type="text/javascript"></script>
+<style type="text/css">
+.adslot { width: 336px; height: 280px; }
+@media (min-width:320px) { .adslot { width: 300px; height: 250px; } }
+@media (min-width:360px) and (orientation: portrait) { .adslot { width: 336px; height: 280px; } }
+@media (min-width:604px) { .adslot { width: 336px; height: 280px; } }
+</style>
+<noscript>
+    <link rel="stylesheet" href="../../css/skel.css" />
+    <link rel="stylesheet" href="../../css/style.css" />
+    <link rel="stylesheet" href="../../css/adslot.css" />
+</noscript>
+<link rel="icon" href="../../favicon-48x48.ico">
+<link rel="apple-touch-icon" href="../../apple-touch-icon.png">
+</head>
+<body>
+<header id="header">
+	<div class="container">
+		<span class="notranslate">
+			<div id="logo">
+				<a href="../../index.html"><img src="../../layout/excel-guides.svg" onerror="this.src='../../layout/excel-guides.png'" border="0" alt="Excel guides" title="Excel guides" width="1" height="1" /><h2>Excel</h2>&nbsp;&nbsp;<span class="easy">for Data Analysis</span></a>
+                <p>#1 <a href="../../index.html">Excel guides</a> on the go</p>
+		  	</div>            
+			<nav id="nav">
+				  <ul>
+                  <li><a href="../../index.html">Excel</a></li>
+                  <li><a href="../../introduction.html">Introduction</a></li>
+				  <li><a href="../../basics.html">Basics</a></li>
+				  <li><a href="../../functions.html">Functions</a></li>
+				  <li><a href="../../data-analysis.html">Data Analysis</a></li>
+                  <li><a href="../../vba.html">VBA</a></li>
+                  <li class="current_page_item"><a href="../../examples.html">300 Examples</a></li>
+                  <li><a href="../../ask-us.html">Ask us</a></li>
+                  </ul>
+				</nav>
+			</span>
+		</div>
+	</header>
+	<!-- end #header -->
+	<div class="container">
+		<div class="row 100%">
+			<div class="8u 12u(medium)">
+				<div class="post">
+						<h1 class="title" style="float:left;">Complex Calculations</h1>
+						<div style="clear: both;">&nbsp;</div>
+<div class="entry">
+							<p>The k<sup>th</sup> term, T<sub>k</sub>, of a certain mathematical series is defined by the following formula:</p>
+<table class="fraction" cellpadding="0" cellspacing="0">
+    						  <tr>
+        					    <td rowspan="2" nowrap="nowrap"><i>T<sub>k</sub></i></td>
+                                <td width="20" rowspan="2" nowrap="nowrap"> = </td>
+        					    <td nowrap="nowrap">k<sup>2</sup> + 6k + 1 </td>
+    						  </tr>
+							  <tr>
+        					    <td class="upper_line">9k + 7</td>
+    						  </tr>
+							</table>
+			  <p>The first term, T<sub>1</sub>, of the series is obtained by substituting k = 1 into the formula i.e.</p>
+			  <table class="fraction" cellpadding="0" cellspacing="0" style="float:left">
+    		    <tr>
+			      <td rowspan="2" nowrap="nowrap"><i>T<sub>1</sub></i></td>
+                  <td width="20" rowspan="2" nowrap="nowrap"> = </td>
+			      <td nowrap="nowrap">1<sup>2</sup> + 6 + 1 </td>
+				  <td width="20" rowspan="2" nowrap="nowrap"> = </td>
+				  <td nowrap="nowrap">1</td>
+				  <td width="55" rowspan="2" nowrap="nowrap"> and </td>		  
+			    </tr>
+			    <tr>
+				  <td class="upper_line">9 + 7</td>
+				  <td class="upper_line">2</td>
+			    </tr>
+			  </table>
+              <table class="fraction" cellpadding="0" cellspacing="0" style="float:left">
+    		    <tr>
+				  <td rowspan="2" nowrap="nowrap"><i>T<sub>2</sub></i></td>
+                  <td width="20" rowspan="2" nowrap="nowrap"> = </td>
+			      <td nowrap="nowrap">2<sup>2</sup> + 12 + 1 </td>
+				  <td width="20" rowspan="2" nowrap="nowrap"> = </td>
+				  <td nowrap="nowrap">17</td>
+				  <td width="95" rowspan="2" nowrap="nowrap"> ... and so on</td>			  
+			    </tr>
+			    <tr>
+				  <td class="upper_line">18 + 7</td>
+				  <td class="upper_line">25</td>
+			    </tr>
+			  </table>			  
+<p style="clear: both;">Below we will look at a program in <strong>Excel VBA</strong> that <strong>calculates</strong> any term T<sub>k</sub> and summation of terms up to N.</p>
+<p><img src="images/complex-calculations/complex-calculations-example.png" alt="Complex Calculations in Excel VBA" width="604" height="301" title="Complex Calculations in Excel VBA" /></p>
+
+
+     
+     
+     
+<p>Explanation: the user has the option to enter &quot;All&quot; or &quot;Odd&quot;, to respectively calculate the sum of the first N terms of the series or the sum of only the odd terms up to N.</p>
+<p>Place a <a href="../create-a-macro.html#command-button">command button</a> on your worksheet and add the following code lines:</p>
+<p>1. First, we declare four variables of type Integer and one variable of type String.</p>
+<div class="code"><span class="predefined">Dim</span> i <span class="predefined">As</span> <span class="predefined">Integer</span>, term <span class="predefined">As</span> <span class="predefined">Integer</span>, N <span class="predefined">As</span> <span class="predefined">Integer</span>, stepSize <span class="predefined">As</span> <span class="predefined">Integer</span><br />
+<span class="predefined">Dim</span> sumType <span class="predefined">As</span> <span class="predefined">String</span></div>
+<p>2. Second, we initialize the variables.</p>
+<div class="code">i = 0<br />
+N = Range(&quot;C2&quot;).Value<br />
+sumType = Range(&quot;C3&quot;).Value</div>
+<p>3. Empty the fields.</p>
+<div class="code">Range(&quot;A8:B1000&quot;).Value = &quot;&quot;<br />
+Range(&quot;C6&quot;).Value = &quot;&quot;</div>
+<p>4. Determine stepSize.</p>
+<div class="code"><span class="predefined">Select</span> <span class="predefined">Case</span> sumType<br />
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="predefined">Case</span> <span class="predefined">Is</span> = &quot;All&quot;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;stepSize = 1<br />
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="predefined">Case</span> <span class="predefined">Is</span> = &quot;Odd&quot;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;stepSize = 2<br />
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="predefined">Case</span> <span class="predefined">Else</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MsgBox &quot;Enter a valid expression in cell C3&quot;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="predefined">End</span><br />
+<span class="predefined">End</span> <span class="predefined">Select</span></div>
+<p>Tip: go through our <a href="select-case.html">Select Case</a> program to learn more about the Select Case structure.</p>
+<p>5. Do the calculations.</p>
+<div class="code"><span class="predefined">For</span> term = 1 <span class="predefined">To</span> N <span class="predefined">Step</span> stepSize<br />
+&nbsp;&nbsp;&nbsp;&nbsp;Cells(8 + i, 1).Value = term<br />
+&nbsp;&nbsp;&nbsp;&nbsp;Cells(8 + i, 2).Value = (term ^ 2 + (6 * term) + 1) / ((9 * term) + 7)<br /><br />
+&nbsp;&nbsp;&nbsp;&nbsp;Range(&quot;C6&quot;).Value = Range(&quot;C6&quot;).Value + Cells(8 + i, 2).Value<br /><br />
+&nbsp;&nbsp;&nbsp;&nbsp;i = i + 1<br />
+<span class="predefined">Next</span> term</div>
+<p>Explanation: we use the <a href="step-keyword.html">Step</a> keyword to specify the increment (1 for "All" and 2 for "Odd") for the counter variable of the loop.</p>
+<p>Result:</p>
+<p><img src="images/complex-calculations/complex-calculations-result.png" alt="Complex Calculations Result" width="604" height="401" title="Complex Calculations Result" /></p>
+<div class="ad"><!-- Advanced Excel Pages End -->
+
+     
+     
+     data-ad-slot="4005850092"></ins>
+</div>
+            </div>
+			   </div>
+				<span class="invtab"><div class="post">
+					<div style="clear: both;"></div>
+                    <div class="entrylearn">  
+                  	<p align="left"><span class="buttonp"> <a href="possible-football-matches.html">10/12 Completed! Learn much more about loops &gt;<br /></a></span>Go to Next Guide: <a href="../macro-errors.html">Macro Errors</a></div>
+                  </div></span>
+                  </div>
+                  <div class="4u 12u(medium)">
+              <div id="search">
+              <div class="cse-branding-right" style="background-color:#FFFFFF;color:#000000">
+                <div class="cse-branding-form" style="margin-right:0px;">
+                  <form action="https://www.Advanced Excel for Data Analysis/search.html" id="cse-search-box">
+                    <div>
+                      <input type="hidden" name="cx" value="partner-pub-1987061359047735:3934495699" />
+                      <input type="hidden" name="cof" value="FORID:10" />
+                      <input type="hidden" name="ie" value="UTF-8" />
+                      <input type="text" name="q" placeholder="Explore Entire Guide" class="field" disabled />
+                      <span class="notranslate"><input type="submit" name="sa" value="Go" class="button" disabled /></span>
+                    </div>
+                  </form>
+                </div>
+                <div class="cse-branding-logo"></div>
+                <div class="cse-branding-text"></div>
+              </div>
+              </div>
+              <div id="sidebar">
+					<ul>
+				  	  <li>
+                        <h3>Guide</h3>
+						  <ul>
+							<li><a href="../loop.html">Loop</a></li>
+                		  </ul>
+					  </li>
+				    </ul>
+			  </div>
+              <div id="sidebar">
+                <ul><li>
+				      <h3><font color="#FF9900"><span class="notranslate">Learn more, it's easy</span></font></h3>
+				    </li>
+					  <li><ul> 
+                        <li><a href="loop-through-defined-range.html">Loop through Defined Range</a></li>
+                        <li><a href="loop-through-entire-column.html">Loop through Entire Column</a></li>
+                        <li><a href="do-until-loop.html">Do Until Loop</a></li>
+                        <li><a href="step-keyword.html">Step Keyword</a></li>
+                        <li><a href="create-a-pattern.html">Create a Pattern</a></li>
+                        <li><a href="sort-numbers.html">Sort Numbers</a></li> 
+                        <li><a href="randomly-sort-data.html">Randomly Sort Data</a></li>
+                        <li><a href="remove-duplicates.html">Remove Duplicates</a></li>
+                        <li class="current_page_item"><a href="complex-calculations.html">Complex Calculations</a></li>
+						<li><a href="possible-football-matches.html">Possible Football Matches</a></li>
+                        <li><a href="knapsack-problem.html">Knapsack Problem</a></li>       	
+                        </ul>
+                    </li>
+                  </ul>
+			  </div>
+              <div id="sidebar">
+					<ul>
+				  	  <li>
+                        <h3><span class="notranslate"><font color="#8FAD22">Download Excel File</font></span></h3>
+						  <ul>
+							<li><a href="excel-files/complex-calculations.xlsm">complex-calculations.xlsm</a></li>
+                    </ul>
+					  </li>
+				  </ul>
+			  </div>
+              <div id="sidebar">
+					<ul>
+				  	  <li>
+                        <h3>Next Guide</h3>
+						  <ul>
+							<li><a href="../macro-errors.html">Macro Errors</a></li>
+                    </ul>
+					  </li>
+				  </ul>
+			  </div>
+              <div id="sidebar">
+		      <h3><span class="notranslate"></span></h3>
+              <p style="padding-top:7px;padding-bottom:1px"><a href="https://facebook.com/thecodedragon" target="blank" rel="nofollow"><img src="../../layout/facebook-logo.png" onmouseover="this.src='../../layout/facebook-logo-onmouseover.png'" onmouseout="this.src='../../layout/facebook-logo.png'" width="30" height="30" border="0" alt="Advanced Excel on Facebook" title="Advanced Excel on Facebook" /></a> <a href="https://twitter.com/ceoofdss" target="blank" rel="nofollow"><img src="../../layout/x-logo.png" onmouseover="this.src='../../layout/x-logo-onmouseover.png'" onmouseout="this.src='../../layout/x-logo.png'" width="30" height="30" border="0" alt="Advanced Excel on X" title="Advanced Excel on X" /></a> <a href="https://www.pinterest.com/julisunkan" target="blank" rel="nofollow"><img src="../../layout/pinterest-logo.png" onmouseover="this.src='../../layout/pinterest-logo-onmouseover.png'" onmouseout="this.src='../../layout/pinterest-logo.png'" width="30" height="30" border="0" alt="Advanced Excel on Pinterest" title="Advanced Excel on Pinterest"></a> <a href="https://www.linkedin.com/in/digitalskeleton/" target="blank" rel="nofollow"><img src="../../layout/linkedin-logo.png" onmouseover="this.src='../../layout/linkedin-logo-onmouseover.png'" onmouseout="this.src='../../layout/linkedin-logo.png'" width="30" height="30" border="0" alt="Advanced Excel on LinkedIn" title="Advanced Excel on LinkedIn"></a></p>
+              </div>
+              <div id="sidebar">
+					<ul>
+				  	  <li>
+                        <h3><span class="notranslate">Become an Excel Pro</span></h3>
+						  <ul>
+                            <li><a href="../../examples.html">300 Examples</a></li>
+                          </ul>
+					  </li>
+				  </ul>
+			  </div>
+              <!-- end #sidebar -->
+			  <div style="clear: both;">&nbsp;</div>
+		  </div>
+		</div>
+	</div>
+	<!-- end #page -->
+</div>
+<div id="footer">
+	<p><a href="complex-calculations.html">Complex Calculations</a> &bull; &copy; AppMonster<br />
+	Excel is Awesome, we'll show you: <a href="../../introduction.html">Introduction</a> &bull; <a href="../../basics.html">Basics</a> &bull; <a href="../../functions.html">Functions</a> &bull; <a href="../../data-analysis.html">Data Analysis</a> &bull; <a href="../../vba.html">VBA</a></p>
+</div>
+<!-- end #footer -->
+
+<script type="text/javascript">
+  
+  $(function() { (adsbygoogle = window.adsbygoogle || []).push({}); });
+  $(function() { (adsbygoogle = window.adsbygoogle || []).push({}); });
+  
+</script>
+
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"rayId":"8c78d39c3b0a9fc0","version":"2024.8.0","serverTiming":{"name":{"cfExtPri":true,"cfL4":true}},"token":"c707dde3711e49e3a0cbf0020eef6a91","b":1}' crossorigin="anonymous"></script>
+</body>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H0MBKVX9SV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-H0MBKVX9SV');
+</script>
+
+<!-- Mirrored from www.Advanced Excel for Data Analysis/vba/examples/complex-calculations.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 23 Sep 2024 07:44:27 GMT -->
+</html>

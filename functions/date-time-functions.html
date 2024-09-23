@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+
+
+<!-- Mirrored from www.Advanced Excel for Data Analysis/functions/date-time-functions.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 23 Sep 2024 07:46:28 GMT -->
+<head>
+
+<title>Date & Time Functions in Excel (In Simple Steps)</title>
+<meta name="keywords" content="date time, excel, year, month, day, date function, add, years, months, days, current date time, now, today, hour, minute, second, time function, number format, datedif">
+<meta name="description" content="To enter a date in Excel, use the &quot;/&quot; or &quot;-&quot; characters. To enter a time, use the &quot;:&quot; (colon). You can also enter a date and a time in one cell.">
+
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="index, follow">
+<META content=EN-US name=LANGUAGE>
+<meta property="og:title" content="Date & Time Functions in Excel">
+<meta property="og:url" content="date-time-functions.html">
+<meta property="og:type" content="article">
+<meta property="fb:admins" content="100003702321830">
+<meta property="og:description" content="To enter a date in Excel, use the &quot;/&quot; or &quot;-&quot; characters. To enter a time, use the &quot;:&quot; (colon). You can also enter a date and a time in one cell.">
+<meta property="og:image" content="../smi/functions/date-time-functions.png"/>
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@ExcelEasy">
+<meta name="twitter:image" content="../smi/functions/date-time-functions.png">
+
+<link rel="preload" href="../css/style.css" as="style">
+<link rel="preload" href="images/date-time-functions/date-time.png" as="image">
+<link rel="preload" href="../js/default.js" as="script">
+<link rel="preload" href="../js/init.js" as="script">
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f5ca7.txt?client=ca-pub-1987456081350047765" data-overlays="bottom" crossorigin="anonymous"></script>
+<link rel="preload" href="../css/style-medium.css" as="style" media="(max-width:961px)">
+<link rel="preload" href="../css/style-small.css" as="style" media="(max-width:620px)">
+<link rel="stylesheet" href="../css/style.css"/>
+<script src="../js/default.js" type="text/javascript"></script>
+<script src="../js/init.js" type="text/javascript"></script>
+<style type="text/css">
+.adslot { width: 336px; height: 280px; }
+@media (min-width:320px) { .adslot { width: 300px; height: 250px; } }
+@media (min-width:360px) and (orientation: portrait) { .adslot { width: 336px; height: 280px; } }
+@media (min-width:604px) { .adslot { width: 336px; height: 280px; } }
+</style>
+<noscript>
+    <link rel="stylesheet" href="../css/skel.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/adslot.css" />
+</noscript>
+<link rel="icon" href="../favicon-48x48.ico">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+</head>
+<body>
+<header id="header">
+	<div class="container">
+		<span class="notranslate">
+			<div id="logo">
+				<a href="../index.html"><img src="../layout/excel-guides.svg" onerror="this.src='../layout/excel-guides.png'" border="0" alt="Excel guides" title="Excel guides" width="1" height="1" /><h2>Excel</h2>&nbsp;&nbsp;<span class="easy">for Data Analysis</span></a>
+                <p>#1 <a href="../index.html">Excel guides</a> on the go</p>
+		  	</div>            
+			<nav id="nav">
+				  <ul>
+                  <li><a href="../index.html">Excel</a></li>
+                  <li><a href="../introduction.html">Introduction</a></li>
+				  <li><a href="../basics.html">Basics</a></li>
+				  <li class="current_page_item"><a href="../functions.html">Functions</a></li>
+				  <li><a href="../data-analysis.html">Data Analysis</a></li>
+                  <li><a href="../vba.html">VBA</a></li>
+                  <li class="pro"><a href="../examples.html">300 Examples</a></li>
+                  <li><a href="../ask-us.html">Ask us</a></li>
+                  </ul>
+				</nav>
+			</span>
+		</div>
+	</header>
+	<!-- end #header -->
+	<div class="container">
+		<div class="row 100%">
+			<div class="8u 12u(medium)">
+				<div class="post">
+						<h1 class="title" style="float:left;">Date & Time Functions</h1>
+						<div style="clear: both;">&nbsp;</div>
+                      <div class="entry">
+                      <p class="spacing"><a href="#year-month-day">Year, Month, Day</a> | <a href="#date-function">Date Function</a> | <a href="#current-date-time">Current Date & Time</a> | <a href="#hour-minute-second">Hour, Minute, Second</a> | <a href="#time-function">Time Function</a></p>
+                      <p>To enter a <strong>date</strong> in <strong>Excel</strong>, use the &quot;/&quot; or &quot;-&quot; characters. To enter a <strong>time</strong>, use the &quot;:&quot; (colon). You can also enter a date and a time in one cell.</p>
+                      <p><img src="images/date-time-functions/date-time.png" alt="Date and Time in Excel" width="376" height="107" title="Date and Time in Excel" /></p>
+                      <p>Note: Dates are in US Format. Months first, Days second. This type of format depends on your windows regional settings. Learn more about <a href="../examples/date-time-formats.html">Date and Time formats</a>.</p>
+                      
+
+     
+     
+     
+                      <h3><a name="year-month-day" id="year-month-day"></a>Year, Month, Day</h3>
+  <p>To get the year of a date, use the YEAR function.</p>
+  <p><img src="images/date-time-functions/year-function.png" alt="Year Function" width="376" height="107" title="Year Function" /></p>
+  <p>Note: use  the MONTH and DAY function to get the month and day of a date.</p>
+  <h3><a name="date-function" id="date-function"></a>Date Function</h3>
+  <p>1. To add a number of days to a date, use the following simple formula.</p>
+  <p><img src="images/date-time-functions/add-days.png" alt="Add Days" width="376" height="107" title="Add Days" /></p>
+  <p>2. To add a number of years, months and/or days, use the DATE function.</p>
+  <p><img src="images/date-time-functions/add-years-months-days.png" alt="Add Years, Months and Days" width="604" height="107" title="Add Years, Months and Days" /></p>
+  <p>Note: the DATE function accepts three arguments: year, month and day. Excel knows that 6 + 2 = 8 = August has 31 days and rolls over to the next month (23 August + 9 days = 1 September).</p>
+  <h3><a name="current-date-time" id="current-date-time"></a>Current Date &amp; Time</h3>
+  <p>To get the current <strong>date</strong> and <strong>time,</strong> use the NOW function.</p>
+  <p><img src="images/date-time-functions/now-function.png" loading="lazy" alt="Now Function" width="372" height="107" title="Now Function" /></p>
+  <p>Note: use the TODAY function to enter <a href="../examples/todays-date.html">today's date</a> in Excel.</p>
+  <h3><a name="hour-minute-second" id="hour-minute-second"></a>Hour, Minute, Second</h3>
+  <p>To return the hour, use the HOUR function.</p>
+  <p><img src="images/date-time-functions/hour-function.png" loading="lazy" alt="Hour Function" width="372" height="107" title="Hour Function" /></p>
+  <p>Note: use the MINUTE and SECOND function to return the minute and second.</p>
+  <h3><a name="time-function" id="time-function"></a>Time Function</h3>
+  <p>To add a number of hours, minutes and/or seconds, use the TIME function.</p>
+  <p><img src="images/date-time-functions/add-hours-minutes-seconds.png" loading="lazy" alt="Add Hours, Minutes and Seconds" width="604" height="107" title="Add Hours, Minutes and Seconds" /></p>
+  <p>Note: Excel adds 2 hours, 10 + 1 = 11 minutes and 70 - 60 = 10 seconds.</p>
+  <div class="ad"><!-- Advanced Excel Pages End -->
+
+     
+     
+     data-ad-slot="4005850092"></ins>
+</div>
+            </div>
+			   </div>
+				<span class="invtab"><div class="post">
+					<div style="clear: both;"></div>
+                    <div class="entrylearn">  
+                  <p align="left"><span class="buttonp"> <a href="../examples/datedif.html">1/13 Completed! Learn more about date & time functions &gt;<br />
+                    </a></span>Go to Next Guide: <a href="text-functions.html">Text Functions</a></p></div>
+                  </div></span>
+                  
+			</div>
+            <div class="4u 12u(medium)">
+              <div id="search">
+              <div class="cse-branding-right" style="background-color:#FFFFFF;color:#000000">
+                <div class="cse-branding-form" style="margin-right:0px;">
+                  <form action="https://www.Advanced Excel for Data Analysis/search.html" id="cse-search-box">
+                    <div>
+                      <input type="hidden" name="cx" value="partner-pub-1987061359047735:3934495699" />
+                      <input type="hidden" name="cof" value="FORID:10" />
+                      <input type="hidden" name="ie" value="UTF-8" />
+                      <input type="text" name="q" placeholder="Explore Entire Guide" class="field" disabled />
+                      <span class="notranslate"><input type="submit" name="sa" value="Go" class="button" disabled /></span>
+                    </div>
+                  </form>
+                </div>
+                <div class="cse-branding-logo"></div>
+                <div class="cse-branding-text"></div>
+              </div>
+              </div>
+              <div id="sidebar">
+					<ul>
+				  	  <li>
+                        <h3>Guide</h3>
+						  <ul>
+							<li class="current_page_item"><a href="date-time-functions.html">Date & Time Functions</a></li>
+                    </ul>
+					  </li>
+				  </ul>
+			  </div>
+              <div id="sidebar">
+				  <ul><li>
+				      <h3><font color="#FF9900"><span class="notranslate">Learn more, it's easy</span></font></h3>
+				    </li>
+					  <li><ul>
+                        <li><a href="../examples/datedif.html">DateDif</a></li>
+                        <li><a href="../examples/todays-date.html">Today's Date</a></li>
+                        <li><a href="../examples/date-time-formats.html">Date and Time Formats</a></li>
+                        <li><a href="../examples/calculate-age.html">Calculate Age</a></li>
+                        <li><a href="../examples/time-difference.html">Time Difference</a></li>
+                        <li><a href="../examples/weekdays.html">Weekdays</a></li>
+                        <li><a href="../examples/days-until-birthday.html">Days until Birthday</a></li>
+                        <li><a href="../examples/last-day-of-the-month.html">Last Day of the Month</a></li>
+                        <li><a href="../examples/add-subtract-time.html">Add or Subtract Time</a></li>
+                        <li><a href="../examples/quarter.html">Quarter</a></li>                       
+                        <li><a href="../examples/day-of-the-year.html">Day of the Year</a></li>
+						<li><a href="../examples/days-between-dates.html">Days between Dates</a></li>
+                        </ul>
+                    </li>
+                  </ul>
+			  </div>
+              <div id="sidebar">
+					<ul>
+				  	  <li>
+                        <h3><span class="notranslate"><font color="#8FAD22">Download Excel File</font></span></h3>
+						  <ul>
+							<li><a href="excel-files/date-time-functions.xlsx">date-time-functions.xlsx</a></li>
+                    </ul>
+					  </li>
+				  </ul>
+			  </div>
+              <div id="sidebar">
+					<ul>
+				  	  <li>
+                        <h3>Next Guide</h3>
+						  <ul>
+							<li><a href="text-functions.html">Text Functions</a></li>
+                    </ul>
+					  </li>
+				  </ul>
+			  </div>
+              <div id="sidebar">
+		      <h3><span class="notranslate"></span></h3>
+              <p style="padding-top:7px;padding-bottom:1px"><a href="https://facebook.com/thecodedragon" target="blank" rel="nofollow"><img src="../layout/facebook-logo.png" onmouseover="this.src='../layout/facebook-logo-onmouseover.png'" onmouseout="this.src='../layout/facebook-logo.png'" width="30" height="30" border="0" alt="Advanced Excel on Facebook" title="Advanced Excel on Facebook" /></a> <a href="https://twitter.com/ceoofdss" target="blank" rel="nofollow"><img src="../layout/x-logo.png" onmouseover="this.src='../layout/x-logo-onmouseover.png'" onmouseout="this.src='../layout/x-logo.png'" width="30" height="30" border="0" alt="Advanced Excel on X" title="Advanced Excel on X" /></a> <a href="https://www.pinterest.com/julisunkan" target="blank" rel="nofollow"><img src="../layout/pinterest-logo.png" onmouseover="this.src='../layout/pinterest-logo-onmouseover.png'" onmouseout="this.src='../layout/pinterest-logo.png'" width="30" height="30" border="0" alt="Advanced Excel on Pinterest" title="Advanced Excel on Pinterest"></a> <a href="https://www.linkedin.com/in/digitalskeleton/" target="blank" rel="nofollow"><img src="../layout/linkedin-logo.png" onmouseover="this.src='../layout/linkedin-logo-onmouseover.png'" onmouseout="this.src='../layout/linkedin-logo.png'" width="30" height="30" border="0" alt="Advanced Excel on LinkedIn" title="Advanced Excel on LinkedIn"></a></p>
+              </div>
+              <div id="sidebar">
+					<ul>
+				  	  <li>
+                        <h3><span class="notranslate">Become an Excel Pro</span></h3>
+						  <ul>
+                            <li><a href="../examples.html">300 Examples</a></li>
+                          </ul>
+					  </li>
+				  </ul>
+			  </div>
+              <!-- end #sidebar -->
+			  <div style="clear: both;">&nbsp;</div>
+		  </div>
+		</div>
+	</div>
+	<!-- end #page -->
+</div>
+<div id="footer">
+	<p><a href="date-time-functions.html">Date & Time Functions</a> &bull; &copy; AppMonster<br />
+	Excel is Awesome, we'll show you: <a href="../introduction.html">Introduction</a> &bull; <a href="../basics.html">Basics</a> &bull; <a href="../functions.html">Functions</a> &bull; <a href="../data-analysis.html">Data Analysis</a> &bull; <a href="../vba.html">VBA</a></p>
+</div>
+<!-- end #footer -->
+
+<script type="text/javascript">
+  
+  $(function() { (adsbygoogle = window.adsbygoogle || []).push({}); });
+  $(function() { (adsbygoogle = window.adsbygoogle || []).push({}); });
+  
+</script>
+
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"rayId":"8c78d4322e9eb8d2","version":"2024.8.0","serverTiming":{"name":{"cfExtPri":true,"cfL4":true}},"token":"c707dde3711e49e3a0cbf0020eef6a91","b":1}' crossorigin="anonymous"></script>
+</body>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H0MBKVX9SV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-H0MBKVX9SV');
+</script>
+
+<!-- Mirrored from www.Advanced Excel for Data Analysis/functions/date-time-functions.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 23 Sep 2024 07:46:30 GMT -->
+</html>

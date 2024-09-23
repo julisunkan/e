@@ -1,0 +1,6 @@
+Some information here..
+
+latitude: 72n31
+longitude: 15w27
+
+Some more information here..

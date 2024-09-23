@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+
+
+<!-- Mirrored from www.Advanced Excel for Data Analysis/examples/drop-down-list.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 23 Sep 2024 07:33:56 GMT -->
+<head>
+
+<title>Create Drop-down Lists in Excel (Quickly and Easily)</title>
+<meta name="keywords" content="drop-down list, excel, data validation, create drop-down list, allow other entries, add, remove, items, dynamic drop-down list, remove drop-down list, dependent drop-down lists, allow, list, source, item, range reference, type items, case sensitive, error alert, invalid data, manual input, new item, update drop-down list, formula, offset function, automatically, add item, end of the list, table, structured reference, unique list items, spill range, clear all">
+<meta name="description" content="Drop-down lists in Excel are helpful if you want to be sure that users select an item from a list, instead of typing their own values.">
+
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="index, follow">
+<META content=EN-US name=LANGUAGE>
+<meta property="og:title" content="Drop-down List in Excel">
+<meta property="og:url" content="drop-down-list.html">
+<meta property="og:type" content="article">
+<meta property="fb:admins" content="100003702321830">
+<meta property="og:description" content="Drop-down lists in Excel are helpful if you want to be sure that users select an item from a list, instead of typing their own values.">
+<meta property="og:image" content="../smi/examples/drop-down-list-2.png"/>
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@ExcelEasy">
+<meta name="twitter:image" content="../smi/examples/drop-down-list-3.png">
+
+<link rel="preload" href="../css/style.css" as="style">
+<link rel="preload" href="images/drop-down-list/items.png" as="image">
+<link rel="preload" href="../js/default.js" as="script">
+<link rel="preload" href="../js/init.js" as="script">
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f5ca7.txt?client=ca-pub-1987456081350047765" data-overlays="bottom" crossorigin="anonymous"></script>
+<link rel="preload" href="../css/style-medium.css" as="style" media="(max-width:961px)">
+<link rel="preload" href="../css/style-small.css" as="style" media="(max-width:620px)">
+<link rel="stylesheet" href="../css/style.css"/>
+<script src="../js/default.js" type="text/javascript"></script>
+<script src="../js/init.js" type="text/javascript"></script>
+<style type="text/css">
+.adslot { width: 336px; height: 280px; }
+@media (min-width:320px) { .adslot { width: 300px; height: 250px; } }
+@media (min-width:360px) and (orientation: portrait) { .adslot { width: 336px; height: 280px; } }
+@media (min-width:604px) { .adslot { width: 336px; height: 280px; } }
+</style>
+<noscript>
+    <link rel="stylesheet" href="../css/skel.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/adslot.css" />
+</noscript>
+<link rel="icon" href="../favicon-48x48.ico">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+</head>
+<body>
+<header id="header">
+	<div class="container">
+		<span class="notranslate">
+			<div id="logo">
+				<a href="../index.html"><img src="../layout/excel-guides.svg" onerror="this.src='../layout/excel-guides.png'" border="0" alt="Excel guides" title="Excel guides" width="1" height="1" /><h2>Excel</h2>&nbsp;&nbsp;<span class="easy">for Data Analysis</span></a>
+                <p>#1 <a href="../index.html">Excel guides</a> on the go</p>
+		  	</div>            
+			<nav id="nav">
+				  <ul>
+                  <li><a href="../index.html">Excel</a></li>
+                  <li><a href="../introduction.html">Introduction</a></li>
+				  <li><a href="../basics.html">Basics</a></li>
+				  <li><a href="../functions.html">Functions</a></li>
+				  <li><a href="../data-analysis.html">Data Analysis</a></li>
+                  <li><a href="../vba.html">VBA</a></li>
+                  <li class="current_page_item"><a href="../examples.html">300 Examples</a></li>
+                  <li><a href="../ask-us.html">Ask us</a></li>
+                  </ul>
+				</nav>
+			</span>
+		</div>
+	</header>
+	<!-- end #header -->
+	<div class="container">
+		<div class="row 100%">
+			<div class="8u 12u(medium)">
+				<div class="post">
+						<h1 class="title" style="float:left;">Drop-down List</h1>
+						<div style="clear: both;">&nbsp;</div>
+<div class="entry">
+<p class="spacing"><a href="#create-drop-down-list">Create a Drop-down List</a> | <a href="#allow-other-entries">Allow Other Entries</a> | <a href="#add-remove-items">Add/Remove Items</a> | <a href="#dynamic-drop-down-list">Dynamic Drop-down List</a> | <a href="#remove-drop-down-list">Remove Drop-down List</a> | <a href="#dependent-drop-down-lists">Dependent Drop-down Lists</a> | <a href="#table-magic">Table Magic</a></p>
+<p><strong>Drop-down lists</strong> in <strong>Excel</strong> are helpful if you want to be sure that users select an item from a list, instead of typing their own values.</p>
+<h3><a name="create-drop-down-list" id="create-drop-down-list"></a>Create a Drop-down List</h3>
+<p>To create a drop-down list in Excel, execute the following steps.</p>
+<p>1. On the second sheet, type the items you want to appear in the drop-down list.</p>
+<p><img src="images/drop-down-list/items.png" alt="Items" width="604" height="195" title="Items" /></p>
+<p>Note: if you don't want users to access the items on Sheet2, you can hide Sheet2. To achieve this, right click on the sheet tab of Sheet2 and click on Hide.</p>
+
+
+     
+     
+     
+<p>2. On the first sheet, select cell B1.</p>
+<p><img src="images/drop-down-list/select-cell.png" alt="Select Cell" width="604" height="81" title="Select Cell" /></p>
+<p>3. On the Data tab, in the Data Tools group, click Data Validation.</p>
+<p><img src="images/drop-down-list/click-data-validation.png" alt="Click Data Validation" width="446" height="100" title="Click Data Validation" /></p>
+<p>The 'Data Validation' dialog box appears.</p>
+<p>4. In the Allow box, click List.</p>
+<p>5. Click in the Source box and select the range A1:A3 on Sheet2.</p>
+<p><img src="images/drop-down-list/validation-criteria.png" loading="lazy" alt="Validation Criteria" width="394" height="319" title="Validation Criteria" /></p>
+<p>6. Click OK.</p>
+<p>Result:</p>
+<p><img src="images/drop-down-list/drop-down-list.png" loading="lazy" alt="Drop-down List in Excel" width="604" height="101" title="Drop-down List in Excel" /></p>
+<p>Note: to copy/paste a drop-down list, select the cell with the drop-down list and press CTRL + c, select another cell and press CTRL + v.</p>
+<p>7. You can also type the items directly into the Source box, instead of using a range reference.</p>
+<p><img src="images/drop-down-list/simple-drop-down-list.png" loading="lazy" alt="Simple Drop-down List" width="394" height="319" title="Simple Drop-down List" /></p>
+<p>Note: this makes your drop-down list case sensitive. For example, if a user types yes, an error alert will be displayed.</p>
+<div class="ad"><!-- Advanced Excel Pages Middle -->
+
+     
+     
+     data-ad-slot="2529116896"></ins>
+</div>
+<h3><a name="allow-other-entries" id="allow-other-entries"></a>Allow Other Entries</h3>
+<p>You can also create a drop-down list in Excel that allows other entries.</p>
+<p>1. First, if you type a value that is not in the list, Excel shows an error alert.</p>
+<p><img src="images/drop-down-list/error-alert.png" loading="lazy" alt="Error Alert" width="604" height="201" title="Error Alert" /></p>
+<p>To allow other entries, execute the following steps.</p>
+<p>2. On the Data tab, in the Data Tools group, click Data Validation.</p>
+<p><img src="images/drop-down-list/click-data-validation.png" loading="lazy" alt="Click Data Validation" width="446" height="100" title="Click Data Validation" /></p>
+<p>The 'Data Validation' dialog box appears.</p>
+<p>3. On the Error Alert tab, uncheck 'Show error alert after invalid data is entered'.</p>
+<p><img src="images/drop-down-list/allow-other-entries.png" loading="lazy" alt="Allow Other Entries" width="394" height="319" title="Allow Other Entries" /></p>
+<p>4. Click OK.</p>
+<p>5. You can now enter a value that is not in the list.</p>
+<p><img src="images/drop-down-list/manual-input.png" loading="lazy" alt="Manual Input" width="604" height="81" title="Manual Input" /></p>
+<h3><a name="add-remove-items" id="add-remove-items"></a>Add/Remove Items</h3>
+<p>You can add or remove items from a drop-down list in Excel without opening the 'Data Validation' dialog box and changing the range reference. This saves time.</p>   
+<p>1. To add an item to a drop-down list, go to the items and select an item.</p>
+<p><img src="images/drop-down-list/select-item.png" loading="lazy" alt="Select Item" width="604" height="175" title="Select Item" /></p>
+<p>2. Right click, and then click Insert.</p>
+<p><img src="images/drop-down-list/click-insert.png" loading="lazy" alt="Click Insert" width="137" height="300" title="Click Insert" /></p>
+<p>3. Select "Shift cells down" and click OK.</p>
+<p><img src="images/drop-down-list/shift-cells-down.png" loading="lazy" alt="Shift Cells Down" width="173" height="178" title="Shift Cells Down" /></p>
+<p>Result:</p>
+<p><img src="images/drop-down-list/new-range-reference.png" loading="lazy" alt="New Range Reference" width="604" height="195" title="New Range Reference" /></p>
+<p>Note: Excel automatically changed the range reference from Sheet2!$A$1:$A$3 to Sheet2!$A$1:$A$4. You can check this by opening the 'Data Validation' dialog box.</p>
+<p>4. Type a new item.</p>
+<p><img src="images/drop-down-list/type-new-item.png" loading="lazy" alt="Type New Item" width="604" height="195" title="Type New Item" /></p>
+<p>Result:</p>
+<p><img src="images/drop-down-list/updated-drop-down-list.png" loading="lazy" alt="Updated Drop-down List" width="604" height="121" title="Updated Drop-down List" /></p>
+<p>5. To remove an item from a drop-down list, at step 2, click Delete, select "Shift cells up" and click OK.</p>
+<!--<div class="ad">Excel Pages Middle
+
+     
+     
+     data-ad-slot="2529116896"></ins>
+</div>-->
+<h3><a name="dynamic-drop-down-list" id="dynamic-drop-down-list"></a>Dynamic Drop-down List</h3>
+<p>You can also use a formula that updates your drop-down list automatically when you add an item to the end of the list.</p>
+<p>1. On the first sheet, select cell B1.</p>
+<p><img src="images/drop-down-list/select-cell.png" loading="lazy" alt="Select Cell" width="604" height="81" title="Select Cell" /></p>
+<p>2. On the Data tab, in the Data Tools group, click Data Validation.</p>
+<p><img src="images/drop-down-list/click-data-validation.png" loading="lazy" alt="Click Data Validation" width="446" height="100" title="Click Data Validation" /></p>
+<p>The 'Data Validation' dialog box appears.</p>
+<p>3. In the Allow box, click List.</p>
+<p>4. Click in the Source box and enter the formula:<br>
+<span class="breakmob">=OFFSET(Sheet2!$A$1,0,0,COUNTA(Sheet2!$A:$A),1)</span></p>
+<p><img src="images/drop-down-list/offset-function.png" loading="lazy" alt="Offset Function" width="394" height="319" title="Offset Function" /></p>
+<p>Explanation: the <a href="offset.html">OFFSET function</a> takes 5 arguments. Reference: Sheet2!$A$1, rows to offset: 0, columns to offset: 0, height: COUNTA(Sheet2!$A:$A) and width: 1. COUNTA(Sheet2!$A:$A) counts the number of values in column A on Sheet2 that are not empty. When you add an item to the list on Sheet2, COUNTA(Sheet2!$A:$A) increases. As a result, the range returned by the OFFSET function expands and the drop-down list will be updated.</p>
+<p>5. Click OK.</p>
+<p>6. On the second sheet, simply add a new item to the end of the list.</p>
+<p><img src="images/drop-down-list/add-new-item.png" loading="lazy" alt="Add New Item" width="604" height="215" title="Add New Item" /></p>
+<p>Result:</p>
+<p><img src="images/drop-down-list/dynamic-drop-down-list.png" loading="lazy" alt="Dynamic Drop-down List" width="604" height="141" title="Dynamic Drop-down List" /></p>
+<h3><a name="remove-drop-down-list" id="remove-drop-down-list"></a>Remove Drop-down List</h3>
+<p>To remove a drop-down list in Excel, execute the following steps.</p>
+<p>1. Select the cell with the drop-down list.</p>
+<p><img src="images/drop-down-list/select-cell-with-drop-down-list.png" loading="lazy" alt="Select Cell with Drop-down List" width="604" height="81" title="Select Cell with Drop-down List" /></p>
+<p>2. On the Data tab, in the Data Tools group, click Data Validation.</p>
+<p><img src="images/drop-down-list/click-data-validation.png" loading="lazy" alt="Click Data Validation" width="446" height="100" title="Click Data Validation" /></p>
+<p>The 'Data Validation' dialog box appears.</p>
+<p>3. Click Clear All.</p>
+<p><img src="images/drop-down-list/click-clear-all.png" loading="lazy" alt="Click Clear All" width="394" height="319" title="Click Clear All" /></p>
+<p>Note: to remove all other drop-down lists with the same settings, check "Apply these changes to all other cells with the same settings" before you click on Clear All.</p>
+<p>4. Click OK.</p>
+<h3><a name="dependent-drop-down-lists" id="dependent-drop-down-lists"></a>Dependent Drop-down Lists</h3>
+<p>Want to learn even more about drop-down lists in Excel? Learn how to create <a href="dependent-drop-down-lists.html">dependent drop-down lists</a>.</p>
+<p>1. For example, if the user selects Pizza from a first drop-down list.</p>
+<p><img src="images/drop-down-list/first-drop-down-list.png" loading="lazy" alt="First Drop-down List" width="604" height="101" title="First Drop-down List" /></p>
+<p>2. A second drop-down list contains the Pizza items.</p>
+<p><img src="images/drop-down-list/second-drop-down-list.png" loading="lazy" alt="Second Drop-down List" width="604" height="101" title="Second Drop-down List" /></p>
+<p>3. But if the user selects Chinese from the first drop-down list, the second drop-down list contains the Chinese dishes.</p>
+<p><img src="images/drop-down-list/dependent-drop-down-lists.png" loading="lazy" alt="Dependent Drop-down Lists in Excel" width="604" height="101" title="Dependent Drop-down Lists in Excel" /></p>
+<!--<div class="ad">Excel Pages Middle
+
+     
+     
+     data-ad-slot="2529116896"></ins>
+</div>-->
+<h3><a name="table-magic" id="table-magic"></a>Table Magic</h3>
+<p>You can also store your items in an <a href="../data-analysis/tables.html">Excel table</a> to create a dynamic drop-down list.</p>
+<p>1. On the second sheet, select a list item.</p>
+<p><img src="images/drop-down-list/select-list-item.png" loading="lazy" alt="Select List Item" width="604" height="195" title="Select List Item" /></p>
+<p>2. On the Insert tab, in the Tables group, click Table.</p>
+<p><img src="images/drop-down-list/insert-table.png" loading="lazy" alt="Insert Table" width="204" height="100" title="Insert Table" /></p>
+<p>3. Excel automatically selects the data for you. Click OK.</p>
+<p><img src="images/drop-down-list/create-table.png" loading="lazy" alt="Create Table" width="230" height="151" title="Create Table" /></p>
+<p>4. If you select the list, Excel reveals the <a href="structured-references.html">structured reference</a>.</p>
+<p><img src="images/drop-down-list/structured-reference.png" loading="lazy" alt="Structured Reference" width="604" height="215" title="Structured Reference" /></p>
+<p>5. Use this structured reference to create a dynamic drop-down list.</p>
+<p><img src="images/drop-down-list/table-indirect.png" loading="lazy" alt="Table and INDIRECT" width="394" height="319" title="Table and INDIRECT" /></p>
+<p>Explanation: the <a href="indirect.html">INDIRECT function</a> in Excel converts a text string into a valid reference.</p>
+<p>6. On the second sheet, simply add a new item to the end of the list.</p>
+<p><img src="images/drop-down-list/add-item.png" loading="lazy" alt="Add Item" width="604" height="235" title="Add Item" /></p>
+<p>Result:</p>
+<p><img src="images/drop-down-list/dynamic-drop-down-list.png" loading="lazy" alt="Dynamic Drop-down List" width="604" height="141" title="Dynamic Drop-down List" /></p>
+<p>Note: try it yourself. Download the Excel file and create this drop-down list.</p>
+<p>7. When using tables, use the UNIQUE function in Excel 365/2021 to extract unique list items.</p>
+<p><img src="images/drop-down-list/unique-list-items.png" loading="lazy" alt="Unique List Items" width="604" height="415" title="Unique List Items" /></p>
+<p>Note: this dynamic array function, entered into cell F1, fills multiple cells. Wow! This behavior in Excel 365/2021 is called <a href="dynamic-arrays.html">spilling</a>.</p>
+<p>8. Use this spill range to create a magic drop-down list.</p></p>
+<p><img src="images/drop-down-list/create-drop-down-list.png" loading="lazy" alt="Create Drop-down List" width="394" height="319" title="Create Drop-down List" /></p>
+<p>Explanation: always use the first cell (F1) and a hash character to refer to a spill range.</p>
+<p>Result:</p>
+<p><img src="images/drop-down-list/drop-down-list-with-unique-values.png" loading="lazy" alt="Drop-down List With Unique Values" width="604" height="121" title="Drop-down List With Unique Values" /></p>
+<p>Note: when you add new records, the UNIQUE function automatically extracts new unique list items and Excel automatically updates the drop-down list.</p>
+<div class="ad"><!-- Advanced Excel Pages End -->
+
+     
+     
+     data-ad-slot="4005850092"></ins>
+</div>
+            </div>
+			   </div>
+				<span class="invtab"><div class="post">
+					<div style="clear: both;"></div>
+                    <div class="entrylearn">  
+                  <p align="left"><span class="buttonp"> <a href="dependent-drop-down-lists.html">6/9 Completed! Learn much more about data validation &gt;<br />
+                    </a></span>Go to Next Guide: <a href="../basics/keyboard-shortcuts.html">Keyboard Shortcuts</a></div>
+                  </div></span>
+                  </div>
+                  <div class="4u 12u(medium)">
+              <div id="search">
+              <div class="cse-branding-right" style="background-color:#FFFFFF;color:#000000">
+                <div class="cse-branding-form" style="margin-right:0px;">
+                  <form action="https://www.Advanced Excel for Data Analysis/search.html" id="cse-search-box">
+                    <div>
+                      <input type="hidden" name="cx" value="partner-pub-1987061359047735:3934495699" />
+                      <input type="hidden" name="cof" value="FORID:10" />
+                      <input type="hidden" name="ie" value="UTF-8" />
+                      <input type="text" name="q" placeholder="Explore Entire Guide" class="field" disabled />
+                      <span class="notranslate"><input type="submit" name="sa" value="Go" class="button" disabled /></span>
+                    </div>
+                  </form>
+                </div>
+                <div class="cse-branding-logo"></div>
+                <div class="cse-branding-text"></div>
+              </div>
+              </div>
+              <div id="sidebar">
+					<ul>
+				  	  <li>
+                        <h3>Guide</h3>
+						  <ul>
+							<li><a href="../basics/data-validation.html">Data Validation</a></li>
+                    </ul>
+					  </li>
+				  </ul>
+			  </div>
+              <div id="sidebar">
+				  <ul><li>
+				      <h3><font color="#FF9900"><span class="notranslate">Learn more, it's easy</span></font></h3>
+				    </li>
+					  <li><ul>
+                        <li><a href="reject-invalid-dates.html">Reject Invalid Dates</a></li>
+                        <li><a href="budget-limit.html">Budget Limit</a></li>
+                        <li><a href="prevent-duplicate-entries.html">Prevent Duplicate Entries</a></li>
+                        <li><a href="product-codes.html">Product Codes</a></li>
+                        <li class="current_page_item"><a href="drop-down-list.html">Drop-down List</a></li>
+                        <li><a href="dependent-drop-down-lists.html">Dependent Drop-down Lists</a></li>
+                        <li><a href="cm-to-inches.html">Cm to inches</a></li>
+                        <li><a href="kg-to-lbs.html">Kg to lbs</a></li>
+                        </ul>
+                    </li>
+                  </ul>
+			  </div>
+              <div id="sidebar">
+					<ul>
+				  	  <li>
+                        <h3><span class="notranslate"><font color="#8FAD22">Download Excel File</font></span></h3>
+						  <ul>
+							<li><a href="excel-files/drop-down-list.xlsx">drop-down-list.xlsx</a></li>
+                    </ul>
+					  </li>
+				  </ul>
+			  </div>
+              <div id="sidebar">
+					<ul>
+				  	  <li>
+                        <h3>Next Guide</h3>
+						  <ul>
+							<li><a href="../basics/keyboard-shortcuts.html">Keyboard Shortcuts</a></li>
+                    </ul>
+					  </li>
+				  </ul>
+			  </div>
+              <div id="sidebar">
+		      <h3><span class="notranslate"></span></h3>
+              <p style="padding-top:7px;padding-bottom:1px"><a href="https://facebook.com/thecodedragon" target="blank" rel="nofollow"><img src="../layout/facebook-logo.png" onmouseover="this.src='../layout/facebook-logo-onmouseover.png'" onmouseout="this.src='../layout/facebook-logo.png'" width="30" height="30" border="0" alt="Advanced Excel on Facebook" title="Advanced Excel on Facebook" /></a> <a href="https://twitter.com/ceoofdss" target="blank" rel="nofollow"><img src="../layout/x-logo.png" onmouseover="this.src='../layout/x-logo-onmouseover.png'" onmouseout="this.src='../layout/x-logo.png'" width="30" height="30" border="0" alt="Advanced Excel on X" title="Advanced Excel on X" /></a> <a href="https://www.pinterest.com/julisunkan" target="blank" rel="nofollow"><img src="../layout/pinterest-logo.png" onmouseover="this.src='../layout/pinterest-logo-onmouseover.png'" onmouseout="this.src='../layout/pinterest-logo.png'" width="30" height="30" border="0" alt="Advanced Excel on Pinterest" title="Advanced Excel on Pinterest"></a> <a href="https://www.linkedin.com/in/digitalskeleton/" target="blank" rel="nofollow"><img src="../layout/linkedin-logo.png" onmouseover="this.src='../layout/linkedin-logo-onmouseover.png'" onmouseout="this.src='../layout/linkedin-logo.png'" width="30" height="30" border="0" alt="Advanced Excel on LinkedIn" title="Advanced Excel on LinkedIn"></a></p>
+              </div>
+			  <div id="sidebar">
+              <ul><li></li>
+		        <li>
+		          <h3><span class="notranslate">Most Popular</span></h3>
+	            </li>
+		        <li><ul>
+                        <li><a href="../data-analysis/pivot-tables.html">Pivot Tables</a></li>
+                        <li><a href="vlookup.html">Vlookup</a></li>
+                        <li><a href="../introduction/formulas-functions.html">Formulas and Functions</a></li>
+                        <li><a href="../data-analysis/charts.html">Charts</a></li>
+                        <li><a href="../data-analysis/conditional-formatting.html">Conditional Formatting</a></li>
+                        <li><a href="find-duplicates.html">Find Duplicates</a></li>
+                        <li><a href="if.html">If</a></li>
+                        <li><a href="drop-down-list.html">Drop-down List</a></li>
+						<li><a href="countif.html">Countif</a></li>
+                        <li><a href="index-match.html">Index and Match</a></li>
+                        </ul>
+			    </li>
+              </ul>
+              </div>
+              <div id="sidebar">
+					<ul>
+				  	  <li>
+                        <h3><span class="notranslate">Become an Excel Pro</span></h3>
+						  <ul>
+                            <li><a href="../examples.html">300 Examples</a></li>
+                          </ul>
+					  </li>
+				  </ul>
+			  </div>
+              <!-- end #sidebar -->
+			  <div style="clear: both;">&nbsp;</div>
+		  </div>
+		</div>
+	</div>
+	<!-- end #page -->
+</div>
+<div id="footer">
+	<p><a href="drop-down-list.html">Drop-down List</a> &bull; &copy; AppMonster<br />
+	Excel is Awesome, we'll show you: <a href="../introduction.html">Introduction</a> &bull; <a href="../basics.html">Basics</a> &bull; <a href="../functions.html">Functions</a> &bull; <a href="../data-analysis.html">Data Analysis</a> &bull; <a href="../vba.html">VBA</a></p>
+</div>
+<!-- end #footer -->
+
+<script type="text/javascript">
+  
+  $(function() { (adsbygoogle = window.adsbygoogle || []).push({}); });
+  $(function() { (adsbygoogle = window.adsbygoogle || []).push({}); });
+  //$(function() { (adsbygoogle = window.adsbygoogle || []).push({}); });
+  //$(function() { (adsbygoogle = window.adsbygoogle || []).push({}); });
+  $(function() { (adsbygoogle = window.adsbygoogle || []).push({}); });
+  
+</script>
+
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"rayId":"8c78d21b4bedb8d2","version":"2024.8.0","serverTiming":{"name":{"cfExtPri":true,"cfL4":true}},"token":"c707dde3711e49e3a0cbf0020eef6a91","b":1}' crossorigin="anonymous"></script>
+</body>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H0MBKVX9SV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-H0MBKVX9SV');
+</script>
+
+<!-- Mirrored from www.Advanced Excel for Data Analysis/examples/drop-down-list.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 23 Sep 2024 07:34:04 GMT -->
+</html>

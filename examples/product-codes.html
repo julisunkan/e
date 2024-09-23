@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+
+
+<!-- Mirrored from www.Advanced Excel for Data Analysis/examples/product-codes.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 23 Sep 2024 07:33:55 GMT -->
+<head>
+
+<title>Product Codes in Excel (In Easy Steps)</title>
+<meta name="keywords" content="product codes, entering, excel, data validation, only, allow, specific input, custom, data validation formula, force, start, letter, length, characters, end, numbers, text string, and, left, len, isnumber, value, right, function">
+<meta name="description" content="Use data validation to only allow the input of specific product codes. For example, only allow codes that are 4 characters long, start with a C, etc.">
+
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="index, follow">
+<META content=EN-US name=LANGUAGE>
+<meta property="og:title" content="Product Codes in Excel">
+<meta property="og:url" content="product-codes.html">
+<meta property="og:type" content="article">
+<meta property="fb:admins" content="100003702321830">
+<meta property="og:description" content="Use data validation to only allow the input of specific product codes. For example, only allow codes that are 4 characters long, start with a C, etc.">
+<meta property="og:image" content="../smi/examples/product-codes.png"/>
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@ExcelEasy">
+<meta name="twitter:image" content="../smi/examples/product-codes.png">
+
+<link rel="preload" href="../css/style.css" as="style">
+<link rel="preload" href="images/product-codes/select-range.png" as="image">
+<link rel="preload" href="../js/default.js" as="script">
+<link rel="preload" href="../js/init.js" as="script">
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f5ca7.txt?client=ca-pub-1987456081350047765" data-overlays="bottom" crossorigin="anonymous"></script>
+<link rel="preload" href="../css/style-medium.css" as="style" media="(max-width:961px)">
+<link rel="preload" href="../css/style-small.css" as="style" media="(max-width:620px)">
+<link rel="stylesheet" href="../css/style.css"/>
+<script src="../js/default.js" type="text/javascript"></script>
+<script src="../js/init.js" type="text/javascript"></script>
+<style type="text/css">
+.adslot { width: 336px; height: 280px; }
+@media (min-width:320px) { .adslot { width: 300px; height: 250px; } }
+@media (min-width:360px) and (orientation: portrait) { .adslot { width: 336px; height: 280px; } }
+@media (min-width:604px) { .adslot { width: 336px; height: 280px; } }
+</style>
+<noscript>
+    <link rel="stylesheet" href="../css/skel.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/adslot.css" />
+</noscript>
+<link rel="icon" href="../favicon-48x48.ico">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+</head>
+<body>
+<header id="header">
+	<div class="container">
+		<span class="notranslate">
+			<div id="logo">
+				<a href="../index.html"><img src="../layout/excel-guides.svg" onerror="this.src='../layout/excel-guides.png'" border="0" alt="Excel guides" title="Excel guides" width="1" height="1" /><h2>Excel</h2>&nbsp;&nbsp;<span class="easy">for Data Analysis</span></a>
+                <p>#1 <a href="../index.html">Excel guides</a> on the go</p>
+		  	</div>            
+			<nav id="nav">
+				  <ul>
+                  <li><a href="../index.html">Excel</a></li>
+                  <li><a href="../introduction.html">Introduction</a></li>
+				  <li><a href="../basics.html">Basics</a></li>
+				  <li><a href="../functions.html">Functions</a></li>
+				  <li><a href="../data-analysis.html">Data Analysis</a></li>
+                  <li><a href="../vba.html">VBA</a></li>
+                  <li class="current_page_item"><a href="../examples.html">300 Examples</a></li>
+                  <li><a href="../ask-us.html">Ask us</a></li>
+                  </ul>
+				</nav>
+			</span>
+		</div>
+	</header>
+	<!-- end #header -->
+	<div class="container">
+		<div class="row 100%">
+			<div class="8u 12u(medium)">
+				<div class="post">
+						<h1 class="title" style="float:left;">Product Codes</h1>
+						<div style="clear: both;">&nbsp;</div>
+<div class="entry">
+<p>Use data validation to <strong>only allow the input of specific product codes</strong>. For example, only allow codes that are 4 characters long, start with a C, etc.</p>
+<p>1. Select the range A2:A7.</p>
+<p><img src="images/product-codes/select-range.png" alt="Select the Range in Excel" width="192" height="181" title="Select the Range in Excel" /></p>
+<p>2. On the Data tab, in the Data Tools group, click Data Validation.</p>
+<p><img src="images/product-codes/click-data-validation.png" alt="Click Data Validation" width="446" height="100" title="Click Data Validation" /></p>
+
+
+     
+     
+     
+<p>3. In the Allow list, click Custom.</p>
+<p>4. In the Formula box, enter the formula shown below and click OK.</p>
+<p><img src="images/product-codes/data-validation-formula.png" alt="Data Validation Formula" width="394" height="319" title="Data Validation Formula" /></p>
+<p>Explanation: this <a href="and.html">AND function</a> has three arguments. LEFT(A2)=&quot;C&quot; forces the user to start with the letter C. LEN(A2)=4 forces the user to enter a string with a length of 4 characters. ISNUMBER(VALUE(RIGHT(A2,3))) forces the user to end with 3 numbers. RIGHT(A2,3) extracts the 3 rightmost characters from the text string. The VALUE function converts this text string to a number. ISNUMBER checks whether this value is a number. The AND Function returns TRUE if all conditions are true. Because we selected the range A2:A7 before we clicked on Data Validation, <strong>Excel</strong> automatically copies the formula to the other cells.</p>
+<p>5. To check this, select cell A3 and click Data Validation.</p>
+<p><img src="images/product-codes/formula-check.png" loading="lazy" alt="Formula Check" width="394" height="319" title="Formula Check" /></p>
+<p>As you can see, this cell also contains the correct formula.</p>
+<p>6. Enter an incorrect product code.</p>
+<p>Result. Excel shows an error alert.</p>
+<p><img src="images/product-codes/incorrect-product-code.png" loading="lazy" alt="Incorrect Product Code" width="604" height="201" title="Incorrect Product Code" /></p>
+<p>Note: to enter an input message and error alert message, go to the Input Message and Error Alert tab.</p>
+<div class="ad"><!-- Advanced Excel Pages End -->
+
+     
+     
+     data-ad-slot="4005850092"></ins>
+</div>
+            </div>
+			   </div>
+				<span class="invtab"><div class="post">
+					<div style="clear: both;"></div>
+                    <div class="entrylearn">  
+                  <p align="left"><span class="buttonp"> <a href="drop-down-list.html">5/9 Completed! Learn much more about data validation &gt;<br />
+                    </a></span>Go to Next Guide: <a href="../basics/keyboard-shortcuts.html">Keyboard Shortcuts</a></div>
+                  </div></span>
+                  </div>
+                  <div class="4u 12u(medium)">
+              <div id="search">
+              <div class="cse-branding-right" style="background-color:#FFFFFF;color:#000000">
+                <div class="cse-branding-form" style="margin-right:0px;">
+                  <form action="https://www.Advanced Excel for Data Analysis/search.html" id="cse-search-box">
+                    <div>
+                      <input type="hidden" name="cx" value="partner-pub-1987061359047735:3934495699" />
+                      <input type="hidden" name="cof" value="FORID:10" />
+                      <input type="hidden" name="ie" value="UTF-8" />
+                      <input type="text" name="q" placeholder="Explore Entire Guide" class="field" disabled />
+                      <span class="notranslate"><input type="submit" name="sa" value="Go" class="button" disabled /></span>
+                    </div>
+                  </form>
+                </div>
+                <div class="cse-branding-logo"></div>
+                <div class="cse-branding-text"></div>
+              </div>
+              </div>
+              <div id="sidebar">
+					<ul>
+				  	  <li>
+                        <h3>Guide</h3>
+						  <ul>
+							<li><a href="../basics/data-validation.html">Data Validation</a></li>
+                    </ul>
+					  </li>
+				  </ul>
+			  </div>
+              <div id="sidebar">
+				  <ul><li>
+				      <h3><font color="#FF9900"><span class="notranslate">Learn more, it's easy</span></font></h3>
+				    </li>
+					  <li><ul>
+                        <li><a href="reject-invalid-dates.html">Reject Invalid Dates</a></li>
+                        <li><a href="budget-limit.html">Budget Limit</a></li>
+                        <li><a href="prevent-duplicate-entries.html">Prevent Duplicate Entries</a></li>
+                        <li class="current_page_item"><a href="product-codes.html">Product Codes</a></li>
+                        <li><a href="drop-down-list.html">Drop-down List</a></li>
+                        <li><a href="dependent-drop-down-lists.html">Dependent Drop-down Lists</a></li>
+                        <li><a href="cm-to-inches.html">Cm to inches</a></li>
+                        <li><a href="kg-to-lbs.html">Kg to lbs</a></li>
+                        </ul>
+                    </li>
+                  </ul>
+			  </div>
+              <div id="sidebar">
+					<ul>
+				  	  <li>
+                        <h3><span class="notranslate"><font color="#8FAD22">Download Excel File</font></span></h3>
+						  <ul>
+							<li><a href="excel-files/product-codes.xlsx">product-codes.xlsx</a></li>
+                    </ul>
+					  </li>
+				  </ul>
+			  </div>
+              <div id="sidebar">
+					<ul>
+				  	  <li>
+                        <h3>Next Guide</h3>
+						  <ul>
+							<li><a href="../basics/keyboard-shortcuts.html">Keyboard Shortcuts</a></li>
+                    </ul>
+					  </li>
+				  </ul>
+			  </div>
+              <div id="sidebar">
+		      <h3><span class="notranslate"></span></h3>
+              <p style="padding-top:7px;padding-bottom:1px"><a href="https://facebook.com/thecodedragon" target="blank" rel="nofollow"><img src="../layout/facebook-logo.png" onmouseover="this.src='../layout/facebook-logo-onmouseover.png'" onmouseout="this.src='../layout/facebook-logo.png'" width="30" height="30" border="0" alt="Advanced Excel on Facebook" title="Advanced Excel on Facebook" /></a> <a href="https://twitter.com/ceoofdss" target="blank" rel="nofollow"><img src="../layout/x-logo.png" onmouseover="this.src='../layout/x-logo-onmouseover.png'" onmouseout="this.src='../layout/x-logo.png'" width="30" height="30" border="0" alt="Advanced Excel on X" title="Advanced Excel on X" /></a> <a href="https://www.pinterest.com/julisunkan" target="blank" rel="nofollow"><img src="../layout/pinterest-logo.png" onmouseover="this.src='../layout/pinterest-logo-onmouseover.png'" onmouseout="this.src='../layout/pinterest-logo.png'" width="30" height="30" border="0" alt="Advanced Excel on Pinterest" title="Advanced Excel on Pinterest"></a> <a href="https://www.linkedin.com/in/digitalskeleton/" target="blank" rel="nofollow"><img src="../layout/linkedin-logo.png" onmouseover="this.src='../layout/linkedin-logo-onmouseover.png'" onmouseout="this.src='../layout/linkedin-logo.png'" width="30" height="30" border="0" alt="Advanced Excel on LinkedIn" title="Advanced Excel on LinkedIn"></a></p>
+              </div>
+              <div id="sidebar">
+					<ul>
+				  	  <li>
+                        <h3><span class="notranslate">Become an Excel Pro</span></h3>
+						  <ul>
+                            <li><a href="../examples.html">300 Examples</a></li>
+                          </ul>
+					  </li>
+				  </ul>
+			  </div>
+              <!-- end #sidebar -->
+			  <div style="clear: both;">&nbsp;</div>
+		  </div>
+		</div>
+	</div>
+	<!-- end #page -->
+</div>
+<div id="footer">
+	<p><a href="product-codes.html">Product Codes</a> &bull; &copy; AppMonster<br />
+	Excel is Awesome, we'll show you: <a href="../introduction.html">Introduction</a> &bull; <a href="../basics.html">Basics</a> &bull; <a href="../functions.html">Functions</a> &bull; <a href="../data-analysis.html">Data Analysis</a> &bull; <a href="../vba.html">VBA</a></p>
+</div>
+<!-- end #footer -->
+
+<script type="text/javascript">
+  
+  $(function() { (adsbygoogle = window.adsbygoogle || []).push({}); });
+  $(function() { (adsbygoogle = window.adsbygoogle || []).push({}); });
+  
+</script>
+
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"rayId":"8c78d219fa07b8d2","version":"2024.8.0","serverTiming":{"name":{"cfExtPri":true,"cfL4":true}},"token":"c707dde3711e49e3a0cbf0020eef6a91","b":1}' crossorigin="anonymous"></script>
+</body>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H0MBKVX9SV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-H0MBKVX9SV');
+</script>
+
+<!-- Mirrored from www.Advanced Excel for Data Analysis/examples/product-codes.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 23 Sep 2024 07:33:56 GMT -->
+</html>

@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+
+
+<!-- Mirrored from www.Advanced Excel for Data Analysis/examples/standard-deviation.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 23 Sep 2024 07:39:10 GMT -->
+<head>
+
+<title>Standard Deviation in Excel (In Easy Steps)</title>
+<meta name="keywords" content="standard deviation, excel, population, sample, stdev function, stdev.p, stdev.s, formula, mean, distance, square, divide, data points, sample size, square root, variation, calculate, estimate, bessel's correction, variance, var.p, var.s">
+<meta name="description" content="This page explains how to calculate the standard deviation based on the entire population using the STDEV.P function in Excel and how to estimate the standard deviation based on a sample using the STDEV.S function in Excel.">
+
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="index, follow">
+<META content=EN-US name=LANGUAGE>
+<meta property="og:title" content="Standard Deviation in Excel">
+<meta property="og:url" content="standard-deviation.html">
+<meta property="og:type" content="article">
+<meta property="fb:admins" content="100003702321830">
+<meta property="og:description" content="This page explains how to calculate the standard deviation based on the entire population using the STDEV.P function in Excel and how to estimate the standard deviation based on a sample using the STDEV.S function in Excel.">
+<meta property="og:image" content="../smi/examples/standard-deviation.png"/>
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@ExcelEasy">
+<meta name="twitter:image" content="../smi/examples/standard-deviation.png">
+
+<link rel="preload" href="../css/style.css" as="style">
+<link rel="preload" href="images/standard-deviation/standard-deviation-of-zero.png" as="image">
+<link rel="preload" href="../js/default.js" as="script">
+<link rel="preload" href="../js/init.js" as="script">
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f5ca7.txt?client=ca-pub-1987456081350047765" data-overlays="bottom" crossorigin="anonymous"></script>
+<link rel="preload" href="../css/style-medium.css" as="style" media="(max-width:961px)">
+<link rel="preload" href="../css/style-small.css" as="style" media="(max-width:620px)">
+<link rel="stylesheet" href="../css/style.css"/>
+<script src="../js/default.js" type="text/javascript"></script>
+<script src="../js/init.js" type="text/javascript"></script>
+<style type="text/css">
+.adslot { width: 336px; height: 280px; }
+@media (min-width:320px) { .adslot { width: 300px; height: 250px; } }
+@media (min-width:360px) and (orientation: portrait) { .adslot { width: 336px; height: 280px; } }
+@media (min-width:604px) { .adslot { width: 336px; height: 280px; } }
+</style>
+<noscript>
+    <link rel="stylesheet" href="../css/skel.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/adslot.css" />
+</noscript>
+<link rel="icon" href="../favicon-48x48.ico">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+</head>
+<body>
+<header id="header">
+	<div class="container">
+		<span class="notranslate">
+			<div id="logo">
+				<a href="../index.html"><img src="../layout/excel-guides.svg" onerror="this.src='../layout/excel-guides.png'" border="0" alt="Excel guides" title="Excel guides" width="1" height="1" /><h2>Excel</h2>&nbsp;&nbsp;<span class="easy">for Data Analysis</span></a>
+                <p>#1 <a href="../index.html">Excel guides</a> on the go</p>
+		  	</div>            
+			<nav id="nav">
+				  <ul>
+                  <li><a href="../index.html">Excel</a></li>
+                  <li><a href="../introduction.html">Introduction</a></li>
+				  <li><a href="../basics.html">Basics</a></li>
+				  <li><a href="../functions.html">Functions</a></li>
+				  <li><a href="../data-analysis.html">Data Analysis</a></li>
+                  <li><a href="../vba.html">VBA</a></li>
+                  <li class="current_page_item"><a href="../examples.html">300 Examples</a></li>
+                  <li><a href="../ask-us.html">Ask us</a></li>
+                  </ul>
+				</nav>
+			</span>
+		</div>
+	</header>
+	<!-- end #header -->
+	<div class="container">
+		<div class="row 100%">
+			<div class="8u 12u(medium)">
+				<div class="post">
+						<h1 class="title" style="float:left;">Standard Deviation</h1>
+						<div style="clear: both;">&nbsp;</div>
+<div class="entry">
+<p class="spacing"><a href="#what-is-standard-deviation?">What is Standard Deviation?</a> | <a href="#stdev.p">STDEV.P</a> | <a href="#stdev.s">STDEV.S</a> | <a href="#variance">Variance</a></p>
+<p>This page explains how to calculate the <strong>standard deviation</strong> based on the entire population using the STDEV.P function in <strong>Excel</strong> and how to estimate the standard deviation based on a sample using the STDEV.S function in Excel.</p>
+<h3><a name="what-is-standard-deviation?" id="what-is-standard-deviation?"></a>What is Standard Deviation?</h3>
+			  <p>Standard deviation is a number that tells you how far numbers are from their mean.</p>
+              <p>1. For example, the numbers below have a mean (average) of 10.</p>
+			  <p><img src="images/standard-deviation/standard-deviation-of-zero.png" alt="Standard Deviation of Zero in Excel" width="604" height="207" title="Standard Deviation of Zero in Excel" /></p>
+              <p>Explanation: the numbers are all the same which means there's no variation. As a result, the numbers have a standard deviation of zero. The STDEV function is an old function. Microsoft Excel recommends using the new STEDV.S function which produces the exact same result.</p>
+              
+
+     
+     
+     
+              <p>2. The numbers below also have a mean (average) of 10.</p>
+              <p><img src="images/standard-deviation/low-standard-deviation.png" alt="Low Standard Deviation in Excel" width="604" height="207" title="Low Standard Deviation in Excel" /></p>
+              <p>Explanation: the numbers are close to the mean. As a result, the numbers have a low standard deviation.</p>
+              <p>3. The numbers below also have a mean (average) of 10.</p>
+              <p><img src="images/standard-deviation/high-standard-deviation.png" loading="lazy" alt="High Standard Deviation in Excel" width="604" height="207" title="High Standard Deviation in Excel" /></p>
+              <p>Explanation: the numbers are spread out. As a result, the numbers have a high standard deviation.</p>
+              <h3><a name="stdev.p" id="stdev.p"></a>STDEV.P</h3>
+              <p>The STDEV.P function (the P stands for Population) in Excel calculates the standard deviation based on the entire population. For example, you're teaching a group of 5 students. You have the test scores of <u>all</u> students. The entire population consists of 5 data points. The STDEV.P function uses the following formula:</p>
+              <p><img src="images/standard-deviation/formula-standard-deviation-population.png" loading="lazy" alt="Formula of the Standard Deviation Based on the Entire Population" width="126" height="79" title="Formula of the Standard Deviation Based on the Entire Population" /></p>
+              <p>In this example, x<sub>1</sub> = 5, x<sub>2</sub> = 1, x<sub>3</sub> = 4, x<sub>4</sub> = 6, x<sub>5</sub> = 9, &mu; = 5 (mean), N = 5 (number of data points).</p>
+              <p>1. Calculate the mean (&mu;).</p>
+              <p><img src="images/standard-deviation/calculate-the-mean.png" loading="lazy" alt="Calculate the Mean" width="604" height="207" title="Calculate the Mean" /></p>
+              <p>2. For each number, calculate the distance to the mean.</p>
+              <p><img src="images/standard-deviation/distance-to-the-mean.png" loading="lazy" alt="Distance to the Mean" width="604" height="187" title="Distance to the Mean" /></p>
+              <p>3. For each number, square this distance.</p>
+              <p><img src="images/standard-deviation/square-of-the-distance-to-the-mean.png" loading="lazy" alt="Square of the Distance to the Mean" width="604" height="187" title="Square of the Distance to the Mean" /></p>
+              <p>4. Sum (&sum;) these values.</p>
+              <p><img src="images/standard-deviation/sum-these-values.png" loading="lazy" alt="Sum these Values" width="604" height="207" title="Sum these Values" /></p>
+              <p>5. Divide by the number of data points (N = 5).</p>
+              <p><img src="images/standard-deviation/divide-by-number-of-data-points.png" loading="lazy" alt="Divide by the Number of Data Points" width="604" height="207" title="Divide by the Number of Data Points" /></p>
+              <p>6. Take the <a href="square-root.html">square root</a>.</p>
+              <p><img src="images/standard-deviation/standard-deviation-population.png" loading="lazy" alt="Standard Deviation Based on the Entire Population" width="604" height="207" title="Standard Deviation Based on the Entire Population" /></p>
+              <p>7. Fortunately, the STDEV.P function in Excel can execute all these steps for you.</p>
+              <p><img src="images/standard-deviation/stdev.p-function.png" loading="lazy" alt="STDEV.P function in Excel" width="604" height="207" title="STDEV.P function in Excel" /></p>
+              <div class="ad"><!-- Advanced Excel Pages Middle -->
+
+     
+     
+     data-ad-slot="2529116896"></ins>
+</div>
+              <h3><a name="stdev.s" id="stdev.s"></a>STDEV.S</h3>
+              <p>The STDEV.S function (the S stands for Sample) in Excel estimates the standard deviation based on a sample. For example, you're teaching a large group of students. You <u>only</u> have the test scores of 5 students. The sample size equals 5. The STDEV.S function uses the following formula:</p>
+              <p><img src="images/standard-deviation/formula-standard-deviation-sample.png" loading="lazy" alt="Formula of the Standard Deviation Based on a Sample" width="126" height="79" title="Formula of the Standard Deviation Based on a Sample" /></p>
+              <p>In this example, x<sub>1</sub>=5, x<sub>2</sub>=1, x<sub>3</sub>=4, x<sub>4</sub>=6, x<sub>5</sub>=9 (same numbers as above), x&#772;=5 (sample mean), n=5 (sample size).</p>
+              <p>1. Repeat steps 1-5 above but at step 5 divide by n-1 instead of N.</p>
+              <p><img src="images/standard-deviation/divide-by-n-1.png" loading="lazy" alt="Divide by n-1" width="604" height="207" title="Divide by n-1" /></p>
+              <p>2. Take the <a href="square-root.html">square root</a>.</p>
+              <p><img src="images/standard-deviation/standard-deviation-sample.png" loading="lazy" alt="Standard Deviation Based on a Sample" width="604" height="207" title="Standard Deviation Based on a Sample" /></p>
+              <p>3. Fortunately, the STDEV.S function in Excel can execute all these steps for you.</p>
+              <p><img src="images/standard-deviation/stdev.s-function.png" loading="lazy" alt="STDEV.S function in Excel" width="604" height="207" title="STDEV.S function in Excel" /></p>
+              <p>Note: why do we divide by n - 1 instead of by n when we estimate the standard deviation based on a sample? Bessel's correction states that dividing by n-1 instead of by n gives a better estimation of the standard deviation.</p>
+			  <!--<div class="ad">Excel Pages Middle
+
+     
+     
+     data-ad-slot="2529116896"></ins>
+</div>-->
+			  <h3><a name="variance" id="variance"></a>Variance</h3>
+              <p>Variance is the square of the standard deviation. It's that simple. Sometimes it's easier to use the variance when solving statistical problems.</p>
+              <p>1. The VAR.P function below calculates the variance based on the entire population.</p>
+              <p><img src="images/standard-deviation/var.p-function.png" loading="lazy" alt="VAR.P function in Excel" width="604" height="207" title="VAR.P function in Excel" /></p>
+              <p>Note: you already knew this answer (see step 5 under <a href="standard-deviation.html#stdev.p">STDEV.P</a>). Take the square root of this result to find the standard deviation based on the entire population.</p>
+              <p>2. The VAR.S function below estimates the variance based on a sample.</p>
+              <p><img src="images/standard-deviation/var.s-function.png" loading="lazy" alt="VAR.S function in Excel" width="604" height="207" title="VAR.S function in Excel" /></p>
+              <p>Note: you already knew this answer (see step 1 under <a href="standard-deviation.html#stdev.s">STDEV.S</a>). Take the square root of this result to find the standard deviation based on a sample.</p>
+              <p>3. VAR and VAR.S produce the exact same result.</p>
+              <p><img src="images/standard-deviation/var-function.png" loading="lazy" alt="VAR function in Excel" width="604" height="207" title="VAR function in Excel" /></p>
+              <p>Note: Microsoft Excel recommends using the new VAR.S function.</p>
+          <div class="ad"><!-- Advanced Excel Pages End -->
+
+     
+     
+     data-ad-slot="4005850092"></ins>
+</div>             
+              </div>
+			   </div>
+				<span class="invtab"><div class="post">
+					<div style="clear: both;"></div>
+                    <div class="entrylearn">  
+                  <p align="left"><span class="buttonp"> <a href="frequency.html">13/14 Completed! Learn more about statistical functions &gt;<br />
+                  </a></span>Go to Next Guide: <a href="../functions/round.html">Round</a></div>
+                  </div></span>
+                  </div>
+                  <div class="4u 12u(medium)">
+              <div id="search">
+              <div class="cse-branding-right" style="background-color:#FFFFFF;color:#000000">
+                <div class="cse-branding-form" style="margin-right:0px;">
+                  <form action="https://www.Advanced Excel for Data Analysis/search.html" id="cse-search-box">
+                    <div>
+                      <input type="hidden" name="cx" value="partner-pub-1987061359047735:3934495699" />
+                      <input type="hidden" name="cof" value="FORID:10" />
+                      <input type="hidden" name="ie" value="UTF-8" />
+                      <input type="text" name="q" placeholder="Explore Entire Guide" class="field" disabled />
+                      <span class="notranslate"><input type="submit" name="sa" value="Go" class="button" disabled /></span>
+                    </div>
+                  </form>
+                </div>
+                <div class="cse-branding-logo"></div>
+                <div class="cse-branding-text"></div>
+              </div>
+              </div>
+              <div id="sidebar">
+					<ul>
+				  	  <li>
+                        <h3>Guide</h3>
+						  <ul>
+							<li><a href="../functions/statistical-functions.html">Statistical Functions</a></li>
+                    </ul>
+					  </li>
+				  </ul>
+			  </div>
+              <div id="sidebar">
+				  <ul><li>
+				      <h3><font color="#FF9900"><span class="notranslate">Learn more, it's easy</span></font></h3>
+				    </li>
+					  <li><ul>                    
+                        <li><a href="average.html">Average</a></li>
+                        <li><a href="negative-numbers-to-zero.html">Negative Numbers to Zero</a></li>
+                        <li><a href="random-numbers.html">Random Numbers</a></li>
+                        <li><a href="rank.html">Rank</a></li>
+                        <li><a href="percentiles-quartiles.html">Percentiles and Quartiles</a></li>
+                        <li><a href="box-whisker-plot.html">Box and Whisker Plot</a></li>
+                        <li><a href="averageif.html">AverageIf</a></li>
+                        <li><a href="forecast.html">Forecast</a></li>
+                        <li><a href="maxifs-minifs.html">MaxIfs and MinIfs</a></li>
+                        <li><a href="weighted-average.html">Weighted Average</a></li>
+                        <li><a href="mode.html">Mode</a></li> 
+                        <li class="current_page_item"><a href="standard-deviation.html">Standard Deviation</a></li>
+                        <li><a href="frequency.html">Frequency</a></li>  
+                        </ul>
+                    </li>
+                  </ul>
+			  </div>
+              <div id="sidebar">
+					<ul>
+				  	  <li>
+                        <h3><span class="notranslate"><font color="#8FAD22">Download Excel File</font></span></h3>
+						  <ul>
+							<li><a href="excel-files/standard-deviation.xlsx">standard-deviation.xlsx</a></li>
+                    </ul>
+					  </li>
+				  </ul>
+			  </div>
+              <div id="sidebar">
+					<ul>
+				  	  <li>
+                        <h3>Next Guide</h3>
+						  <ul>
+							<li><a href="../functions/round.html">Round</a></li>
+                    </ul>
+					  </li>
+				  </ul>
+			  </div>
+              <div id="sidebar">
+		      <h3><span class="notranslate"></span></h3>
+              <p style="padding-top:7px;padding-bottom:1px"><a href="https://facebook.com/thecodedragon" target="blank" rel="nofollow"><img src="../layout/facebook-logo.png" onmouseover="this.src='../layout/facebook-logo-onmouseover.png'" onmouseout="this.src='../layout/facebook-logo.png'" width="30" height="30" border="0" alt="Advanced Excel on Facebook" title="Advanced Excel on Facebook" /></a> <a href="https://twitter.com/ceoofdss" target="blank" rel="nofollow"><img src="../layout/x-logo.png" onmouseover="this.src='../layout/x-logo-onmouseover.png'" onmouseout="this.src='../layout/x-logo.png'" width="30" height="30" border="0" alt="Advanced Excel on X" title="Advanced Excel on X" /></a> <a href="https://www.pinterest.com/julisunkan" target="blank" rel="nofollow"><img src="../layout/pinterest-logo.png" onmouseover="this.src='../layout/pinterest-logo-onmouseover.png'" onmouseout="this.src='../layout/pinterest-logo.png'" width="30" height="30" border="0" alt="Advanced Excel on Pinterest" title="Advanced Excel on Pinterest"></a> <a href="https://www.linkedin.com/in/digitalskeleton/" target="blank" rel="nofollow"><img src="../layout/linkedin-logo.png" onmouseover="this.src='../layout/linkedin-logo-onmouseover.png'" onmouseout="this.src='../layout/linkedin-logo.png'" width="30" height="30" border="0" alt="Advanced Excel on LinkedIn" title="Advanced Excel on LinkedIn"></a></p>
+              </div>
+              <div id="sidebar">
+					<ul>
+				  	  <li>
+                        <h3><span class="notranslate">Become an Excel Pro</span></h3>
+						  <ul>
+                            <li><a href="../examples.html">300 Examples</a></li>
+                          </ul>
+					  </li>
+				  </ul>
+			  </div>
+              <!-- end #sidebar -->
+			  <div style="clear: both;">&nbsp;</div>
+		  </div>
+		</div>
+	</div>
+	<!-- end #page -->
+</div>
+<div id="footer">
+	<p><a href="standard-deviation.html">Standard Deviation</a> &bull; &copy; AppMonster<br />
+	Excel is Awesome, we'll show you: <a href="../introduction.html">Introduction</a> &bull; <a href="../basics.html">Basics</a> &bull; <a href="../functions.html">Functions</a> &bull; <a href="../data-analysis.html">Data Analysis</a> &bull; <a href="../vba.html">VBA</a></p>
+</div>
+<!-- end #footer -->
+
+<script type="text/javascript">
+  
+  $(function() { (adsbygoogle = window.adsbygoogle || []).push({}); });
+  $(function() { (adsbygoogle = window.adsbygoogle || []).push({}); });
+  //$(function() { (adsbygoogle = window.adsbygoogle || []).push({}); });
+  $(function() { (adsbygoogle = window.adsbygoogle || []).push({}); });
+  
+</script>
+
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"rayId":"8c78d2c81e86b8d2","version":"2024.8.0","serverTiming":{"name":{"cfExtPri":true,"cfL4":true}},"token":"c707dde3711e49e3a0cbf0020eef6a91","b":1}' crossorigin="anonymous"></script>
+</body>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H0MBKVX9SV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-H0MBKVX9SV');
+</script>
+
+<!-- Mirrored from www.Advanced Excel for Data Analysis/examples/standard-deviation.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 23 Sep 2024 07:39:15 GMT -->
+</html>

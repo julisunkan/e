@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+
+
+<!-- Mirrored from www.Advanced Excel for Data Analysis/examples/frequency.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 23 Sep 2024 07:39:15 GMT -->
+<head>
+
+<title>How to use FREQUENCY in Excel (In Easy Steps)</title>
+<meta name="keywords" content="frequency function, excel, bin table, countifs function, frequency distribution, upper levels, extra cell, array formula, analysis toolpak, histogram, bin numbers, maximum value">
+<meta name="description" content="The FREQUENCY function in Excel calculates how often values occur within the ranges you specify in a bin table. You can also use the COUNTIFS function to create a frequency distribution.">
+
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="index, follow">
+<META content=EN-US name=LANGUAGE>
+<meta property="og:title" content="FREQUENCY function in Excel">
+<meta property="og:url" content="frequency.html">
+<meta property="og:type" content="article">
+<meta property="fb:admins" content="100003702321830">
+<meta property="og:description" content="The FREQUENCY function in Excel calculates how often values occur within the ranges you specify in a bin table. You can also use the COUNTIFS function to create a frequency distribution.">
+<meta property="og:image" content="../smi/examples/frequency.png"/>
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@ExcelEasy">
+<meta name="twitter:image" content="../smi/examples/frequency.png">
+
+<link rel="preload" href="../css/style.css" as="style">
+<link rel="preload" href="images/frequency/bin-numbers.png" as="image">
+<link rel="preload" href="../js/default.js" as="script">
+<link rel="preload" href="../js/init.js" as="script">
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f5ca7.txt?client=ca-pub-1987456081350047765" data-overlays="bottom" crossorigin="anonymous"></script>
+<link rel="preload" href="../css/style-medium.css" as="style" media="(max-width:961px)">
+<link rel="preload" href="../css/style-small.css" as="style" media="(max-width:620px)">
+<link rel="stylesheet" href="../css/style.css"/>
+<script src="../js/default.js" type="text/javascript"></script>
+<script src="../js/init.js" type="text/javascript"></script>
+<style type="text/css">
+.adslot { width: 336px; height: 280px; }
+@media (min-width:320px) { .adslot { width: 300px; height: 250px; } }
+@media (min-width:360px) and (orientation: portrait) { .adslot { width: 336px; height: 280px; } }
+@media (min-width:604px) { .adslot { width: 336px; height: 280px; } }
+</style>
+<noscript>
+    <link rel="stylesheet" href="../css/skel.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/adslot.css" />
+</noscript>
+<link rel="icon" href="../favicon-48x48.ico">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+</head>
+<body>
+<header id="header">
+	<div class="container">
+		<span class="notranslate">
+			<div id="logo">
+				<a href="../index.html"><img src="../layout/excel-guides.svg" onerror="this.src='../layout/excel-guides.png'" border="0" alt="Excel guides" title="Excel guides" width="1" height="1" /><h2>Excel</h2>&nbsp;&nbsp;<span class="easy">for Data Analysis</span></a>
+                <p>#1 <a href="../index.html">Excel guides</a> on the go</p>
+		  	</div>            
+			<nav id="nav">
+				  <ul>
+                  <li><a href="../index.html">Excel</a></li>
+                  <li><a href="../introduction.html">Introduction</a></li>
+				  <li><a href="../basics.html">Basics</a></li>
+				  <li><a href="../functions.html">Functions</a></li>
+				  <li><a href="../data-analysis.html">Data Analysis</a></li>
+                  <li><a href="../vba.html">VBA</a></li>
+                  <li class="current_page_item"><a href="../examples.html">300 Examples</a></li>
+                  <li><a href="../ask-us.html">Ask us</a></li>
+                  </ul>
+				</nav>
+			</span>
+		</div>
+	</header>
+	<!-- end #header -->
+	<div class="container">
+		<div class="row 100%">
+			<div class="8u 12u(medium)">
+				<div class="post">
+						<h1 class="title" style="float:left;">FREQUENCY</h1>
+						<div style="clear: both;">&nbsp;</div>
+<div class="entry">
+<p>The <strong>FREQUENCY function</strong> in <strong>Excel</strong> calculates how often values occur within the ranges you specify in a bin table. You can also use the COUNTIFS function to create a <strong>frequency distribution</strong>.</p>
+<p>1. First, enter the bin numbers (upper levels) in the range C4:C8.</p>
+<p><img src="images/frequency/bin-numbers.png" alt="Bin Numbers" width="604" height="421" title="Bin Numbers" /></p>
+
+
+     
+     
+     
+<p>2. Select the range D4:D9 (extra cell), enter the FREQUENCY function shown below (without the curly braces) and finish by pressing CTRL + SHIFT + ENTER.</p>
+<p><img src="images/frequency/frequency-function.png" alt="Frequency Function in Excel" width="604" height="467" title="Frequency Function in Excel" /></p>
+<p>Note: the formula bar indicates that this is an array formula by enclosing it in curly braces {}. To delete this array formula, select the range D4:D9 and press Delete.</p>
+<p>3. If you have Excel 365 or Excel 2021, simply select cell D4, enter the FREQUENCY function and press Enter. Bye bye curly braces.</p>
+<p><img src="images/frequency/dynamic-array-formula.png" loading="lazy" alt="Dynamic Array Formula" width="604" height="467" title="Dynamic Array Formula" /></p>
+<p>Note: the FREQUENCY function, entered into cell D4, fills multiple cells. Wow! This behavior in Excel 365/2021 is called <a href="dynamic-arrays.html">spilling</a>.</p>
+<p>4. <a href="hide-columns-rows.html#hide">Hide</a> the column with the bin numbers (upper levels) and insert a column with proper bin labels.</p>
+<p><img src="images/frequency/frequency-distribution.png" loading="lazy" alt="Frequency Distribution" width="604" height="421" title="Frequency Distribution" /></p>
+<p>Explanation: 1 value is less than or equal to 20, 8 values are greater than or equal to 21 and less than or equal to 25, etc. At step 2, we selected the range D4:D9 (instead of the range D4:D8). As a result, the FREQUENCY function also counts the number of values that are greater than 40.</p>
+<div class="ad"><!-- Advanced Excel Pages Middle -->
+
+     
+     
+     data-ad-slot="2529116896"></ins>
+</div>
+<p>5. You can also use the Analysis Toolpak to create a <a href="histogram.html">histogram</a>.</p>
+<p><img src="images/frequency/histogram.png" loading="lazy" alt="Histogram in Excel" width="604" height="303" title="Histogram in Excel" /></p>
+<p>6. Change the bin numbers. Select the range D4:D9 (no extra cell), enter the FREQUENCY function shown below (without the curly braces) and finish by pressing CTRL + SHIFT + ENTER.</p>
+<p><img src="images/frequency/no-extra-cell.png" loading="lazy" alt="No Extra Cell" width="604" height="467" title="No Extra Cell" /></p>
+<p>Explanation: the last bin number is greater than or equal to the maximum value (52). As a result, we don't need an extra cell to count the number of values that are greater than 60.</p>
+<p>7. You can also use the <a href="../functions/count-sum-functions.html#countifs">COUNTIFS function</a> to create a frequency distribution.</p>
+<p><img src="images/frequency/countifs-function.png" loading="lazy" alt="Countifs Function" width="604" height="467" title="Countifs Function" /></p>
+<p>Explanation: the COUNTIFS function in Excel counts cells based on two or more criteria. The COUNTIFS function shown above has 2 range/criteria pairs. The & operator joins ">=" with the value in cell C4 and "<=" with the value in cell D4. You can easily <a href="copy-formula.html#fill-handle">copy this formula</a> to the other cells.</p>
+<div class="ad"><!-- Advanced Excel Pages End -->
+
+     
+     
+     data-ad-slot="4005850092"></ins>
+</div>       
+              </div>
+			   </div>
+				<span class="invtab"><div class="post">
+					<div style="clear: both;"></div>
+                    <div class="entrylearn">  
+                  <p align="left"><span class="buttonp"> <a href="../functions/statistical-functions.html">14/14 Completed! Learn more about statistical functions &gt;<br />
+                    </a></span>Go to Next Guide: <a href="../functions/round.html">Round</a></div>
+                  </div></span>
+                  </div>
+                  <div class="4u 12u(medium)">
+              <div id="search">
+              <div class="cse-branding-right" style="background-color:#FFFFFF;color:#000000">
+                <div class="cse-branding-form" style="margin-right:0px;">
+                  <form action="https://www.Advanced Excel for Data Analysis/search.html" id="cse-search-box">
+                    <div>
+                      <input type="hidden" name="cx" value="partner-pub-1987061359047735:3934495699" />
+                      <input type="hidden" name="cof" value="FORID:10" />
+                      <input type="hidden" name="ie" value="UTF-8" />
+                      <input type="text" name="q" placeholder="Explore Entire Guide" class="field" disabled />
+                      <span class="notranslate"><input type="submit" name="sa" value="Go" class="button" disabled /></span>
+                    </div>
+                  </form>
+                </div>
+                <div class="cse-branding-logo"></div>
+                <div class="cse-branding-text"></div>
+              </div>
+              </div>
+              <div id="sidebar">
+					<ul>
+				  	  <li>
+                        <h3>Guide</h3>
+						  <ul>
+							<li><a href="../functions/statistical-functions.html">Statistical Functions</a></li>
+                    </ul>
+					  </li>
+				  </ul>
+			  </div>
+              <div id="sidebar">
+				  <ul><li>
+				      <h3><font color="#FF9900"><span class="notranslate">Learn more, it's easy</span></font></h3>
+				    </li>
+					  <li><ul>                    
+                        <li><a href="average.html">Average</a></li>
+                        <li><a href="negative-numbers-to-zero.html">Negative Numbers to Zero</a></li>
+                        <li><a href="random-numbers.html">Random Numbers</a></li>
+                        <li><a href="rank.html">Rank</a></li>
+                        <li><a href="percentiles-quartiles.html">Percentiles and Quartiles</a></li>
+                        <li><a href="box-whisker-plot.html">Box and Whisker Plot</a></li>
+                        <li><a href="averageif.html">AverageIf</a></li>
+                        <li><a href="forecast.html">Forecast</a></li>
+                        <li><a href="maxifs-minifs.html">MaxIfs and MinIfs</a></li>
+                        <li><a href="weighted-average.html">Weighted Average</a></li>
+                        <li><a href="mode.html">Mode</a></li> 
+                        <li><a href="standard-deviation.html">Standard Deviation</a></li>
+                        <li class="current_page_item"><a href="frequency.html">Frequency</a></li>  
+                        </ul>
+                    </li>
+                  </ul>
+			  </div>
+              <div id="sidebar">
+					<ul>
+				  	  <li>
+                        <h3><span class="notranslate"><font color="#8FAD22">Download Excel File</font></span></h3>
+						  <ul>
+							<li><a href="excel-files/frequency.xlsx">frequency.xlsx</a></li>
+                    </ul>
+					  </li>
+				  </ul>
+			  </div>
+              <div id="sidebar">
+					<ul>
+				  	  <li>
+                        <h3>Next Guide</h3>
+						  <ul>
+							<li><a href="../functions/round.html">Round</a></li>
+                    </ul>
+					  </li>
+				  </ul>
+			  </div>
+              <div id="sidebar">
+		      <h3><span class="notranslate"></span></h3>
+              <p style="padding-top:7px;padding-bottom:1px"><a href="https://facebook.com/thecodedragon" target="blank" rel="nofollow"><img src="../layout/facebook-logo.png" onmouseover="this.src='../layout/facebook-logo-onmouseover.png'" onmouseout="this.src='../layout/facebook-logo.png'" width="30" height="30" border="0" alt="Advanced Excel on Facebook" title="Advanced Excel on Facebook" /></a> <a href="https://twitter.com/ceoofdss" target="blank" rel="nofollow"><img src="../layout/x-logo.png" onmouseover="this.src='../layout/x-logo-onmouseover.png'" onmouseout="this.src='../layout/x-logo.png'" width="30" height="30" border="0" alt="Advanced Excel on X" title="Advanced Excel on X" /></a> <a href="https://www.pinterest.com/julisunkan" target="blank" rel="nofollow"><img src="../layout/pinterest-logo.png" onmouseover="this.src='../layout/pinterest-logo-onmouseover.png'" onmouseout="this.src='../layout/pinterest-logo.png'" width="30" height="30" border="0" alt="Advanced Excel on Pinterest" title="Advanced Excel on Pinterest"></a> <a href="https://www.linkedin.com/in/digitalskeleton/" target="blank" rel="nofollow"><img src="../layout/linkedin-logo.png" onmouseover="this.src='../layout/linkedin-logo-onmouseover.png'" onmouseout="this.src='../layout/linkedin-logo.png'" width="30" height="30" border="0" alt="Advanced Excel on LinkedIn" title="Advanced Excel on LinkedIn"></a></p>
+              </div>
+              <div id="sidebar">
+					<ul>
+				  	  <li>
+                        <h3><span class="notranslate">Become an Excel Pro</span></h3>
+						  <ul>
+                            <li><a href="../examples.html">300 Examples</a></li>
+                          </ul>
+					  </li>
+				  </ul>
+			  </div>
+              <!-- end #sidebar -->
+			  <div style="clear: both;">&nbsp;</div>
+		  </div>
+		</div>
+	</div>
+	<!-- end #page -->
+</div>
+<div id="footer">
+	<p><a href="frequency.html">Frequency</a> &bull; &copy; AppMonster<br />
+	Excel is Awesome, we'll show you: <a href="../introduction.html">Introduction</a> &bull; <a href="../basics.html">Basics</a> &bull; <a href="../functions.html">Functions</a> &bull; <a href="../data-analysis.html">Data Analysis</a> &bull; <a href="../vba.html">VBA</a></p>
+</div>
+<!-- end #footer -->
+
+<script type="text/javascript">
+  
+  $(function() { (adsbygoogle = window.adsbygoogle || []).push({}); });
+  $(function() { (adsbygoogle = window.adsbygoogle || []).push({}); });
+  $(function() { (adsbygoogle = window.adsbygoogle || []).push({}); });
+  
+</script>
+
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"rayId":"8c78d2c9fd599fc0","version":"2024.8.0","serverTiming":{"name":{"cfExtPri":true,"cfL4":true}},"token":"c707dde3711e49e3a0cbf0020eef6a91","b":1}' crossorigin="anonymous"></script>
+</body>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H0MBKVX9SV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-H0MBKVX9SV');
+</script>
+
+<!-- Mirrored from www.Advanced Excel for Data Analysis/examples/frequency.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 23 Sep 2024 07:39:17 GMT -->
+</html>

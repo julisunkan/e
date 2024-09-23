@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+
+
+<!-- Mirrored from www.Advanced Excel for Data Analysis/examples/circular-reference.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 23 Sep 2024 07:39:36 GMT -->
+<head>
+
+<title>Find Circular References in Excel (In Easy Steps)</title>
+<meta name="keywords" content="circular reference, find, excel, direct circular reference, indirect circular reference, find circular references, formula, refers, own, cell, error message, formula auditing, show formulas, circle, error checking, cell address, status bar, fix circular reference, find more circular references, warning">
+<meta name="description" content="A circular reference in Excel occurs when a formula directly or indirectly refers to its own cell. This is not possible. Let's start simple.">
+
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="index, follow">
+<META content=EN-US name=LANGUAGE>
+<meta property="og:title" content="Circular Reference in Excel">
+<meta property="og:url" content="circular-reference.html">
+<meta property="og:type" content="article">
+<meta property="fb:admins" content="100003702321830">
+<meta property="og:description" content="A circular reference in Excel occurs when a formula directly or indirectly refers to its own cell. This is not possible. Let's start simple.">
+<meta property="og:image" content="../smi/examples/circular-reference-2.png"/>
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@ExcelEasy">
+<meta name="twitter:image" content="../smi/examples/circular-reference-2.png">
+
+<link rel="preload" href="../css/style.css" as="style">
+<link rel="preload" href="images/circular-reference/direct-circular-reference.png" as="image">
+<link rel="preload" href="../js/default.js" as="script">
+<link rel="preload" href="../js/init.js" as="script">
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f5ca7.txt?client=ca-pub-1987456081350047765" data-overlays="bottom" crossorigin="anonymous"></script>
+<link rel="preload" href="../css/style-medium.css" as="style" media="(max-width:961px)">
+<link rel="preload" href="../css/style-small.css" as="style" media="(max-width:620px)">
+<link rel="stylesheet" href="../css/style.css"/>
+<script src="../js/default.js" type="text/javascript"></script>
+<script src="../js/init.js" type="text/javascript"></script>
+<style type="text/css">
+.adslot { width: 336px; height: 280px; }
+@media (min-width:320px) { .adslot { width: 300px; height: 250px; } }
+@media (min-width:360px) and (orientation: portrait) { .adslot { width: 336px; height: 280px; } }
+@media (min-width:604px) { .adslot { width: 336px; height: 280px; } }
+</style>
+<noscript>
+    <link rel="stylesheet" href="../css/skel.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/adslot.css" />
+</noscript>
+<link rel="icon" href="../favicon-48x48.ico">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+</head>
+<body>
+<header id="header">
+	<div class="container">
+		<span class="notranslate">
+			<div id="logo">
+				<a href="../index.html"><img src="../layout/excel-guides.svg" onerror="this.src='../layout/excel-guides.png'" border="0" alt="Excel guides" title="Excel guides" width="1" height="1" /><h2>Excel</h2>&nbsp;&nbsp;<span class="easy">for Data Analysis</span></a>
+                <p>#1 <a href="../index.html">Excel guides</a> on the go</p>
+		  	</div>            
+			<nav id="nav">
+				  <ul>
+                  <li><a href="../index.html">Excel</a></li>
+                  <li><a href="../introduction.html">Introduction</a></li>
+				  <li><a href="../basics.html">Basics</a></li>
+				  <li><a href="../functions.html">Functions</a></li>
+				  <li><a href="../data-analysis.html">Data Analysis</a></li>
+                  <li><a href="../vba.html">VBA</a></li>
+                  <li class="current_page_item"><a href="../examples.html">300 Examples</a></li>
+                  <li><a href="../ask-us.html">Ask us</a></li>
+                  </ul>
+				</nav>
+			</span>
+		</div>
+	</header>
+	<!-- end #header -->
+	<div class="container">
+		<div class="row 100%">
+			<div class="8u 12u(medium)">
+				<div class="post">
+						<h1 class="title" style="float:left;">Circular Reference</h1>
+						<div style="clear: both;">&nbsp;</div>
+<div class="entry">
+<p class="spacing"><a href="#direct-circular-reference">Direct Circular Reference</a> | <a href="#indirect-circular-reference">Indirect Circular Reference</a> | <a href="#find-circular-references">Find Circular References</a></p>
+<p>A <strong>circular reference in Excel</strong> occurs when a formula directly or indirectly refers to its own cell. This is not possible.</p>
+<h3><a name="direct-circular-reference" id="direct-circular-reference"></a>Direct Circular Reference</h3>
+<p>Let's start simple. A direct circular reference in Excel occurs when a formula directly refers to its own cell.</p>
+<p>1. For example, the formula in cell A3 below directly refers to its own cell (A3). This is not possible.</p>
+<p><img src="images/circular-reference/direct-circular-reference.png" alt="Direct Circular Reference in Excel" width="604" height="147" title="Direct Circular Reference in Excel" /></p>
+
+
+     
+     
+     
+<p>2. Press Enter. The circular reference error message appears.</p>
+<p><img src="images/circular-reference/circular-reference-error-message.png" alt="Circular Reference Error Message" width="604" height="121" title="Circular Reference Error Message" /></p>
+<p>3. Click OK. Excel returns a 0.</p>
+<p><img src="images/circular-reference/accept-direct-circular-reference.png" alt="Accept Direct Circular Reference" width="604" height="147" title="Accept Direct Circular Reference" /></p>
+<h3><a name="indirect-circular-reference" id="indirect-circular-reference"></a>Indirect Circular Reference</h3>
+<p>An indirect circular reference in Excel occurs when a formula indirectly refers to its own cell. Let's look at a simple example.</p>
+<p>1. For example, cell D2 below contains the value 25.</p>
+<p><img src="images/circular-reference/cell-d2.png" loading="lazy" alt="Cell D2" width="604" height="187" title="Cell D2" /></p>
+<p>2. Cell F4 refers to cell D2.</p>
+<p><img src="images/circular-reference/relative-reference-1.png" loading="lazy" alt="Relative Reference" width="604" height="187" title="Relative Reference" /></p>
+<p>3. Cell C5 refers to cell F4.</p>
+<p><img src="images/circular-reference/relative-reference-2.png" loading="lazy" alt="Relative Reference" width="604" height="187" title="Relative Reference" /></p>
+<p>4. So far, everything's OK. Now replace the value 25 in cell D2 with the formula shown below.</p>
+<p><img src="images/circular-reference/create-indirect-circular-reference.png" loading="lazy" alt="Create Indirect Circular Reference" width="604" height="187" title="Create Indirect Circular Reference" /></p>
+<p>5. Press Enter. The circular reference error message appears.</p>
+<p><img src="images/circular-reference/circular-reference-error-message.png" loading="lazy" alt="Circular Reference Error Message" width="604" height="121" title="Circular Reference Error Message" /></p>
+<p>6. Click OK. Excel returns a 0.</p>
+<p><img src="images/circular-reference/indirect-circular-reference.png" loading="lazy" alt="Indirect Circular Reference in Excel" width="604" height="187" title="Indirect Circular Reference in Excel" /></p>
+<p>7. On the Formulas tab, in the Formula Auditing group, click Show Formulas.</p>
+<p><img src="images/circular-reference/show-formulas.png" loading="lazy" alt="Show Formulas" width="320" height="100" title="Show Formulas" /></p>
+<p>8. Cell D2 refers to cell C5. Cell C5 refers to cell F4. Cell F4 refers back to cell D2.</p>
+<p><img src="images/circular-reference/circle.png" loading="lazy" alt="Circle" width="604" height="141" title="Circle" /></p>
+<p>Conclusion: the formula in cell D2 indirectly refers to its own cell (D2). This is not possible. The formulas in cell C5 and cell F4 also refer back to their own cell (it's a circle).</p>
+<div class="ad"><!-- Advanced Excel Pages Middle -->
+
+     
+     
+     data-ad-slot="2529116896"></ins>
+</div>
+<h3><a name="find-circular-references" id="find-circular-references"></a>Find Circular References</h3>
+<p>To <strong>find circular references</strong> in Excel, in the Formula Auditing group, click the down arrow next to Error Checking and click Cell References.</p>
+<p>1. Our sheet contains 2 circular references. 1 direct circular reference (A3) and 1 indirect circular reference (D2, C5 and F4).</p>
+<p><img src="images/circular-reference/circular-references.png" loading="lazy" alt="Circular References in Excel" width="604" height="187" title="Circular References in Excel" /></p>
+<p>2. On the Formulas tab, in the Formula Auditing group, click the down arrow next to Error Checking.</p>
+<p><img src="images/circular-reference/error-checking.png" loading="lazy" alt="Error Checking" width="320" height="100" title="Error Checking" /></p>
+<p>3. Click Circular References. Excel shows the cell address of one circular reference.</p>
+<p><img src="images/circular-reference/find-circular-reference.png" loading="lazy" alt="Find Circular Reference" width="238" height="96" title="Find Circular Reference" /></p>
+<p>4. You can also look at the status bar. This is much easier.</p>
+<p><img src="images/circular-reference/status-bar.png" loading="lazy" alt="Status Bar" width="604" height="91" title="Status Bar" /></p>
+<p>5. Fix this circular reference.</p>
+<p><img src="images/circular-reference/fix-circular-reference.png" loading="lazy" alt="Fix Circular Reference" width="604" height="187" title="Fix Circular Reference" /></p>
+<p>To find more circular references, repeat these steps.</p>
+<p>6. On the Formulas tab, in the Formula Auditing group, click the down arrow next to Error Checking.</p>
+<p><img src="images/circular-reference/error-checking.png" loading="lazy" alt="Error Checking" width="320" height="100" title="Error Checking" /></p>
+<p>7. Click Circular References. Excel shows the cell addresses of the indirect circular reference.</p>
+<p><img src="images/circular-reference/multiple-cell-addresses.png" loading="lazy" alt="Multiple Cell Addresses" width="238" height="146" title="Multiple Cell Addresses" /></p>
+<p>8. The status bar only displays a single cell address.</p>
+<p><img src="images/circular-reference/single-cell-address.png" loading="lazy" alt="Single Cell Address" width="604" height="91" title="Single Cell Address" /></p>
+<p>Note: fix this circular reference by replacing one of the formulas with a value. As a result, the warning in the status bar will disappear.</p>
+<div class="ad"><!-- Advanced Excel Pages End -->
+
+     
+     
+     data-ad-slot="4005850092"></ins>
+</div>
+            </div>
+			   </div>
+				<span class="invtab"><div class="post">
+					<div style="clear: both;"></div>
+                    <div class="entrylearn">  
+                  <p align="left"><span class="buttonp"> <a href="formula-auditing.html">5/9 Completed! Learn much more about formula errors &gt;<br />
+                    </a></span>Go to Next Guide: <a href="../functions/array-formulas.html">Array Formulas</a></div>
+                  </div></span>
+                  </div>
+                  <div class="4u 12u(medium)">
+              <div id="search">
+              <div class="cse-branding-right" style="background-color:#FFFFFF;color:#000000">
+                <div class="cse-branding-form" style="margin-right:0px;">
+                  <form action="https://www.Advanced Excel for Data Analysis/search.html" id="cse-search-box">
+                    <div>
+                      <input type="hidden" name="cx" value="partner-pub-1987061359047735:3934495699" />
+                      <input type="hidden" name="cof" value="FORID:10" />
+                      <input type="hidden" name="ie" value="UTF-8" />
+                      <input type="text" name="q" placeholder="Explore Entire Guide" class="field" disabled />
+                      <span class="notranslate"><input type="submit" name="sa" value="Go" class="button" disabled /></span>
+                    </div>
+                  </form>
+                </div>
+                <div class="cse-branding-logo"></div>
+                <div class="cse-branding-text"></div>
+              </div>
+              </div>
+              <div id="sidebar">
+					<ul>
+				  	  <li>
+                        <h3>Guide</h3>
+						  <ul>
+							<li><a href="../functions/formula-errors.html">Formula Errors</a></li>
+                    </ul>
+					  </li>
+				  </ul>
+			  </div>
+              <div id="sidebar">
+				  <ul><li>
+				      <h3><font color="#FF9900"><span class="notranslate">Learn more, it's easy</span></font></h3>
+				    </li>
+					  <li><ul>
+                        <li><a href="iferror.html">IfError</a></li>
+                        <li><a href="iserror.html">IsError</a></li>
+                        <li><a href="aggregate.html">Aggregate</a></li>
+                        <li class="current_page_item"><a href="circular-reference.html">Circular Reference</a></li>
+                        <li><a href="formula-auditing.html">Formula Auditing</a></li>
+						<li><a href="sum-range-with-errors.html">Sum Range with Errors</a></li>
+                        <li><a href="floating-point-errors.html">Floating Point Errors</a></li>
+                        <li><a href="ifna.html">IFNA</a></li>
+                        </ul>
+                    </li>
+                  </ul>
+			  </div>
+              <div id="sidebar">
+					<ul>
+				  	  <li>
+                        <h3><span class="notranslate"><font color="#8FAD22">Download Excel File</font></span></h3>
+						  <ul>
+							<li><a href="excel-files/circular-reference.xlsx">circular-reference.xlsx</a></li>
+                    </ul>
+					  </li>
+				  </ul>
+			  </div>
+              <div id="sidebar">
+					<ul>
+				  	  <li>
+                        <h3>Next Guide</h3>
+						  <ul>
+							<li><a href="../functions/array-formulas.html">Array Formulas</a></li>
+                    </ul>
+					  </li>
+				  </ul>
+			  </div>
+              <div id="sidebar">
+		      <h3><span class="notranslate"></span></h3>
+              <p style="padding-top:7px;padding-bottom:1px"><a href="https://facebook.com/thecodedragon" target="blank" rel="nofollow"><img src="../layout/facebook-logo.png" onmouseover="this.src='../layout/facebook-logo-onmouseover.png'" onmouseout="this.src='../layout/facebook-logo.png'" width="30" height="30" border="0" alt="Advanced Excel on Facebook" title="Advanced Excel on Facebook" /></a> <a href="https://twitter.com/ceoofdss" target="blank" rel="nofollow"><img src="../layout/x-logo.png" onmouseover="this.src='../layout/x-logo-onmouseover.png'" onmouseout="this.src='../layout/x-logo.png'" width="30" height="30" border="0" alt="Advanced Excel on X" title="Advanced Excel on X" /></a> <a href="https://www.pinterest.com/julisunkan" target="blank" rel="nofollow"><img src="../layout/pinterest-logo.png" onmouseover="this.src='../layout/pinterest-logo-onmouseover.png'" onmouseout="this.src='../layout/pinterest-logo.png'" width="30" height="30" border="0" alt="Advanced Excel on Pinterest" title="Advanced Excel on Pinterest"></a> <a href="https://www.linkedin.com/in/digitalskeleton/" target="blank" rel="nofollow"><img src="../layout/linkedin-logo.png" onmouseover="this.src='../layout/linkedin-logo-onmouseover.png'" onmouseout="this.src='../layout/linkedin-logo.png'" width="30" height="30" border="0" alt="Advanced Excel on LinkedIn" title="Advanced Excel on LinkedIn"></a></p>
+              </div>
+              <div id="sidebar">
+					<ul>
+				  	  <li>
+                        <h3><span class="notranslate">Become an Excel Pro</span></h3>
+						  <ul>
+                            <li><a href="../examples.html">300 Examples</a></li>
+                          </ul>
+					  </li>
+				  </ul>
+			  </div>
+              <!-- end #sidebar -->
+			  <div style="clear: both;">&nbsp;</div>
+		  </div>
+		</div>
+	</div>
+	<!-- end #page -->
+</div>
+<div id="footer">
+	<p><a href="circular-reference.html">Circular Reference</a> &bull; &copy; AppMonster<br />
+	Excel is Awesome, we'll show you: <a href="../introduction.html">Introduction</a> &bull; <a href="../basics.html">Basics</a> &bull; <a href="../functions.html">Functions</a> &bull; <a href="../data-analysis.html">Data Analysis</a> &bull; <a href="../vba.html">VBA</a></p>
+</div>
+<!-- end #footer -->
+
+<script type="text/javascript">
+  
+  $(function() { (adsbygoogle = window.adsbygoogle || []).push({}); });
+  $(function() { (adsbygoogle = window.adsbygoogle || []).push({}); });
+  $(function() { (adsbygoogle = window.adsbygoogle || []).push({}); });
+  
+</script>
+
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"rayId":"8c78d2d67930b8d2","version":"2024.8.0","serverTiming":{"name":{"cfExtPri":true,"cfL4":true}},"token":"c707dde3711e49e3a0cbf0020eef6a91","b":1}' crossorigin="anonymous"></script>
+</body>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H0MBKVX9SV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-H0MBKVX9SV');
+</script>
+
+<!-- Mirrored from www.Advanced Excel for Data Analysis/examples/circular-reference.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 23 Sep 2024 07:39:40 GMT -->
+</html>

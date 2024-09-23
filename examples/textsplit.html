@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+
+
+<!-- Mirrored from www.Advanced Excel for Data Analysis/examples/textsplit.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 23 Sep 2024 07:40:11 GMT -->
+<head>
+
+<title>How to use TEXTSPLIT in Excel (In Easy Steps)</title>
+<meta name="keywords" content="textsplit, excel, textsplit function, split text, splitting text strings, split text into columns, split text into rows, delimiters, ignore empty values, case-insensitive splitting, 2-dimensional split">
+<meta name="description" content="Use the TEXTSPLIT function in Excel 365 to split text into rows or columns using delimiters. This guide teaches you how to use the TEXTSPLIT function, starting with simple text splits and moving on to more advanced formulas.">
+
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="index, follow">
+<META content=EN-US name=LANGUAGE>
+<meta property="og:title" content="TEXTSPLIT function in Excel">
+<meta property="og:url" content="textsplit.html">
+<meta property="og:type" content="article">
+<meta property="fb:admins" content="100003702321830">
+<meta property="og:description" content="Use the TEXTSPLIT function in Excel 365 to split text into rows or columns using delimiters. This guide teaches you how to use the TEXTSPLIT function, starting with simple text splits and moving on to more advanced formulas.">
+<meta property="og:image" content="../smi/examples/textsplit.png"/>
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@ExcelEasy">
+<meta name="twitter:image" content="../smi/examples/textsplit.png">
+
+<link rel="preload" href="../css/style.css" as="style">
+<link rel="preload" href="images/textsplit/basic-textsplit-function.png" as="image">
+<link rel="preload" href="../js/default.js" as="script">
+<link rel="preload" href="../js/init.js" as="script">
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f5ca7.txt?client=ca-pub-1987456081350047765" data-overlays="bottom" crossorigin="anonymous"></script>
+<link rel="preload" href="../css/style-medium.css" as="style" media="(max-width:961px)">
+<link rel="preload" href="../css/style-small.css" as="style" media="(max-width:620px)">
+<link rel="stylesheet" href="../css/style.css"/>
+<script src="../js/default.js" type="text/javascript"></script>
+<script src="../js/init.js" type="text/javascript"></script>
+<style type="text/css">
+.adslot { width: 336px; height: 280px; }
+@media (min-width:320px) { .adslot { width: 300px; height: 250px; } }
+@media (min-width:360px) and (orientation: portrait) { .adslot { width: 336px; height: 280px; } }
+@media (min-width:604px) { .adslot { width: 336px; height: 280px; } }
+</style>
+<noscript>
+    <link rel="stylesheet" href="../css/skel.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/adslot.css" />
+</noscript>
+<link rel="icon" href="../favicon-48x48.ico">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+</head>
+<body>
+<header id="header">
+	<div class="container">
+		<span class="notranslate">
+			<div id="logo">
+				<a href="../index.html"><img src="../layout/excel-guides.svg" onerror="this.src='../layout/excel-guides.png'" border="0" alt="Excel guides" title="Excel guides" width="1" height="1" /><h2>Excel</h2>&nbsp;&nbsp;<span class="easy">for Data Analysis</span></a>
+                <p>#1 <a href="../index.html">Excel guides</a> on the go</p>
+		  	</div>            
+			<nav id="nav">
+				  <ul>
+                  <li><a href="../index.html">Excel</a></li>
+                  <li><a href="../introduction.html">Introduction</a></li>
+				  <li><a href="../basics.html">Basics</a></li>
+				  <li><a href="../functions.html">Functions</a></li>
+				  <li><a href="../data-analysis.html">Data Analysis</a></li>
+                  <li><a href="../vba.html">VBA</a></li>
+                  <li class="current_page_item"><a href="../examples.html">300 Examples</a></li>
+                  <li><a href="../ask-us.html">Ask us</a></li>
+                  </ul>
+				</nav>
+			</span>
+		</div>
+	</header>
+	<!-- end #header -->
+	<div class="container">
+		<div class="row 100%">
+			<div class="8u 12u(medium)">
+				<div class="post">
+						<h1 class="title" style="float:left;">TEXTSPLIT</h1>
+						<div style="clear: both;">&nbsp;</div>
+<div class="entry">
+<p class="spacing"><a href="#basic-textsplit-function">Basic TEXTSPLIT function</a> | <a href="#split-text-into-columns-or-rows">Split Text into Columns or Rows</a> | <a href="#multiple-delimiters">Multiple Delimiters</a> | <a href="#ignore-empty-values">Ignore Empty Values</a> | <a href="#case-insensitive-splitting">Case-Insensitive Splitting</a> | <a href="#2-dimensional-split">2-Dimensional Split</a></p>
+<p>Use the <strong>TEXTSPLIT function in Excel</strong> 365 to split text into rows or columns using delimiters.</p>
+<p>This guide teaches you how to use the TEXTSPLIT function, starting with simple <strong>text splits</strong> and moving on to more advanced formulas.</p>
+<h3><a name="basic-textsplit-function" id="basic-textsplit-function"></a>Basic TEXTSPLIT function</h3>
+<p>When TEXTSPLIT has only 2 arguments, it splits text into columns. In this example, we're using a comma and a space as the delimiter (second argument).</p>
+<p><img src="images/textsplit/basic-textsplit-function.png" alt="Basic TEXTSPLIT function in Excel" width="604" height="227" title="Basic TEXTSPLIT function in Excel" /></p>
+
+
+     
+     
+     
+<p>Note: the TEXTSPLIT function, entered into cell B2, fills multiple cells (B2 and C2). Wow! This behavior is called <a href="dynamic-arrays.html">spilling</a>.</p>
+<h3><a name="split-text-into-columns-or-rows" id="split-text-into-columns-or-rows"></a>Split Text into Columns or Rows</h3>
+<p>The TEXTSPLIT function below, with 2 arguments, splits text into columns using a dash as the delimiter. The results spill over into the cells to the right of cell B1.</p>
+<p><img src="images/textsplit/split-text-into-columns.png" alt="Split Text into Columns" width="604" height="107" title="Split Text into Columns" /></p>
+<p>Use 3 arguments and leave the second argument empty to <strong>split text</strong> into rows!</p>
+<p><img src="images/textsplit/split-text-into-rows.png" alt="Split Text into Rows" width="604" height="187" title="Split Text into Rows" /></p>
+<h3><a name="multiple-delimiters" id="multiple-delimiters"></a>Multiple Delimiters</h3>
+<p>The TEXTSPLIT function below splits cell A1 using multiple delimiters (semicolon, dash, and slash).</p>
+<p><img src="images/textsplit/split-text-using-multiple-delimiters.png" loading="lazy" alt="Split Text Using Multiple Delimiters" width="604" height="107" title="Split Text Using Multiple Delimiters" /></p>
+<p>Explanation: you can split text using various delimiters by providing them as an array constant to <strong>TEXTSPLIT</strong>.</p>
+<h3><a name="ignore-empty-values" id="ignore-empty-values"></a>Ignore Empty Values</h3>
+<p>You can use the 4th argument (set it to TRUE) of the TEXTSPLIT function to ignore empty values.</p>
+<p>Let's say you have a string containing names separated by commas, and you want to split this string into separate cells in Excel while ignoring any empty values.</p>
+<p>1. Without using the 4th argument, TEXTSPLIT returns empty cells.</p>
+<p><img src="images/textsplit/textsplit-returns-empty-cells.png" loading="lazy" alt="TEXTSPLIT Returns Empty Cells" width="604" height="107" title="TEXTSPLIT Returns Empty Cells" /></p>
+<p>2. The TEXTSPLIT function below ignores empty values resulting from consecutive commas.</p>
+<p><img src="images/textsplit/textsplit-function-that-ignores-empty-values.png" loading="lazy" alt="TEXTSPLIT function that Ignores Empty Values" width="604" height="107" title="TEXTSPLIT function that Ignores Empty Values" /></p>
+<p>Tip: if your TEXTSPLIT function returns leading spaces, extra spaces or trailing spaces in cells that you want removed, you can add a TRIM function to remove these spaces.</p>
+<h3><a name="case-insensitive-splitting" id="case-insensitive-splitting"></a>Case-Insensitive Splitting</h3>
+<p>By default, TEXTSPLIT is case-sensitive when searching for a delimiter. To make the delimiter case-insensitive, use the 5th argument (set it to 1).</p>
+<p>Suppose you have a list of dimensions with delimiters that vary in case, such as "by", "By" and "BY".</p>
+<p>1. The TEXTSPLIT function below doesn't recognize " By " or " BY ".</p>
+<p><img src="images/textsplit/case-sensitive-delimiter-search.png" loading="lazy" alt="Case-sensitive Delimiter Search" width="604" height="187" title="Case-sensitive Delimiter Search" /></p>
+<p>2. To handle all variations of "by" regardless of case, set the 5th argument to 1.</p>
+<p><img src="images/textsplit/case-insensitive-splitting.png" loading="lazy" alt="Case-insensitive Splitting" width="604" height="187" title="Case-insensitive Splitting" /></p>
+<p>Explanation: this TEXTSPLIT function is case-insensitive, splitting text strings using any case variation of "by", including "By" and "BY". Note that this configuration leaves the 3rd and 4th arguments empty.</p>
+<h3><a name="2-dimensional-split" id="2-dimensional-split"></a>2-Dimensional Split</h3>
+<p>Imagine you have a multiline text string (see cell A1 below) where each line represents a person's name and their age, separated by an equal sign, and each person separated by a comma and a space.</p>
+<p><img src="images/textsplit/multiline-text-string.png" loading="lazy" alt="Multiline Text String" width="604" height="107" title="Multiline Text String" /></p>
+<p>You want to split this text into columns for names and ages and rows for each person. Here's how you can achieve this using TEXTSPLIT.</p>
+<p><img src="images/textsplit/2-dimensional-split.png" loading="lazy" alt="2-Dimensional Split" width="604" height="167" title="2-Dimensional Split" /></p>
+<p>Explanation: this formula splits the text string based on the equal sign "=" as the column delimiter (2nd argument) and the comma and space ", " as the row delimiter (3rd argument).</p>
+<div class="ad"><!-- Advanced Excel Pages End -->
+
+     
+     
+     data-ad-slot="4005850092"></ins>
+</div>
+            </div>
+			   </div>
+				<span class="invtab"><div class="post">
+					<div style="clear: both;"></div>
+                    <div class="entrylearn">  
+                  <p align="left"><span class="buttonp"> <a href="../functions/array-formulas.html">13/13 Completed! Learn much more about array formulas &gt;<br />
+                  </a></span>Go to Next Guide: <a href="../data-analysis/sort.html">Sort</a></div>
+                  </div></span>
+                  </div>
+                  <div class="4u 12u(medium)">
+              <div id="search">
+              <div class="cse-branding-right" style="background-color:#FFFFFF;color:#000000">
+                <div class="cse-branding-form" style="margin-right:0px;">
+                  <form action="https://www.Advanced Excel for Data Analysis/search.html" id="cse-search-box">
+                    <div>
+                      <input type="hidden" name="cx" value="partner-pub-1987061359047735:3934495699" />
+                      <input type="hidden" name="cof" value="FORID:10" />
+                      <input type="hidden" name="ie" value="UTF-8" />
+                      <input type="text" name="q" placeholder="Explore Entire Guide" class="field" disabled />
+                      <span class="notranslate"><input type="submit" name="sa" value="Go" class="button" disabled /></span>
+                    </div>
+                  </form>
+                </div>
+                <div class="cse-branding-logo"></div>
+                <div class="cse-branding-text"></div>
+              </div>
+              </div>
+              <div id="sidebar">
+					<ul>
+				  	  <li>
+                        <h3>Guide</h3>
+						  <ul>
+							<li><a href="../functions/array-formulas.html">Array Formulas</a></li>
+                    </ul>
+					  </li>
+				  </ul>
+			  </div>
+              <div id="sidebar">
+				  <ul><li>
+				      <h3><font color="#FF9900"><span class="notranslate">Learn more, it's easy</span></font></h3>
+				    </li>
+					  <li><ul>
+                        <li><a href="count-errors.html">Count Errors</a></li> 
+                        <li><a href="count-unique-values.html">Count Unique Values</a></li>
+                        <li><a href="count-with-or-criteria.html">Count with Or Criteria</a></li>
+                        <li><a href="sum-every-nth-row.html">Sum Every Nth Row</a></li>
+                        <li><a href="sum-largest-numbers.html">Sum Largest Numbers</a></li>
+                        <li><a href="sum-with-or-criteria.html">Sum with Or Criteria</a></li>
+                        <li><a href="most-frequently-occurring-word.html">Most Frequently Occurring Word</a></li>
+						<li><a href="dynamic-arrays.html">Dynamic Arrays</a></li>
+						<li><a href="let-function.html">LET function</a></li>
+						<li><a href="array-manipulation.html">Array Manipulation</a></li>
+						<li><a href="lambda.html">Lambda</a></li>
+						<li class="current_page_item"><a href="textsplit.html">TextSplit</a></li>
+                        </ul>
+                    </li>
+                  </ul>
+			  </div>
+              <div id="sidebar">
+					<ul>
+				  	  <li>
+                        <h3><span class="notranslate"><font color="#8FAD22">Download Excel File</font></span></h3>
+						  <ul>
+							<li><a href="excel-files/textsplit.xlsx">textsplit.xlsx</a></li>
+                    </ul>
+					  </li>
+				  </ul>
+			  </div>
+              <div id="sidebar">
+					<ul>
+				  	  <li>
+                        <h3>Next Guide</h3>
+						  <ul>
+							<li><a href="../data-analysis/sort.html">Sort</a></li>
+                    </ul>
+					  </li>
+				  </ul>
+			  </div>
+              <div id="sidebar">
+		      <h3><span class="notranslate"></span></h3>
+              <p style="padding-top:7px;padding-bottom:1px"><a href="https://facebook.com/thecodedragon" target="blank" rel="nofollow"><img src="../layout/facebook-logo.png" onmouseover="this.src='../layout/facebook-logo-onmouseover.png'" onmouseout="this.src='../layout/facebook-logo.png'" width="30" height="30" border="0" alt="Advanced Excel on Facebook" title="Advanced Excel on Facebook" /></a> <a href="https://twitter.com/ceoofdss" target="blank" rel="nofollow"><img src="../layout/x-logo.png" onmouseover="this.src='../layout/x-logo-onmouseover.png'" onmouseout="this.src='../layout/x-logo.png'" width="30" height="30" border="0" alt="Advanced Excel on X" title="Advanced Excel on X" /></a> <a href="https://www.pinterest.com/julisunkan" target="blank" rel="nofollow"><img src="../layout/pinterest-logo.png" onmouseover="this.src='../layout/pinterest-logo-onmouseover.png'" onmouseout="this.src='../layout/pinterest-logo.png'" width="30" height="30" border="0" alt="Advanced Excel on Pinterest" title="Advanced Excel on Pinterest"></a> <a href="https://www.linkedin.com/in/digitalskeleton/" target="blank" rel="nofollow"><img src="../layout/linkedin-logo.png" onmouseover="this.src='../layout/linkedin-logo-onmouseover.png'" onmouseout="this.src='../layout/linkedin-logo.png'" width="30" height="30" border="0" alt="Advanced Excel on LinkedIn" title="Advanced Excel on LinkedIn"></a></p>
+              </div>
+              <div id="sidebar">
+					<ul>
+				  	  <li>
+                        <h3><span class="notranslate">Become an Excel Pro</span></h3>
+						  <ul>
+                            <li><a href="../examples.html">300 Examples</a></li>
+                          </ul>
+					  </li>
+				  </ul>
+			  </div>
+              <!-- end #sidebar -->
+			  <div style="clear: both;">&nbsp;</div>
+		  </div>
+		</div>
+	</div>
+	<!-- end #page -->
+</div>
+<div id="footer">
+	<p><a href="textsplit.html">TextSplit</a> &bull; &copy; AppMonster<br />
+	Excel is Awesome, we'll show you: <a href="../introduction.html">Introduction</a> &bull; <a href="../basics.html">Basics</a> &bull; <a href="../functions.html">Functions</a> &bull; <a href="../data-analysis.html">Data Analysis</a> &bull; <a href="../vba.html">VBA</a></p>
+</div>
+<!-- end #footer -->
+
+<script type="text/javascript">
+  
+  $(function() { (adsbygoogle = window.adsbygoogle || []).push({}); });
+  $(function() { (adsbygoogle = window.adsbygoogle || []).push({}); });
+  
+</script>
+
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"rayId":"8c78d2ecf95bb8d2","version":"2024.8.0","serverTiming":{"name":{"cfExtPri":true,"cfL4":true}},"token":"c707dde3711e49e3a0cbf0020eef6a91","b":1}' crossorigin="anonymous"></script>
+</body>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H0MBKVX9SV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-H0MBKVX9SV');
+</script>
+
+<!-- Mirrored from www.Advanced Excel for Data Analysis/examples/textsplit.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 23 Sep 2024 07:40:14 GMT -->
+</html>

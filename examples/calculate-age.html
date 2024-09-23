@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+
+
+<!-- Mirrored from www.Advanced Excel for Data Analysis/examples/calculate-age.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 23 Sep 2024 07:36:47 GMT -->
+<head>
+
+<title>How to Calculate Age in Excel (Easy Formula)</title>
+<meta name="keywords" content="calculate age, excel, age formula, datedif, today, function, date of birth, specific date, years, months, days, exact age">
+<meta name="description" content="To calculate age in Excel, use the DATEDIF function and TODAY. You can also use the age formula further down to calculate a person’s exact age in years, months, and days. Enter the date of birth into cell A2.">
+
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="index, follow">
+<META content=EN-US name=LANGUAGE>
+<meta property="og:title" content="Calculate Age in Excel">
+<meta property="og:url" content="calculate-age.html">
+<meta property="og:type" content="article">
+<meta property="fb:admins" content="100003702321830">
+<meta property="og:description" content="To calculate age in Excel, use the DATEDIF function and TODAY. You can also use the age formula further down to calculate a person’s exact age in years, months, and days. Enter the date of birth into cell A2.">
+<meta property="og:image" content="../smi/examples/calculate-age-2.png"/>
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@ExcelEasy">
+<meta name="twitter:image" content="../smi/examples/calculate-age-2.png">
+
+<link rel="preload" href="../css/style.css" as="style">
+<link rel="preload" href="images/calculate-age/date-of-birth.png" as="image">
+<link rel="preload" href="../js/default.js" as="script">
+<link rel="preload" href="../js/init.js" as="script">
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f5ca7.txt?client=ca-pub-1987456081350047765" data-overlays="bottom" crossorigin="anonymous"></script>
+<link rel="preload" href="../css/style-medium.css" as="style" media="(max-width:961px)">
+<link rel="preload" href="../css/style-small.css" as="style" media="(max-width:620px)">
+<link rel="stylesheet" href="../css/style.css"/>
+<script src="../js/default.js" type="text/javascript"></script>
+<script src="../js/init.js" type="text/javascript"></script>
+<style type="text/css">
+.adslot { width: 336px; height: 280px; }
+@media (min-width:320px) { .adslot { width: 300px; height: 250px; } }
+@media (min-width:360px) and (orientation: portrait) { .adslot { width: 336px; height: 280px; } }
+@media (min-width:604px) { .adslot { width: 336px; height: 280px; } }
+</style>
+<noscript>
+    <link rel="stylesheet" href="../css/skel.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/adslot.css" />
+</noscript>
+<link rel="icon" href="../favicon-48x48.ico">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+</head>
+<body>
+<header id="header">
+	<div class="container">
+		<span class="notranslate">
+			<div id="logo">
+				<a href="../index.html"><img src="../layout/excel-guides.svg" onerror="this.src='../layout/excel-guides.png'" border="0" alt="Excel guides" title="Excel guides" width="1" height="1" /><h2>Excel</h2>&nbsp;&nbsp;<span class="easy">for Data Analysis</span></a>
+                <p>#1 <a href="../index.html">Excel guides</a> on the go</p>
+		  	</div>            
+			<nav id="nav">
+				  <ul>
+                  <li><a href="../index.html">Excel</a></li>
+                  <li><a href="../introduction.html">Introduction</a></li>
+				  <li><a href="../basics.html">Basics</a></li>
+				  <li><a href="../functions.html">Functions</a></li>
+				  <li><a href="../data-analysis.html">Data Analysis</a></li>
+                  <li><a href="../vba.html">VBA</a></li>
+                  <li class="current_page_item"><a href="../examples.html">300 Examples</a></li>
+                  <li><a href="../ask-us.html">Ask us</a></li>
+                  </ul>
+				</nav>
+			</span>
+		</div>
+	</header>
+	<!-- end #header -->
+	<div class="container">
+		<div class="row 100%">
+			<div class="8u 12u(medium)">
+				<div class="post">
+						<h1 class="title" style="float:left;">Calculate Age</h1>
+				    <div style="clear: both;">&nbsp;</div>
+<div class="entry">
+<p>To <strong>calculate age in Excel</strong>, use the DATEDIF function and TODAY. You can also use the age formula further down to calculate a person’s exact age in years, months, and days.</p>
+              <p>1. Enter the date of birth into cell A2.</p>
+              <p><img src="images/calculate-age/date-of-birth.png" alt="Date of Birth in Excel" width="604" height="127" title="Date of Birth in Excel" /></p>
+			  
+
+     
+     
+     
+              <p>2. Enter the TODAY function into cell B2 to return today's date.</p>
+              <p><img src="images/calculate-age/today-function.png" alt="Today Function" width="604" height="127" title="Today Function" /></p>
+			  <p>3. The DATEDIF function below calculates the age of a person.</p>
+              <p><img src="images/calculate-age/datedif-function.png" alt="DateDif Function" width="604" height="127" title="DateDif Function" /></p>
+              <p>Note: the <a href="datedif.html">DATEDIF function</a> in Excel has three arguments. Fill in "y" for the third argument to get the number of complete years between the date of birth and today's date.</p>
+              <p>4. Calculate the age of a person without displaying today's date.</p>
+              <p><img src="images/calculate-age/caculate-age-in-years.png" alt="Calculate Age in Years" width="604" height="127" title="Calculate Age in Years" /></p>
+              <p>5. Calculate the age of a person on a specific date.</p>
+              <p><img src="images/calculate-age/calculate-age-on-specific-date.png" loading="lazy" alt="Calculate Age on Specific Date" width="604" height="127" title="Calculate Age on Specific Date" /></p>
+              <p>Note: the DATE function accepts three arguments: year, month and day.</p>
+              <p>6. The <strong>age formula</strong> below calculates the exact age of a person in years, months and days.</p>
+              <p><img src="images/calculate-age/calculate-age-in-years-months-and-days.png" loading="lazy" alt="Calculate Age in Years, Months and Days" width="604" height="127" title="Calculate Age in Years, Months and Days" /></p>
+              <p>Note: fill in "ym" for the third argument to ignore years and get the number of months between two dates. Fill in "md" for the third argument to ignore months and get the number of days between two dates. Use the & operator to join strings.</p>
+              <div class="ad"><!-- Advanced Excel Pages End -->
+
+     
+     
+     data-ad-slot="4005850092"></ins>
+</div>
+            </div>
+			   </div>
+				<span class="invtab"><div class="post">
+					<div style="clear: both;"></div>
+                    <div class="entrylearn">  
+                  <p align="left"><span class="buttonp"> <a href="time-difference.html">5/13 Completed! Learn more about date & time functions &gt;<br />
+                  </a></span>Go to Next Guide: <a href="../functions/text-functions.html">Text Functions</a></div>
+                  </div></span>
+                  </div>
+                  <div class="4u 12u(medium)">
+              <div id="search">
+              <div class="cse-branding-right" style="background-color:#FFFFFF;color:#000000">
+                <div class="cse-branding-form" style="margin-right:0px;">
+                  <form action="https://www.Advanced Excel for Data Analysis/search.html" id="cse-search-box">
+                    <div>
+                      <input type="hidden" name="cx" value="partner-pub-1987061359047735:3934495699" />
+                      <input type="hidden" name="cof" value="FORID:10" />
+                      <input type="hidden" name="ie" value="UTF-8" />
+                      <input type="text" name="q" placeholder="Explore Entire Guide" class="field" disabled />
+                      <span class="notranslate"><input type="submit" name="sa" value="Go" class="button" disabled /></span>
+                    </div>
+                  </form>
+                </div>
+                <div class="cse-branding-logo"></div>
+                <div class="cse-branding-text"></div>
+              </div>
+              </div>
+              <div id="sidebar">
+					<ul>
+				  	  <li>
+                        <h3>Guide</h3>
+						  <ul>
+							<li><a href="../functions/date-time-functions.html">Date & Time Functions</a></li>
+                    </ul>
+					  </li>
+				  </ul>
+			  </div>
+              <div id="sidebar">
+				  <ul><li>
+				      <h3><font color="#FF9900"><span class="notranslate">Learn more, it's easy</span></font></h3>
+				    </li>
+					  <li><ul>
+                        <li><a href="datedif.html">DateDif</a></li>
+                        <li><a href="todays-date.html">Today's Date</a></li>
+                        <li><a href="date-time-formats.html">Date and Time Formats</a></li>
+                        <li class="current_page_item"><a href="calculate-age.html">Calculate Age</a></li>
+                        <li><a href="time-difference.html">Time Difference</a></li>
+                        <li><a href="weekdays.html">Weekdays</a></li>
+                        <li><a href="days-until-birthday.html">Days until Birthday</a></li>
+                        <li><a href="last-day-of-the-month.html">Last Day of the Month</a></li>
+                        <li><a href="add-subtract-time.html">Add or Subtract Time</a></li>
+                        <li><a href="quarter.html">Quarter</a></li>                       
+                        <li><a href="day-of-the-year.html">Day of the Year</a></li>
+						<li><a href="days-between-dates.html">Days between Dates</a></li>
+                        </ul>
+                    </li>
+                  </ul>
+			  </div>
+              <div id="sidebar">
+					<ul>
+				  	  <li>
+                        <h3><span class="notranslate"><font color="#8FAD22">Download Excel File</font></span></h3>
+						  <ul>
+							<li><a href="excel-files/calculate-age.xlsx">calculate-age.xlsx</a></li>
+                    </ul>
+					  </li>
+				  </ul>
+			  </div>
+              <div id="sidebar">
+					<ul>
+				  	  <li>
+                        <h3>Next Guide</h3>
+						  <ul>
+							<li><a href="../functions/text-functions.html">Text Functions</a></li>
+                    </ul>
+					  </li>
+				  </ul>
+			  </div>
+              <div id="sidebar">
+		      <h3><span class="notranslate"></span></h3>
+              <p style="padding-top:7px;padding-bottom:1px"><a href="https://facebook.com/thecodedragon" target="blank" rel="nofollow"><img src="../layout/facebook-logo.png" onmouseover="this.src='../layout/facebook-logo-onmouseover.png'" onmouseout="this.src='../layout/facebook-logo.png'" width="30" height="30" border="0" alt="Advanced Excel on Facebook" title="Advanced Excel on Facebook" /></a> <a href="https://twitter.com/ceoofdss" target="blank" rel="nofollow"><img src="../layout/x-logo.png" onmouseover="this.src='../layout/x-logo-onmouseover.png'" onmouseout="this.src='../layout/x-logo.png'" width="30" height="30" border="0" alt="Advanced Excel on X" title="Advanced Excel on X" /></a> <a href="https://www.pinterest.com/julisunkan" target="blank" rel="nofollow"><img src="../layout/pinterest-logo.png" onmouseover="this.src='../layout/pinterest-logo-onmouseover.png'" onmouseout="this.src='../layout/pinterest-logo.png'" width="30" height="30" border="0" alt="Advanced Excel on Pinterest" title="Advanced Excel on Pinterest"></a> <a href="https://www.linkedin.com/in/digitalskeleton/" target="blank" rel="nofollow"><img src="../layout/linkedin-logo.png" onmouseover="this.src='../layout/linkedin-logo-onmouseover.png'" onmouseout="this.src='../layout/linkedin-logo.png'" width="30" height="30" border="0" alt="Advanced Excel on LinkedIn" title="Advanced Excel on LinkedIn"></a></p>
+              </div>
+              <div id="sidebar">
+					<ul>
+				  	  <li>
+                        <h3><span class="notranslate">Become an Excel Pro</span></h3>
+						  <ul>
+                            <li><a href="../examples.html">300 Examples</a></li>
+                          </ul>
+					  </li>
+				  </ul>
+			  </div>
+              <!-- end #sidebar -->
+			  <div style="clear: both;">&nbsp;</div>
+		  </div>
+		</div>
+	</div>
+	<!-- end #page -->
+</div>
+<div id="footer">
+	<p><a href="calculate-age.html">Calculate Age</a> &bull; &copy; AppMonster<br />
+	Excel is Awesome, we'll show you: <a href="../introduction.html">Introduction</a> &bull; <a href="../basics.html">Basics</a> &bull; <a href="../functions.html">Functions</a> &bull; <a href="../data-analysis.html">Data Analysis</a> &bull; <a href="../vba.html">VBA</a></p>
+</div>
+<!-- end #footer -->
+
+<script type="text/javascript">
+  
+  $(function() { (adsbygoogle = window.adsbygoogle || []).push({}); });
+  $(function() { (adsbygoogle = window.adsbygoogle || []).push({}); });
+  
+</script>
+
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"rayId":"8c78d2799f669fc0","version":"2024.8.0","serverTiming":{"name":{"cfExtPri":true,"cfL4":true}},"token":"c707dde3711e49e3a0cbf0020eef6a91","b":1}' crossorigin="anonymous"></script>
+</body>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H0MBKVX9SV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-H0MBKVX9SV');
+</script>
+
+<!-- Mirrored from www.Advanced Excel for Data Analysis/examples/calculate-age.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 23 Sep 2024 07:36:49 GMT -->
+</html>

@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+
+
+<!-- Mirrored from www.Advanced Excel for Data Analysis/examples/custom-number-format.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 23 Sep 2024 07:32:56 GMT -->
+<head>
+
+<title>Custom Number Format in Excel (In Simple Steps)</title>
+<meta name="keywords" content="custom number format, excel, number format code, currency, accounting, date, time, percentage, leading zeros, decimal places, add text, large numbers, repeat characters, colors, parts, semicolon, custom date format, format cells">
+<meta name="description" content="Excel has many built-in formats that you can use: Currency, Accounting, Date, Time, Percentage, etc. If you cannot find the right format, you can create a custom number format.">
+
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="index, follow">
+<META content=EN-US name=LANGUAGE>
+<meta property="og:title" content="Custom Number Format in Excel">
+<meta property="og:url" content="custom-number-format.html">
+<meta property="og:type" content="article">
+<meta property="fb:admins" content="100003702321830">
+<meta property="og:description" content="Excel has many built-in formats that you can use: Currency, Accounting, Date, Time, Percentage, etc. If you cannot find the right format, you can create a custom number format.">
+<meta property="og:image" content="../smi/examples/custom-number-format.png"/>
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@ExcelEasy">
+<meta name="twitter:image" content="../smi/examples/custom-number-format.png">
+
+<link rel="preload" href="../css/style.css" as="style">
+<link rel="preload" href="images/custom-number-format/type-the-number-format-code.png" as="image">
+<link rel="preload" href="../js/default.js" as="script">
+<link rel="preload" href="../js/init.js" as="script">
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f5ca7.txt?client=ca-pub-1987456081350047765" data-overlays="bottom" crossorigin="anonymous"></script>
+<link rel="preload" href="../css/style-medium.css" as="style" media="(max-width:961px)">
+<link rel="preload" href="../css/style-small.css" as="style" media="(max-width:620px)">
+<link rel="stylesheet" href="../css/style.css"/>
+<script src="../js/default.js" type="text/javascript"></script>
+<script src="../js/init.js" type="text/javascript"></script>
+<style type="text/css">
+.adslot { width: 336px; height: 280px; }
+@media (min-width:320px) { .adslot { width: 300px; height: 250px; } }
+@media (min-width:360px) and (orientation: portrait) { .adslot { width: 336px; height: 280px; } }
+@media (min-width:604px) { .adslot { width: 336px; height: 280px; } }
+</style>
+<noscript>
+    <link rel="stylesheet" href="../css/skel.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/adslot.css" />
+</noscript>
+<link rel="icon" href="../favicon-48x48.ico">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+</head>
+<body>
+<header id="header">
+	<div class="container">
+		<span class="notranslate">
+			<div id="logo">
+				<a href="../index.html"><img src="../layout/excel-guides.svg" onerror="this.src='../layout/excel-guides.png'" border="0" alt="Excel guides" title="Excel guides" width="1" height="1" /><h2>Excel</h2>&nbsp;&nbsp;<span class="easy">for Data Analysis</span></a>
+                <p>#1 <a href="../index.html">Excel guides</a> on the go</p>
+		  	</div>            
+			<nav id="nav">
+				  <ul>
+                  <li><a href="../index.html">Excel</a></li>
+                  <li><a href="../introduction.html">Introduction</a></li>
+				  <li><a href="../basics.html">Basics</a></li>
+				  <li><a href="../functions.html">Functions</a></li>
+				  <li><a href="../data-analysis.html">Data Analysis</a></li>
+                  <li><a href="../vba.html">VBA</a></li>
+                  <li class="current_page_item"><a href="../examples.html">300 Examples</a></li>
+                  <li><a href="../ask-us.html">Ask us</a></li>
+                  </ul>
+				</nav>
+			</span>
+		</div>
+	</header>
+	<!-- end #header -->
+	<div class="container">
+		<div class="row 100%">
+			<div class="8u 12u(medium)">
+				<div class="post">
+						<h1 class="title" style="float:left;">Custom Number Format</h1>
+						<div style="clear: both;">&nbsp;</div>
+<div class="entry">
+<p class="spacing"><a href="#leading-zeros">Leading Zeros</a> | <a href="#decimal-places">Decimal Places</a> | <a href="#add-text">Add Text</a> | <a href="#large-numbers">Large Numbers</a> | <a href="#repeat-characters">Repeat Characters</a> | <a href="#colors">Colors</a> | <a href="#dates-times">Dates & Times</a></p>
+
+			  <p><strong>Excel</strong> has many built-in formats that you can use: Currency, Accounting, Date, Time, Percentage, etc. If you cannot find the right format, you can create a <strong>custom number format</strong>.</p>
+              <h3><a name="leading-zeros" id="leading-zeros"></a>Leading Zeros</h3>
+              <p>For example, you might have codes that consist of 5 numbers. Instead of typing 00041, simply type 41 and let Excel add the leading zeros.</p>
+              <p>1. Enter the value 41 into cell A1.</p>
+              <p>2. Select cell A1, right click, and then click Format Cells.</p>
+              <p>3. Select Custom.</p>
+              <p>4. Type the following <strong>number format code</strong>: <span class="highlight">00000</span></p>
+              
+
+     
+     
+     
+              <p>5. Click OK.</p>
+              <p><img src="images/custom-number-format/type-the-number-format-code.png" alt="Type the Number Format Code" width="529" height="465" title="Type the Number Format Code" /></p>
+              <p>Note: Excel gives you a live preview of how the number will be <strong>formatted</strong> (under Sample).</p>
+              <p>Result:</p>
+              <p><img src="images/custom-number-format/leading-zeros.png" alt="Leading Zeros in Excel" width="604" height="107" title="Leading Zeros in Excel" /></p>
+              <p>Note: cell A1 still contains the number 41. We only changed the appearance of this number, not the number itself.</p>
+              <h3><a name="decimal-places" id="decimal-places"></a>Decimal Places</h3>
+              <p>You can also control the number of decimal places. Use 0 to display the nearest integer value. Use 0.0 for one decimal place. Use 0.00 for two decimal places, etc.</p>
+              <p>1. Enter the value 839.1274 into cell A1.</p>
+              <p>2. Use the following number format code: <span class="highlight">0.00</span></p>
+              <p><img src="images/custom-number-format/decimal-places.png" loading="lazy" alt="Decimal Places" width="604" height="107" title="Decimal Places" /></p>
+              <h3><a name="add-text" id="add-text"></a>Add Text</h3>
+              <p>You can also add text to your numbers. For example, add &quot;ft&quot;.</p>
+              <p>1. Enter the value 839.1274 into cell A1.</p>
+              <p>2. Use the following number format code: <span class="highlight">0.0 "ft"</span></p>
+              <p><img src="images/custom-number-format/add-text.png" loading="lazy" alt="Add Text" width="604" height="107" title="Add Text" /></p>
+              <p>Note: remember, we only changed the appearance of this number, not the number itself. You can still use this number in your calculations.</p>
+			  <div class="ad"><!-- Advanced Excel Pages Middle -->
+
+     
+     
+     data-ad-slot="2529116896"></ins>
+</div>
+			  <h3><a name="large-numbers" id="large-numbers"></a>Large Numbers</h3>
+              <p>You can also control large numbers. Use one comma (,) to display thousands and use two commas (,,) to display millions.</p>
+              <p>1. Enter the following values in cells A1, B1, C1 and D1: 1000000, 2500000, 81000000 and 700000.</p>
+              <p>2. Use the following number format code: <span class="highlight">0.0,, &quot;M&quot;</span></p>
+              <p><img src="images/custom-number-format/large-numbers.png" loading="lazy" alt="Large Numbers" width="604" height="107" title="Large Numbers" /></p>
+              <p>Note: we used 0.0 for one decimal place and &quot;M&quot; to add the letter M.</p>
+			  <h3><a name="repeat-characters" id="repeat-characters"></a>Repeat Characters</h3>
+              <p>Use the asterisk (*) followed with a character to fill a cell with that character.</p>
+              <p>1. Type Hi into cell  A1.</p>
+              <p>2. Use the following number format code: <span class="highlight">@ *-</span></p>
+              <p><img src="images/custom-number-format/repeat-characters.png" loading="lazy" alt="Repeat Characters" width="604" height="107" title="Repeat Characters" /></p>
+              <p>Note: the @ symbol is used to get the text input.</p>
+              <h3><a name="colors" id="colors"></a>Colors</h3>
+              <p>You can control positive numbers, negative numbers, zero values and text all at the same time! Each part is separated with a semicolon (;) in your number format code.</p>
+              <p>1. Enter the following values in cells A1, B1, C1 and A2: 5000000, 0, Hi and -5.89.</p>
+              <p>2. Use the number format code: <span class="highlight">[Green]$#,##0_);[Red]$(#,##0);&quot;zero&quot;;[Blue]"Text:" @</span></p>
+              <p><img src="images/custom-number-format/colors.png" loading="lazy" alt="Colors" width="604" height="127" title="Colors" /></p>
+              <p>Note: #,## is used to add comma's to large numbers. To add a space, use the underscore &quot;_&quot; followed by a character. The length of the space will be the length of this character. In our example, we added a parenthesis &quot;)&quot;. As a result, the positive number lines up correctly with the negative number enclosed in parentheses. Use two parts separated with a semicolon (;) to control positive and negative numbers only. Use three parts separated with a semicolon (;) to control positive numbers, negative numbers and zero values only.</p>
+			  <!--<div class="ad">Excel Pages Middle
+
+     
+     
+     data-ad-slot="2529116896"></ins>
+</div>-->
+			  <h3><a name="dates-times" id="date-times"></a>Dates and Times</h3>
+              <p>You can also control dates and times. Use one of the existing Date or Time formats as a starting point.</p>
+              <p>1. Enter the value 42855 into cell A1.</p>
+              <p>2. Select cell A1, right click, and then click Format Cells.</p>
+              <p>3. Select Date and select the Long Date.</p>
+              <p><img src="images/custom-number-format/long-date.png" loading="lazy" alt="Long Date" width="529" height="465" title="Long Date" /></p>
+              <p>Note: Excel gives you a live preview of how the number will be formatted (under Sample).</p>
+              <p>4. Select Custom.</p>
+              <p>5. Slightly change the number format code to: <span class="highlight">mm/dd/yyyy, dddd</span></p>
+              <p>6. Click OK.</p>
+              <p><img src="images/custom-number-format/custom-date-format.png" loading="lazy" alt="Custom Date Format" width="529" height="465" title="Custom Date Format" /></p>
+              <p>Result:</p>
+              <p><img src="images/custom-number-format/date.png" loading="lazy" alt="Date" width="604" height="107" title="Date" /></p>
+              <p>General note: a custom number format is stored in the workbook where you create it. If you copy a value with a custom number format to another workbook, it will also be available in that workbook.</p>
+              <div class="ad"><!-- Advanced Excel Pages End -->
+
+     
+     
+     data-ad-slot="4005850092"></ins>
+</div>
+            </div>
+			   </div>
+				<span class="invtab"><div class="post">
+					<div style="clear: both;"></div>
+                    <div class="entrylearn">  
+                  <p align="left"><span class="buttonp"> <a href="format-painter.html">7/15 Completed! Learn more about formatting cells &gt;<br />
+                    </a></span>Go to Next Guide: <a href="../basics/find-select.html">Find & Select</a></div>
+                  </div></span>
+                  </div>
+                  <div class="4u 12u(medium)">
+              <div id="search">
+              <div class="cse-branding-right" style="background-color:#FFFFFF;color:#000000">
+                <div class="cse-branding-form" style="margin-right:0px;">
+                  <form action="https://www.Advanced Excel for Data Analysis/search.html" id="cse-search-box">
+                    <div>
+                      <input type="hidden" name="cx" value="partner-pub-1987061359047735:3934495699" />
+                      <input type="hidden" name="cof" value="FORID:10" />
+                      <input type="hidden" name="ie" value="UTF-8" />
+                      <input type="text" name="q" placeholder="Explore Entire Guide" class="field" disabled />
+                      <span class="notranslate"><input type="submit" name="sa" value="Go" class="button" disabled /></span>
+                    </div>
+                  </form>
+                </div>
+                <div class="cse-branding-logo"></div>
+                <div class="cse-branding-text"></div>
+              </div>
+              </div>
+              <div id="sidebar">
+					<ul>
+				  	  <li>
+                        <h3>Guide</h3>
+						  <ul>
+							<li><a href="../basics/format-cells.html">Format Cells</a></li>
+                    </ul>
+					  </li>
+				  </ul>
+			  </div>
+              <div id="sidebar">
+				  <ul><li>
+				      <h3><font color="#FF9900"><span class="notranslate">Learn more, it's easy</span></font></h3>
+				    </li>
+					  <li><ul>
+                        <li><a href="decimal-places.html">Decimal Places</a></li>
+                        <li><a href="fractions.html">Fractions</a></li>
+                        <li><a href="currency-vs-accounting.html">Currency vs Accounting</a></li>
+                        <li><a href="text-to-numbers.html">Text to Numbers</a></li>
+                        <li><a href="numbers-to-text.html">Numbers to Text</a></li>
+                        <li class="current_page_item"><a href="custom-number-format.html">Custom Number Format</a></li>
+                        <li><a href="format-painter.html">Format Painter</a></li>
+                        <li><a href="cell-styles.html">Cell Styles</a></li>
+                        <li><a href="wrap-text.html">Wrap Text</a></li>
+                        <li><a href="merge-cells.html">Merge Cells</a></li>
+                        <li><a href="strikethrough.html">Strikethrough</a></li>
+                        <li><a href="superscript-subscript.html">Superscript and Subscript</a></li>
+                        <li><a href="check-mark.html">Check Mark</a></li>
+						<li><a href="remove-leading-zeros.html">Remove Leading Zeros</a></li>
+                        </ul>
+                    </li>
+                  </ul>
+			  </div>
+              <div id="sidebar">
+					<ul>
+				  	  <li>
+                        <h3><span class="notranslate"><font color="#8FAD22">Download Excel File</font></span></h3>
+						  <ul>
+							<li><a href="excel-files/custom-number-format.xlsx">custom-number-format.xlsx</a></li>
+                    </ul>
+					  </li>
+				  </ul>
+			  </div>
+              <div id="sidebar">
+					<ul>
+				  	  <li>
+                        <h3>Next Guide</h3>
+						  <ul>
+							<li><a href="../basics/find-select.html">Find & Select</a></li>
+                    </ul>
+					  </li>
+				  </ul>
+			  </div>
+              <div id="sidebar">
+		      <h3><span class="notranslate"></span></h3>
+              <p style="padding-top:7px;padding-bottom:1px"><a href="https://facebook.com/thecodedragon" target="blank" rel="nofollow"><img src="../layout/facebook-logo.png" onmouseover="this.src='../layout/facebook-logo-onmouseover.png'" onmouseout="this.src='../layout/facebook-logo.png'" width="30" height="30" border="0" alt="Advanced Excel on Facebook" title="Advanced Excel on Facebook" /></a> <a href="https://twitter.com/ceoofdss" target="blank" rel="nofollow"><img src="../layout/x-logo.png" onmouseover="this.src='../layout/x-logo-onmouseover.png'" onmouseout="this.src='../layout/x-logo.png'" width="30" height="30" border="0" alt="Advanced Excel on X" title="Advanced Excel on X" /></a> <a href="https://www.pinterest.com/julisunkan" target="blank" rel="nofollow"><img src="../layout/pinterest-logo.png" onmouseover="this.src='../layout/pinterest-logo-onmouseover.png'" onmouseout="this.src='../layout/pinterest-logo.png'" width="30" height="30" border="0" alt="Advanced Excel on Pinterest" title="Advanced Excel on Pinterest"></a> <a href="https://www.linkedin.com/in/digitalskeleton/" target="blank" rel="nofollow"><img src="../layout/linkedin-logo.png" onmouseover="this.src='../layout/linkedin-logo-onmouseover.png'" onmouseout="this.src='../layout/linkedin-logo.png'" width="30" height="30" border="0" alt="Advanced Excel on LinkedIn" title="Advanced Excel on LinkedIn"></a></p>
+              </div>
+              <div id="sidebar">
+					<ul>
+				  	  <li>
+                        <h3><span class="notranslate">Become an Excel Pro</span></h3>
+						  <ul>
+                            <li><a href="../examples.html">300 Examples</a></li>
+                          </ul>
+					  </li>
+				  </ul>
+			  </div>
+              <!-- end #sidebar -->
+			  <div style="clear: both;">&nbsp;</div>
+		  </div>
+		</div>
+	</div>
+	<!-- end #page -->
+</div>
+<div id="footer">
+	<p><a href="custom-number-format.html">Custom Number Format</a> &bull; &copy; AppMonster<br />
+	Excel is Awesome, we'll show you: <a href="../introduction.html">Introduction</a> &bull; <a href="../basics.html">Basics</a> &bull; <a href="../functions.html">Functions</a> &bull; <a href="../data-analysis.html">Data Analysis</a> &bull; <a href="../vba.html">VBA</a></p>
+</div>
+<!-- end #footer -->
+
+<script type="text/javascript">
+  
+  $(function() { (adsbygoogle = window.adsbygoogle || []).push({}); });
+  $(function() { (adsbygoogle = window.adsbygoogle || []).push({}); });
+  //$(function() { (adsbygoogle = window.adsbygoogle || []).push({}); });
+  $(function() { (adsbygoogle = window.adsbygoogle || []).push({}); });
+  
+</script>
+
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"rayId":"8c78d1f489459fc0","version":"2024.8.0","serverTiming":{"name":{"cfExtPri":true,"cfL4":true}},"token":"c707dde3711e49e3a0cbf0020eef6a91","b":1}' crossorigin="anonymous"></script>
+</body>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H0MBKVX9SV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-H0MBKVX9SV');
+</script>
+
+<!-- Mirrored from www.Advanced Excel for Data Analysis/examples/custom-number-format.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 23 Sep 2024 07:32:59 GMT -->
+</html>

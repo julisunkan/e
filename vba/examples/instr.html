@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+
+
+<!-- Mirrored from www.Advanced Excel for Data Analysis/vba/examples/instr.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 23 Sep 2024 07:44:41 GMT -->
+<head>
+
+<title>Instr Function in Excel VBA (In Easy Steps)</title>
+<meta name="keywords" content="instr, vba, excel, position, substring, string, start position, zero, vba program, instr function, case-sensitive search, vbtextcompare, case-insensitive search">
+<meta name="description" content="Use Instr in Excel VBA to find the position of a substring in a string. The Instr function is quite versatile.">
+
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="index, follow">
+<META content=EN-US name=LANGUAGE>
+<meta property="og:title" content="Instr Function in Excel VBA">
+<meta property="og:url" content="instr.html">
+<meta property="og:type" content="article">
+<meta property="fb:admins" content="100003702321830">
+<meta property="og:description" content="Use Instr in Excel VBA to find the position of a substring in a string. The Instr function is quite versatile.">
+<meta property="og:image" content="../../smi/vba/examples/instr.png"/>
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@ExcelEasy">
+<meta name="twitter:image" content="../../smi/vba/examples/instr.png">
+
+<link rel="preload" href="../../css/style.css" as="style">
+<link rel="preload" href="images/instr/instr-result.png" as="image">
+<link rel="preload" href="../../js/default.js" as="script">
+<link rel="preload" href="../../js/init.js" as="script">
+<script async src="../../../pagead2.googlesyndication.com/pagead/js/f5ca7.txt?client=ca-pub-1987456081350047765" data-overlays="bottom" crossorigin="anonymous"></script>
+<link rel="preload" href="../../css/style-medium.css" as="style" media="(max-width:961px)">
+<link rel="preload" href="../../css/style-small.css" as="style" media="(max-width:620px)">
+<link rel="stylesheet" href="../../css/style.css"/>
+<script src="../../js/default.js" type="text/javascript"></script>
+<script src="../../js/init.js" type="text/javascript"></script>
+<style type="text/css">
+.adslot { width: 336px; height: 280px; }
+@media (min-width:320px) { .adslot { width: 300px; height: 250px; } }
+@media (min-width:360px) and (orientation: portrait) { .adslot { width: 336px; height: 280px; } }
+@media (min-width:604px) { .adslot { width: 336px; height: 280px; } }
+</style>
+<noscript>
+    <link rel="stylesheet" href="../../css/skel.css" />
+    <link rel="stylesheet" href="../../css/style.css" />
+    <link rel="stylesheet" href="../../css/adslot.css" />
+</noscript>
+<link rel="icon" href="../../favicon-48x48.ico">
+<link rel="apple-touch-icon" href="../../apple-touch-icon.png">
+</head>
+<body>
+<header id="header">
+	<div class="container">
+		<span class="notranslate">
+			<div id="logo">
+				<a href="../../index.html"><img src="../../layout/excel-guides.svg" onerror="this.src='../../layout/excel-guides.png'" border="0" alt="Excel guides" title="Excel guides" width="1" height="1" /><h2>Excel</h2>&nbsp;&nbsp;<span class="easy">for Data Analysis</span></a>
+                <p>#1 <a href="../../index.html">Excel guides</a> on the go</p>
+		  	</div>            
+			<nav id="nav">
+				  <ul>
+                  <li><a href="../../index.html">Excel</a></li>
+                  <li><a href="../../introduction.html">Introduction</a></li>
+				  <li><a href="../../basics.html">Basics</a></li>
+				  <li><a href="../../functions.html">Functions</a></li>
+				  <li><a href="../../data-analysis.html">Data Analysis</a></li>
+                  <li><a href="../../vba.html">VBA</a></li>
+                  <li class="current_page_item"><a href="../../examples.html">300 Examples</a></li>
+                  <li><a href="../../ask-us.html">Ask us</a></li>
+                  </ul>
+				</nav>
+			</span>
+		</div>
+	</header>
+	<!-- end #header -->
+	<div class="container">
+		<div class="row 100%">
+			<div class="8u 12u(medium)">
+				<div class="post">
+						<h1 class="title" style="float:left;">Instr</h1>
+						<div style="clear: both;">&nbsp;</div>
+<div class="entry">
+<p class="spacing"><a href="#simple-instr-function">Simple Instr Function</a> | <a href="#start-position">Start Position</a> | <a href="#zero">Zero</a> | <a href="#instr-and-if">Instr and If</a> | <a href="#case-insensitive-search">Case-insensitive Search</a></p>
+			  <p>Use <strong>Instr</strong> in <strong>Excel VBA</strong> to find the position of a substring in a string. The Instr function is quite versatile.</p>
+              <p>Place a <a href="../create-a-macro.html#command-button">command button</a> on your worksheet and add the code lines below. To execute the code lines, click the command button on the sheet.</p>
+              <h3><a name="simple-instr-function" id="simple-instr-function"></a>Simple Instr Function</h3>
+              <p>By default, the Instr function starts searching at the beginning of the string (position 1).</p>
+              <p>Code:</p>
+              <div class="code"><span class="predefined">Dim</span> state <span class="predefined">As</span> <span class="predefined">String</span><br />
+              state = "Virginia"<br /><br />
+              MsgBox InStr(state, "gin")</div>
+              
+
+     
+     
+     
+              <p>Result:</p>
+              <p><img src="images/instr/instr-result.png" alt="Instr Result" width="140" height="148" title="Instr Result" /></p>
+              <p>Note: string "gin" found at position 4.</p>
+              <h3><a name="start-position" id="start-position"></a>Start Position</h3>
+              <p>The second Instr function below starts searching at position 7.</p>
+              <p>Code:</p>
+              <div class="code"><span class="predefined">Dim</span> state <span class="predefined">As</span> <span class="predefined">String</span><br />
+              state = "South Carolina"<br /><br />
+              MsgBox InStr(state, "o")<br />
+              MsgBox InStr(7, state, "o")</div>
+              <p>Result:</p>
+              <p><img src="images/instr/position-2.png" alt="Position 2" width="140" height="148" title="Position 2" /></p>
+              <p><img src="images/instr/position-10.png" loading="lazy" alt="Position 10" width="140" height="148" title="Position 10" /></p>
+              <p>Explanation: the first Instr function finds the string "o" at position 2. The second Instr function starts searching at position 7 and finds the string "o" at position 10.</p>
+              <h3><a name="zero" id="zero"></a>Zero</h3>
+              <p>The Instr function returns 0 if the string is not found (important as we will see next).</p>
+              <p>Code:</p>
+              <div class="code"><span class="predefined">Dim</span> state <span class="predefined">As</span> <span class="predefined">String</span><br />
+              state = "Florida"<br /><br />
+              MsgBox InStr(state, "us")</div>
+              <p>Result:</p>
+              <p><img src="images/instr/zero-result.png" loading="lazy" alt="Zero Result" width="140" height="148" title="Zero Result" /></p>
+              <p>Conclusion: string "us" not found.</p>
+              <div class="ad"><!-- Advanced Excel Pages Middle -->
+
+     
+     
+     data-ad-slot="2529116896"></ins>
+</div>
+              <h3><a name="instr-and-if" id="instr-and-if"></a>Instr and If</h3>
+              <p>Let's create a simple VBA program that uses the <strong>Instr function</strong>.</p>
+              <p>Code:</p>
+              <div class="code"><span class="predefined">Dim</span> state <span class="predefined">As</span> <span class="predefined">String</span>, substring <span class="predefined">As</span> <span class="predefined">String</span><br /><br />
+              state = Range("A2").Value<br />
+              substring = Range("B2").Value<br /><br />
+              <span class="predefined">If</span> InStr(state, substring) > 0 <span class="predefined">Then</span><br />
+              &nbsp;&nbsp;&nbsp;&nbsp;Range("C2").Value = "Found"<br />
+              <span class="predefined">Else</span><br />
+              &nbsp;&nbsp;&nbsp;&nbsp;Range("C2").Value = "Not Found"<br />
+              <span class="predefined">End</span> <span class="predefined">If</span></div>
+              <p>Result when you click the command button on the sheet:</p>
+              <p><img src="images/instr/instr-and-if.png" loading="lazy" alt="Instr and If" width="604" height="81" title="Instr and If" /></p>
+              <p>Explanation: string "outh" found at position 2. The Instr function returns 2. As a result, Excel VBA places the string "Found" into cell C2.</p>
+              <h3><a name="case-insensitive-search" id="case-insensitive-search"></a>Case-insensitive Search</h3>
+              <p>By default, the Instr function performs a case-sensitive search. Enter the string "dakota" into cell B2 and click the command button on the sheet.</p>
+              <p><img src="images/instr/case-sensitive-search.png" loading="lazy" alt="Case-sensitive Search" width="604" height="81" title="Case-sensitive Search" /></p>
+              <p>Explanation: string "dakota" not found (first letter not capitalized). The Instr function returns 0. As a result, Excel VBA places the string "Not Found" into cell C2.</p>
+              <p>To perform a case-insensitive search, update the code as follows:</p>
+              <div class="code"><span class="predefined">Dim</span> state <span class="predefined">As</span> <span class="predefined">String</span>, substring <span class="predefined">As</span> <span class="predefined">String</span><br /><br />
+              state = Range("A2").Value<br />
+              substring = Range("B2").Value<br /><br />
+              <span class="predefined">If</span> InStr(1, state, substring, vbTextCompare) > 0 <span class="predefined">Then</span><br />
+              &nbsp;&nbsp;&nbsp;&nbsp;Range("C2").Value = "Found"<br />
+              <span class="predefined">Else</span><br />
+              &nbsp;&nbsp;&nbsp;&nbsp;Range("C2").Value = "Not Found"<br />
+              <span class="predefined">End</span> <span class="predefined">If</span></div>
+              <p>Result when you click the command button on the sheet:</p>
+              <p><img src="images/instr/case-insensitive-search.png" loading="lazy" alt="Case-insensitive Search" width="604" height="81" title="Case-insensitive Search" /></p>
+              <p>Explanation: the Instr function shown above has 4 arguments. To perform a case-insensitive search, always specify a start position (first argument) and use vbTextCompare (fourth argument).</p>
+          <div class="ad"><!-- Advanced Excel Pages End -->
+
+     
+     
+     data-ad-slot="4005850092"></ins>
+</div>
+            </div>
+			   </div>
+				<span class="invtab"><div class="post">
+					<div style="clear: both;"></div>
+                    <div class="entrylearn">  
+                  	<p align="left"><span class="buttonp"> <a href="count-words.html">5/6 Completed! Learn more about string manipulation &gt;<br /></a></span>Go to Next Guide: <a href="../date-time.html">Date and Time</a></div>
+                  </div></span>
+                  </div>
+                  <div class="4u 12u(medium)">
+              <div id="search">
+              <div class="cse-branding-right" style="background-color:#FFFFFF;color:#000000">
+                <div class="cse-branding-form" style="margin-right:0px;">
+                  <form action="https://www.Advanced Excel for Data Analysis/search.html" id="cse-search-box">
+                    <div>
+                      <input type="hidden" name="cx" value="partner-pub-1987061359047735:3934495699" />
+                      <input type="hidden" name="cof" value="FORID:10" />
+                      <input type="hidden" name="ie" value="UTF-8" />
+                      <input type="text" name="q" placeholder="Explore Entire Guide" class="field" disabled />
+                      <span class="notranslate"><input type="submit" name="sa" value="Go" class="button" disabled /></span>
+                    </div>
+                  </form>
+                </div>
+                <div class="cse-branding-logo"></div>
+                <div class="cse-branding-text"></div>
+              </div>
+              </div>
+              <div id="sidebar">
+					<ul>
+				  	  <li>
+                        <h3>Guide</h3>
+						  <ul>
+							<li><a href="../string-manipulation.html">String Manipulation</a></li>
+                		  </ul>
+					  </li>
+				    </ul>
+			  </div>
+              <div id="sidebar">
+				  <ul><li>
+					    <h3><font color="#FF9900"><span class="notranslate">Learn more, it's easy</span></font></h3>
+				    </li>
+					  <li><ul>                                              
+                      	<li><a href="separate-strings.html">Separate Strings</a></li>
+                        <li><a href="reverse-strings.html">Reverse Strings</a></li>
+                        <li><a href="convert-to-proper-case.html">Convert to Proper Case</a></li>
+                        <li class="current_page_item"><a href="instr.html">Instr</a></li>
+                        <li><a href="count-words.html">Count Words</a></li>
+                        </ul>
+                    </li>
+                  </ul>
+			  </div>
+              <div id="sidebar">
+					<ul>
+				  	  <li>
+                        <h3><span class="notranslate"><font color="#8FAD22">Download Excel File</font></span></h3>
+						  <ul>
+							<li><a href="excel-files/instr.xlsm">instr.xlsm</a></li>
+                    </ul>
+					  </li>
+				  </ul>
+			  </div>
+              <div id="sidebar">
+					<ul>
+				  	  <li>
+                        <h3>Next Guide</h3>
+						  <ul>
+							<li><a href="../date-time.html">Date and Time</a></li>
+                    </ul>
+					  </li>
+				  </ul>
+			  </div>
+              <div id="sidebar">
+		      <h3><span class="notranslate"></span></h3>
+              <p style="padding-top:7px;padding-bottom:1px"><a href="https://facebook.com/thecodedragon" target="blank" rel="nofollow"><img src="../../layout/facebook-logo.png" onmouseover="this.src='../../layout/facebook-logo-onmouseover.png'" onmouseout="this.src='../../layout/facebook-logo.png'" width="30" height="30" border="0" alt="Advanced Excel on Facebook" title="Advanced Excel on Facebook" /></a> <a href="https://twitter.com/ceoofdss" target="blank" rel="nofollow"><img src="../../layout/x-logo.png" onmouseover="this.src='../../layout/x-logo-onmouseover.png'" onmouseout="this.src='../../layout/x-logo.png'" width="30" height="30" border="0" alt="Advanced Excel on X" title="Advanced Excel on X" /></a> <a href="https://www.pinterest.com/julisunkan" target="blank" rel="nofollow"><img src="../../layout/pinterest-logo.png" onmouseover="this.src='../../layout/pinterest-logo-onmouseover.png'" onmouseout="this.src='../../layout/pinterest-logo.png'" width="30" height="30" border="0" alt="Advanced Excel on Pinterest" title="Advanced Excel on Pinterest"></a> <a href="https://www.linkedin.com/in/digitalskeleton/" target="blank" rel="nofollow"><img src="../../layout/linkedin-logo.png" onmouseover="this.src='../../layout/linkedin-logo-onmouseover.png'" onmouseout="this.src='../../layout/linkedin-logo.png'" width="30" height="30" border="0" alt="Advanced Excel on LinkedIn" title="Advanced Excel on LinkedIn"></a></p>
+              </div>
+              <div id="sidebar">
+					<ul>
+				  	  <li>
+                        <h3><span class="notranslate">Become an Excel Pro</span></h3>
+						  <ul>
+                            <li><a href="../../examples.html">300 Examples</a></li>
+                          </ul>
+					  </li>
+				  </ul>
+			  </div>
+              <!-- end #sidebar -->
+			  <div style="clear: both;">&nbsp;</div>
+		  </div>
+		</div>
+	</div>
+	<!-- end #page -->
+</div>
+<div id="footer">
+	<p><a href="instr.html">Instr</a> &bull; &copy; AppMonster<br />
+	Excel is Awesome, we'll show you: <a href="../../introduction.html">Introduction</a> &bull; <a href="../../basics.html">Basics</a> &bull; <a href="../../functions.html">Functions</a> &bull; <a href="../../data-analysis.html">Data Analysis</a> &bull; <a href="../../vba.html">VBA</a></p>
+</div>
+<!-- end #footer -->
+
+<script type="text/javascript">
+  
+  $(function() { (adsbygoogle = window.adsbygoogle || []).push({}); });
+  $(function() { (adsbygoogle = window.adsbygoogle || []).push({}); });
+  $(function() { (adsbygoogle = window.adsbygoogle || []).push({}); });
+  
+</script>
+
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"rayId":"8c78d3adba1b9fc0","version":"2024.8.0","serverTiming":{"name":{"cfExtPri":true,"cfL4":true}},"token":"c707dde3711e49e3a0cbf0020eef6a91","b":1}' crossorigin="anonymous"></script>
+</body>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H0MBKVX9SV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-H0MBKVX9SV');
+</script>
+
+<!-- Mirrored from www.Advanced Excel for Data Analysis/vba/examples/instr.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 23 Sep 2024 07:44:43 GMT -->
+</html>

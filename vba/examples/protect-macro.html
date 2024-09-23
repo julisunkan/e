@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+
+
+<!-- Mirrored from www.Advanced Excel for Data Analysis/vba/examples/protect-macro.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 23 Sep 2024 07:43:29 GMT -->
+<head>
+
+<title>Password Protect an Excel Macro (In Easy Steps)</title>
+<meta name="keywords" content="password protect, macro, excel, viewed, executed, vbaproject properties, protection, lock, code, inputbox">
+<meta name="description" content="Just like you can password protect workbooks and worksheets, you can password protect a macro in Excel from being viewed (and executed).">
+
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="index, follow">
+<META content=EN-US name=LANGUAGE>
+<meta property="og:title" content="Password Protect an Excel Macro">
+<meta property="og:url" content="protect-macro.html">
+<meta property="og:type" content="article">
+<meta property="fb:admins" content="100003702321830">
+<meta property="og:description" content="Just like you can password protect workbooks and worksheets, you can password protect a macro in Excel from being viewed (and executed).">
+<meta property="og:image" content="../../smi/vba/examples/protect-macro-2.png"/>
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@ExcelEasy">
+<meta name="twitter:image" content="../../smi/vba/examples/protect-macro-2.png">
+
+<link rel="preload" href="../../css/style.css" as="style">
+<link rel="preload" href="images/protect-macro/click-tools-vbaproject-properties.png" as="image">
+<link rel="preload" href="../../js/default.js" as="script">
+<link rel="preload" href="../../js/init.js" as="script">
+<script async src="../../../pagead2.googlesyndication.com/pagead/js/f5ca7.txt?client=ca-pub-1987456081350047765" data-overlays="bottom" crossorigin="anonymous"></script>
+<link rel="preload" href="../../css/style-medium.css" as="style" media="(max-width:961px)">
+<link rel="preload" href="../../css/style-small.css" as="style" media="(max-width:620px)">
+<link rel="stylesheet" href="../../css/style.css"/>
+<script src="../../js/default.js" type="text/javascript"></script>
+<script src="../../js/init.js" type="text/javascript"></script>
+<style type="text/css">
+.adslot { width: 336px; height: 280px; }
+@media (min-width:320px) { .adslot { width: 300px; height: 250px; } }
+@media (min-width:360px) and (orientation: portrait) { .adslot { width: 336px; height: 280px; } }
+@media (min-width:604px) { .adslot { width: 336px; height: 280px; } }
+</style>
+<noscript>
+    <link rel="stylesheet" href="../../css/skel.css" />
+    <link rel="stylesheet" href="../../css/style.css" />
+    <link rel="stylesheet" href="../../css/adslot.css" />
+</noscript>
+<link rel="icon" href="../../favicon-48x48.ico">
+<link rel="apple-touch-icon" href="../../apple-touch-icon.png">
+</head>
+<body>
+<header id="header">
+	<div class="container">
+		<span class="notranslate">
+			<div id="logo">
+				<a href="../../index.html"><img src="../../layout/excel-guides.svg" onerror="this.src='../../layout/excel-guides.png'" border="0" alt="Excel guides" title="Excel guides" width="1" height="1" /><h2>Excel</h2>&nbsp;&nbsp;<span class="easy">for Data Analysis</span></a>
+                <p>#1 <a href="../../index.html">Excel guides</a> on the go</p>
+		  	</div>            
+			<nav id="nav">
+				  <ul>
+                  <li><a href="../../index.html">Excel</a></li>
+                  <li><a href="../../introduction.html">Introduction</a></li>
+				  <li><a href="../../basics.html">Basics</a></li>
+				  <li><a href="../../functions.html">Functions</a></li>
+				  <li><a href="../../data-analysis.html">Data Analysis</a></li>
+                  <li><a href="../../vba.html">VBA</a></li>
+                  <li class="current_page_item"><a href="../../examples.html">300 Examples</a></li>
+                  <li><a href="../../ask-us.html">Ask us</a></li>
+                  </ul>
+				</nav>
+			</span>
+		</div>
+	</header>
+	<!-- end #header -->
+	<div class="container">
+		<div class="row 100%">
+			<div class="8u 12u(medium)">
+				<div class="post">
+						<h1 class="title" style="float:left;">Protect Macro</h1>
+						<div style="clear: both;">&nbsp;</div>
+<div class="entry">
+			  <p>Just like you can password protect workbooks and worksheets, you can <strong>password protect a macro</strong> in <strong>Excel</strong> from being viewed (and executed).</p>
+			  <p>Place a <a href="../create-a-macro.html#command-button">command button</a> on your worksheet and add the following code lines:</p>
+			  <p>1. First, create a simple macro that you want to protect.</p>
+			  <div class="code">Range(&quot;A1&quot;).Value = &quot;This is secret code&quot;</div>
+              
+
+     
+     
+     
+              <p>2. Next, click Tools, VBAProject Properties.</p>
+			  <p><img src="images/protect-macro/click-tools-vbaproject-properties.png" alt="Click Tools, VBAProject Properties." width="604" height="277" title="Click Tools, VBAProject Properties." /></p>
+			  <p>3. On the Protection tab, check &quot;Lock project for viewing&quot; and enter a password twice.</p>
+			  <p><img src="images/protect-macro/enter-password-twice.png" alt="Enter a Password Twice" width="414" height="379" title="Enter a Password Twice" /></p>
+			  <p>4. Click OK.</p>
+			  <p>5. Save, close and reopen the Excel file. Try to view the code.</p>
+			  <p>The following dialog box will appear:</p>
+			  <p><img src="images/protect-macro/password-protected-from-being-viewed.png" loading="lazy" alt="Password Protected from being Viewed" width="277" height="110" title="Password Protected from being Viewed" /></p>
+			  <p>You can still execute the code by clicking on the command button but you cannot view or edit the code anymore (unless you know the password). The password for the downloadable Excel file is &quot;easy&quot;.</p>
+			  <p>6. If you want to password protect the macro from being <u>executed</u>, add the following code lines:</p>
+			  <div class="code"><span class="predefined">Dim</span> password <span class="predefined">As</span> <span class="predefined">Variant</span><br />
+              password = Application.InputBox(&quot;Enter Password&quot;, &quot;Password Protected&quot;)<br /><br />
+              <span class="predefined">Select</span> <span class="predefined">Case</span> password<br />
+              &nbsp;&nbsp;&nbsp;&nbsp;<span class="predefined">Case</span> <span class="predefined">Is</span> = <span class="predefined">False</span><br />
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">'do nothing</span><br />
+              &nbsp;&nbsp;&nbsp;&nbsp;<span class="predefined">Case</span> <span class="predefined">Is</span> = &quot;easy&quot;<br />
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Range(&quot;A1&quot;).Value = &quot;This is secret code&quot;<br />
+              &nbsp;&nbsp;&nbsp;&nbsp;<span class="predefined">Case</span> <span class="predefined">Else</span><br />
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MsgBox &quot;Incorrect Password&quot;<br />
+              <span class="predefined">End</span> <span class="predefined">Select</span></div>
+			  <p>Result when you click the command button on the sheet:</p>
+			  <p><img src="images/protect-macro/password-protected-from-being-executed.png" loading="lazy" alt="Password Protected from being Executed" width="266" height="116" title="Password Protected from being Executed" /></p>
+			  <p>Explanation: The macro uses the InputBox method of the Application object. If the users clicks Cancel, this method returns False and nothing happens (InputBox disappears). Only when the user knows the password (&quot;easy&quot; again), the secret code will be executed. If the entered password is incorrect, a MsgBox is displayed. Note that the user cannot take a look at the password in the Visual Basic Editor because the project is protected from being viewed.</p>
+			  <div class="ad"><!-- Advanced Excel Pages End -->
+
+     
+     
+     data-ad-slot="4005850092"></ins>
+</div>
+            </div>
+			   </div>
+				<span class="invtab"><div class="post">
+					<div style="clear: both;"></div>
+                    <div class="entrylearn">  
+                  	<p align="left"><span class="buttonp"> <a href="../create-a-macro.html">9/9 Completed! Learn much more about creating macros &gt;<br /></a></span>Go to Next Guide: <a href="../msgbox.html">MsgBox</a></div>
+                  </div></span>
+                  </div>
+                  <div class="4u 12u(medium)">
+              <div id="search">
+              <div class="cse-branding-right" style="background-color:#FFFFFF;color:#000000">
+                <div class="cse-branding-form" style="margin-right:0px;">
+                  <form action="https://www.Advanced Excel for Data Analysis/search.html" id="cse-search-box">
+                    <div>
+                      <input type="hidden" name="cx" value="partner-pub-1987061359047735:3934495699" />
+                      <input type="hidden" name="cof" value="FORID:10" />
+                      <input type="hidden" name="ie" value="UTF-8" />
+                      <input type="text" name="q" placeholder="Explore Entire Guide" class="field" disabled />
+                      <span class="notranslate"><input type="submit" name="sa" value="Go" class="button" disabled /></span>
+                    </div>
+                  </form>
+                </div>
+                <div class="cse-branding-logo"></div>
+                <div class="cse-branding-text"></div>
+              </div>
+              </div>
+              <div id="sidebar">
+					<ul>
+				  	  <li>
+                        <h3>Guide</h3>
+						  <ul>
+							<li><a href="../create-a-macro.html">Create a Macro</a></li>
+                		  </ul>
+					  </li>
+				    </ul>
+			  </div>
+              <div id="sidebar">
+					<ul><li></li>
+                      <li>
+					    <h3><font color="#FF9900"><span class="notranslate">Learn more, it's easy</span></font></h3>
+				    </li>
+					  <li><ul>                                              
+                      	<li><a href="swap-values.html">Swap Values</a></li>
+                        <li><a href="run-code-from-a-module.html">Run Code from a Module</a></li>
+                        <li><a href="macro-recorder.html">Macro Recorder</a></li>
+                        <li><a href="use-relative-references.html">Use Relative References</a></li>
+                        <li><a href="formulaR1C1.html">FormulaR1C1</a></li>
+                        <li><a href="add-a-macro-to-the-toolbar.html">Add a Macro to the Toolbar</a></li>
+                        <li><a href="enable-macros.html">Enable Macros</a></li>
+                        <li class="current_page_item"><a href="protect-macro.html">Protect Macro</a></li>
+                        </ul>
+                    </li>
+                  </ul>
+			  </div>
+              <div id="sidebar">
+					<ul>
+				  	  <li>
+                        <h3><span class="notranslate"><font color="#8FAD22">Download Excel File</font></span></h3>
+						  <ul>
+							<li><a href="excel-files/protect-macro.xlsm">protect-macro.xlsm</a></li>
+                    </ul>
+					  </li>
+				  </ul>
+			  </div>
+              <div id="sidebar">
+					<ul>
+				  	  <li>
+                        <h3>Next Guide</h3>
+						  <ul>
+							<li><a href="../msgbox.html">MsgBox</a></li>
+                    </ul>
+					  </li>
+				  </ul>
+			  </div>
+              <div id="sidebar">
+		      <h3><span class="notranslate"></span></h3>
+              <p style="padding-top:7px;padding-bottom:1px"><a href="https://facebook.com/thecodedragon" target="blank" rel="nofollow"><img src="../../layout/facebook-logo.png" onmouseover="this.src='../../layout/facebook-logo-onmouseover.png'" onmouseout="this.src='../../layout/facebook-logo.png'" width="30" height="30" border="0" alt="Advanced Excel on Facebook" title="Advanced Excel on Facebook" /></a> <a href="https://twitter.com/ceoofdss" target="blank" rel="nofollow"><img src="../../layout/x-logo.png" onmouseover="this.src='../../layout/x-logo-onmouseover.png'" onmouseout="this.src='../../layout/x-logo.png'" width="30" height="30" border="0" alt="Advanced Excel on X" title="Advanced Excel on X" /></a> <a href="https://www.pinterest.com/julisunkan" target="blank" rel="nofollow"><img src="../../layout/pinterest-logo.png" onmouseover="this.src='../../layout/pinterest-logo-onmouseover.png'" onmouseout="this.src='../../layout/pinterest-logo.png'" width="30" height="30" border="0" alt="Advanced Excel on Pinterest" title="Advanced Excel on Pinterest"></a> <a href="https://www.linkedin.com/in/digitalskeleton/" target="blank" rel="nofollow"><img src="../../layout/linkedin-logo.png" onmouseover="this.src='../../layout/linkedin-logo-onmouseover.png'" onmouseout="this.src='../../layout/linkedin-logo.png'" width="30" height="30" border="0" alt="Advanced Excel on LinkedIn" title="Advanced Excel on LinkedIn"></a></p>
+              </div>
+              <div id="sidebar">
+					<ul>
+				  	  <li>
+                        <h3><span class="notranslate">Become an Excel Pro</span></h3>
+						  <ul>
+                            <li><a href="../../examples.html">300 Examples</a></li>
+                          </ul>
+					  </li>
+				  </ul>
+			  </div>
+              <!-- end #sidebar -->
+			  <div style="clear: both;">&nbsp;</div>
+		  </div>
+		</div>
+	</div>
+	<!-- end #page -->
+</div>
+<div id="footer">
+	<p><a href="protect-macro.html">Protect Macro</a> &bull; &copy; AppMonster<br />
+	Excel is Awesome, we'll show you: <a href="../../introduction.html">Introduction</a> &bull; <a href="../../basics.html">Basics</a> &bull; <a href="../../functions.html">Functions</a> &bull; <a href="../../data-analysis.html">Data Analysis</a> &bull; <a href="../../vba.html">VBA</a></p>
+</div>
+<!-- end #footer -->
+
+<script type="text/javascript">
+  
+  $(function() { (adsbygoogle = window.adsbygoogle || []).push({}); });
+  $(function() { (adsbygoogle = window.adsbygoogle || []).push({}); });
+  
+</script>
+
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"rayId":"8c78d35fcb55b8d2","version":"2024.8.0","serverTiming":{"name":{"cfExtPri":true,"cfL4":true}},"token":"c707dde3711e49e3a0cbf0020eef6a91","b":1}' crossorigin="anonymous"></script>
+</body>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H0MBKVX9SV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-H0MBKVX9SV');
+</script>
+
+<!-- Mirrored from www.Advanced Excel for Data Analysis/vba/examples/protect-macro.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 23 Sep 2024 07:43:30 GMT -->
+</html>

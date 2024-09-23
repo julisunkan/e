@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+
+
+<!-- Mirrored from www.Advanced Excel for Data Analysis/examples/unique-values.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 23 Sep 2024 07:40:46 GMT -->
+<head>
+
+<title>Find Unique Values in Excel (In Simple Steps)</title>
+<meta name="keywords" content="unique values, excel, find, extract unique values, filter for unique values, unique function, remove duplicates, advanced filter, unique records only, unique rows, values that occur exactly once, find and delete duplicate values">
+<meta name="description" content="To find unique values in Excel, use the Advanced Filter. You can extract unique values or filter for unique values. If you have Excel 365 or Excel 2021, use the magic UNIQUE function.">
+
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="index, follow">
+<META content=EN-US name=LANGUAGE>
+<meta property="og:title" content="Unique Values in Excel">
+<meta property="og:url" content="unique-values.html">
+<meta property="og:type" content="article">
+<meta property="fb:admins" content="100003702321830">
+<meta property="og:description" content="To find unique values in Excel, use the Advanced Filter. You can extract unique values or filter for unique values. If you have Excel 365 or Excel 2021, use the magic UNIQUE function.">
+<meta property="og:image" content="../smi/examples/unique-values.png"/>
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@ExcelEasy">
+<meta name="twitter:image" content="../smi/examples/unique-values.png">
+
+<link rel="preload" href="../css/style.css" as="style">
+<link rel="preload" href="images/unique-values/vertical-list.png" as="image">
+<link rel="preload" href="../js/default.js" as="script">
+<link rel="preload" href="../js/init.js" as="script">
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f5ca7.txt?client=ca-pub-1987456081350047765" data-overlays="bottom" crossorigin="anonymous"></script>
+<link rel="preload" href="../css/style-medium.css" as="style" media="(max-width:961px)">
+<link rel="preload" href="../css/style-small.css" as="style" media="(max-width:620px)">
+<link rel="stylesheet" href="../css/style.css"/>
+<script src="../js/default.js" type="text/javascript"></script>
+<script src="../js/init.js" type="text/javascript"></script>
+<style type="text/css">
+.adslot { width: 336px; height: 280px; }
+@media (min-width:320px) { .adslot { width: 300px; height: 250px; } }
+@media (min-width:360px) and (orientation: portrait) { .adslot { width: 336px; height: 280px; } }
+@media (min-width:604px) { .adslot { width: 336px; height: 280px; } }
+</style>
+<noscript>
+    <link rel="stylesheet" href="../css/skel.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/adslot.css" />
+</noscript>
+<link rel="icon" href="../favicon-48x48.ico">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+</head>
+<body>
+<header id="header">
+	<div class="container">
+		<span class="notranslate">
+			<div id="logo">
+				<a href="../index.html"><img src="../layout/excel-guides.svg" onerror="this.src='../layout/excel-guides.png'" border="0" alt="Excel guides" title="Excel guides" width="1" height="1" /><h2>Excel</h2>&nbsp;&nbsp;<span class="easy">for Data Analysis</span></a>
+                <p>#1 <a href="../index.html">Excel guides</a> on the go</p>
+		  	</div>            
+			<nav id="nav">
+				  <ul>
+                  <li><a href="../index.html">Excel</a></li>
+                  <li><a href="../introduction.html">Introduction</a></li>
+				  <li><a href="../basics.html">Basics</a></li>
+				  <li><a href="../functions.html">Functions</a></li>
+				  <li><a href="../data-analysis.html">Data Analysis</a></li>
+                  <li><a href="../vba.html">VBA</a></li>
+                  <li class="current_page_item"><a href="../examples.html">300 Examples</a></li>
+                  <li><a href="../ask-us.html">Ask us</a></li>
+                  </ul>
+				</nav>
+			</span>
+		</div>
+	</header>
+	<!-- end #header -->
+	<div class="container">
+		<div class="row 100%">
+			<div class="8u 12u(medium)">
+				<div class="post">
+						<h1 class="title" style="float:left;">Unique Values</h1>
+						<div style="clear: both;">&nbsp;</div>
+<div class="entry">
+<p class="spacing"><a href="#extract-unique-values">Extract Unique Values</a> | <a href="#filter-for-unique-values">Filter for Unique Values</a> | <a href="#unique-function">Unique Function</a> | <a href="#remove-duplicates">Remove Duplicates</a></p>
+			  <p>To find <strong>unique values in Excel</strong>, use the Advanced Filter. You can extract unique values or filter for unique values. If you have Excel 365 or Excel 2021, use the magic UNIQUE function.</p>
+              <h3><a name="extract-unique-values" id="extract-unique-values"></a>Extract Unique Values</h3>
+              <p>When using the Advanced Filter in Excel, always enter a text label at the top of each column of data.</p>
+              <p>1. Click a cell in the list range.</p>
+              <p><img src="images/unique-values/vertical-list.png" alt="Vertical List" width="284" height="241" title="Vertical List" /></p>
+              
+
+     
+     
+     
+              <p>2. On the Data tab, in the Sort & Filter group, click Advanced.</p>
+              <p><img src="images/unique-values/click-advanced.png" alt="Click Advanced" width="214" height="100" title="Click Advanced" /></p>
+              <p>The Advanced Filter dialog box appears.</p>
+              <p>3. Click Copy to another location (see image below).</p>
+              <p>4. Click in the Copy to box and select cell C1.</p>
+              <p>5. Check Unique records only.</p>
+              <p>6. Click OK.</p>
+              <p><img src="images/unique-values/unique-records-only.png" loading="lazy" alt="Unique Records Only" width="228" height="236" title="Unique Records Only" /></p>
+              <p>Result:</p>
+              <p><img src="images/unique-values/extract-unique-values.png" loading="lazy" alt="Extract Unique Values in Excel" width="284" height="241" title="Extract Unique Values in Excel" /></p>
+              <p>Note: Excel removes all duplicate values (Lion in cell A7 and Elephant in cell A9) and sends the unique values to column C. You can also use this tool to extract unique <u>rows</u> in Excel.</p>
+              <h3><a name="filter-for-unique-values" id="filter-for-unique-values"></a>Filter for Unique Values</h3>
+              <p>Filtering for unique values in Excel is a piece of cake.</p>
+              <p>1. Click a cell in the list range.</p>
+              <p><img src="images/unique-values/vertical-list.png" loading="lazy" alt="Vertical List" width="284" height="241" title="Vertical List" /></p>
+              <p>2. On the Data tab, in the Sort & Filter group, click Advanced.</p>
+              <p><img src="images/unique-values/click-advanced.png" loading="lazy" alt="Click Advanced" width="214" height="100" title="Click Advanced" /></p>
+              <p>3. Click Filter the list, in-place (see image below).</p>
+              <p>4. Check Unique records only.</p>
+              <p>5. Click OK.</p>
+              <p><img src="images/unique-values/filter-the-list-in-place.png" loading="lazy" alt="Filter the List, in-place" width="228" height="236" title="Filter the List, in-place" /></p>
+              <p>Result:</p>
+              <p><img src="images/unique-values/filter-for-unique-values.png" loading="lazy" alt="Filter for Unique Values in Excel" width="284" height="201" title="Filter for Unique Values in Excel" /></p>
+              <p>Note: rows 7 and 9 are hidden. To clear this filter, on the Data tab, in the Sort & Filter group, click Clear. You can also use this tool to filter for unique <u>rows</u> in Excel.</p>
+              <div class="ad"><!-- Advanced Excel Pages Middle -->
+
+     
+     
+     data-ad-slot="2529116896"></ins>
+</div>
+              <h3><a name="unique-function" id="unique-function"></a>Unique Function</h3>
+              <p>If you have Excel 365 or Excel 2021, simply use the magic <strong>UNIQUE function</strong> to extract unique values.</p>
+              <p>1. The UNIQUE function below (with no extra arguments) extracts unique values.</p>
+              <p><img src="images/unique-values/unique-function.png" loading="lazy" alt="UNIQUE function in Excel" width="604" height="267" title="UNIQUE function in Excel" /></p>
+              <p>Note: this dynamic array function, entered into cell C1, fills multiple cells. Wow! This behavior in Excel 365/2021 is called <a href="dynamic-arrays.html">spilling</a>.</p>
+              <p>2. The UNIQUE function below extracts values that occur exactly once.</p>
+              <p><img src="images/unique-values/values-that-occur-exactly-once.png" loading="lazy" alt="Values that Occur Exactly Once" width="604" height="267" title="Values that Occur Exactly Once" /></p>
+              <p>Note: the UNIQUE function has 2 optional arguments. The default value of 0 (second argument) tells the UNIQUE function to extract values from a vertical array. The value 1 (third argument) tells the UNIQUE function to extract values that occur exactly once.</p>
+              <h3><a name="remove-duplicates" id="remove-duplicates"></a>Remove Duplicates</h3>
+              <p>To <strong>find unique values</strong> (or unique rows) <u>and</u> delete duplicate values (or duplicate rows) at the same time, use the <a href="remove-duplicates.html">Remove Duplicates</a> tool in Excel.</p>
+              <p>On the Data tab, in the Data Tools group, click Remove Duplicates.</p>
+              <p><img src="images/unique-values/click-remove-duplicates.png" loading="lazy" alt="Click Remove Duplicates" width="446" height="100" title="Click Remove Duplicates" /></p>
+              <p>In the example below, Excel removes all identical rows (blue) except for the first identical row found (yellow).</p>
+              <p><img src="images/unique-values/remove-duplicates-example.png" loading="lazy" alt="Remove Duplicates Example" width="299" height="381" title="Remove Duplicates Example" /> <img src="images/unique-values/remove-duplicates-result.png" loading="lazy" alt="Remove Duplicates Result" width="299" height="381" title="Remove Duplicates Result" /></p>
+              <p>Note: visit our page about <a href="remove-duplicates.html">removing duplicates</a> to learn more about this great Excel tool.</p>
+              <div class="ad"><!-- Advanced Excel Pages End -->
+
+     
+     
+     data-ad-slot="4005850092"></ins>
+</div>
+            </div>
+			   </div>
+				<span class="invtab"><div class="post">
+					<div style="clear: both;"></div>
+                    <div class="entrylearn">  
+                  <p align="left"><span class="buttonp"> <a href="filter-function.html">9/10 Completed! Learn much more about filtering &gt;<br />
+                  </a></span>Go to Next Guide: <a href="../data-analysis/conditional-formatting.html">Conditional Formatting</a></div>
+                  </div></span>
+                  </div>
+                  <div class="4u 12u(medium)">
+              <div id="search">
+              <div class="cse-branding-right" style="background-color:#FFFFFF;color:#000000">
+                <div class="cse-branding-form" style="margin-right:0px;">
+                  <form action="https://www.Advanced Excel for Data Analysis/search.html" id="cse-search-box">
+                    <div>
+                      <input type="hidden" name="cx" value="partner-pub-1987061359047735:3934495699" />
+                      <input type="hidden" name="cof" value="FORID:10" />
+                      <input type="hidden" name="ie" value="UTF-8" />
+                      <input type="text" name="q" placeholder="Explore Entire Guide" class="field" disabled />
+                      <span class="notranslate"><input type="submit" name="sa" value="Go" class="button" disabled /></span>
+                    </div>
+                  </form>
+                </div>
+                <div class="cse-branding-logo"></div>
+                <div class="cse-branding-text"></div>
+              </div>
+              </div>
+              <div id="sidebar">
+					<ul>
+				  	  <li>
+                        <h3>Guide</h3>
+						  <ul>
+							<li><a href="../data-analysis/filter.html">Filter</a></li>
+                    </ul>
+					  </li>
+				  </ul>
+			  </div>
+              <div id="sidebar">
+				  <ul><li>
+				      <h3><font color="#FF9900"><span class="notranslate">Learn more, it's easy</span></font></h3>
+				    </li>
+					  <li><ul>
+                        <li><a href="number-text-filters.html">Number and Text Filters</a></li>
+                        <li><a href="date-filters.html">Date Filters</a></li>
+                        <li><a href="advanced-filter.html">Advanced Filter</a></li>
+                        <li><a href="data-form.html">Data Form</a></li>
+                        <li><a href="remove-duplicates.html">Remove Duplicates</a></li>
+                        <li><a href="outlining-data.html">Outlining Data</a></li>
+                        <li><a href="subtotal.html">Subtotal</a></li>
+                        <li class="current_page_item"><a href="unique-values.html">Unique Values</a></li>
+                        <li><a href="filter-function.html">FILTER function</a></li>
+                        </ul>
+                    </li>
+                  </ul>
+			  </div>
+              <div id="sidebar">
+					<ul>
+				  	  <li>
+                        <h3><span class="notranslate"><font color="#8FAD22">Download Excel File</font></span></h3>
+						  <ul>
+							<li><a href="excel-files/unique-values.xlsx">unique-values.xlsx</a></li>
+                    </ul>
+					  </li>
+				  </ul>
+			  </div>
+              <div id="sidebar">
+					<ul>
+				  	  <li>
+                        <h3>Next Guide</h3>
+						  <ul>
+							<li><a href="../data-analysis/conditional-formatting.html">Conditional Formatting</a></li>
+                    </ul>
+					  </li>
+				  </ul>
+			  </div>
+              <div id="sidebar">
+		      <h3><span class="notranslate"></span></h3>
+              <p style="padding-top:7px;padding-bottom:1px"><a href="https://facebook.com/thecodedragon" target="blank" rel="nofollow"><img src="../layout/facebook-logo.png" onmouseover="this.src='../layout/facebook-logo-onmouseover.png'" onmouseout="this.src='../layout/facebook-logo.png'" width="30" height="30" border="0" alt="Advanced Excel on Facebook" title="Advanced Excel on Facebook" /></a> <a href="https://twitter.com/ceoofdss" target="blank" rel="nofollow"><img src="../layout/x-logo.png" onmouseover="this.src='../layout/x-logo-onmouseover.png'" onmouseout="this.src='../layout/x-logo.png'" width="30" height="30" border="0" alt="Advanced Excel on X" title="Advanced Excel on X" /></a> <a href="https://www.pinterest.com/julisunkan" target="blank" rel="nofollow"><img src="../layout/pinterest-logo.png" onmouseover="this.src='../layout/pinterest-logo-onmouseover.png'" onmouseout="this.src='../layout/pinterest-logo.png'" width="30" height="30" border="0" alt="Advanced Excel on Pinterest" title="Advanced Excel on Pinterest"></a> <a href="https://www.linkedin.com/in/digitalskeleton/" target="blank" rel="nofollow"><img src="../layout/linkedin-logo.png" onmouseover="this.src='../layout/linkedin-logo-onmouseover.png'" onmouseout="this.src='../layout/linkedin-logo.png'" width="30" height="30" border="0" alt="Advanced Excel on LinkedIn" title="Advanced Excel on LinkedIn"></a></p>
+              </div>
+              <div id="sidebar">
+					<ul>
+				  	  <li>
+                        <h3><span class="notranslate">Become an Excel Pro</span></h3>
+						  <ul>
+                            <li><a href="../examples.html">300 Examples</a></li>
+                          </ul>
+					  </li>
+				  </ul>
+			  </div>
+              <!-- end #sidebar -->
+			  <div style="clear: both;">&nbsp;</div>
+		  </div>
+		</div>
+	</div>
+	<!-- end #page -->
+</div>
+<div id="footer">
+	<p><a href="unique-values.html">Unique Values</a> &bull; &copy; AppMonster<br />
+	Excel is Awesome, we'll show you: <a href="../introduction.html">Introduction</a> &bull; <a href="../basics.html">Basics</a> &bull; <a href="../functions.html">Functions</a> &bull; <a href="../data-analysis.html">Data Analysis</a> &bull; <a href="../vba.html">VBA</a></p>
+</div>
+<!-- end #footer -->
+
+<script type="text/javascript">
+  
+  $(function() { (adsbygoogle = window.adsbygoogle || []).push({}); });
+  $(function() { (adsbygoogle = window.adsbygoogle || []).push({}); });
+  $(function() { (adsbygoogle = window.adsbygoogle || []).push({}); });
+  
+</script>
+
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"rayId":"8c78d3017d27b8d2","version":"2024.8.0","serverTiming":{"name":{"cfExtPri":true,"cfL4":true}},"token":"c707dde3711e49e3a0cbf0020eef6a91","b":1}' crossorigin="anonymous"></script>
+</body>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H0MBKVX9SV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-H0MBKVX9SV');
+</script>
+
+<!-- Mirrored from www.Advanced Excel for Data Analysis/examples/unique-values.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 23 Sep 2024 07:40:49 GMT -->
+</html>

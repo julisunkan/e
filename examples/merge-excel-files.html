@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+
+
+<!-- Mirrored from www.Advanced Excel for Data Analysis/examples/merge-excel-files.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 23 Sep 2024 07:32:16 GMT -->
+<head>
+
+<title>How to Merge Excel Files (In Easy Steps)</title>
+<meta name="keywords" content="merge excel files, move or copy, click sheet tabs, move selected sheets, to book, create a copy, repeat, additional excel files, save merged workbook, as new file, merge complete, vba macro, combine excel files, import sheets button, merging process, numerous excel files">
+<meta name="description" content="To merge Excel files into one, use the 'Move or Copy' feature. If you need to merge many Excel files, consider using VBA to automate the process.">
+
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="index, follow">
+<META content=EN-US name=LANGUAGE>
+<meta property="og:title" content="Merge Excel Files">
+<meta property="og:url" content="merge-excel-files.html">
+<meta property="og:type" content="article">
+<meta property="fb:admins" content="100003702321830">
+<meta property="og:description" content="To merge Excel files into one, use the 'Move or Copy' feature. If you need to merge many Excel files, consider using VBA to automate the process.">
+<meta property="og:image" content="../smi/examples/merge-excel-files.png"/>
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@ExcelEasy">
+<meta name="twitter:image" content="../smi/examples/merge-excel-files.png">
+
+<link rel="preload" href="../css/style.css" as="style">
+<link rel="preload" href="images/merge-excel-files/click-sheet-tabs.png" as="image">
+<link rel="preload" href="../js/default.js" as="script">
+<link rel="preload" href="../js/init.js" as="script">
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f5ca7.txt?client=ca-pub-1987456081350047765" data-overlays="bottom" crossorigin="anonymous"></script>
+<link rel="preload" href="../css/style-medium.css" as="style" media="(max-width:961px)">
+<link rel="preload" href="../css/style-small.css" as="style" media="(max-width:620px)">
+<link rel="stylesheet" href="../css/style.css"/>
+<script src="../js/default.js" type="text/javascript"></script>
+<script src="../js/init.js" type="text/javascript"></script>
+<style type="text/css">
+.adslot { width: 336px; height: 280px; }
+@media (min-width:320px) { .adslot { width: 300px; height: 250px; } }
+@media (min-width:360px) and (orientation: portrait) { .adslot { width: 336px; height: 280px; } }
+@media (min-width:604px) { .adslot { width: 336px; height: 280px; } }
+</style>
+<noscript>
+    <link rel="stylesheet" href="../css/skel.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/adslot.css" />
+</noscript>
+<link rel="icon" href="../favicon-48x48.ico">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+</head>
+<body>
+<header id="header">
+	<div class="container">
+		<span class="notranslate">
+			<div id="logo">
+				<a href="../index.html"><img src="../layout/excel-guides.svg" onerror="this.src='../layout/excel-guides.png'" border="0" alt="Excel guides" title="Excel guides" width="1" height="1" /><h2>Excel</h2>&nbsp;&nbsp;<span class="easy">for Data Analysis</span></a>
+                <p>#1 <a href="../index.html">Excel guides</a> on the go</p>
+		  	</div>            
+			<nav id="nav">
+				  <ul>
+                  <li><a href="../index.html">Excel</a></li>
+                  <li><a href="../introduction.html">Introduction</a></li>
+				  <li><a href="../basics.html">Basics</a></li>
+				  <li><a href="../functions.html">Functions</a></li>
+				  <li><a href="../data-analysis.html">Data Analysis</a></li>
+                  <li><a href="../vba.html">VBA</a></li>
+                  <li class="current_page_item"><a href="../examples.html">300 Examples</a></li>
+                  <li><a href="../ask-us.html">Ask us</a></li>
+                  </ul>
+				</nav>
+			</span>
+		</div>
+	</header>
+	<!-- end #header -->
+	<div class="container">
+		<div class="row 100%">
+			<div class="8u 12u(medium)">
+				<div class="post">
+						<h1 class="title" style="float:left;">Merge Excel Files</h1>
+						<div style="clear: both;">&nbsp;</div>
+<div class="entry">
+<p class="spacing"><a href="#move-or-copy">Move or Copy</a> | <a href="#use-vba-to-merge-files">Use VBA to Merge Files</a></p>
+<p>To <strong>merge Excel files</strong> into one, use the 'Move or Copy' feature. If you need to merge many Excel files, consider using VBA to automate the process.</p>
+<h3><a name="move-or-copy" id="move-or-copy"></a>Move or Copy</h3>
+<p>To merge only a few Excel files (2-10), execute the following steps.</p>
+<p>1. Open the Excel files you want to merge. For example, <a href="excel-files/quarter-1.xlsx">quarter-1.xlsx</a> and <a href="excel-files/quarter-2.xlsx">quarter-2.xlsx</a>.</p>
+<p>2. Go to the Excel file quarter-2.xlsx, hold Ctrl and click the sheet tabs you want to move.</p>
+<p><img src="images/merge-excel-files/click-sheet-tabs.png" alt="Click Sheet Tabs" width="348" height="191" title="Click Sheet Tabs" /></p>
+
+
+     
+     
+     
+<p>3. Right-click one of the selected tabs, and then click Move or Copy.</p>
+<p><img src="images/merge-excel-files/move-or-copy-feature.png" alt="Move or Copy feature" width="149" height="318" title="Move or Copy feature" /></p>
+<p>The 'Move or Copy' dialog box appears.</p>
+<p>4. Select quarter-1.xlsx from the &quot;To book&quot; drop-down list.</p>
+<p>5. Click (move to end).</p>
+<p>6. Check Create a copy.</p>
+<p>7. Click OK.</p>
+<p><img src="images/merge-excel-files/move-selected-sheets.png" loading="lazy" alt="Move Selected Sheets" width="306" height="313" title="Move Selected Sheets" /></p>
+<p>8. Repeat these steps for any additional Excel files, such as quarter-3.xlsx and quarter-4.xlsx.</p>
+<p>9. Finally, save the <strong>merged workbook</strong> as a new file by selecting File > Save As. As a result, the original 'quarter-1.xlsx' will remain unchanged.</p>
+<p>The merge is complete.</p>
+<p><img src="images/merge-excel-files/merged-excel-files.png" loading="lazy" alt="Merged Excel Files" width="475" height="191" title="Merged Excel Files" /></p>
+<p>Tip: when merging Excel files, you can quickly select multiple sheets by clicking the first tab, holding down Shift, and clicking the last tab.</p>
+<h3><a name="use-vba-to-merge-files" id="use-vba-to-merge-files"></a>Use VBA to Merge Files</h3>
+<p>To efficiently merge many Excel files, use the VBA macro you can find here:</p>
+<p><a href="../vba/examples/import-sheets.html">https://www.Advanced Excel for Data Analysis/vba/examples/import-sheets.html</a></p>
+<p>1. Start by downloading the file 'import-sheets.xlsm' from the above link.</p>
+<p>2. Move all the Excel files you want to merge into the folder located at 'C:\test' on your computer.</p>
+<p>3. Open 'import-sheets.xlsm' and click the 'Import Sheets' button to execute the macro.</p>
+<p><img src="images/merge-excel-files/use-vba-to-merge-numerous-excel-files.png" loading="lazy" alt="Use VBA to Merge Numerous Excel Files" width="604" height="191" title="Use VBA to Merge Numerous Excel Files" /></p>
+<p>This will <strong>combine all the Excel files into one</strong>. For instance, in our demonstration, we merged 'book4.xlsx', which contains a single sheet named 'OneSheet', and 'book5.xlsx', which includes two sheets, 'FirstSheet' and 'SecondSheet'. Of course, the VBA script also works efficiently with numerous Excel files; a simple click of the button makes the <strong>merging process</strong> straightforward and efficient.</p>
+<div class="ad"><!-- Advanced Excel Pages End -->
+
+     
+     
+     data-ad-slot="4005850092"></ins>
+</div>
+            </div>
+			   </div>
+				<span class="invtab"><div class="post">
+					<div style="clear: both;"></div>
+                    <div class="entrylearn">  
+                  <p align="left"><span class="buttonp"> <a href="save-in-97-2003-format.html">5/6 Completed! Learn much more about workbooks &gt;<br />
+                  </a></span>Go to Next Guide: <a href="../basics/worksheets.html">Worksheets</a></div>
+                  </div></span>
+                  </div>
+                  <div class="4u 12u(medium)">
+              <div id="search">
+              <div class="cse-branding-right" style="background-color:#FFFFFF;color:#000000">
+                <div class="cse-branding-form" style="margin-right:0px;">
+                  <form action="https://www.Advanced Excel for Data Analysis/search.html" id="cse-search-box">
+                    <div>
+                      <input type="hidden" name="cx" value="partner-pub-1987061359047735:3934495699" />
+                      <input type="hidden" name="cof" value="FORID:10" />
+                      <input type="hidden" name="ie" value="UTF-8" />
+                      <input type="text" name="q" placeholder="Explore Entire Guide" class="field" disabled />
+                      <span class="notranslate"><input type="submit" name="sa" value="Go" class="button" disabled /></span>
+                    </div>
+                  </form>
+                </div>
+                <div class="cse-branding-logo"></div>
+                <div class="cse-branding-text"></div>
+              </div>
+              </div>
+              <div id="sidebar">
+					<ul>
+				  	  <li>
+                        <h3>Guide</h3>
+						  <ul>
+							<li><a href="../basics/workbook.html">Workbook</a></li>
+                    </ul>
+					  </li>
+				  </ul>
+			  </div>
+              <div id="sidebar">
+				  <ul><li>
+				      <h3><font color="#FF9900"><span class="notranslate">Learn more, it's easy</span></font></h3>
+				    </li>
+					  <li><ul>
+                        <li><a href="themes.html">Themes</a></li>
+                        <li><a href="view-multiple-workbooks.html">View Multiple Workbooks</a></li>
+                        <li><a href="autorecover.html">AutoRecover</a></li>
+						<li class="current_page_item"><a href="merge-excel-files.html">Merge Excel Files</a></li>
+                        <li><a href="save-in-97-2003-format.html">Save in 97-2003 Format</a></li>
+                        </ul>
+                    </li>
+                  </ul>
+			  </div>
+			  <div id="sidebar">
+					<ul>
+				  	  <li>
+                        <h3><span class="notranslate"><font color="#8FAD22">Download Excel Files</font></span></h3>
+						  <ul>
+							<li><a href="excel-files/quarter-1.xlsx">quarter-1.xlsx</a></li>
+							<li><a href="excel-files/quarter-2.xlsx">quarter-2.xlsx</a></li>
+                    </ul>
+					  </li>
+				  </ul>
+			  </div>
+              <div id="sidebar">
+					<ul>
+				  	  <li>
+                        <h3>Next Guide</h3>
+						  <ul>
+							<li><a href="../basics/worksheets.html">Worksheets</a></li>
+                    </ul>
+					  </li>
+				  </ul>
+			  </div>
+              <div id="sidebar">
+		      <h3><span class="notranslate"></span></h3>
+              <p style="padding-top:7px;padding-bottom:1px"><a href="https://facebook.com/thecodedragon" target="blank" rel="nofollow"><img src="../layout/facebook-logo.png" onmouseover="this.src='../layout/facebook-logo-onmouseover.png'" onmouseout="this.src='../layout/facebook-logo.png'" width="30" height="30" border="0" alt="Advanced Excel on Facebook" title="Advanced Excel on Facebook" /></a> <a href="https://twitter.com/ceoofdss" target="blank" rel="nofollow"><img src="../layout/x-logo.png" onmouseover="this.src='../layout/x-logo-onmouseover.png'" onmouseout="this.src='../layout/x-logo.png'" width="30" height="30" border="0" alt="Advanced Excel on X" title="Advanced Excel on X" /></a> <a href="https://www.pinterest.com/julisunkan" target="blank" rel="nofollow"><img src="../layout/pinterest-logo.png" onmouseover="this.src='../layout/pinterest-logo-onmouseover.png'" onmouseout="this.src='../layout/pinterest-logo.png'" width="30" height="30" border="0" alt="Advanced Excel on Pinterest" title="Advanced Excel on Pinterest"></a> <a href="https://www.linkedin.com/in/digitalskeleton/" target="blank" rel="nofollow"><img src="../layout/linkedin-logo.png" onmouseover="this.src='../layout/linkedin-logo-onmouseover.png'" onmouseout="this.src='../layout/linkedin-logo.png'" width="30" height="30" border="0" alt="Advanced Excel on LinkedIn" title="Advanced Excel on LinkedIn"></a></p>
+              </div>
+			  <div id="sidebar">
+              <ul><li></li>
+		        <li>
+		          <h3><span class="notranslate">Most Popular</span></h3>
+	            </li>
+		        <li><ul>
+                        <li><a href="../data-analysis/pivot-tables.html">Pivot Tables</a></li>
+                        <li><a href="vlookup.html">Vlookup</a></li>
+                        <li><a href="../introduction/formulas-functions.html">Formulas and Functions</a></li>
+                        <li><a href="../data-analysis/charts.html">Charts</a></li>
+                        <li><a href="../data-analysis/conditional-formatting.html">Conditional Formatting</a></li>
+                        <li><a href="find-duplicates.html">Find Duplicates</a></li>
+                        <li><a href="if.html">If</a></li>
+                        <li><a href="drop-down-list.html">Drop-down List</a></li>
+						<li><a href="countif.html">Countif</a></li>
+                        <li><a href="index-match.html">Index and Match</a></li>
+                        </ul>
+			    </li>
+              </ul>
+              </div>
+              <div id="sidebar">
+					<ul>
+				  	  <li>
+                        <h3><span class="notranslate">Become an Excel Pro</span></h3>
+						  <ul>
+                            <li><a href="../examples.html">300 Examples</a></li>
+                          </ul>
+					  </li>
+				  </ul>
+			  </div>
+              <!-- end #sidebar -->
+			  <div style="clear: both;">&nbsp;</div>
+		  </div>
+		</div>
+	</div>
+	<!-- end #page -->
+</div>
+<div id="footer">
+	<p><a href="merge-excel-files.html">Merge Excel Files</a> &bull; &copy; AppMonster<br />
+	Excel is Awesome, we'll show you: <a href="../introduction.html">Introduction</a> &bull; <a href="../basics.html">Basics</a> &bull; <a href="../functions.html">Functions</a> &bull; <a href="../data-analysis.html">Data Analysis</a> &bull; <a href="../vba.html">VBA</a></p>
+</div>
+<!-- end #footer -->
+
+<script type="text/javascript">
+  
+  $(function() { (adsbygoogle = window.adsbygoogle || []).push({}); });
+  $(function() { (adsbygoogle = window.adsbygoogle || []).push({}); });
+  
+</script>
+
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"rayId":"8c78d1dbaa67b8d2","version":"2024.8.0","serverTiming":{"name":{"cfExtPri":true,"cfL4":true}},"token":"c707dde3711e49e3a0cbf0020eef6a91","b":1}' crossorigin="anonymous"></script>
+</body>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H0MBKVX9SV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-H0MBKVX9SV');
+</script>
+
+<!-- Mirrored from www.Advanced Excel for Data Analysis/examples/merge-excel-files.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 23 Sep 2024 07:32:18 GMT -->
+</html>

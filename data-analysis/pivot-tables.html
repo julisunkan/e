@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+
+
+<!-- Mirrored from www.Advanced Excel for Data Analysis/data-analysis/pivot-tables.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 23 Sep 2024 07:45:35 GMT -->
+<head>
+
+<title>Pivot Tables in Excel (In Easy Steps)</title>
+<meta name="keywords" content="excel pivot tables, insert pivot table, drag fields, pivottable fields pane, rows, columns, values, filters, sort pivot table, filter pivot table, change summary calculation, count, sum, two-dimensional pivot table, pivot chart">
+<meta name="description" content="Pivot tables are one of Excel's most powerful features. A pivot table allows you to extract the significance from a large, detailed data set.">
+
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="index, follow">
+<META content=EN-US name=LANGUAGE>
+<meta property="og:title" content="Pivot Tables in Excel">
+<meta property="og:url" content="pivot-tables.html">
+<meta property="og:type" content="article">
+<meta property="fb:admins" content="100003702321830">
+<meta property="og:description" content="Pivot tables are one of Excel's most powerful features. A pivot table allows you to extract the significance from a large, detailed data set.">
+<meta property="og:image" content="../smi/data-analysis/pivot-tables.png"/>
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@ExcelEasy">
+<meta name="twitter:image" content="../smi/data-analysis/pivot-tables.png">
+
+<link rel="preload" href="../css/style.css" as="style">
+<link rel="preload" href="images/pivot-tables/pivot-table-data.png" as="image">
+<link rel="preload" href="../js/default.js" as="script">
+<link rel="preload" href="../js/init.js" as="script">
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f5ca7.txt?client=ca-pub-1987456081350047765" data-overlays="bottom" crossorigin="anonymous"></script>
+<link rel="preload" href="../css/style-medium.css" as="style" media="(max-width:961px)">
+<link rel="preload" href="../css/style-small.css" as="style" media="(max-width:620px)">
+<link rel="stylesheet" href="../css/style.css"/>
+<script src="../js/default.js" type="text/javascript"></script>
+<script src="../js/init.js" type="text/javascript"></script>
+<style type="text/css">
+.adslot { width: 336px; height: 280px; }
+@media (min-width:320px) { .adslot { width: 300px; height: 250px; } }
+@media (min-width:360px) and (orientation: portrait) { .adslot { width: 336px; height: 280px; } }
+@media (min-width:604px) { .adslot { width: 336px; height: 280px; } }
+</style>
+<noscript>
+    <link rel="stylesheet" href="../css/skel.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/adslot.css" />
+</noscript>
+<link rel="icon" href="../favicon-48x48.ico">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+</head>
+<body>
+<header id="header">
+	<div class="container">
+		<span class="notranslate">
+			<div id="logo">
+				<a href="../index.html"><img src="../layout/excel-guides.svg" onerror="this.src='../layout/excel-guides.png'" border="0" alt="Excel guides" title="Excel guides" width="1" height="1" /><h2>Excel</h2>&nbsp;&nbsp;<span class="easy">for Data Analysis</span></a>
+                <p>#1 <a href="../index.html">Excel guides</a> on the go</p>
+		  	</div>            
+			<nav id="nav">
+				  <ul>
+                  <li><a href="../index.html">Excel</a></li>
+                  <li><a href="../introduction.html">Introduction</a></li>
+				  <li><a href="../basics.html">Basics</a></li>
+				  <li><a href="../functions.html">Functions</a></li>
+				  <li class="current_page_item"><a href="../data-analysis.html">Data Analysis</a></li>
+                  <li><a href="../vba.html">VBA</a></li>
+                  <li class="pro"><a href="../examples.html">300 Examples</a></li>
+                  <li><a href="../ask-us.html">Ask us</a></li>
+                  </ul>
+				</nav>
+			</span>
+		</div>
+	</header>
+	<!-- end #header -->
+	<div class="container">
+		<div class="row 100%">
+			<div class="8u 12u(medium)">
+				<div class="post">
+						<h1 class="title" style="float:left;">Pivot Tables</h1>
+						<div style="clear: both;">&nbsp;</div>
+                      <div class="entry">
+                      <p class="spacing"><a href="#insert-pivot-table">Insert a Pivot Table</a> | <a href="#drag-fields">Drag fields</a> | <a href="#sort">Sort a Pivot Table</a> | <a href="#filter">Filter</a> | <a href="#change-summary-calculation">Change Summary Calculation</a> | <a href="#two-dimensional-pivot-table">Two-dimensional Pivot Table</a></p>
+                      <p><strong>Pivot tables</strong> are one of <strong>Excel</strong>'s most powerful features. A pivot table allows you to extract the significance from a large, detailed data set.</p>
+                      <p>Our data set consists of 213 records and 6 fields. Order ID, Product, Category, Amount, Date and Country.</p>
+                      <p><img src="images/pivot-tables/pivot-table-data.png" alt="Pivot Table Data in Excel" width="604" height="232" title="Pivot Table Data in Excel" /></p>
+                      
+
+     
+     
+     
+                      <h3><a name="insert-pivot-table" id="insert-pivot-table"></a>Insert a Pivot Table</h3>
+              <p>To insert a <strong>pivot table</strong>, execute the following steps.</p>
+              <p>1. Click any single cell inside the data set.</p>
+              <p>2. On the Insert tab, in the Tables group, click PivotTable.</p>
+              <p><img src="images/pivot-tables/insert-pivot-table.png" alt="Insert Excel Pivot Table" width="204" height="100" title="Insert Excel Pivot Table" /></p>
+              <p>The following dialog box appears. Excel automatically selects the data for you. The default location for a new pivot table is New Worksheet.</p>
+              <p>3. Click OK.</p>
+              <p><img src="images/pivot-tables/create-pivot-table-dialog-box.png" loading="lazy" alt="Create PivotTable Dialog Box" width="387" height="346" title="Create PivotTable Dialog Box" /></p>
+              <h3><a name="drag-fields" id="drag-fields"></a>Drag fields</h3>
+              <p>The <strong>PivotTable Fields pane</strong> appears. To get the total amount exported of each product, drag the following fields to the different areas.</p>
+              <p>1. Product field to the Rows area.</p>
+              <p>2. Amount field to the Values area.</p>
+              <p>3. Country field to the Filters area.</p>
+              <p><img src="images/pivot-tables/drag-fields-areas.png" loading="lazy" alt="Drag Fields to Areas" width="261" height="474" title="Drag Fields to Areas" /></p>
+              <p>Below you can find the pivot table. Bananas are our main export product. That's how easy pivot tables can be!</p>
+              <p><img src="images/pivot-tables/pivot-table.png" loading="lazy" alt="Pivot Table" width="287" height="261" title="Pivot Table" /></p>
+			  <div class="ad"><!-- Advanced Excel Pages Middle -->
+
+     
+     
+     data-ad-slot="2529116896"></ins>
+</div>
+			  <h3><a name="sort" id="sort"></a>Sort a Pivot Table</h3>
+              <p>To get Banana at the top of the list, sort the pivot table.</p>
+              <p>1. Click any cell inside the Sum of Amount column.</p>
+              <p>2. Right click and click on Sort, Sort Largest to Smallest.</p>
+              <p><img src="images/pivot-tables/sort-largest-to-smallest.png" loading="lazy" alt="Sort Largest to Smallest" width="380" height="278" title="Sort Largest to Smallest" /></p>
+              <p>Result.</p>
+              <p><img src="images/pivot-tables/sorted-pivot-table.png" loading="lazy" alt="Sorted Pivot Table" width="287" height="261" title="Sorted Pivot Table" /></p>
+			  <h3><a name="filter" id="filter"></a>Filter</h3>
+              <p>Because we added the Country field to the Filters area, we can filter this pivot table by Country. For example, which products do we export the most to France?</p>
+              <p>1. Click the filter drop-down and select France.</p>
+              <p>Result. Apples are our main export product to France.</p>
+              <p><img src="images/pivot-tables/filtered-pivot-table.png" loading="lazy" alt="Filtered Pivot Table" width="287" height="261" title="Filtered Pivot Table" /></p>
+              <p>Note: you can use the standard filter (triangle next to Row Labels) to only show the amounts of specific products.</p>
+			  <!--<div class="ad">Excel Pages Middle
+
+     
+     
+     data-ad-slot="2529116896"></ins>
+</div>-->
+			  <h3><a name="change-summary-calculation" id="change-summary-calculation"></a>Change Summary Calculation</h3>
+              <p>By default, Excel summarizes your data by either summing or counting the items. To change the type of calculation that you want to use, execute the following steps.</p>
+              <p>1. Click any cell inside the Sum of Amount column.</p>
+              <p>2. Right click and click on Value Field Settings.</p>
+              <p><img src="images/pivot-tables/value-field-settings.png" loading="lazy" alt="Value Field Settings" width="200" height="278" title="Value Field Settings" ></p>
+              <p>3. Choose the type of calculation you want to use. For example, click Count.</p>
+              <p><img src="images/pivot-tables/summarize-value-field-by.png" loading="lazy" alt="Summarize Value Field By" width="373" height="319" title="Summarize Value Field By" /></p>
+              <p>4. Click OK.</p>
+              <p>Result. 16 out of the 28 orders to France were 'Apple' orders.</p>
+              <p><img src="images/pivot-tables/count.png" loading="lazy" alt="Count" width="297" height="261" title="Count" /></p>
+              <h3><a name="two-dimensional-pivot-table" id="two-dimensional-pivot-table"></a>Two-dimensional Pivot Table</h3>
+              <p>If you drag a field to the Rows area and Columns area, you can create a two-dimensional pivot table. First, <a href="#insert-pivot-table">insert a pivot table</a>. Next, to get the total amount exported to each country, of each product, drag the following fields to the different areas.</p>
+              <p>1. Country field to the Rows area.</p>
+              <p>2. Product field to the Columns area.</p>
+              <p>3. Amount field to the Values area.</p>
+              <p>4. Category field to the Filters area.</p>
+              <p><img src="images/pivot-tables/create-two-dimensional-pivot-table.png" loading="lazy" alt="Create Two-dimensional Pivot Table" width="261" height="474" title="Create Two-dimensional Pivot Table" /></p>
+              <p>Below you can find the two-dimensional pivot table.</p>
+              <p><img src="images/pivot-tables/two-dimensional-pivot-table.png" loading="lazy" alt="Two-dimensional Pivot Table in Excel" width="604" height="281" title="Two-dimensional Pivot Table in Excel" /></p>
+              <p>To easily compare these numbers, create a <a href="../examples/pivot-chart.html">pivot chart</a> and apply a filter. Maybe this is one step too far for you at this stage, but it shows you one of the many other powerful pivot table features Excel has to offer.</p>
+              <p><img src="images/pivot-tables/pivot-chart.png" loading="lazy" alt="Pivot Chart" width="481" height="289" title="Pivot Chart" /></p>
+              <div class="ad"><!-- Advanced Excel Pages End -->
+
+     
+     
+     data-ad-slot="4005850092"></ins>
+</div>
+            </div>
+			   </div>
+				<span class="invtab"><div class="post">
+					<div style="clear: both;"></div>
+                    <div class="entrylearn">  
+                  <p align="left"><span class="buttonp"> <a href="../examples/group-pivot-table-items.html">1/9 Completed! Learn much more about pivot tables &gt;<br />
+                    </a></span>Go to Next Guide: <a href="tables.html">Tables</a></p></div>
+                  </div></span>
+                  
+			</div>
+            <div class="4u 12u(medium)">
+              <div id="search">
+              <div class="cse-branding-right" style="background-color:#FFFFFF;color:#000000">
+                <div class="cse-branding-form" style="margin-right:0px;">
+                  <form action="https://www.Advanced Excel for Data Analysis/search.html" id="cse-search-box">
+                    <div>
+                      <input type="hidden" name="cx" value="partner-pub-1987061359047735:3934495699" />
+                      <input type="hidden" name="cof" value="FORID:10" />
+                      <input type="hidden" name="ie" value="UTF-8" />
+                      <input type="text" name="q" placeholder="Explore Entire Guide" class="field" disabled />
+                      <span class="notranslate"><input type="submit" name="sa" value="Go" class="button" disabled /></span>
+                    </div>
+                  </form>
+                </div>
+                <div class="cse-branding-logo"></div>
+                <div class="cse-branding-text"></div>
+              </div>
+              </div>
+              <div id="sidebar">
+					<ul>
+				  	  <li>
+                        <h3>Guide</h3>
+						  <ul>
+							<li class="current_page_item"><a href="pivot-tables.html">Pivot Tables</a></li>
+                    </ul>
+					  </li>
+				  </ul>
+			  </div>
+              <div id="sidebar">
+				  <ul><li>
+				      <h3><font color="#FF9900"><span class="notranslate">Learn more, it's easy</span></font></h3>
+				    </li>
+					  <li><ul>
+                        <li><a href="../examples/group-pivot-table-items.html">Group Pivot Table Items</a></li>
+                        <li><a href="../examples/multi-level-pivot-table.html">Multi-level Pivot Table</a></li>
+                        <li><a href="../examples/frequency-distribution.html">Frequency Distribution</a></li>
+                        <li><a href="../examples/pivot-chart.html">Pivot Chart</a></li>
+                        <li><a href="../examples/slicers.html">Slicers</a></li>
+                        <li><a href="../examples/update-pivot-table.html">Update Pivot Table</a></li>
+                        <li><a href="../examples/calculated-field-item.html">Calculated Field/Item</a></li>
+                        <li><a href="../examples/getpivotdata.html">GetPivotData</a></li>
+                        </ul>
+                    </li>
+                  </ul>
+			  </div>
+              <div id="sidebar">
+					<ul>
+				  	  <li>
+                        <h3><span class="notranslate"><font color="#8FAD22">Download Excel File</font></span></h3>
+						  <ul>
+							<li><a href="excel-files/pivot-tables.xlsx">pivot-tables.xlsx</a></li>
+                    </ul>
+					  </li>
+				  </ul>
+			  </div>
+              <div id="sidebar">
+					<ul>
+				  	  <li>
+                        <h3>Next Guide</h3>
+						  <ul>
+							<li><a href="tables.html">Tables</a></li>
+                    </ul>
+					  </li>
+				  </ul>
+			  </div>
+              <div id="sidebar">
+		      <h3><span class="notranslate"></span></h3>
+              <p style="padding-top:7px;padding-bottom:1px"><a href="https://facebook.com/thecodedragon" target="blank" rel="nofollow"><img src="../layout/facebook-logo.png" onmouseover="this.src='../layout/facebook-logo-onmouseover.png'" onmouseout="this.src='../layout/facebook-logo.png'" width="30" height="30" border="0" alt="Advanced Excel on Facebook" title="Advanced Excel on Facebook" /></a> <a href="https://twitter.com/ceoofdss" target="blank" rel="nofollow"><img src="../layout/x-logo.png" onmouseover="this.src='../layout/x-logo-onmouseover.png'" onmouseout="this.src='../layout/x-logo.png'" width="30" height="30" border="0" alt="Advanced Excel on X" title="Advanced Excel on X" /></a> <a href="https://www.pinterest.com/julisunkan" target="blank" rel="nofollow"><img src="../layout/pinterest-logo.png" onmouseover="this.src='../layout/pinterest-logo-onmouseover.png'" onmouseout="this.src='../layout/pinterest-logo.png'" width="30" height="30" border="0" alt="Advanced Excel on Pinterest" title="Advanced Excel on Pinterest"></a> <a href="https://www.linkedin.com/in/digitalskeleton/" target="blank" rel="nofollow"><img src="../layout/linkedin-logo.png" onmouseover="this.src='../layout/linkedin-logo-onmouseover.png'" onmouseout="this.src='../layout/linkedin-logo.png'" width="30" height="30" border="0" alt="Advanced Excel on LinkedIn" title="Advanced Excel on LinkedIn"></a></p>
+              </div>
+			  <div id="sidebar">
+              <ul><li></li>
+		        <li>
+		          <h3><span class="notranslate">Most Popular</span></h3>
+	            </li>
+		        <li><ul>
+                        <li><a href="pivot-tables.html">Pivot Tables</a></li>
+                        <li><a href="../examples/vlookup.html">Vlookup</a></li>
+                        <li><a href="../introduction/formulas-functions.html">Formulas and Functions</a></li>
+                        <li><a href="charts.html">Charts</a></li>
+                        <li><a href="conditional-formatting.html">Conditional Formatting</a></li>
+                        <li><a href="../examples/find-duplicates.html">Find Duplicates</a></li>
+                        <li><a href="../examples/if.html">If</a></li>
+                        <li><a href="../examples/drop-down-list.html">Drop-down List</a></li>
+						<li><a href="../examples/countif.html">Countif</a></li>
+                        <li><a href="../examples/index-match.html">Index and Match</a></li>
+                        </ul>
+			    </li>
+              </ul>
+              </div>
+              <div id="sidebar">
+					<ul>
+				  	  <li>
+                        <h3><span class="notranslate">Become an Excel Pro</span></h3>
+						  <ul>
+                            <li><a href="../examples.html">300 Examples</a></li>
+                          </ul>
+					  </li>
+				  </ul>
+			  </div>
+              <!-- end #sidebar -->
+			  <div style="clear: both;">&nbsp;</div>
+		  </div>
+		</div>
+	</div>
+	<!-- end #page -->
+</div>
+<div id="footer">
+	<p><a href="pivot-tables.html">Pivot Tables</a> &bull; &copy; AppMonster<br />
+	Excel is Awesome, we'll show you: <a href="../introduction.html">Introduction</a> &bull; <a href="../basics.html">Basics</a> &bull; <a href="../functions.html">Functions</a> &bull; <a href="../data-analysis.html">Data Analysis</a> &bull; <a href="../vba.html">VBA</a></p>
+</div>
+<!-- end #footer -->
+
+<script type="text/javascript">
+  
+  $(function() { (adsbygoogle = window.adsbygoogle || []).push({}); });
+  $(function() { (adsbygoogle = window.adsbygoogle || []).push({}); });
+  //$(function() { (adsbygoogle = window.adsbygoogle || []).push({}); });
+  $(function() { (adsbygoogle = window.adsbygoogle || []).push({}); });
+  
+</script>
+
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"rayId":"8c78d3fce98c9fc0","version":"2024.8.0","serverTiming":{"name":{"cfExtPri":true,"cfL4":true}},"token":"c707dde3711e49e3a0cbf0020eef6a91","b":1}' crossorigin="anonymous"></script>
+</body>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H0MBKVX9SV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-H0MBKVX9SV');
+</script>
+
+<!-- Mirrored from www.Advanced Excel for Data Analysis/data-analysis/pivot-tables.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 23 Sep 2024 07:45:39 GMT -->
+</html>

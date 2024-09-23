@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+
+
+<!-- Mirrored from www.Advanced Excel for Data Analysis/vba/loop.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 23 Sep 2024 07:47:32 GMT -->
+<head>
+
+<title>For Loop in Excel VBA (In Easy Steps)</title>
+<meta name="keywords" content="loop, excel vba, for next, single, one-dimensional range, double, two-dimensional range, triple, multiple worksheets, looping, code, do while loop, true">
+<meta name="description" content="Looping is one of the most powerful programming techniques. A loop in Excel VBA enables you to loop through a range of cells with just a few codes lines.">
+
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="index, follow">
+<META content=EN-US name=LANGUAGE>
+<meta property="og:title" content="Loop in Excel VBA">
+<meta property="og:url" content="loop.html">
+<meta property="og:type" content="article">
+<meta property="fb:admins" content="100003702321830">
+<meta property="og:description" content="Looping is one of the most powerful programming techniques. A loop in Excel VBA enables you to loop through a range of cells with just a few codes lines.">
+<meta property="og:image" content="../smi/vba/loop-2.png"/>
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@ExcelEasy">
+<meta name="twitter:image" content="../smi/vba/loop-2.png">
+
+<link rel="preload" href="../css/style.css" as="style">
+<link rel="preload" href="images/loop/single-loop.png" as="image">
+<link rel="preload" href="../js/default.js" as="script">
+<link rel="preload" href="../js/init.js" as="script">
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f5ca7.txt?client=ca-pub-1987456081350047765" data-overlays="bottom" crossorigin="anonymous"></script>
+<link rel="preload" href="../css/style-medium.css" as="style" media="(max-width:961px)">
+<link rel="preload" href="../css/style-small.css" as="style" media="(max-width:620px)">
+<link rel="stylesheet" href="../css/style.css"/>
+<script src="../js/default.js" type="text/javascript"></script>
+<script src="../js/init.js" type="text/javascript"></script>
+<style type="text/css">
+.adslot { width: 336px; height: 280px; }
+@media (min-width:320px) { .adslot { width: 300px; height: 250px; } }
+@media (min-width:360px) and (orientation: portrait) { .adslot { width: 336px; height: 280px; } }
+@media (min-width:604px) { .adslot { width: 336px; height: 280px; } }
+</style>
+<noscript>
+    <link rel="stylesheet" href="../css/skel.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/adslot.css" />
+</noscript>
+<link rel="icon" href="../favicon-48x48.ico">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+</head>
+<body>
+<header id="header">
+	<div class="container">
+		<span class="notranslate">
+			<div id="logo">
+				<a href="../index.html"><img src="../layout/excel-guides.svg" onerror="this.src='../layout/excel-guides.png'" border="0" alt="Excel guides" title="Excel guides" width="1" height="1" /><h2>Excel</h2>&nbsp;&nbsp;<span class="easy">for Data Analysis</span></a>
+                <p>#1 <a href="../index.html">Excel guides</a> on the go</p>
+		  	</div>            
+			<nav id="nav">
+				  <ul>
+                  <li><a href="../index.html">Excel</a></li>
+                  <li><a href="../introduction.html">Introduction</a></li>
+				  <li><a href="../basics.html">Basics</a></li>
+				  <li><a href="../functions.html">Functions</a></li>
+				  <li><a href="../data-analysis.html">Data Analysis</a></li>
+                  <li class="current_page_item"><a href="../vba.html">VBA</a></li>
+                  <li class="pro"><a href="../examples.html">300 Examples</a></li>
+                  <li><a href="../ask-us.html">Ask us</a></li>
+                  </ul>
+				</nav>
+			</span>
+		</div>
+	</header>
+	<!-- end #header -->
+	<div class="container">
+		<div class="row 100%">
+			<div class="8u 12u(medium)">
+				<div class="post">
+						<h1 class="title" style="float:left;">Loop</h1>
+                        <div style="clear: both;">&nbsp;</div>
+<div class="entry"> 
+  <p class="spacing"><a href="#single-loop">Single Loop</a> | <a href="#double-loop">Double Loop</a> | <a href="#triple-loop">Triple Loop</a> | <a href="#do-while-loop">Do While Loop</a></p> 
+  <p>Looping is one of the most powerful programming techniques. A <strong>loop</strong> in <strong>Excel VBA</strong> enables you to loop through a range of cells with just a few codes lines.</p>
+  <h3><a name="single-loop" id="single-loop"></a>Single Loop</h3>
+  <p>You can use a single loop to loop through a one-dimensional range of cells.</p>
+  <p>Place a <a href="create-a-macro.html#command-button">command button</a> on your worksheet and add the following code lines:</p>
+  <div class="code"><span class="predefined">Dim</span> i <span class="predefined">As</span> <span class="predefined">Integer</span><br /><br />
+  <span class="predefined">For</span> i = 1 <span class="predefined">To</span> 6<br />
+  &nbsp;&nbsp;&nbsp;&nbsp;Cells(i, 1).Value = 100<br />
+  <span class="predefined">Next</span> i</div>
+  
+
+     
+     
+     
+  <p>Result when you click the command button on the sheet:</p>
+  <p><img src="images/loop/single-loop.png" alt="Single Loop in Excel VBA" width="604" height="181" title="Single Loop in Excel VBA" /></p>
+  <p>Explanation: The code lines between For and Next will be executed six times. For i = 1, Excel VBA enters the value 100 into the cell at the intersection of row 1 and column 1. When Excel VBA reaches Next i, it increases i with 1 and jumps back to the For statement. For i = 2, Excel VBA enters the value 100 into the cell at the intersection of row 2 and column 1, etc.</p>
+  <p>Note: it is good practice to always indent (tab) the code between the words For and Next. This makes your code easier to read.</p>
+  <h3><a name="double-loop" id="double-loop"></a>Double Loop</h3>
+  <p>You can use a double loop to loop through a two-dimensional range of cells.</p>
+  <p>Place a <a href="create-a-macro.html#command-button">command button</a> on your worksheet and add the following code lines:</p>
+  <div class="code"><span class="predefined">Dim</span> i <span class="predefined">As</span> <span class="predefined">Integer</span>, j <span class="predefined">As</span> <span class="predefined">Integer</span><br /><br />
+  <span class="predefined">For</span> i = 1 <span class="predefined">To</span> 6<br />
+  &nbsp;&nbsp;&nbsp;&nbsp;<span class="predefined">For</span> j = 1 <span class="predefined">To</span> 2<br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Cells(i, j).Value = 100<br />
+  &nbsp;&nbsp;&nbsp;&nbsp;<span class="predefined">Next</span> j<br />
+  <span class="predefined">Next</span> i</div>
+  <p>Result when you click the command button on the sheet:</p>
+  <p><img src="images/loop/double-loop.png" alt="Double Loop in Excel VBA" width="604" height="181" title="Double Loop in Excel VBA" /></p>
+  <p>Explanation: For i = 1 and j = 1, Excel VBA enters the value 100 into the cell at the intersection of row 1 and column 1. When Excel VBA reaches Next j, it increases j with 1 and jumps back to the For j statement. For i = 1 and j = 2, Excel VBA enters the value 100 into the cell at the intersection of row 1 and column 2. Next, Excel VBA ignores Next j because j only runs from 1 to 2. When Excel VBA reaches Next i, it increases i with 1 and jumps back to the For i statement. For i = 2 and j = 1, Excel VBA enters the value 100 into the cell at the intersection of row 2 and column 1, etc.</p>
+  <h3><a name="triple-loop" id="triple-loop"></a>Triple Loop</h3>
+  <p>You can use a triple loop to loop through two-dimensional ranges on multiple Excel worksheets.</p>
+  <p>Place a <a href="create-a-macro.html#command-button">command button</a> on your worksheet and add the following code lines:</p>
+  <div class="code"><span class="predefined">Dim</span> c <span class="predefined">As</span> <span class="predefined">Integer</span>, i <span class="predefined">As</span> <span class="predefined">Integer</span>, j <span class="predefined">As</span> <span class="predefined">Integer</span><br /><br />
+  <span class="predefined">For</span> c = 1 <span class="predefined">To</span> 3<br />
+  &nbsp;&nbsp;&nbsp;&nbsp;<span class="predefined">For</span> i = 1 <span class="predefined">To</span> 6<br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="predefined">For</span> j = 1 <span class="predefined">To</span> 2<br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Worksheets(c).Cells(i, j).Value = 100<br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="predefined">Next</span> j<br />
+  &nbsp;&nbsp;&nbsp;&nbsp;<span class="predefined">Next</span> i<br />
+  <span class="predefined">Next</span> c</div>
+  <p>Explanation: The only change made compared to the code for the double loop is that we have added one more loop and added Worksheets(c). in front of Cells to get the two-dimensional range on the first sheet for c = 1, the second sheet for c = 2 and the third sheet for c = 3. Download the Excel file to see this result.</p>
+  <div class="ad"><!-- Advanced Excel Pages Middle -->
+
+     
+     
+     data-ad-slot="2529116896"></ins>
+</div>
+  <h3><a name="do-while-loop" id="do-while-loop"></a>Do While Loop</h3>
+  <p>Besides the For Next loop, there are other loops in Excel VBA. For example, the Do While Loop. Code placed between Do While and Loop will be repeated as long as the part after Do While is true.</p>
+  <p>1. Place a <a href="create-a-macro.html#command-button">command button</a> on your worksheet and add the following code lines:</p>
+  <div class="code"><span class="predefined">Dim</span> i <span class="predefined">As</span> Integer<br />
+  i = 1<br /><br />
+  <span class="predefined">Do</span> <span class="predefined">While</span> i &lt; 6<br />
+  &nbsp;&nbsp;&nbsp;&nbsp;Cells(i, 1).Value = 20<br />
+  &nbsp;&nbsp;&nbsp;&nbsp;i = i + 1<br />
+  <span class="predefined">Loop</span></div>
+  <p>Result when you click the command button on the sheet:</p>
+  <p><img src="images/loop/do-while-loop.png" loading="lazy" alt="Do While Loop" width="604" height="181" title="Do While Loop" /></p>
+  <p>Explanation: as long as i is lower than 6, Excel VBA enters the value 20 into the cell at the intersection of row i and column 1 and increments i by 1. In Excel VBA (and in other programming languages), the symbol '=' means becomes. It does not mean equal. So i = i + 1 means i becomes i + 1. In other words: take the present value of i and add 1 to it. For example, if i = 1, i becomes 1 + 1 = 2. As a result, the value 20 will be placed into column A five times (not six because Excel VBA stops when i equals 6).</p>
+  <p>2. Enter some numbers in column A.</p>
+  <p><img src="images/loop/any-number-of-rows.png" loading="lazy" alt="Any Number Of Rows" width="604" height="181" title="Any Number Of Rows" /></p>
+  <p>3. Place a <a href="create-a-macro.html#command-button">command button</a> on your worksheet and add the following code lines:</p>
+  <div class="code"><span class="predefined">Dim</span> i <span class="predefined">As</span> Integer<br />
+  i = 1<br /><br />
+  <span class="predefined">Do</span> <span class="predefined">While</span> Cells(i, 1).Value &lt;&gt; &quot;&quot;<br />
+  &nbsp;&nbsp;&nbsp;&nbsp;Cells(i, 2).Value = Cells(i, 1).Value + 10<br />
+  &nbsp;&nbsp;&nbsp;&nbsp;i = i + 1<br />
+  <span class="predefined">Loop</span></div>
+  <p>Result when you click the command button on the sheet:</p>
+  <p><img src="images/loop/advanced-do-while-loop.png" loading="lazy" alt="Advanced Do While Loop" width="604" height="181" title="Advanced Do While Loop" /></p>
+  <p>Explanation: as long as Cells(i, 1).Value is not empty (&lt;&gt; means not equal to), Excel VBA enters the value into the cell at the intersection of row i and column 2, that is 10 higher than the value in the cell at the intersection of row i and column 1. Excel VBA stops when i equals 7 because Cells(7, 1).Value is empty. This is a great way to loop through any number of rows on a worksheet.</p>  
+  <div class="ad"><!-- Advanced Excel Pages End -->
+
+     
+     
+     data-ad-slot="4005850092"></ins>
+</div>
+            </div>
+			   </div>
+				<span class="invtab"><div class="post">
+					<div style="clear: both;"></div>
+                    <div class="entrylearn">
+                      <p align="left"><span class="buttonp"> <a href="examples/loop-through-defined-range.html">1/12 Completed! Learn much more about loops &gt;<br />
+                    </a></span>Go to Next Guide: <a href="macro-errors.html">Macro Errors</a></div>
+                  </div></span>
+                  
+			</div>
+            <div class="4u 12u(medium)">
+              <div id="search">
+              <div class="cse-branding-right" style="background-color:#FFFFFF;color:#000000">
+                <div class="cse-branding-form" style="margin-right:0px;">
+                  <form action="https://www.Advanced Excel for Data Analysis/search.html" id="cse-search-box">
+                    <div>
+                      <input type="hidden" name="cx" value="partner-pub-1987061359047735:3934495699" />
+                      <input type="hidden" name="cof" value="FORID:10" />
+                      <input type="hidden" name="ie" value="UTF-8" />
+                      <input type="text" name="q" placeholder="Explore Entire Guide" class="field" disabled />
+                      <span class="notranslate"><input type="submit" name="sa" value="Go" class="button" disabled /></span>
+                    </div>
+                  </form>
+                </div>
+                <div class="cse-branding-logo"></div>
+                <div class="cse-branding-text"></div>
+              </div>
+              </div>
+              <div id="sidebar">
+					<ul>
+				  	  <li>
+                        <h3>Guide</h3>
+						  <ul>
+							<li class="current_page_item"><a href="loop.html">Loop</a></li>
+                		  </ul>
+					  </li>
+				    </ul>
+			  </div>
+              <div id="sidebar">
+                <ul><li>
+				      <h3><font color="#FF9900"><span class="notranslate">Learn more, it's easy</span></font></h3>
+				    </li>
+					  <li><ul> 
+                        <li><a href="examples/loop-through-defined-range.html">Loop through Defined Range</a></li>
+                        <li><a href="examples/loop-through-entire-column.html">Loop through Entire Column</a></li>
+                        <li><a href="examples/do-until-loop.html">Do Until Loop</a></li>
+                        <li><a href="examples/step-keyword.html">Step Keyword</a></li>
+                        <li><a href="examples/create-a-pattern.html">Create a Pattern</a></li>
+                        <li><a href="examples/sort-numbers.html">Sort Numbers</a></li> 
+                        <li><a href="examples/randomly-sort-data.html">Randomly Sort Data</a></li>
+                        <li><a href="examples/remove-duplicates.html">Remove Duplicates</a></li>
+                        <li><a href="examples/complex-calculations.html">Complex Calculations</a></li>
+						<li><a href="examples/possible-football-matches.html">Possible Football Matches</a></li>
+                        <li><a href="examples/knapsack-problem.html">Knapsack Problem</a></li>       	
+                        </ul>
+                    </li>
+                  </ul>
+			  </div>
+              <div id="sidebar">
+					<ul>
+				  	  <li>
+                        <h3><span class="notranslate"><font color="#8FAD22">Download Excel File</font></span></h3>
+						  <ul>
+							<li><a href="excel-files/loop.xlsm">loop.xlsm</a></li>
+                    </ul>
+					  </li>
+				  </ul>
+			  </div>
+              <div id="sidebar">
+					<ul>
+				  	  <li>
+                        <h3>Next Guide</h3>
+						  <ul>
+							<li><a href="macro-errors.html">Macro Errors</a></li>
+                    </ul>
+					  </li>
+				  </ul>
+			  </div>
+              <div id="sidebar">
+		      <h3><span class="notranslate"></span></h3>
+              <p style="padding-top:7px;padding-bottom:1px"><a href="https://facebook.com/thecodedragon" target="blank" rel="nofollow"><img src="../layout/facebook-logo.png" onmouseover="this.src='../layout/facebook-logo-onmouseover.png'" onmouseout="this.src='../layout/facebook-logo.png'" width="30" height="30" border="0" alt="Advanced Excel on Facebook" title="Advanced Excel on Facebook" /></a> <a href="https://twitter.com/ceoofdss" target="blank" rel="nofollow"><img src="../layout/x-logo.png" onmouseover="this.src='../layout/x-logo-onmouseover.png'" onmouseout="this.src='../layout/x-logo.png'" width="30" height="30" border="0" alt="Advanced Excel on X" title="Advanced Excel on X" /></a> <a href="https://www.pinterest.com/julisunkan" target="blank" rel="nofollow"><img src="../layout/pinterest-logo.png" onmouseover="this.src='../layout/pinterest-logo-onmouseover.png'" onmouseout="this.src='../layout/pinterest-logo.png'" width="30" height="30" border="0" alt="Advanced Excel on Pinterest" title="Advanced Excel on Pinterest"></a> <a href="https://www.linkedin.com/in/digitalskeleton/" target="blank" rel="nofollow"><img src="../layout/linkedin-logo.png" onmouseover="this.src='../layout/linkedin-logo-onmouseover.png'" onmouseout="this.src='../layout/linkedin-logo.png'" width="30" height="30" border="0" alt="Advanced Excel on LinkedIn" title="Advanced Excel on LinkedIn"></a></p>
+              </div>
+			  <div id="sidebar">
+              <ul><li></li>
+		        <li>
+		          <h3><span class="notranslate">Most Popular</span></h3>
+	            </li>
+		        <li><ul>
+                        <li><a href="range-object.html">Range Object</a></li>
+                        <li><a href="loop.html">Loop</a></li>
+                        <li><a href="if-then-statement.html">If Then Statement</a></li>
+                        <li><a href="msgbox.html">MsgBox</a></li>
+                        <li><a href="array.html">Array</a></li>
+                        <li><a href="function-sub.html">Function and Sub</a></li>
+                        <li><a href="userform.html">Userform</a></li>
+                        </ul>
+			    </li>
+              </ul>
+              </div>
+              <div id="sidebar">
+					<ul>
+				  	  <li>
+                        <h3><span class="notranslate">Become an Excel Pro</span></h3>
+						  <ul>
+                            <li><a href="../examples.html">300 Examples</a></li>
+                          </ul>
+					  </li>
+				  </ul>
+			  </div>
+              <!-- end #sidebar -->
+			  <div style="clear: both;">&nbsp;</div>
+		  </div>
+		</div>
+	</div>
+	<!-- end #page -->
+</div>
+<div id="footer">
+	<p><a href="loop.html">Loop</a> &bull; &copy; AppMonster<br />
+	Excel is Awesome, we'll show you: <a href="../introduction.html">Introduction</a> &bull; <a href="../basics.html">Basics</a> &bull; <a href="../functions.html">Functions</a> &bull; <a href="../data-analysis.html">Data Analysis</a> &bull; <a href="../vba.html">VBA</a></p>
+</div>
+<!-- end #footer -->
+
+<script type="text/javascript">
+  
+  $(function() { (adsbygoogle = window.adsbygoogle || []).push({}); });
+  $(function() { (adsbygoogle = window.adsbygoogle || []).push({}); });
+  $(function() { (adsbygoogle = window.adsbygoogle || []).push({}); });
+  
+</script>
+
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"rayId":"8c78d44d7cd8b8d2","version":"2024.8.0","serverTiming":{"name":{"cfExtPri":true,"cfL4":true}},"token":"c707dde3711e49e3a0cbf0020eef6a91","b":1}' crossorigin="anonymous"></script>
+</body>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H0MBKVX9SV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-H0MBKVX9SV');
+</script>
+
+<!-- Mirrored from www.Advanced Excel for Data Analysis/vba/loop.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 23 Sep 2024 07:47:34 GMT -->
+</html>

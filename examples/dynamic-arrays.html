@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+
+
+<!-- Mirrored from www.Advanced Excel for Data Analysis/examples/dynamic-arrays.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 23 Sep 2024 07:40:00 GMT -->
+<head>
+
+<title>Dynamic Array Formulas in Excel (In Easy Steps)</title>
+<meta name="keywords" content="dynamic arrays, excel 365, dynamic array formulas, excel 2021, fill multiple cells, spilling, dynamic array functions, sort function, filter function, randarray function, sequence function, unique function, xlookup function, single cell, spills to neighboring cells, spill range, spill error">
+<meta name="description" content="Dynamic array formulas, entered into a single cell, fill multiple cells. This behavior in Excel 365/2021 is called spilling.">
+
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="index, follow">
+<META content=EN-US name=LANGUAGE>
+<meta property="og:title" content="Dynamic Array Formulas in Excel">
+<meta property="og:url" content="dynamic-arrays.html">
+<meta property="og:type" content="article">
+<meta property="fb:admins" content="100003702321830">
+<meta property="og:description" content="Dynamic array formulas, entered into a single cell, fill multiple cells. This behavior in Excel 365/2021 is called spilling.">
+<meta property="og:image" content="../smi/examples/dynamic-arrays.png"/>
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@ExcelEasy">
+<meta name="twitter:image" content="../smi/examples/dynamic-arrays.png">
+
+<link rel="preload" href="../css/style.css" as="style">
+<link rel="preload" href="images/dynamic-arrays/absolute-reference.png" as="image">
+<link rel="preload" href="../js/default.js" as="script">
+<link rel="preload" href="../js/init.js" as="script">
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f5ca7.txt?client=ca-pub-1987456081350047765" data-overlays="bottom" crossorigin="anonymous"></script>
+<link rel="preload" href="../css/style-medium.css" as="style" media="(max-width:961px)">
+<link rel="preload" href="../css/style-small.css" as="style" media="(max-width:620px)">
+<link rel="stylesheet" href="../css/style.css"/>
+<script src="../js/default.js" type="text/javascript"></script>
+<script src="../js/init.js" type="text/javascript"></script>
+<style type="text/css">
+.adslot { width: 336px; height: 280px; }
+@media (min-width:320px) { .adslot { width: 300px; height: 250px; } }
+@media (min-width:360px) and (orientation: portrait) { .adslot { width: 336px; height: 280px; } }
+@media (min-width:604px) { .adslot { width: 336px; height: 280px; } }
+</style>
+<noscript>
+    <link rel="stylesheet" href="../css/skel.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/adslot.css" />
+</noscript>
+<link rel="icon" href="../favicon-48x48.ico">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+</head>
+<body>
+<header id="header">
+	<div class="container">
+		<span class="notranslate">
+			<div id="logo">
+				<a href="../index.html"><img src="../layout/excel-guides.svg" onerror="this.src='../layout/excel-guides.png'" border="0" alt="Excel guides" title="Excel guides" width="1" height="1" /><h2>Excel</h2>&nbsp;&nbsp;<span class="easy">for Data Analysis</span></a>
+                <p>#1 <a href="../index.html">Excel guides</a> on the go</p>
+		  	</div>            
+			<nav id="nav">
+				  <ul>
+                  <li><a href="../index.html">Excel</a></li>
+                  <li><a href="../introduction.html">Introduction</a></li>
+				  <li><a href="../basics.html">Basics</a></li>
+				  <li><a href="../functions.html">Functions</a></li>
+				  <li><a href="../data-analysis.html">Data Analysis</a></li>
+                  <li><a href="../vba.html">VBA</a></li>
+                  <li class="current_page_item"><a href="../examples.html">300 Examples</a></li>
+                  <li><a href="../ask-us.html">Ask us</a></li>
+                  </ul>
+				</nav>
+			</span>
+		</div>
+	</header>
+	<!-- end #header -->
+	<div class="container">
+		<div class="row 100%">
+			<div class="8u 12u(medium)">
+				<div class="post">
+						<h1 class="title" style="float:left;">Dynamic Arrays</h1>
+						<div style="clear: both;">&nbsp;</div>
+<div class="entry">
+<p class="spacing"><a href="#formula-example">Formula Example</a> | <a href="#dynamic-array-functions">Dynamic Array Functions</a> | <a href="#old-array-formulas">Old Array Formulas</a> | <a href="#spill-range">Spill Range</a></p>
+<p><strong>Dynamic array formulas</strong>, entered into a single cell, fill multiple cells. This behavior in Excel 365/2021 is called spilling.</p>
+<h3><a name="formula-example" id="formula-example"></a>Formula Example</h3>
+<p>Let's start with an easy example.</p>
+<p>1. Lock the reference to cell E2 by placing a $ symbol in front of the column letter and row number.</p>
+<p><img src="images/dynamic-arrays/absolute-reference.png" alt="Absolute Reference" width="604" height="227" title="Absolute Reference" /></p>
+
+
+     
+     
+     
+<p>2. To quickly copy the formula in cell C2 to the other cells, select cell C2, click on the lower right corner of cell C2 and drag it down to cell C7.</p>
+<p><img src="images/dynamic-arrays/copy-formula.png" alt="Copy Formula" width="604" height="227" title="Copy Formula" /></p>
+<p>Check:</p>
+<p><img src="images/dynamic-arrays/traditional-excel-formula.png" loading="lazy" alt="Traditional Excel Formula" width="604" height="227" title="Traditional Excel Formula" /></p>
+<p>Explanation: the absolute reference ($E$2) stays the same, while the relative reference (B2) changes to B3, B4, B5, B6 and B7.</p>
+<p>3. If you have Excel 365 or Excel 2021, simply enter the dynamic array formula shown below into cell C2.</p>
+<p><img src="images/dynamic-arrays/dynamic-array-formula.png" loading="lazy" alt="Dynamic Array Formula" width="604" height="227" title="Dynamic Array Formula" /></p>
+<p>4. Press Enter.</p>
+<p><img src="images/dynamic-arrays/blue-border.png" loading="lazy" alt="Blue Border" width="604" height="227" title="Blue Border" /></p>
+<p>Explanation: this dynamic array (DA) formula, entered into cell C2, fills multiple cells. This behavior in Excel 365/2021 is called spilling. If you select a cell in the range C2:C7, a blue border appears.</p>
+<p>5. If you select a cell in the range C3:C7, the formula in the formula bar will be greyed out.</p>
+<p><img src="images/dynamic-arrays/formula-greyed-out.png" loading="lazy" alt="Formula Greyed Out" width="604" height="227" title="Formula Greyed Out" /></p>
+<div class="ad"><!-- Advanced Excel Pages Middle -->
+
+     
+     
+     data-ad-slot="2529116896"></ins>
+</div>
+<h3><a name="dynamic-array-functions" id="dynamic-array-functions"></a>Dynamic Array Functions</h3>
+<p><strong>Excel 365 and Excel 2021</strong> offer many new <strong>dynamic array functions</strong>. Follow the links below to learn more about these functions.</p>
+<p>1. The <a href="sort-function.html">SORT function</a> below sorts by the second column, in ascending order.</p>
+<p><img src="images/dynamic-arrays/sort-function.png" loading="lazy" alt="SORT function" width="604" height="387" title="SORT function" /></p>
+<p>Note: this dynamic array function, entered into cell F2, fills multiple cells. Wow!</p>
+<p>2. The <a href="filter-function.html">FILTER function</a> below extracts all USA records.</p>
+<p><img src="images/dynamic-arrays/filter-function.png" loading="lazy" alt="FILTER function" width="604" height="387" title="FILTER function" /></p>
+<p>3. The <a href="random-numbers.html#randarray">RANDARRAY function</a> below generates random decimal numbers between 0 and 1. The array below consists of 5 rows and 2 columns.</p>
+<p><img src="images/dynamic-arrays/randarray-function.png" loading="lazy" alt="RANDARRAY function" width="604" height="187" title="RANDARRY function" /></p>
+<p>4. The <a href="autofill.html#sequence-function">SEQUENCE function</a> below generates a two-dimensional array. Rows = 7, Columns = 4, Start = 0, Step = 5.</p>
+<p><img src="images/dynamic-arrays/sequence-function.png" loading="lazy" alt="SEQUENCE function" width="604" height="227" title="SEQUENCE function" /></p>
+<p>5. The <a href="unique-values.html#unique-function">UNIQUE function</a> below (with no extra arguments) extracts unique values.</p>
+<p><img src="images/dynamic-arrays/unique-function.png" loading="lazy" alt="UNIQUE function" width="604" height="267" title="UNIQUE function" /></p>
+<p>6. The <a href="xlookup.html">XLOOKUP function</a> below looks up the ID and returns the first name, last name and salary.</p>
+<p><img src="images/dynamic-arrays/xlookup-function.png" loading="lazy" alt="XLOOKUP function" width="604" height="327" title="XLOOKUP function" /></p>
+<p>Note: if you have Excel 365 or Excel 2021, use <a href="xlookup.html">XLOOKUP</a> instead of VLOOKUP. The XLOOKUP function is easier to use and has some additional advantages.</p>
+<p>7. The SORTBY function sorts a range based on the values in a corresponding range.</p>
+<p><img src="images/dynamic-arrays/sortby-function.png" loading="lazy" alt="SORTBY function" width="604" height="227" title="SORTBY function" /></p>
+<p>Note: use 1 to sort in ascending order, use -1 to sort in descending order.</p>
+<!--<div class="ad">Excel Pages Middle
+
+     
+     
+     data-ad-slot="2529116896"></ins>
+</div>-->
+<h3><a name="old-array-formulas" id="old-array-formulas"></a>Old Array Formulas</h3>
+<p>Old <a href="../functions/array-formulas.html">array formulas</a> still work. The good news is, if you have Excel 365 or Excel 2021, you don't have to press CTRL + SHIFT + ENTER anymore. Below you can find a few examples.</p>
+<p>1. A traditional array formula finished by pressing CTRL + SHIFT + ENTER.</p>
+<p><img src="images/dynamic-arrays/cse-formula.png" loading="lazy" alt="CSE formula" width="604" height="307" title="CSE formula" /></p>
+<p>Explanation: this formula <a href="sum-largest-numbers.html">sums the 4 largest numbers</a>.</p>
+<p>2. The same formula in Excel 365/2021 finished by simply pressing Enter. Bye bye curly braces.</p>
+<p><img src="images/dynamic-arrays/bye-bye-curly-braces.png" loading="lazy" alt="Bye Bye Curly Braces" width="604" height="307" title="Bye Bye Curly Braces" /></p>
+<p>3. A traditional TRANSPOSE function entered by preselecting the range E2:E4 and finished by pressing CTRL + SHIFT + ENTER.</p>
+<p><img src="images/dynamic-arrays/old-transpose-function.png" loading="lazy" alt="Old TRANSPOSE function" width="604" height="167" title="Old TRANSPOSE function" /></p>
+<p>Explanation: the <a href="transpose.html#transpose-function">TRANSPOSE function</a> converts a horizontal range to a vertical range, or vice versa.</p>
+<p>4. The same function in Excel 365/2021, entered into a single cell, spills to neighboring cells.</p>
+<p><img src="images/dynamic-arrays/function-spills-to-neighboring-cells.png" loading="lazy" alt="Function Spills to Neighboring Cells" width="604" height="167" title="Function Spills to Neighboring Cells" /></p>
+<h3><a name="spill-range" id="spill-range"></a>Spill Range</h3>
+<p>To refer to the values inside the blue rectangle, also called the spill range, always use the first cell and a hash character.</p>
+<p>1. For example, the <a href="unique-values.html#unique-function">UNIQUE function</a> below, entered into cell C1, extracts unique values.</p>
+<p><img src="images/dynamic-arrays/unique-function.png" loading="lazy" alt="UNIQUE function" width="604" height="267" title="UNIQUE function" /></p>
+<p>2. The COUNTA function below uses the spill range (C1#) to count unique values.</p>
+<p><img src="images/dynamic-arrays/spill-range.png" loading="lazy" alt="Spill Range in Excel 365/2021" width="604" height="267" title="Spill Range in Excel 365/2021" /></p>
+<p>3. If something is blocking the spill range, Excel displays the #SPILL! error.</p>
+<p><img src="images/dynamic-arrays/spill-error.png" loading="lazy" alt="#SPILL! error" width="604" height="267" title="#SPILL! error" /></p>
+<p>Note: in this example, simply empty cell C6 to fix the #SPILL error.</p>
+<div class="ad"><!-- Advanced Excel Pages End -->
+
+     
+     
+     data-ad-slot="4005850092"></ins>
+</div>
+            </div>
+			   </div>
+				<span class="invtab"><div class="post">
+					<div style="clear: both;"></div>
+                    <div class="entrylearn">  
+                  <p align="left"><span class="buttonp"> <a href="let-function.html">9/13 Completed! Learn much more about array formulas &gt;<br />
+                  </a></span>Go to Next Guide: <a href="../data-analysis/sort.html">Sort</a></div>
+                  </div></span>
+                  </div>
+                  <div class="4u 12u(medium)">
+              <div id="search">
+              <div class="cse-branding-right" style="background-color:#FFFFFF;color:#000000">
+                <div class="cse-branding-form" style="margin-right:0px;">
+                  <form action="https://www.Advanced Excel for Data Analysis/search.html" id="cse-search-box">
+                    <div>
+                      <input type="hidden" name="cx" value="partner-pub-1987061359047735:3934495699" />
+                      <input type="hidden" name="cof" value="FORID:10" />
+                      <input type="hidden" name="ie" value="UTF-8" />
+                      <input type="text" name="q" placeholder="Explore Entire Guide" class="field" disabled />
+                      <span class="notranslate"><input type="submit" name="sa" value="Go" class="button" disabled /></span>
+                    </div>
+                  </form>
+                </div>
+                <div class="cse-branding-logo"></div>
+                <div class="cse-branding-text"></div>
+              </div>
+              </div>
+              <div id="sidebar">
+					<ul>
+				  	  <li>
+                        <h3>Guide</h3>
+						  <ul>
+							<li><a href="../functions/array-formulas.html">Array Formulas</a></li>
+                    </ul>
+					  </li>
+				  </ul>
+			  </div>
+              <div id="sidebar">
+				  <ul><li>
+				      <h3><font color="#FF9900"><span class="notranslate">Learn more, it's easy</span></font></h3>
+				    </li>
+					  <li><ul>
+                        <li><a href="count-errors.html">Count Errors</a></li> 
+                        <li><a href="count-unique-values.html">Count Unique Values</a></li>
+                        <li><a href="count-with-or-criteria.html">Count with Or Criteria</a></li>
+                        <li><a href="sum-every-nth-row.html">Sum Every Nth Row</a></li>
+                        <li><a href="sum-largest-numbers.html">Sum Largest Numbers</a></li>
+                        <li><a href="sum-with-or-criteria.html">Sum with Or Criteria</a></li>
+                        <li><a href="most-frequently-occurring-word.html">Most Frequently Occurring Word</a></li>
+						<li class="current_page_item"><a href="dynamic-arrays.html">Dynamic Arrays</a></li>
+						<li><a href="let-function.html">LET function</a></li>
+						<li><a href="array-manipulation.html">Array Manipulation</a></li>
+						<li><a href="lambda.html">Lambda</a></li>
+						<li><a href="textsplit.html">TextSplit</a></li>
+                        </ul>
+                    </li>
+                  </ul>
+			  </div>
+              <div id="sidebar">
+					<ul>
+				  	  <li>
+                        <h3><span class="notranslate"><font color="#8FAD22">Download Excel File</font></span></h3>
+						  <ul>
+							<li><a href="excel-files/dynamic-arrays.xlsx">dynamic-arrays.xlsx</a></li>
+                    </ul>
+					  </li>
+				  </ul>
+			  </div>
+              <div id="sidebar">
+					<ul>
+				  	  <li>
+                        <h3>Next Guide</h3>
+						  <ul>
+							<li><a href="../data-analysis/sort.html">Sort</a></li>
+                    </ul>
+					  </li>
+				  </ul>
+			  </div>
+              <div id="sidebar">
+		      <h3><span class="notranslate"></span></h3>
+              <p style="padding-top:7px;padding-bottom:1px"><a href="https://facebook.com/thecodedragon" target="blank" rel="nofollow"><img src="../layout/facebook-logo.png" onmouseover="this.src='../layout/facebook-logo-onmouseover.png'" onmouseout="this.src='../layout/facebook-logo.png'" width="30" height="30" border="0" alt="Advanced Excel on Facebook" title="Advanced Excel on Facebook" /></a> <a href="https://twitter.com/ceoofdss" target="blank" rel="nofollow"><img src="../layout/x-logo.png" onmouseover="this.src='../layout/x-logo-onmouseover.png'" onmouseout="this.src='../layout/x-logo.png'" width="30" height="30" border="0" alt="Advanced Excel on X" title="Advanced Excel on X" /></a> <a href="https://www.pinterest.com/julisunkan" target="blank" rel="nofollow"><img src="../layout/pinterest-logo.png" onmouseover="this.src='../layout/pinterest-logo-onmouseover.png'" onmouseout="this.src='../layout/pinterest-logo.png'" width="30" height="30" border="0" alt="Advanced Excel on Pinterest" title="Advanced Excel on Pinterest"></a> <a href="https://www.linkedin.com/in/digitalskeleton/" target="blank" rel="nofollow"><img src="../layout/linkedin-logo.png" onmouseover="this.src='../layout/linkedin-logo-onmouseover.png'" onmouseout="this.src='../layout/linkedin-logo.png'" width="30" height="30" border="0" alt="Advanced Excel on LinkedIn" title="Advanced Excel on LinkedIn"></a></p>
+              </div>
+              <div id="sidebar">
+					<ul>
+				  	  <li>
+                        <h3><span class="notranslate">Become an Excel Pro</span></h3>
+						  <ul>
+                            <li><a href="../examples.html">300 Examples</a></li>
+                          </ul>
+					  </li>
+				  </ul>
+			  </div>
+              <!-- end #sidebar -->
+			  <div style="clear: both;">&nbsp;</div>
+		  </div>
+		</div>
+	</div>
+	<!-- end #page -->
+</div>
+<div id="footer">
+	<p><a href="dynamic-arrays.html">Dynamic Arrays</a> &bull; &copy; AppMonster<br />
+	Excel is Awesome, we'll show you: <a href="../introduction.html">Introduction</a> &bull; <a href="../basics.html">Basics</a> &bull; <a href="../functions.html">Functions</a> &bull; <a href="../data-analysis.html">Data Analysis</a> &bull; <a href="../vba.html">VBA</a></p>
+</div>
+<!-- end #footer -->
+
+<script type="text/javascript">
+  
+  $(function() { (adsbygoogle = window.adsbygoogle || []).push({}); });
+  $(function() { (adsbygoogle = window.adsbygoogle || []).push({}); });
+  //$(function() { (adsbygoogle = window.adsbygoogle || []).push({}); });
+  $(function() { (adsbygoogle = window.adsbygoogle || []).push({}); });
+  
+</script>
+
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"rayId":"8c78d2e74932b8d2","version":"2024.8.0","serverTiming":{"name":{"cfExtPri":true,"cfL4":true}},"token":"c707dde3711e49e3a0cbf0020eef6a91","b":1}' crossorigin="anonymous"></script>
+</body>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H0MBKVX9SV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-H0MBKVX9SV');
+</script>
+
+<!-- Mirrored from www.Advanced Excel for Data Analysis/examples/dynamic-arrays.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 23 Sep 2024 07:40:05 GMT -->
+</html>

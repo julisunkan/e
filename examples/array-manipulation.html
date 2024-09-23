@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+
+
+<!-- Mirrored from www.Advanced Excel for Data Analysis/examples/array-manipulation.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 23 Sep 2024 07:40:07 GMT -->
+<head>
+
+<title>Array Manipulation Functions in Excel (In Easy Steps)</title>
+<meta name="keywords" content="array manipulation functions, excel 365, combine, shape, resize, arrays, vstack, hstack, torow, 2d array to row, tocol, 2d array to column, wraprows, wrapcols, convert 1d array to 2d array, take function, extract subset of array, chooserows, return specific rows, choosecols">
+<meta name="description" content="Use the new array manipulation functions in Excel 365 to quickly combine, shape and resize arrays.">
+
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="index, follow">
+<META content=EN-US name=LANGUAGE>
+<meta property="og:title" content="Array Manipulation Functions in Excel">
+<meta property="og:url" content="array-manipulation.html">
+<meta property="og:type" content="article">
+<meta property="fb:admins" content="100003702321830">
+<meta property="og:description" content="Use the new array manipulation functions in Excel 365 to quickly combine, shape and resize arrays.">
+<meta property="og:image" content="../smi/examples/array-manipulation.png"/>
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@ExcelEasy">
+<meta name="twitter:image" content="../smi/examples/array-manipulation.png">
+
+<link rel="preload" href="../css/style.css" as="style">
+<link rel="preload" href="images/array-manipulation/vstack-function.png" as="image">
+<link rel="preload" href="../js/default.js" as="script">
+<link rel="preload" href="../js/init.js" as="script">
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f5ca7.txt?client=ca-pub-1987456081350047765" data-overlays="bottom" crossorigin="anonymous"></script>
+<link rel="preload" href="../css/style-medium.css" as="style" media="(max-width:961px)">
+<link rel="preload" href="../css/style-small.css" as="style" media="(max-width:620px)">
+<link rel="stylesheet" href="../css/style.css"/>
+<script src="../js/default.js" type="text/javascript"></script>
+<script src="../js/init.js" type="text/javascript"></script>
+<style type="text/css">
+.adslot { width: 336px; height: 280px; }
+@media (min-width:320px) { .adslot { width: 300px; height: 250px; } }
+@media (min-width:360px) and (orientation: portrait) { .adslot { width: 336px; height: 280px; } }
+@media (min-width:604px) { .adslot { width: 336px; height: 280px; } }
+</style>
+<noscript>
+    <link rel="stylesheet" href="../css/skel.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/adslot.css" />
+</noscript>
+<link rel="icon" href="../favicon-48x48.ico">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+</head>
+<body>
+<header id="header">
+	<div class="container">
+		<span class="notranslate">
+			<div id="logo">
+				<a href="../index.html"><img src="../layout/excel-guides.svg" onerror="this.src='../layout/excel-guides.png'" border="0" alt="Excel guides" title="Excel guides" width="1" height="1" /><h2>Excel</h2>&nbsp;&nbsp;<span class="easy">for Data Analysis</span></a>
+                <p>#1 <a href="../index.html">Excel guides</a> on the go</p>
+		  	</div>            
+			<nav id="nav">
+				  <ul>
+                  <li><a href="../index.html">Excel</a></li>
+                  <li><a href="../introduction.html">Introduction</a></li>
+				  <li><a href="../basics.html">Basics</a></li>
+				  <li><a href="../functions.html">Functions</a></li>
+				  <li><a href="../data-analysis.html">Data Analysis</a></li>
+                  <li><a href="../vba.html">VBA</a></li>
+                  <li class="current_page_item"><a href="../examples.html">300 Examples</a></li>
+                  <li><a href="../ask-us.html">Ask us</a></li>
+                  </ul>
+				</nav>
+			</span>
+		</div>
+	</header>
+	<!-- end #header -->
+	<div class="container">
+		<div class="row 100%">
+			<div class="8u 12u(medium)">
+				<div class="post">
+						<h1 class="title" style="float:left;">Array Manipulation</h1>
+						<div style="clear: both;">&nbsp;</div>
+<div class="entry">
+<p class="spacing"><a href="#vstack">VSTACK</a> | <a href="#hstack">HSTACK</a> | <a href="#torow">TOROW</a> | <a href="#tocol">TOCOL</a> | <a href="#wraprows">WRAPROWS</a> | <a href="#wrapcols">WRAPCOLS</a> | <a href="#take">TAKE</a> | <a href="#chooserows">CHOOSEROWS</a></p>
+<p>Use the new <strong>array manipulation functions in Excel 365</strong> to quickly combine, shape and resize arrays.</p>
+<h3><a name="vstack" id="vstack"></a>VSTACK</h3>
+<p>The <strong>VSTACK function</strong> in Excel 365 vertically stacks multiple arrays into a single array.</p>
+<p><img src="images/array-manipulation/vstack-function.png" alt="VSTACK function in Excel 365" width="604" height="247" title="VSTACK function in Excel 365" /></p>
+
+
+     
+     
+     
+<p>Note: the VSTACK function, entered into cell B5, fills multiple cells. This behavior is called spilling.</p>
+<h3><a name="hstack" id="hstack"></a>HSTACK</h3>
+<p>The <strong>HSTACK function</strong> in Excel 365 horizontally stacks multiple arrays into a single array.</p>
+<p><img src="images/array-manipulation/hstack-function.png" alt="HSTACK function" width="604" height="267" title="HSTACK function" /></p>
+<h3><a name="torow" id="torow"></a>TOROW</h3>
+<p>The <strong>TOROW function</strong> in Excel 365 converts a 2D array into a single row.</p>
+<p><img src="images/array-manipulation/torow-function.png" loading="lazy" alt="TOROW function in Excel 365" width="604" height="187" title="TOROW function in Excel 365" /></p>
+<h3><a name="tocol" id="tocol"></a>TOCOL</h3>
+<p>The <strong>TOCOL function</strong> in Excel 365 converts a 2D array into a single column.</p>
+<p><img src="images/array-manipulation/tocol-function.png" loading="lazy" alt="TOCOL function" width="604" height="287" title="TOCOL function" /></p>
+<h3><a name="wraprows" id="wraprows"></a>WRAPROWS</h3>
+<p>The <strong>WRAPROWS function</strong> converts a 1D array into a 2D array. WRAPROWS starts a new row after a specified number of elements (second argument).</p>
+<p><img src="images/array-manipulation/wraprows-function.png" loading="lazy" alt="WRAPROWS function in Excel 365" width="604" height="267" title="WRAPROWS function in Excel 365" /></p>
+<div class="ad"><!-- Advanced Excel Pages Middle -->
+
+     
+     
+     data-ad-slot="2529116896"></ins>
+</div>
+<h3><a name="wrapcols" id="wrapcols"></a>WRAPCOLS</h3>
+<p>The <strong>WRAPCOLS function</strong> converts a 1D array into a 2D array. WRAPCOLS starts a new column after a specified number of elements (second argument).</p>
+<p><img src="images/array-manipulation/wrapcols-function.png" loading="lazy" alt="WRAPCOLS function" width="604" height="267" title="WRAPCOLS function" /></p>
+<h3><a name="take" id="take"></a>TAKE</h3>
+<p>The <strong>TAKE function</strong> <strong>extracts a subset of an array</strong>. You can start in each corner by using positive and negative arguments.</p>
+<p>1. The TAKE function below extracts a 4 by 2 array (starting in the upper-left corner).</p>
+<p><img src="images/array-manipulation/take-function-positive-arguments.png" loading="lazy" alt="TAKE function" width="604" height="207" title="TAKE function" /></p>
+<p>2. The TAKE function below extracts a 3 by 1 array (starting in the bottom-right corner).</p>
+<p><img src="images/array-manipulation/take-function-negative-arguments.png" loading="lazy" alt="TAKE function" width="604" height="207" title="TAKE function" /></p>
+<h3><a name="chooserows" id="chooserows"></a>CHOOSEROWS</h3>
+<p>The <strong>CHOOSEROWS function in Excel 365</strong> returns specific rows from an array. The CHOOSEROWS function below returns the 3rd and the 5th row from an array.</p>
+<p><img src="images/array-manipulation/chooserows-function.png" loading="lazy" alt="CHOOSEROWS function" width="604" height="207" title="CHOOSEROWS function" /></p>
+<p>Note: use <strong>CHOOSECOLS</strong> to return specific columns from an array. For example, download the <a href="excel-files/array-manipulation.xlsx">Excel file</a> and try to return the 2nd column from this array. Practice makes perfect!</p>
+<div class="ad"><!-- Advanced Excel Pages End -->
+
+     
+     
+     data-ad-slot="4005850092"></ins>
+</div>
+            </div>
+			   </div>
+				<span class="invtab"><div class="post">
+					<div style="clear: both;"></div>
+                    <div class="entrylearn">  
+                  <p align="left"><span class="buttonp"> <a href="lambda.html">11/13 Completed! Learn much more about array formulas &gt;<br />
+                  </a></span>Go to Next Guide: <a href="../data-analysis/sort.html">Sort</a></div>
+                  </div></span>
+                  </div>
+                  <div class="4u 12u(medium)">
+              <div id="search">
+              <div class="cse-branding-right" style="background-color:#FFFFFF;color:#000000">
+                <div class="cse-branding-form" style="margin-right:0px;">
+                  <form action="https://www.Advanced Excel for Data Analysis/search.html" id="cse-search-box">
+                    <div>
+                      <input type="hidden" name="cx" value="partner-pub-1987061359047735:3934495699" />
+                      <input type="hidden" name="cof" value="FORID:10" />
+                      <input type="hidden" name="ie" value="UTF-8" />
+                      <input type="text" name="q" placeholder="Explore Entire Guide" class="field" disabled />
+                      <span class="notranslate"><input type="submit" name="sa" value="Go" class="button" disabled /></span>
+                    </div>
+                  </form>
+                </div>
+                <div class="cse-branding-logo"></div>
+                <div class="cse-branding-text"></div>
+              </div>
+              </div>
+              <div id="sidebar">
+					<ul>
+				  	  <li>
+                        <h3>Guide</h3>
+						  <ul>
+							<li><a href="../functions/array-formulas.html">Array Formulas</a></li>
+                    </ul>
+					  </li>
+				  </ul>
+			  </div>
+              <div id="sidebar">
+				  <ul><li>
+				      <h3><font color="#FF9900"><span class="notranslate">Learn more, it's easy</span></font></h3>
+				    </li>
+					  <li><ul>
+                        <li><a href="count-errors.html">Count Errors</a></li> 
+                        <li><a href="count-unique-values.html">Count Unique Values</a></li>
+                        <li><a href="count-with-or-criteria.html">Count with Or Criteria</a></li>
+                        <li><a href="sum-every-nth-row.html">Sum Every Nth Row</a></li>
+                        <li><a href="sum-largest-numbers.html">Sum Largest Numbers</a></li>
+                        <li><a href="sum-with-or-criteria.html">Sum with Or Criteria</a></li>
+                        <li><a href="most-frequently-occurring-word.html">Most Frequently Occurring Word</a></li>
+						<li><a href="dynamic-arrays.html">Dynamic Arrays</a></li>
+						<li><a href="let-function.html">LET function</a></li>
+						<li class="current_page_item"><a href="array-manipulation.html">Array Manipulation</a></li>
+						<li><a href="lambda.html">Lambda</a></li>
+						<li><a href="textsplit.html">TextSplit</a></li>
+                        </ul>
+                    </li>
+                  </ul>
+			  </div>
+              <div id="sidebar">
+					<ul>
+				  	  <li>
+                        <h3><span class="notranslate"><font color="#8FAD22">Download Excel File</font></span></h3>
+						  <ul>
+							<li><a href="excel-files/array-manipulation.xlsx">array-manipulation.xlsx</a></li>
+                    </ul>
+					  </li>
+				  </ul>
+			  </div>
+              <div id="sidebar">
+					<ul>
+				  	  <li>
+                        <h3>Next Guide</h3>
+						  <ul>
+							<li><a href="../data-analysis/sort.html">Sort</a></li>
+                    </ul>
+					  </li>
+				  </ul>
+			  </div>
+              <div id="sidebar">
+		      <h3><span class="notranslate"></span></h3>
+              <p style="padding-top:7px;padding-bottom:1px"><a href="https://facebook.com/thecodedragon" target="blank" rel="nofollow"><img src="../layout/facebook-logo.png" onmouseover="this.src='../layout/facebook-logo-onmouseover.png'" onmouseout="this.src='../layout/facebook-logo.png'" width="30" height="30" border="0" alt="Advanced Excel on Facebook" title="Advanced Excel on Facebook" /></a> <a href="https://twitter.com/ceoofdss" target="blank" rel="nofollow"><img src="../layout/x-logo.png" onmouseover="this.src='../layout/x-logo-onmouseover.png'" onmouseout="this.src='../layout/x-logo.png'" width="30" height="30" border="0" alt="Advanced Excel on X" title="Advanced Excel on X" /></a> <a href="https://www.pinterest.com/julisunkan" target="blank" rel="nofollow"><img src="../layout/pinterest-logo.png" onmouseover="this.src='../layout/pinterest-logo-onmouseover.png'" onmouseout="this.src='../layout/pinterest-logo.png'" width="30" height="30" border="0" alt="Advanced Excel on Pinterest" title="Advanced Excel on Pinterest"></a> <a href="https://www.linkedin.com/in/digitalskeleton/" target="blank" rel="nofollow"><img src="../layout/linkedin-logo.png" onmouseover="this.src='../layout/linkedin-logo-onmouseover.png'" onmouseout="this.src='../layout/linkedin-logo.png'" width="30" height="30" border="0" alt="Advanced Excel on LinkedIn" title="Advanced Excel on LinkedIn"></a></p>
+              </div>
+              <div id="sidebar">
+					<ul>
+				  	  <li>
+                        <h3><span class="notranslate">Become an Excel Pro</span></h3>
+						  <ul>
+                            <li><a href="../examples.html">300 Examples</a></li>
+                          </ul>
+					  </li>
+				  </ul>
+			  </div>
+              <!-- end #sidebar -->
+			  <div style="clear: both;">&nbsp;</div>
+		  </div>
+		</div>
+	</div>
+	<!-- end #page -->
+</div>
+<div id="footer">
+	<p><a href="array-manipulation.html">Array Manipulation</a> &bull; &copy; AppMonster<br />
+	Excel is Awesome, we'll show you: <a href="../introduction.html">Introduction</a> &bull; <a href="../basics.html">Basics</a> &bull; <a href="../functions.html">Functions</a> &bull; <a href="../data-analysis.html">Data Analysis</a> &bull; <a href="../vba.html">VBA</a></p>
+</div>
+<!-- end #footer -->
+
+<script type="text/javascript">
+  
+  $(function() { (adsbygoogle = window.adsbygoogle || []).push({}); });
+  $(function() { (adsbygoogle = window.adsbygoogle || []).push({}); });
+  $(function() { (adsbygoogle = window.adsbygoogle || []).push({}); });
+  
+</script>
+
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"rayId":"8c78d2e9ecd8b8d2","version":"2024.8.0","serverTiming":{"name":{"cfExtPri":true,"cfL4":true}},"token":"c707dde3711e49e3a0cbf0020eef6a91","b":1}' crossorigin="anonymous"></script>
+</body>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H0MBKVX9SV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-H0MBKVX9SV');
+</script>
+
+<!-- Mirrored from www.Advanced Excel for Data Analysis/examples/array-manipulation.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 23 Sep 2024 07:40:10 GMT -->
+</html>

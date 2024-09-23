@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+
+
+<!-- Mirrored from www.Advanced Excel for Data Analysis/examples/get-sheet-name.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 23 Sep 2024 07:32:33 GMT -->
+<head>
+
+<title>Get Sheet Name in Excel (In Simple Steps)</title>
+<meta name="keywords" content="get sheet name, excel, cell, find, mid, function, complete path, workbook name, current worksheet name, add text to sheet name, second worksheet, sheet names, all excel files">
+<meta name="description" content="To return the sheet name in a cell, use CELL, FIND and MID in Excel. There's no built-in function in Excel that can get the sheet name.">
+
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="index, follow">
+<META content=EN-US name=LANGUAGE>
+<meta property="og:title" content="Get Sheet Name in Excel">
+<meta property="og:url" content="get-sheet-name.html">
+<meta property="og:type" content="article">
+<meta property="fb:admins" content="100003702321830">
+<meta property="og:description" content="To return the sheet name in a cell, use CELL, FIND and MID in Excel. There's no built-in function in Excel that can get the sheet name.">
+<meta property="og:image" content="../smi/examples/get-sheet-name.png"/>
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@ExcelEasy">
+<meta name="twitter:image" content="../smi/examples/get-sheet-name.png">
+
+<link rel="preload" href="../css/style.css" as="style">
+<link rel="preload" href="images/get-sheet-name/cell-function.png" as="image">
+<link rel="preload" href="../js/default.js" as="script">
+<link rel="preload" href="../js/init.js" as="script">
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f5ca7.txt?client=ca-pub-1987456081350047765" data-overlays="bottom" crossorigin="anonymous"></script>
+<link rel="preload" href="../css/style-medium.css" as="style" media="(max-width:961px)">
+<link rel="preload" href="../css/style-small.css" as="style" media="(max-width:620px)">
+<link rel="stylesheet" href="../css/style.css"/>
+<script src="../js/default.js" type="text/javascript"></script>
+<script src="../js/init.js" type="text/javascript"></script>
+<style type="text/css">
+.adslot { width: 336px; height: 280px; }
+@media (min-width:320px) { .adslot { width: 300px; height: 250px; } }
+@media (min-width:360px) and (orientation: portrait) { .adslot { width: 336px; height: 280px; } }
+@media (min-width:604px) { .adslot { width: 336px; height: 280px; } }
+</style>
+<noscript>
+    <link rel="stylesheet" href="../css/skel.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/adslot.css" />
+</noscript>
+<link rel="icon" href="../favicon-48x48.ico">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+</head>
+<body>
+<header id="header">
+	<div class="container">
+		<span class="notranslate">
+			<div id="logo">
+				<a href="../index.html"><img src="../layout/excel-guides.svg" onerror="this.src='../layout/excel-guides.png'" border="0" alt="Excel guides" title="Excel guides" width="1" height="1" /><h2>Excel</h2>&nbsp;&nbsp;<span class="easy">for Data Analysis</span></a>
+                <p>#1 <a href="../index.html">Excel guides</a> on the go</p>
+		  	</div>            
+			<nav id="nav">
+				  <ul>
+                  <li><a href="../index.html">Excel</a></li>
+                  <li><a href="../introduction.html">Introduction</a></li>
+				  <li><a href="../basics.html">Basics</a></li>
+				  <li><a href="../functions.html">Functions</a></li>
+				  <li><a href="../data-analysis.html">Data Analysis</a></li>
+                  <li><a href="../vba.html">VBA</a></li>
+                  <li class="current_page_item"><a href="../examples.html">300 Examples</a></li>
+                  <li><a href="../ask-us.html">Ask us</a></li>
+                  </ul>
+				</nav>
+			</span>
+		</div>
+	</header>
+	<!-- end #header -->
+	<div class="container">
+		<div class="row 100%">
+			<div class="8u 12u(medium)">
+				<div class="post">
+						<h1 class="title" style="float:left;">Get Sheet Name</h1>
+						<div style="clear: both;">&nbsp;</div>
+<div class="entry">
+
+							<p>To <strong>return the sheet name</strong> in a cell, use CELL, FIND and MID in <strong>Excel</strong>. There's no built-in function in Excel that can <strong>get the sheet name</strong>.</p>
+<p>1. The CELL function below returns the complete path, workbook name and current worksheet name.</p>
+<p><img src="images/get-sheet-name/cell-function.png" alt="Cell Function in Excel" width="604" height="177" title="Cell Function in Excel" /></p>
+<p>Note: instead of using A1, you can refer to any cell on the first worksheet to get the name of this worksheet.</p>
+
+
+     
+     
+     
+<p>2. Use the FIND function to find the position of the right bracket. Add 1 to return the start position of the sheet name.</p>
+<p><img src="images/get-sheet-name/find-function.png" alt="Find Function in Excel" width="604" height="177" title="Find Function in Excel" /></p>
+<p>3. To extract a substring, starting in the middle of a string, use the MID function. First argument (formula from step 1). Second argument (formula from step 2). Third argument (31).</p>
+<p><img src="images/get-sheet-name/get-name-of-current-worksheet.png" alt="Get Name of Current Worksheet" width="604" height="177" title="Get Name of Current Worksheet" /></p>
+<p>Explanation: the MID function shown above starts at position 24 and extracts 31 characters (maximum length of a worksheet name).</p>
+<p>4. You may want to add text to the name of the sheet. Simply use the ampersand (&) operator as shown below.</p>
+<p><img src="images/get-sheet-name/add-text-to-sheet-name.png" loading="lazy" alt="Add Text to Sheet Name" width="604" height="177" title="Add Text to Sheet Name" /></p>
+<p>5. To get the name of the second worksheet, simply refer to any cell on the second worksheet.</p>
+<p><img src="images/get-sheet-name/get-name-of-second-worksheet.png" loading="lazy" alt="Get Name of Second Worksheet" width="604" height="177" title="Get Name of Second Worksheet" /></p>
+<p>Pro tip: use Excel VBA to display the sheet names of all Excel files in a directory. You can find detailed instructions <a href="../vba/examples/files-in-a-directory.html">here</a>.</p>
+<div class="ad"><!-- Advanced Excel Pages End -->
+
+     
+     
+     data-ad-slot="4005850092"></ins>
+</div>
+            </div>
+			   </div>
+				<span class="invtab"><div class="post">
+					<div style="clear: both;"></div>
+                    <div class="entrylearn">  
+                  <p align="left"><span class="buttonp"> <a href="comments.html">8/12 Completed! Learn much more about worksheets &gt;<br />
+                  </a></span>Go to Next Guide: <a href="../basics/format-cells.html">Format Cells</a></div>
+                  </div></span>
+                  </div>
+                  <div class="4u 12u(medium)">
+              <div id="search">
+              <div class="cse-branding-right" style="background-color:#FFFFFF;color:#000000">
+                <div class="cse-branding-form" style="margin-right:0px;">
+                  <form action="https://www.Advanced Excel for Data Analysis/search.html" id="cse-search-box">
+                    <div>
+                      <input type="hidden" name="cx" value="partner-pub-1987061359047735:3934495699" />
+                      <input type="hidden" name="cof" value="FORID:10" />
+                      <input type="hidden" name="ie" value="UTF-8" />
+                      <input type="text" name="q" placeholder="Explore Entire Guide" class="field" disabled />
+                      <span class="notranslate"><input type="submit" name="sa" value="Go" class="button" disabled /></span>
+                    </div>
+                  </form>
+                </div>
+                <div class="cse-branding-logo"></div>
+                <div class="cse-branding-text"></div>
+              </div>
+              </div>
+              <div id="sidebar">
+					<ul>
+				  	  <li>
+                        <h3>Guide</h3>
+						  <ul>
+							<li><a href="../basics/worksheets.html">Worksheets</a></li>
+                    </ul>
+					  </li>
+				  </ul>
+			  </div>
+              <div id="sidebar">
+				  <ul><li>
+				      <h3><font color="#FF9900"><span class="notranslate">Learn more, it's easy</span></font></h3>
+				    </li>
+					  <li><ul>
+                        <li><a href="zoom.html">Zoom</a></li>
+                        <li><a href="split.html">Split</a></li>
+                        <li><a href="freeze-panes.html">Freeze Panes</a></li>
+                        <li><a href="group-worksheets.html">Group Worksheets</a></li>
+                        <li><a href="consolidate.html">Consolidate</a></li>
+                        <li><a href="view-multiple-worksheets.html">View Multiple Worksheets</a></li>
+                        <li class="current_page_item"><a href="get-sheet-name.html">Get Sheet Name</a></li>
+						<li><a href="comments.html">Comments</a></li>
+                        <li><a href="spell-check.html">Spell Check</a></li>
+						<li><a href="unhide-sheets.html">Unhide Sheets</a></li>
+						<li><a href="chart-sheet.html">Chart Sheet</a></li>
+                        </ul>
+                    </li>
+                  </ul>
+			  </div>
+              <div id="sidebar">
+					<ul>
+				  	  <li>
+                        <h3><span class="notranslate"><font color="#8FAD22">Download Excel File</font></span></h3>
+						  <ul>
+							<li><a href="excel-files/get-sheet-name.xlsx">get-sheet-name.xlsx</a></li>
+                    </ul>
+					  </li>
+				  </ul>
+			  </div>
+              <div id="sidebar">
+					<ul>
+				  	  <li>
+                        <h3>Next Guide</h3>
+						  <ul>
+							<li><a href="../basics/format-cells.html">Format Cells</a></li>
+                    </ul>
+					  </li>
+				  </ul>
+			  </div>
+              <div id="sidebar">
+		      <h3><span class="notranslate"></span></h3>
+              <p style="padding-top:7px;padding-bottom:1px"><a href="https://facebook.com/thecodedragon" target="blank" rel="nofollow"><img src="../layout/facebook-logo.png" onmouseover="this.src='../layout/facebook-logo-onmouseover.png'" onmouseout="this.src='../layout/facebook-logo.png'" width="30" height="30" border="0" alt="Advanced Excel on Facebook" title="Advanced Excel on Facebook" /></a> <a href="https://twitter.com/ceoofdss" target="blank" rel="nofollow"><img src="../layout/x-logo.png" onmouseover="this.src='../layout/x-logo-onmouseover.png'" onmouseout="this.src='../layout/x-logo.png'" width="30" height="30" border="0" alt="Advanced Excel on X" title="Advanced Excel on X" /></a> <a href="https://www.pinterest.com/julisunkan" target="blank" rel="nofollow"><img src="../layout/pinterest-logo.png" onmouseover="this.src='../layout/pinterest-logo-onmouseover.png'" onmouseout="this.src='../layout/pinterest-logo.png'" width="30" height="30" border="0" alt="Advanced Excel on Pinterest" title="Advanced Excel on Pinterest"></a> <a href="https://www.linkedin.com/in/digitalskeleton/" target="blank" rel="nofollow"><img src="../layout/linkedin-logo.png" onmouseover="this.src='../layout/linkedin-logo-onmouseover.png'" onmouseout="this.src='../layout/linkedin-logo.png'" width="30" height="30" border="0" alt="Advanced Excel on LinkedIn" title="Advanced Excel on LinkedIn"></a></p>
+              </div>
+              <div id="sidebar">
+					<ul>
+				  	  <li>
+                        <h3><span class="notranslate">Become an Excel Pro</span></h3>
+						  <ul>
+                            <li><a href="../examples.html">300 Examples</a></li>
+                          </ul>
+					  </li>
+				  </ul>
+			  </div>
+              <!-- end #sidebar -->
+			  <div style="clear: both;">&nbsp;</div>
+		  </div>
+		</div>
+	</div>
+	<!-- end #page -->
+</div>
+<div id="footer">
+	<p><a href="get-sheet-name.html">Get Sheet Name</a> &bull; &copy; AppMonster<br />
+	Excel is Awesome, we'll show you: <a href="../introduction.html">Introduction</a> &bull; <a href="../basics.html">Basics</a> &bull; <a href="../functions.html">Functions</a> &bull; <a href="../data-analysis.html">Data Analysis</a> &bull; <a href="../vba.html">VBA</a></p>
+</div>
+<!-- end #footer -->
+
+<script type="text/javascript">
+  
+  $(function() { (adsbygoogle = window.adsbygoogle || []).push({}); });
+  $(function() { (adsbygoogle = window.adsbygoogle || []).push({}); });
+  
+</script>
+
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"rayId":"8c78d1e6fb48b8d2","version":"2024.8.0","serverTiming":{"name":{"cfExtPri":true,"cfL4":true}},"token":"c707dde3711e49e3a0cbf0020eef6a91","b":1}' crossorigin="anonymous"></script>
+</body>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H0MBKVX9SV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-H0MBKVX9SV');
+</script>
+
+<!-- Mirrored from www.Advanced Excel for Data Analysis/examples/get-sheet-name.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 23 Sep 2024 07:32:35 GMT -->
+</html>

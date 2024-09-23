@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+
+
+<!-- Mirrored from www.Advanced Excel for Data Analysis/vba/variables.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 23 Sep 2024 07:47:29 GMT -->
+<head>
+
+<title>Variables in Excel VBA (In Easy Steps)</title>
+<meta name="keywords" content="variables, excel vba, integer, string, double, boolean, declare, initialize, display, dim, assign, beginning, value, whole numbers, text, accurate, numbers after comma, long, variable, true, false">
+<meta name="description" content="This Guide teaches you how to declare, initialize and display a variable in Excel VBA. Letting Excel VBA know you are using a variable is called declaring a variable. Initializing simply means assigning a beginning (initial) value to a variable.">
+
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="index, follow">
+<META content=EN-US name=LANGUAGE>
+<meta property="og:title" content="Variables in Excel VBA">
+<meta property="og:url" content="variables.html">
+<meta property="og:type" content="article">
+<meta property="fb:admins" content="100003702321830">
+<meta property="og:description" content="This Guide teaches you how to declare, initialize and display a variable in Excel VBA.">
+<meta property="og:image" content="../smi/vba/variables-2.png"/>
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@ExcelEasy">
+<meta name="twitter:image" content="../smi/vba/variables-2.png">
+
+<link rel="preload" href="../css/style.css" as="style">
+<link rel="preload" href="images/variables/integer-variable.png" as="image">
+<link rel="preload" href="../js/default.js" as="script">
+<link rel="preload" href="../js/init.js" as="script">
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f5ca7.txt?client=ca-pub-1987456081350047765" data-overlays="bottom" crossorigin="anonymous"></script>
+<link rel="preload" href="../css/style-medium.css" as="style" media="(max-width:961px)">
+<link rel="preload" href="../css/style-small.css" as="style" media="(max-width:620px)">
+<link rel="stylesheet" href="../css/style.css"/>
+<script src="../js/default.js" type="text/javascript"></script>
+<script src="../js/init.js" type="text/javascript"></script>
+<style type="text/css">
+.adslot { width: 336px; height: 280px; }
+@media (min-width:320px) { .adslot { width: 300px; height: 250px; } }
+@media (min-width:360px) and (orientation: portrait) { .adslot { width: 336px; height: 280px; } }
+@media (min-width:604px) { .adslot { width: 336px; height: 280px; } }
+</style>
+<noscript>
+    <link rel="stylesheet" href="../css/skel.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/adslot.css" />
+</noscript>
+<link rel="icon" href="../favicon-48x48.ico">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+</head>
+<body>
+<header id="header">
+	<div class="container">
+		<span class="notranslate">
+			<div id="logo">
+				<a href="../index.html"><img src="../layout/excel-guides.svg" onerror="this.src='../layout/excel-guides.png'" border="0" alt="Excel guides" title="Excel guides" width="1" height="1" /><h2>Excel</h2>&nbsp;&nbsp;<span class="easy">for Data Analysis</span></a>
+                <p>#1 <a href="../index.html">Excel guides</a> on the go</p>
+		  	</div>            
+			<nav id="nav">
+				  <ul>
+                  <li><a href="../index.html">Excel</a></li>
+                  <li><a href="../introduction.html">Introduction</a></li>
+				  <li><a href="../basics.html">Basics</a></li>
+				  <li><a href="../functions.html">Functions</a></li>
+				  <li><a href="../data-analysis.html">Data Analysis</a></li>
+                  <li class="current_page_item"><a href="../vba.html">VBA</a></li>
+                  <li class="pro"><a href="../examples.html">300 Examples</a></li>
+                  <li><a href="../ask-us.html">Ask us</a></li>
+                  </ul>
+				</nav>
+			</span>
+		</div>
+	</header>
+	<!-- end #header -->
+	<div class="container">
+		<div class="row 100%">
+			<div class="8u 12u(medium)">
+				<div class="post">
+						<h1 class="title" style="float:left;">Variables</h1>
+                        <div style="clear: both;">&nbsp;</div>
+<div class="entry">  
+ <p class="spacing"><a href="#integer">Integer</a> | <a href="#string">String</a> | <a href="#double">Double</a> | <a href="#boolean">Boolean</a></p>
+	<p>This Guide teaches you how to declare, initialize and display a <strong>variable</strong> in <strong>Excel VBA</strong>. Letting Excel VBA know you are using a variable is called declaring a variable. Initializing simply means assigning a beginning (initial) value to a variable.</p>
+	<p>Place a <a href="create-a-macro.html#command-button">command button</a> on your worksheet and add the code lines below. To execute the code lines, click the command button on the sheet.</p>
+	<h3><a name="integer" id="integer"></a>Integer</h3>
+	<p>Integer variables are used to store whole numbers.</p>
+	<div class="code"><span class="predefined">Dim</span> x <span class="predefined">As</span> <span class="predefined">Integer</span><br />
+    x = 6<br />
+    Range(&quot;A1&quot;).Value = x</div>
+    
+
+     
+     
+     
+    <p>Result:</p>
+    <p><img src="images/variables/integer-variable.png" alt="Integer Variable in Excel VBA" width="604" height="121" title="Integer Variable in Excel VBA" /></p>
+    <p>Explanation: the first code line declares a variable with name x of type Integer. Next, we initialize x with value 6. Finally, we write the value of x to cell A1.</p>
+    <h3><a name="string" id="string"></a>String</h3>
+    <p>String variables are used to store text.</p>
+	<p>Code:</p>
+    <div class="code"><span class="predefined">Dim</span> book <span class="predefined">As</span> <span class="predefined">String</span><br />
+    book = &quot;bible&quot;<br />
+    Range(&quot;A1&quot;).Value = book</div>
+    <p>Result:</p>
+    <p><img src="images/variables/string-variable.png" alt="String Variable" width="604" height="121" title="String Variable" /></p>
+    <p>Explanation: the first code line declares a variable with name book of type String. Next, we initialize book with the text bible. Always use apostrophes to initialize String variables. Finally, we write the text of the variable book to cell A1.</p>
+    <h3><a name="double" id="double"></a>Double</h3>
+    <p>A variable of type Double is more accurate than a variable of type Integer and can also store numbers after the comma.</p>
+    <p>Code:</p>
+    <div class="code"><span class="predefined">Dim</span> x <span class="predefined">As</span> <span class="predefined">Integer</span><br />
+    x = 5.5<br />
+    MsgBox &quot;value is &quot; &amp; x</div>
+    <p>Result:</p>
+    <p><img src="images/variables/not-accurate-enough.png" loading="lazy" alt="Not Accurate Enough" width="140" height="148" title="Not Accurate Enough" /></p>
+    <p>But that is not the right value! We initialized the variable with value 5.5 and we get the value 6. What we need is a variable of type Double.</p>
+    <p>Code:</p>
+    <div class="code"><span class="predefined">Dim</span> x <span class="predefined">As</span> <span class="predefined">Double</span><br />
+    x = 5.5<br />
+    MsgBox &quot;value is &quot; &amp; x</div>
+    <p>Result:</p>
+    <p><img src="images/variables/double-variable.png" loading="lazy" alt="Double Variable" width="140" height="148" title="Double Variable" /></p>
+    <p>Note: Long variables have even larger capacity. Always use variables of the right type. As a result, errors are easier to find and your code will run faster.</p>
+    <h3><a name="boolean" id="boolean"></a>Boolean</h3>
+    <p>Use a Boolean variable to hold the value True or False.</p>
+    <p>Code:</p>
+    <div class="code">
+    <span class="predefined">Dim</span> continue <span class="predefined">As</span> <span class="predefined">Boolean</span><br />
+    continue = True<br /><br />
+    <span class="predefined">If</span> continue = <span class="predefined">True</span> <span class="predefined">Then</span> MsgBox &quot;Boolean variables are cool&quot;</div>
+    <p>Result:</p>
+    <p><img src="images/variables/boolean-variable.png" loading="lazy" alt="Boolean Variable" width="189" height="148" title="Boolean Variable" /></p>
+    <p>Explanation: the first code line declares a variable with name continue of type Boolean. Next, we initialize continue with the value True. Finally, we use the Boolean variable to only display a MsgBox if the variable holds the value True.</p>
+    <div class="ad"><!-- Advanced Excel Pages End -->
+
+     
+     
+     data-ad-slot="4005850092"></ins>
+</div>
+            </div>
+			   </div>
+				<span class="invtab"><div class="post">
+					<div style="clear: both;"></div>
+                    <div class="entrylearn">   
+                      <p align="left"><span class="buttonp"> <a href="examples/option-explicit.html">1/5 Completed! Learn much more about variables &gt;<br />
+                    </a></span>Go to Next Guide: <a href="if-then-statement.html">If Then Statement</a></div>
+                  </div></span>
+                  
+			</div>
+            <div class="4u 12u(medium)">
+              <div id="search">
+              <div class="cse-branding-right" style="background-color:#FFFFFF;color:#000000">
+                <div class="cse-branding-form" style="margin-right:0px;">
+                  <form action="https://www.Advanced Excel for Data Analysis/search.html" id="cse-search-box">
+                    <div>
+                      <input type="hidden" name="cx" value="partner-pub-1987061359047735:3934495699" />
+                      <input type="hidden" name="cof" value="FORID:10" />
+                      <input type="hidden" name="ie" value="UTF-8" />
+                      <input type="text" name="q" placeholder="Explore Entire Guide" class="field" disabled />
+                      <span class="notranslate"><input type="submit" name="sa" value="Go" class="button" disabled /></span>
+                    </div>
+                  </form>
+                </div>
+                <div class="cse-branding-logo"></div>
+                <div class="cse-branding-text"></div>
+              </div>
+              </div>
+              <div id="sidebar">
+					<ul>
+				  	  <li>
+                        <h3>Guide</h3>
+						  <ul>
+							<li class="current_page_item"><a href="variables.html">Variables</a></li>
+                		  </ul>
+					  </li>
+				    </ul>
+			  </div>
+              <div id="sidebar">
+				  <ul><li></li>
+                  <li>
+					    <h3><font color="#FF9900"><span class="notranslate">Learn more, it's easy</span></font></h3>
+				    </li>
+					  <li><ul>                                              
+                      	<li><a href="examples/option-explicit.html">Option Explicit</a></li>
+                        <li><a href="examples/variable-scope.html">Variable Scope</a></li>
+                        <li><a href="examples/life-of-variables.html">Life of Variables</a></li>
+                        <li><a href="examples/type-mismatch.html">Type Mismatch</a></li>
+                        </ul>
+                    </li>
+                  </ul>
+			  </div>
+              <div id="sidebar">
+					<ul>
+				  	  <li>
+                        <h3><span class="notranslate"><font color="#8FAD22">Download Excel File</font></span></h3>
+						  <ul>
+							<li><a href="excel-files/variables.xlsm">variables.xlsm</a></li>
+                    </ul>
+					  </li>
+				  </ul>
+			  </div>
+              <div id="sidebar">
+					<ul>
+				  	  <li>
+                        <h3>Next Guide</h3>
+						  <ul>
+							<li><a href="if-then-statement.html">If Then Statement</a></li>
+                    </ul>
+					  </li>
+				  </ul>
+			  </div>
+              <div id="sidebar">
+		      <h3><span class="notranslate"></span></h3>
+              <p style="padding-top:7px;padding-bottom:1px"><a href="https://facebook.com/thecodedragon" target="blank" rel="nofollow"><img src="../layout/facebook-logo.png" onmouseover="this.src='../layout/facebook-logo-onmouseover.png'" onmouseout="this.src='../layout/facebook-logo.png'" width="30" height="30" border="0" alt="Advanced Excel on Facebook" title="Advanced Excel on Facebook" /></a> <a href="https://twitter.com/ceoofdss" target="blank" rel="nofollow"><img src="../layout/x-logo.png" onmouseover="this.src='../layout/x-logo-onmouseover.png'" onmouseout="this.src='../layout/x-logo.png'" width="30" height="30" border="0" alt="Advanced Excel on X" title="Advanced Excel on X" /></a> <a href="https://www.pinterest.com/julisunkan" target="blank" rel="nofollow"><img src="../layout/pinterest-logo.png" onmouseover="this.src='../layout/pinterest-logo-onmouseover.png'" onmouseout="this.src='../layout/pinterest-logo.png'" width="30" height="30" border="0" alt="Advanced Excel on Pinterest" title="Advanced Excel on Pinterest"></a> <a href="https://www.linkedin.com/in/digitalskeleton/" target="blank" rel="nofollow"><img src="../layout/linkedin-logo.png" onmouseover="this.src='../layout/linkedin-logo-onmouseover.png'" onmouseout="this.src='../layout/linkedin-logo.png'" width="30" height="30" border="0" alt="Advanced Excel on LinkedIn" title="Advanced Excel on LinkedIn"></a></p>
+              </div>
+			  <div id="sidebar">
+              <ul><li></li>
+		        <li>
+		          <h3><span class="notranslate">Most Popular</span></h3>
+	            </li>
+		        <li><ul>
+                        <li><a href="range-object.html">Range Object</a></li>
+                        <li><a href="loop.html">Loop</a></li>
+                        <li><a href="if-then-statement.html">If Then Statement</a></li>
+                        <li><a href="msgbox.html">MsgBox</a></li>
+                        <li><a href="array.html">Array</a></li>
+                        <li><a href="function-sub.html">Function and Sub</a></li>
+                        <li><a href="userform.html">Userform</a></li>
+                        </ul>
+			    </li>
+              </ul>
+              </div>
+              <div id="sidebar">
+					<ul>
+				  	  <li>
+                        <h3><span class="notranslate">Become an Excel Pro</span></h3>
+						  <ul>
+                            <li><a href="../examples.html">300 Examples</a></li>
+                          </ul>
+					  </li>
+				  </ul>
+			  </div>
+              <!-- end #sidebar -->
+			  <div style="clear: both;">&nbsp;</div>
+		  </div>
+		</div>
+	</div>
+	<!-- end #page -->
+</div>
+<div id="footer">
+	<p><a href="variables.html">Variables</a> &bull; &copy; AppMonster<br />
+	Excel is Awesome, we'll show you: <a href="../introduction.html">Introduction</a> &bull; <a href="../basics.html">Basics</a> &bull; <a href="../functions.html">Functions</a> &bull; <a href="../data-analysis.html">Data Analysis</a> &bull; <a href="../vba.html">VBA</a></p>
+</div>
+<!-- end #footer -->
+
+<script type="text/javascript">
+  
+  $(function() { (adsbygoogle = window.adsbygoogle || []).push({}); });
+  $(function() { (adsbygoogle = window.adsbygoogle || []).push({}); });
+  
+</script>
+
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"rayId":"8c78d44ae9e8b8d2","version":"2024.8.0","serverTiming":{"name":{"cfExtPri":true,"cfL4":true}},"token":"c707dde3711e49e3a0cbf0020eef6a91","b":1}' crossorigin="anonymous"></script>
+</body>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H0MBKVX9SV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-H0MBKVX9SV');
+</script>
+
+<!-- Mirrored from www.Advanced Excel for Data Analysis/vba/variables.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 23 Sep 2024 07:47:31 GMT -->
+</html>

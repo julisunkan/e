@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+
+
+<!-- Mirrored from www.Advanced Excel for Data Analysis/examples/table-as-source-data.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 23 Sep 2024 07:42:22 GMT -->
+<head>
+
+<title>Table as Source Data - Excel guides</title>
+<meta name="keywords" content="table as source data, excel, chart, pivot table, drop-down list, dynamic, new, rows, columns, added to table, included automatically">
+<meta name="description" content="One of the great things about tables in Excel is that your can use a table as source data for a chart, pivot table, etc. To see why this is useful, let's create a simple chart.">
+
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="index, follow">
+<META content=EN-US name=LANGUAGE>
+<meta property="og:title" content="Excel Table as Source Data">
+<meta property="og:url" content="table-as-source-data.html">
+<meta property="og:type" content="article">
+<meta property="fb:admins" content="100003702321830">
+<meta property="og:description" content="One of the great things about tables in Excel is that your can use a table as source data for a chart, pivot table, etc. To see why this is useful, let's create a simple chart.">
+<meta property="og:image" content="../smi/examples/table-as-source-data.png"/>
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@ExcelEasy">
+<meta name="twitter:image" content="../smi/examples/table-as-source-data.png">
+
+<link rel="preload" href="../css/style.css" as="style">
+<link rel="preload" href="images/table-as-source-data/source-data.png" as="image">
+<link rel="preload" href="../js/default.js" as="script">
+<link rel="preload" href="../js/init.js" as="script">
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f5ca7.txt?client=ca-pub-1987456081350047765" data-overlays="bottom" crossorigin="anonymous"></script>
+<link rel="preload" href="../css/style-medium.css" as="style" media="(max-width:961px)">
+<link rel="preload" href="../css/style-small.css" as="style" media="(max-width:620px)">
+<link rel="stylesheet" href="../css/style.css"/>
+<script src="../js/default.js" type="text/javascript"></script>
+<script src="../js/init.js" type="text/javascript"></script>
+<style type="text/css">
+.adslot { width: 336px; height: 280px; }
+@media (min-width:320px) { .adslot { width: 300px; height: 250px; } }
+@media (min-width:360px) and (orientation: portrait) { .adslot { width: 336px; height: 280px; } }
+@media (min-width:604px) { .adslot { width: 336px; height: 280px; } }
+</style>
+<noscript>
+    <link rel="stylesheet" href="../css/skel.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/adslot.css" />
+</noscript>
+<link rel="icon" href="../favicon-48x48.ico">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+</head>
+<body>
+<header id="header">
+	<div class="container">
+		<span class="notranslate">
+			<div id="logo">
+				<a href="../index.html"><img src="../layout/excel-guides.svg" onerror="this.src='../layout/excel-guides.png'" border="0" alt="Excel guides" title="Excel guides" width="1" height="1" /><h2>Excel</h2>&nbsp;&nbsp;<span class="easy">for Data Analysis</span></a>
+                <p>#1 <a href="../index.html">Excel guides</a> on the go</p>
+		  	</div>            
+			<nav id="nav">
+				  <ul>
+                  <li><a href="../index.html">Excel</a></li>
+                  <li><a href="../introduction.html">Introduction</a></li>
+				  <li><a href="../basics.html">Basics</a></li>
+				  <li><a href="../functions.html">Functions</a></li>
+				  <li><a href="../data-analysis.html">Data Analysis</a></li>
+                  <li><a href="../vba.html">VBA</a></li>
+                  <li class="current_page_item"><a href="../examples.html">300 Examples</a></li>
+                  <li><a href="../ask-us.html">Ask us</a></li>
+                  </ul>
+				</nav>
+			</span>
+		</div>
+	</header>
+	<!-- end #header -->
+	<div class="container">
+		<div class="row 100%">
+			<div class="8u 12u(medium)">
+				<div class="post">
+						<h1 class="title" style="float:left;">Table as Source Data</h1>
+						<div style="clear: both;">&nbsp;</div>
+<div class="entry">
+<p>One of the great things about tables in Excel is that your can use a <strong>table as source data</strong> for a <a href="../data-analysis/charts.html">chart</a>, <a href="../data-analysis/pivot-tables.html">pivot table</a>, etc.</p>
+<p>To see why this is useful, let's create a simple chart.</p>
+<p>1. Select a cell in the source data.</p>
+<p><img src="images/table-as-source-data/source-data.png" alt="Source Data" width="349" height="181" title="Source Data" /></p>
+
+
+     
+     
+     
+<p>2. Press Ctrl + T to quickly insert a table.</p>
+<p><img src="images/table-as-source-data/create-table.png" alt="Create Table" width="214" height="128" title="Create Table" /></p>
+<p>3. Press Enter.</p>
+<p>Result so far:</p>
+<p><img src="images/table-as-source-data/table-as-source-data.png" alt="Table as Source Data" width="365" height="181" title="Table as Source Data" /></p>
+<p>4. On the Insert tab, in the Charts group, click the Column symbol.</p>
+<p><img src="images/table-as-source-data/insert-column-chart.png" loading="lazy" alt="Insert Column Chart" width="305" height="100" title="Insert Column Chart" /></p>
+<p>5. Click Clustered Column.</p>
+<p><img src="images/table-as-source-data/click-clustered-column.png" loading="lazy" alt="Click Clustered Column" width="268" height="342" title="Click Clustered Column" /></p>
+<p>Result:</p>
+<p><img src="images/table-as-source-data/column-chart.png" loading="lazy" alt="Column Chart in Excel" width="481" height="289" title="Column Chart in Excel" /></p>
+<p>Now comes the most important part. New rows or columns added to the table will automatically be included in the chart.</p>
+<p>6. Select cell A8 and type Jul (Excel automatically formats this new row for you).</p>
+<p>7. Enter the data for this month.</p>
+<p><img src="images/table-as-source-data/add-new-row-to-table.png" loading="lazy" alt="Add New Row to Table" width="365" height="201" title="Add New Row to Table" /></p>
+<p>Excel automatically updates this dynamic chart. That's pretty awesome.</p>
+<p><img src="images/table-as-source-data/dynamic-chart.png" loading="lazy" alt="Dynamic Chart" width="481" height="289" title="Dynamic Chart" /></p>
+<p>Note: as mentioned earlier, you can also use a table to create a dynamic pivot table, or even better, use a table and the new UNIQUE function in Excel 365/2021 to create a <a href="drop-down-list.html#table-magic">magic drop-down list</a>.</p>
+<div class="ad"><!-- Advanced Excel Pages End -->
+
+     
+     
+     data-ad-slot="4005850092"></ins>
+</div>
+            </div>
+			   </div>
+				<span class="invtab"><div class="post">
+					<div style="clear: both;"></div>
+                    <div class="entrylearn">  
+                  <p align="left"><span class="buttonp"> <a href="remove-table-formatting.html">5/7 Completed! Learn much more about tables &gt;<br />
+                  </a></span>Go to Next Guide: <a href="../data-analysis/what-if-analysis.html">What-If Analysis</a></div>
+                  </div></span>
+                  </div>
+                  <div class="4u 12u(medium)">
+              <div id="search">
+              <div class="cse-branding-right" style="background-color:#FFFFFF;color:#000000">
+                <div class="cse-branding-form" style="margin-right:0px;">
+                  <form action="https://www.Advanced Excel for Data Analysis/search.html" id="cse-search-box">
+                    <div>
+                      <input type="hidden" name="cx" value="partner-pub-1987061359047735:3934495699" />
+                      <input type="hidden" name="cof" value="FORID:10" />
+                      <input type="hidden" name="ie" value="UTF-8" />
+                      <input type="text" name="q" placeholder="Explore Entire Guide" class="field" disabled />
+                      <span class="notranslate"><input type="submit" name="sa" value="Go" class="button" disabled /></span>
+                    </div>
+                  </form>
+                </div>
+                <div class="cse-branding-logo"></div>
+                <div class="cse-branding-text"></div>
+              </div>
+              </div>
+              <div id="sidebar">
+					<ul>
+				  	  <li>
+                        <h3>Guide</h3>
+						  <ul>
+							<li><a href="../data-analysis/tables.html">Tables</a></li>
+                    </ul>
+					  </li>
+				  </ul>
+			  </div>
+              <div id="sidebar">
+				  <ul><li>
+				      <h3><font color="#FF9900"><span class="notranslate">Learn more, it's easy</span></font></h3>
+				    </li>
+					  <li><ul>
+                        <li><a href="structured-references.html">Structured References</a></li>
+                        <li><a href="table-styles.html">Table Styles</a></li>
+						<li><a href="merge-tables.html">Merge Tables</a></li>
+						<li class="current_page_item"><a href="table-as-source-data.html">Table as Source Data</a></li>
+						<li><a href="remove-table-formatting.html">Remove Table Formatting</a></li>
+						<li><a href="quick-analysis.html">Quick Analysis</a></li>
+                        </ul>
+                    </li>
+                  </ul>
+			  </div>
+              <div id="sidebar">
+					<ul>
+				  	  <li>
+                        <h3><span class="notranslate"><font color="#8FAD22">Download Excel File</font></span></h3>
+						  <ul>
+							<li><a href="excel-files/table-as-source-data.xlsx">table-as-source-data.xlsx</a></li>
+                    </ul>
+					  </li>
+				  </ul>
+			  </div>
+              <div id="sidebar">
+					<ul>
+				  	  <li>
+                        <h3>Next Guide</h3>
+						  <ul>
+							<li><a href="../data-analysis/what-if-analysis.html">What-If Analysis</a></li>
+                    </ul>
+					  </li>
+				  </ul>
+			  </div>
+              <div id="sidebar">
+		      <h3><span class="notranslate"></span></h3>
+              <p style="padding-top:7px;padding-bottom:1px"><a href="https://facebook.com/thecodedragon" target="blank" rel="nofollow"><img src="../layout/facebook-logo.png" onmouseover="this.src='../layout/facebook-logo-onmouseover.png'" onmouseout="this.src='../layout/facebook-logo.png'" width="30" height="30" border="0" alt="Advanced Excel on Facebook" title="Advanced Excel on Facebook" /></a> <a href="https://twitter.com/ceoofdss" target="blank" rel="nofollow"><img src="../layout/x-logo.png" onmouseover="this.src='../layout/x-logo-onmouseover.png'" onmouseout="this.src='../layout/x-logo.png'" width="30" height="30" border="0" alt="Advanced Excel on X" title="Advanced Excel on X" /></a> <a href="https://www.pinterest.com/julisunkan" target="blank" rel="nofollow"><img src="../layout/pinterest-logo.png" onmouseover="this.src='../layout/pinterest-logo-onmouseover.png'" onmouseout="this.src='../layout/pinterest-logo.png'" width="30" height="30" border="0" alt="Advanced Excel on Pinterest" title="Advanced Excel on Pinterest"></a> <a href="https://www.linkedin.com/in/digitalskeleton/" target="blank" rel="nofollow"><img src="../layout/linkedin-logo.png" onmouseover="this.src='../layout/linkedin-logo-onmouseover.png'" onmouseout="this.src='../layout/linkedin-logo.png'" width="30" height="30" border="0" alt="Advanced Excel on LinkedIn" title="Advanced Excel on LinkedIn"></a></p>
+              </div>
+			  <div id="sidebar">
+              <ul><li></li>
+		        <li>
+		          <h3><span class="notranslate">Most Popular</span></h3>
+	            </li>
+		        <li><ul>
+                        <li><a href="../data-analysis/pivot-tables.html">Pivot Tables</a></li>
+                        <li><a href="vlookup.html">Vlookup</a></li>
+                        <li><a href="../introduction/formulas-functions.html">Formulas and Functions</a></li>
+                        <li><a href="../data-analysis/charts.html">Charts</a></li>
+                        <li><a href="../data-analysis/conditional-formatting.html">Conditional Formatting</a></li>
+                        <li><a href="find-duplicates.html">Find Duplicates</a></li>
+                        <li><a href="if.html">If</a></li>
+                        <li><a href="drop-down-list.html">Drop-down List</a></li>
+						<li><a href="countif.html">Countif</a></li>
+                        <li><a href="index-match.html">Index and Match</a></li>
+                        </ul>
+			    </li>
+              </ul>
+              </div>
+              <div id="sidebar">
+					<ul>
+				  	  <li>
+                        <h3><span class="notranslate">Become an Excel Pro</span></h3>
+						  <ul>
+                            <li><a href="../examples.html">300 Examples</a></li>
+                          </ul>
+					  </li>
+				  </ul>
+			  </div>
+              <!-- end #sidebar -->
+			  <div style="clear: both;">&nbsp;</div>
+		  </div>
+		</div>
+	</div>
+	<!-- end #page -->
+</div>
+<div id="footer">
+	<p><a href="table-as-source-data.html">Table as Source Data</a> &bull; &copy; AppMonster<br />
+	Excel is Awesome, we'll show you: <a href="../introduction.html">Introduction</a> &bull; <a href="../basics.html">Basics</a> &bull; <a href="../functions.html">Functions</a> &bull; <a href="../data-analysis.html">Data Analysis</a> &bull; <a href="../vba.html">VBA</a></p>
+</div>
+<!-- end #footer -->
+
+<script type="text/javascript">
+  
+  $(function() { (adsbygoogle = window.adsbygoogle || []).push({}); });
+  $(function() { (adsbygoogle = window.adsbygoogle || []).push({}); });
+  
+</script>
+
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"rayId":"8c78d3369dfcb8d2","version":"2024.8.0","serverTiming":{"name":{"cfExtPri":true,"cfL4":true}},"token":"c707dde3711e49e3a0cbf0020eef6a91","b":1}' crossorigin="anonymous"></script>
+</body>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H0MBKVX9SV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-H0MBKVX9SV');
+</script>
+
+<!-- Mirrored from www.Advanced Excel for Data Analysis/examples/table-as-source-data.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 23 Sep 2024 07:42:24 GMT -->
+</html>

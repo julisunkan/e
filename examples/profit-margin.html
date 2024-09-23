@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+
+
+<!-- Mirrored from www.Advanced Excel for Data Analysis/examples/profit-margin.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 23 Sep 2024 07:38:39 GMT -->
+<head>
+
+<title>Profit Margin Formula in Excel (In Easy Steps)</title>
+<meta name="keywords" content="profit margin formula, excel, calculate profit margin, gross profit margin formula, calculate operating profit margin, net profit margin formula, percentage format, total revenue, subtract, cost of goods sold, cogs, operating expenses, opex, interest, taxes, divide">
+<meta name="description" content="Calculating gross profit margin, operating profit margin and net profit margin in Excel is easy. Simply use the formulas explained on this page.">
+
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="index, follow">
+<META content=EN-US name=LANGUAGE>
+<meta property="og:title" content="Profit Margin Formula in Excel">
+<meta property="og:url" content="profit-margin.html">
+<meta property="og:type" content="article">
+<meta property="fb:admins" content="100003702321830">
+<meta property="og:description" content="Calculating gross profit margin, operating profit margin and net profit margin in Excel is easy. Simply use the formulas explained on this page.">
+<meta property="og:image" content="../smi/examples/profit-margin.png"/>
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@ExcelEasy">
+<meta name="twitter:image" content="../smi/examples/profit-margin.png">
+
+<link rel="preload" href="../css/style.css" as="style">
+<link rel="preload" href="images/profit-margin/total-revenue-and-cogs.png" as="image">
+<link rel="preload" href="../js/default.js" as="script">
+<link rel="preload" href="../js/init.js" as="script">
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f5ca7.txt?client=ca-pub-1987456081350047765" data-overlays="bottom" crossorigin="anonymous"></script>
+<link rel="preload" href="../css/style-medium.css" as="style" media="(max-width:961px)">
+<link rel="preload" href="../css/style-small.css" as="style" media="(max-width:620px)">
+<link rel="stylesheet" href="../css/style.css"/>
+<script src="../js/default.js" type="text/javascript"></script>
+<script src="../js/init.js" type="text/javascript"></script>
+<style type="text/css">
+.adslot { width: 336px; height: 280px; }
+@media (min-width:320px) { .adslot { width: 300px; height: 250px; } }
+@media (min-width:360px) and (orientation: portrait) { .adslot { width: 336px; height: 280px; } }
+@media (min-width:604px) { .adslot { width: 336px; height: 280px; } }
+</style>
+<noscript>
+    <link rel="stylesheet" href="../css/skel.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/adslot.css" />
+</noscript>
+<link rel="icon" href="../favicon-48x48.ico">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+</head>
+<body>
+<header id="header">
+	<div class="container">
+		<span class="notranslate">
+			<div id="logo">
+				<a href="../index.html"><img src="../layout/excel-guides.svg" onerror="this.src='../layout/excel-guides.png'" border="0" alt="Excel guides" title="Excel guides" width="1" height="1" /><h2>Excel</h2>&nbsp;&nbsp;<span class="easy">for Data Analysis</span></a>
+                <p>#1 <a href="../index.html">Excel guides</a> on the go</p>
+		  	</div>            
+			<nav id="nav">
+				  <ul>
+                  <li><a href="../index.html">Excel</a></li>
+                  <li><a href="../introduction.html">Introduction</a></li>
+				  <li><a href="../basics.html">Basics</a></li>
+				  <li><a href="../functions.html">Functions</a></li>
+				  <li><a href="../data-analysis.html">Data Analysis</a></li>
+                  <li><a href="../vba.html">VBA</a></li>
+                  <li class="current_page_item"><a href="../examples.html">300 Examples</a></li>
+                  <li><a href="../ask-us.html">Ask us</a></li>
+                  </ul>
+				</nav>
+			</span>
+		</div>
+	</header>
+	<!-- end #header -->
+	<div class="container">
+		<div class="row 100%">
+			<div class="8u 12u(medium)">
+				<div class="post">
+						<h1 class="title" style="float:left;">Profit Margin</h1>
+						<div style="clear: both;">&nbsp;</div>
+<div class="entry">
+			  <p class="spacing"><a href="#gross-profit-margin">Gross Profit Margin</a> | <a href="#operating-profit-margin">Operating Profit Margin</a> | <a href="#net-profit-margin">Net Profit Margin</a></p>
+              <p>Calculating gross <strong>profit margin</strong>, operating profit margin and <strong>net profit margin in Excel</strong> is easy. Simply use the formulas explained on this page.</p>
+              <h3><a name="gross-profit-margin" id="gross-profit-margin"></a>Gross Profit Margin</h3>
+              <p>Assume your business had a total revenue of $10,000 in July and the cost of goods sold (COGS) equaled $4,000.</p>
+              <p><img src="images/profit-margin/total-revenue-and-cogs.png" alt="Total Revenue and COGS" width="604" height="81" title="Total Revenue and COGS" /></p>
+              <p>To calculate the gross profit margin<span class="vismob"> (GPM)</span>, use the following formula:</p>
+              <table class="fraction" cellpadding="0" cellspacing="0" style="float:left">
+              <tr>
+                <td rowspan="2" nowrap="nowrap"><span class="invmob">Gross Profit Margin</span><span class="vismob">GPM</span></td>
+                <td width="24" rowspan="2" nowrap="nowrap"> = </td>
+                <td nowrap="nowrap">Total Revenue - COGS</td>
+              </tr>
+              <tr>
+                <td class="upper_line">Total Revenue</td>
+              </tr>
+              </table>
+              
+
+     
+     
+     
+              <p style="clear: both;">1. The formula below calculates the number above the fraction line. This is called the gross profit.</p>
+              <p><img src="images/profit-margin/gross-profit.png" alt="Gross Profit" width="604" height="147" title="Gross Profit" /></p>
+              <p>2. Divide this result by the total revenue to <strong>calculate the gross profit margin in Excel</strong>.</p>
+              <p><img src="images/profit-margin/calculate-gross-profit-margin.png" alt="Calculate Gross Profit Margin" width="604" height="147" title="Calculate Gross Profit Margin" /></p>
+              <p>3. On the Home tab, click the percentage symbol to apply a Percentage format.</p>
+              <p><img src="images/profit-margin/percentage-format.png" loading="lazy" alt="Percentage Format" width="148" height="100" title="Percentage Format" /></p>
+              <p>Result:</p>
+              <p><img src="images/profit-margin/gross-profit-margin-formula.png" loading="lazy" alt="Gross Profit Margin Formula in Excel" width="604" height="147" title="Gross Profit Margin Formula in Excel" /></p>
+              <h3><a name="operating-profit-margin" id="operating-profit-margin"></a>Operating Profit Margin</h3>
+              <p>The operating profit margin also includes operating expenses (OPEX) such as rent, equipment, inventory costs, marketing, etc.</p>
+              <p><img src="images/profit-margin/operating-expenses.png" loading="lazy" alt="Operating Expenses" width="604" height="101" title="Operating Expenses" /></p>
+              <p>To calculate the operating profit margin<span class="vismob"> (OPM)</span>, use the following formula:</p>
+              <table class="fraction" cellpadding="0" cellspacing="0" style="float:left">
+              <tr>
+                <td rowspan="2" nowrap="nowrap"><span class="invmob">Operating Profit Margin</span><span class="vismob">OPM</span></td>
+                <td width="24" rowspan="2" nowrap="nowrap"> = </td>
+                <td nowrap="nowrap">Total Revenue - COGS - OPEX</td>
+              </tr>
+              <tr>
+                <td class="upper_line">Total Revenue</td>
+              </tr>
+              </table>
+              <p style="clear: both;">1. The formula below calculates the number above the fraction line. This is called the operating profit.</p>
+              <p><img src="images/profit-margin/operating-profit.png" loading="lazy" alt="Operating Profit" width="604" height="167" title="Operating Profit" /></p>
+              <p>2. Divide this result by the total revenue to calculate the operating profit margin in Excel.</p>
+              <p><img src="images/profit-margin/calculate-operating-profit-margin.png" loading="lazy" alt="Calculate Operating Profit Margin" width="604" height="167" title="Calculate Operating Profit Margin" /></p>
+              <p>3. On the Home tab, click the percentage symbol to apply a Percentage format.</p>
+              <p><img src="images/profit-margin/percentage-format.png" loading="lazy" alt="Percentage Format" width="148" height="100" title="Percentage Format" /></p>
+              <p>Result:</p>
+              <p><img src="images/profit-margin/operating-profit-margin-formula.png" loading="lazy" alt="Operating Profit Margin Formula in Excel" width="604" height="167" title="Operating Profit Margin Formula in Excel" /></p>
+              <div class="ad"><!-- Advanced Excel Pages Middle -->
+
+     
+     
+     data-ad-slot="2529116896"></ins>
+</div>
+              <h3><a name="net-profit-margin" id="net-profit-margin"></a>Net Profit Margin</h3>
+              <p>The net profit margin also includes non-operating expenses such as interest (on debt) and taxes.</p>
+              <p><img src="images/profit-margin/total-revenue-and-all-expenses.png" loading="lazy" alt="Total Revenue and All Expenses" width="604" height="141" title="Total Revenue and All Expenses" /></p>
+              <p>To <strong>calculate the net profit margin</strong><span class="vismob"> (NPM)</span>, use the following <strong>formula</strong>:</p>
+              <table class="fraction" cellpadding="0" cellspacing="0" style="float:left">
+              <tr>
+                <td rowspan="2" nowrap="nowrap"><span class="invmob">Net Profit Margin</span><span class="vismob">NPM</span></td>
+                <td width="24" rowspan="2" nowrap="nowrap"> = </td>
+                <td nowrap="nowrap">Total Revenue - COGS - OPEX - I - T</td>
+              </tr>
+              <tr>
+                <td class="upper_line">Total Revenue</td>
+              </tr>
+              </table>
+              <p style="clear: both;">where:</p>
+              <p>COGS = Cost of Goods Sold</p>
+              <p>OPEX = Operating expenses</p>
+              <p>I = Interest</p>
+              <p>T = Taxes</p>
+              <p>1. The formula below calculates the number above the fraction line. This is called the net income.</p>
+              <p><img src="images/profit-margin/net-income.png" loading="lazy" alt="Net Income" width="604" height="207" title="Net Income" /></p>
+              <p>2. Divide this result by the total revenue to calculate the net profit margin in Excel.</p>
+              <p><img src="images/profit-margin/calculate-net-profit-margin.png" loading="lazy" alt="Calculate Net Profit Margin" width="604" height="207" title="Calculate Net Profit Margin" /></p>
+              <p>3. On the Home tab, click the percentage symbol to apply a Percentage format.</p>
+              <p><img src="images/profit-margin/percentage-format.png" loading="lazy" alt="Percentage Format" width="148" height="100" title="Percentage Format" /></p>
+              <p>Result:</p>
+              <p><img src="images/profit-margin/net-profit-margin-formula.png" loading="lazy" alt="Net Profit Margin Formula in Excel" width="604" height="207" title="Net Profit Margin Formula in Excel" /></p>
+              <p>Conclusion: a 35% net profit margin means your business has a net income of $0.35 for each dollar of sales.</p>
+              <div class="ad"><!-- Advanced Excel Pages End -->
+
+     
+     
+     data-ad-slot="4005850092"></ins>
+</div>
+            </div>
+			   </div>
+				<span class="invtab"><div class="post">
+					<div style="clear: both;"></div>
+                    <div class="entrylearn">  
+                  <p align="left"><span class="buttonp"> <a href="../functions/financial-functions.html">11/11 Completed! Learn more about financial functions &gt;<br />
+                  </a></span>Go to Next Guide: <a href="../functions/statistical-functions.html">Statistical Functions</a></div>
+                  </div></span>
+                  </div>
+                  <div class="4u 12u(medium)">
+              <div id="search">
+              <div class="cse-branding-right" style="background-color:#FFFFFF;color:#000000">
+                <div class="cse-branding-form" style="margin-right:0px;">
+                  <form action="https://www.Advanced Excel for Data Analysis/search.html" id="cse-search-box">
+                    <div>
+                      <input type="hidden" name="cx" value="partner-pub-1987061359047735:3934495699" />
+                      <input type="hidden" name="cof" value="FORID:10" />
+                      <input type="hidden" name="ie" value="UTF-8" />
+                      <input type="text" name="q" placeholder="Explore Entire Guide" class="field" disabled />
+                      <span class="notranslate"><input type="submit" name="sa" value="Go" class="button" disabled /></span>
+                    </div>
+                  </form>
+                </div>
+                <div class="cse-branding-logo"></div>
+                <div class="cse-branding-text"></div>
+              </div>
+              </div>
+              <div id="sidebar">
+					<ul>
+				  	  <li>
+                        <h3>Guide</h3>
+						  <ul>
+							<li><a href="../functions/financial-functions.html">Financial Functions</a></li>
+                    </ul>
+					  </li>
+				  </ul>
+			  </div>
+              <div id="sidebar">
+				  <ul><li>
+				      <h3><font color="#FF9900"><span class="notranslate">Learn more, it's easy</span></font></h3>
+				    </li>
+					  <li><ul>
+                        <li><a href="pmt.html">PMT</a></li>
+                        <li><a href="loans-with-different-durations.html">Loans with Different Durations</a></li>
+                        <li><a href="investment-annuity.html">Investment or Annuity</a></li>
+                        <li><a href="compound-interest.html">Compound Interest</a></li>
+                        <li><a href="cagr.html">CAGR</a></li>
+                        <li><a href="loan-amortization-schedule.html">Loan Amortization Schedule</a></li>
+                        <li><a href="npv.html">NPV</a></li>
+                        <li><a href="irr.html">IRR</a></li>
+                        <li><a href="depreciation.html">Depreciation</a></li>
+                        <li class="current_page_item"><a href="profit-margin.html">Profit Margin</a></li>
+                        </ul>
+                    </li>
+                  </ul>
+			  </div>
+              <div id="sidebar">
+					<ul>
+				  	  <li>
+                        <h3><span class="notranslate"><font color="#8FAD22">Download Excel File</font></span></h3>
+						  <ul>
+							<li><a href="excel-files/profit-margin.xlsx">profit-margin.xlsx</a></li>
+                    </ul>
+					  </li>
+				  </ul>
+			  </div>
+              <div id="sidebar">
+					<ul>
+				  	  <li>
+                        <h3>Next Guide</h3>
+						  <ul>
+							<li><a href="../functions/statistical-functions.html">Statistical Functions</a></li>
+                    </ul>
+					  </li>
+				  </ul>
+			  </div>
+              <div id="sidebar">
+		      <h3><span class="notranslate"></span></h3>
+              <p style="padding-top:7px;padding-bottom:1px"><a href="https://facebook.com/thecodedragon" target="blank" rel="nofollow"><img src="../layout/facebook-logo.png" onmouseover="this.src='../layout/facebook-logo-onmouseover.png'" onmouseout="this.src='../layout/facebook-logo.png'" width="30" height="30" border="0" alt="Advanced Excel on Facebook" title="Advanced Excel on Facebook" /></a> <a href="https://twitter.com/ceoofdss" target="blank" rel="nofollow"><img src="../layout/x-logo.png" onmouseover="this.src='../layout/x-logo-onmouseover.png'" onmouseout="this.src='../layout/x-logo.png'" width="30" height="30" border="0" alt="Advanced Excel on X" title="Advanced Excel on X" /></a> <a href="https://www.pinterest.com/julisunkan" target="blank" rel="nofollow"><img src="../layout/pinterest-logo.png" onmouseover="this.src='../layout/pinterest-logo-onmouseover.png'" onmouseout="this.src='../layout/pinterest-logo.png'" width="30" height="30" border="0" alt="Advanced Excel on Pinterest" title="Advanced Excel on Pinterest"></a> <a href="https://www.linkedin.com/in/digitalskeleton/" target="blank" rel="nofollow"><img src="../layout/linkedin-logo.png" onmouseover="this.src='../layout/linkedin-logo-onmouseover.png'" onmouseout="this.src='../layout/linkedin-logo.png'" width="30" height="30" border="0" alt="Advanced Excel on LinkedIn" title="Advanced Excel on LinkedIn"></a></p>
+              </div>
+              <div id="sidebar">
+					<ul>
+				  	  <li>
+                        <h3><span class="notranslate">Become an Excel Pro</span></h3>
+						  <ul>
+                            <li><a href="../examples.html">300 Examples</a></li>
+                          </ul>
+					  </li>
+				  </ul>
+			  </div>
+              <!-- end #sidebar -->
+			  <div style="clear: both;">&nbsp;</div>
+		  </div>
+		</div>
+	</div>
+	<!-- end #page -->
+</div>
+<div id="footer">
+	<p><a href="profit-margin.html">Profit Margin</a> &bull; &copy; AppMonster<br />
+	Excel is Awesome, we'll show you: <a href="../introduction.html">Introduction</a> &bull; <a href="../basics.html">Basics</a> &bull; <a href="../functions.html">Functions</a> &bull; <a href="../data-analysis.html">Data Analysis</a> &bull; <a href="../vba.html">VBA</a></p>
+</div>
+<!-- end #footer -->
+
+<script type="text/javascript">
+  
+  $(function() { (adsbygoogle = window.adsbygoogle || []).push({}); });
+  $(function() { (adsbygoogle = window.adsbygoogle || []).push({}); });
+  $(function() { (adsbygoogle = window.adsbygoogle || []).push({}); });
+  
+</script>
+
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"rayId":"8c78d2b699c29fc0","version":"2024.8.0","serverTiming":{"name":{"cfExtPri":true,"cfL4":true}},"token":"c707dde3711e49e3a0cbf0020eef6a91","b":1}' crossorigin="anonymous"></script>
+</body>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H0MBKVX9SV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-H0MBKVX9SV');
+</script>
+
+<!-- Mirrored from www.Advanced Excel for Data Analysis/examples/profit-margin.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 23 Sep 2024 07:38:43 GMT -->
+</html>

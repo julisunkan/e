@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+
+
+<!-- Mirrored from www.Advanced Excel for Data Analysis/vba/examples/weekdays.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 23 Sep 2024 07:44:48 GMT -->
+<head>
+
+<title>Weekdays in Excel VBA (In Easy Steps)</title>
+<meta name="keywords" content="weekdays, excel vba, between, two dates, excel vba, program, calculates, monday, tuesday, wednesday, thursday, friday, saturday, sunday, 1, 7, datediff, dateadd, weekday, function, macro">
+<meta name="description" content="Below we will look at a program in Excel VBA that calculates the number of weekdays between two dates.">
+
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="index, follow">
+<META content=EN-US name=LANGUAGE>
+<meta property="og:title" content="Weekdays in Excel VBA">
+<meta property="og:url" content="weekdays.html">
+<meta property="og:type" content="article">
+<meta property="fb:admins" content="100003702321830">
+<meta property="og:description" content="Learn how to create a program in Excel VBA that calculates the number of weekdays between two dates.">
+<meta property="og:image" content="../../smi/vba/examples/weekdays-2.png"/>
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@ExcelEasy">
+<meta name="twitter:image" content="../../smi/vba/examples/weekdays-2.png">
+
+<link rel="preload" href="../../css/style.css" as="style">
+<link rel="preload" href="images/weekdays/weekdays-example.png" as="image">
+<link rel="preload" href="../../js/default.js" as="script">
+<link rel="preload" href="../../js/init.js" as="script">
+<script async src="../../../pagead2.googlesyndication.com/pagead/js/f5ca7.txt?client=ca-pub-1987456081350047765" data-overlays="bottom" crossorigin="anonymous"></script>
+<link rel="preload" href="../../css/style-medium.css" as="style" media="(max-width:961px)">
+<link rel="preload" href="../../css/style-small.css" as="style" media="(max-width:620px)">
+<link rel="stylesheet" href="../../css/style.css"/>
+<script src="../../js/default.js" type="text/javascript"></script>
+<script src="../../js/init.js" type="text/javascript"></script>
+<style type="text/css">
+.adslot { width: 336px; height: 280px; }
+@media (min-width:320px) { .adslot { width: 300px; height: 250px; } }
+@media (min-width:360px) and (orientation: portrait) { .adslot { width: 336px; height: 280px; } }
+@media (min-width:604px) { .adslot { width: 336px; height: 280px; } }
+</style>
+<noscript>
+    <link rel="stylesheet" href="../../css/skel.css" />
+    <link rel="stylesheet" href="../../css/style.css" />
+    <link rel="stylesheet" href="../../css/adslot.css" />
+</noscript>
+<link rel="icon" href="../../favicon-48x48.ico">
+<link rel="apple-touch-icon" href="../../apple-touch-icon.png">
+</head>
+<body>
+<header id="header">
+	<div class="container">
+		<span class="notranslate">
+			<div id="logo">
+				<a href="../../index.html"><img src="../../layout/excel-guides.svg" onerror="this.src='../../layout/excel-guides.png'" border="0" alt="Excel guides" title="Excel guides" width="1" height="1" /><h2>Excel</h2>&nbsp;&nbsp;<span class="easy">for Data Analysis</span></a>
+                <p>#1 <a href="../../index.html">Excel guides</a> on the go</p>
+		  	</div>            
+			<nav id="nav">
+				  <ul>
+                  <li><a href="../../index.html">Excel</a></li>
+                  <li><a href="../../introduction.html">Introduction</a></li>
+				  <li><a href="../../basics.html">Basics</a></li>
+				  <li><a href="../../functions.html">Functions</a></li>
+				  <li><a href="../../data-analysis.html">Data Analysis</a></li>
+                  <li><a href="../../vba.html">VBA</a></li>
+                  <li class="current_page_item"><a href="../../examples.html">300 Examples</a></li>
+                  <li><a href="../../ask-us.html">Ask us</a></li>
+                  </ul>
+				</nav>
+			</span>
+		</div>
+	</header>
+	<!-- end #header -->
+	<div class="container">
+		<div class="row 100%">
+			<div class="8u 12u(medium)">
+				<div class="post">
+						<h1 class="title" style="float:left;">Weekdays</h1>
+						<div style="clear: both;">&nbsp;</div>
+<div class="entry">
+              <p>Below we will look at a program in <strong>Excel VBA</strong> that calculates the number of <strong>weekdays</strong> between two dates.</p>
+              <p>Weekdays are: Monday, Tuesday, Wednesday, Thursday and Friday.</p>
+              <p>Situation:</p>
+              <p><img src="images/weekdays/weekdays-example.png" alt="Weekdays in Excel VBA" width="604" height="101" title="Weekdays in Excel VBA" /></p>
+              <p>Note: Dates are in US Format. Months first, Days Second. This type of format depends on your windows regional settings.</p>
+              
+
+     
+     
+     
+              <p>1. First, we declare five variables. date1 of type Date, date2 of type Date, dateToCheck of type Date, daysBetween of type Integer, weekdays of type Integer and i of type Integer.</p>
+              <div class="code"><span class="predefined">Dim</span> date1 <span class="predefined">As</span> <span class="predefined">Date</span>, date2 <span class="predefined">As</span>
+              <span class="predefined">Date</span>, dateToCheck <span class="predefined">As</span> <span class="predefined">Date</span><br />
+              <span class="predefined">Dim</span> daysBetween <span class="predefined">As</span> <span class="predefined">Integer</span>, weekdays <span class="predefined">As</span> <span class="predefined">Integer</span>, i <span class="predefined">As</span> <span class="predefined">Integer</span></div>
+              <p>2. We initialize four variables. We use the DateDiff function to initialize the variable daysBetween. This function has three arguments. We fill in &quot;d&quot; for the first argument since we want the number of days between date1 and date2.</p>
+              <div class="code">weekdays = 0<br />
+              date1 = Range(&quot;B2&quot;)<br />
+              date2 = Range(&quot;B3&quot;)<br />
+              daysBetween = DateDiff(&quot;d&quot;, date1, date2)</div>
+              <p>3. We need to check for each date between date1 and date2 (including date1 and date2) whether the date is a weekday or not. If yes, we increment weekdays by 1. We will use a For Next loop.</p>
+              <div class="code"><span class="predefined">For</span> i = 0 <span class="predefined">To</span> daysBetween</div>
+              <p>4. We use the DateAdd function to get each date we need to check. This function has three arguments. We fill in &quot;d&quot; for the first argument since we want to add days, i for the second argument, and date1 for the third argument since we want to add i days to date1. This way Excel VBA can check each date between date1 and date2 starting with date1. Add the following code line:</p>
+              <div class="code">dateToCheck = DateAdd(&quot;d&quot;, i, date1)</div>
+              <p>Example: for i = 3, Excel VBA checks date1 + 3 days.</p>
+              <p>5. Next, we use the Weekday function (build in function) to check whether dateToCheck is a weekday or not. The Weekday function returns 1 for a Sunday and 7 for a Saturday. Therefore, we only increment the variable weekdays if Weekday(dateToCheck) is not equal to 1 and not equal to 7 (&lt;&gt; means not equal to). The following code lines get the job done.</p>
+              <div class="code"><span class="predefined">If</span> (Weekday(dateToCheck) &lt;&gt; 1 <span class="predefined">And</span> Weekday(dateToCheck) &lt;&gt; 7) <span class="predefined">Then</span><br />
+              &nbsp;&nbsp;&nbsp;&nbsp;weekdays = weekdays + 1<br />
+              <span class="predefined">End</span> <span class="predefined">If</span></div>
+              <p>6. Don't forget to close the loop.</p>
+              <div class="code"><span class="predefined">Next</span> i</div>
+              <p>7. Finally, we display the number of weekdays using a MsgBox. We use the &amp; operator to concatenate (join) two strings. Although weekdays is not a string it works here.</p>
+              <div class="code">MsgBox weekdays &amp; &quot; weekdays between these two dates&quot;</div>
+              <p>8. Place your macro in a command button and test it.</p>
+              <p>Result:</p>
+              <p><img src="images/weekdays/weekdays-result.png" alt="Weekdays Result" width="251" height="148" title="Weekdays Result" /></p>
+              <div class="ad"><!-- Advanced Excel Pages End -->
+
+     
+     
+     data-ad-slot="4005850092"></ins>
+</div>
+            </div>
+			   </div>
+				<span class="invtab"><div class="post">
+					<div style="clear: both;"></div>
+                    <div class="entrylearn">  
+                  	<p align="left"><span class="buttonp"> <a href="delay-a-macro.html">4/9 Completed! Learn more about dates and times &gt;<br /></a></span>Go to Next Guide: <a href="../events.html">Events</a></div>
+                  </div></span>
+                  </div>
+                  <div class="4u 12u(medium)">
+              <div id="search">
+              <div class="cse-branding-right" style="background-color:#FFFFFF;color:#000000">
+                <div class="cse-branding-form" style="margin-right:0px;">
+                  <form action="https://www.Advanced Excel for Data Analysis/search.html" id="cse-search-box">
+                    <div>
+                      <input type="hidden" name="cx" value="partner-pub-1987061359047735:3934495699" />
+                      <input type="hidden" name="cof" value="FORID:10" />
+                      <input type="hidden" name="ie" value="UTF-8" />
+                      <input type="text" name="q" placeholder="Explore Entire Guide" class="field" disabled />
+                      <span class="notranslate"><input type="submit" name="sa" value="Go" class="button" disabled /></span>
+                    </div>
+                  </form>
+                </div>
+                <div class="cse-branding-logo"></div>
+                <div class="cse-branding-text"></div>
+              </div>
+              </div>
+              <div id="sidebar">
+					<ul>
+				  	  <li>
+                        <h3>Guide</h3>
+						  <ul>
+							<li><a href="../date-time.html">Date and Time</a></li>
+                		  </ul>
+					  </li>
+				    </ul>
+			  </div>
+              <div id="sidebar">
+				  <ul><li>
+					    <h3><font color="#FF9900"><span class="notranslate">Learn more, it's easy</span></font></h3>
+				    </li>
+					  <li><ul>                        
+                        <li><a href="compare-dates-times.html">Compare Dates and Times</a></li>
+                        <li><a href="datediff-function.html">DateDiff Function</a></li>
+                        <li class="current_page_item"><a href="weekdays.html">Weekdays</a></li>
+                        <li><a href="delay-a-macro.html">Delay a Macro</a></li>                       
+                        <li><a href="year-occurrences.html">Year Occurrences</a></li>
+                        <li><a href="tasks-on-schedule.html">Tasks on Schedule</a></li>
+                        <li><a href="sort-birthdays.html">Sort Birthdays</a></li>
+						<li><a href="date-format.html">Date Format</a></li>
+                        </ul>
+                    </li>
+                  </ul>
+			  </div>
+              <div id="sidebar">
+					<ul>
+				  	  <li>
+                        <h3><span class="notranslate"><font color="#8FAD22">Download Excel File</font></span></h3>
+						  <ul>
+							<li><a href="excel-files/weekdays.xlsm">weekdays.xlsm</a></li>
+                    </ul>
+					  </li>
+				  </ul>
+			  </div>
+              <div id="sidebar">
+					<ul>
+				  	  <li>
+                        <h3>Next Guide</h3>
+						  <ul>
+							<li><a href="../events.html">Events</a></li>
+                    </ul>
+					  </li>
+				  </ul>
+			  </div>
+              <div id="sidebar">
+		      <h3><span class="notranslate"></span></h3>
+              <p style="padding-top:7px;padding-bottom:1px"><a href="https://facebook.com/thecodedragon" target="blank" rel="nofollow"><img src="../../layout/facebook-logo.png" onmouseover="this.src='../../layout/facebook-logo-onmouseover.png'" onmouseout="this.src='../../layout/facebook-logo.png'" width="30" height="30" border="0" alt="Advanced Excel on Facebook" title="Advanced Excel on Facebook" /></a> <a href="https://twitter.com/ceoofdss" target="blank" rel="nofollow"><img src="../../layout/x-logo.png" onmouseover="this.src='../../layout/x-logo-onmouseover.png'" onmouseout="this.src='../../layout/x-logo.png'" width="30" height="30" border="0" alt="Advanced Excel on X" title="Advanced Excel on X" /></a> <a href="https://www.pinterest.com/julisunkan" target="blank" rel="nofollow"><img src="../../layout/pinterest-logo.png" onmouseover="this.src='../../layout/pinterest-logo-onmouseover.png'" onmouseout="this.src='../../layout/pinterest-logo.png'" width="30" height="30" border="0" alt="Advanced Excel on Pinterest" title="Advanced Excel on Pinterest"></a> <a href="https://www.linkedin.com/in/digitalskeleton/" target="blank" rel="nofollow"><img src="../../layout/linkedin-logo.png" onmouseover="this.src='../../layout/linkedin-logo-onmouseover.png'" onmouseout="this.src='../../layout/linkedin-logo.png'" width="30" height="30" border="0" alt="Advanced Excel on LinkedIn" title="Advanced Excel on LinkedIn"></a></p>
+              </div>
+              <div id="sidebar">
+					<ul>
+				  	  <li>
+                        <h3><span class="notranslate">Become an Excel Pro</span></h3>
+						  <ul>
+                            <li><a href="../../examples.html">300 Examples</a></li>
+                          </ul>
+					  </li>
+				  </ul>
+			  </div>
+              <!-- end #sidebar -->
+			  <div style="clear: both;">&nbsp;</div>
+		  </div>
+		</div>
+	</div>
+	<!-- end #page -->
+</div>
+<div id="footer">
+	<p><a href="weekdays.html">Weekdays</a> &bull; &copy; AppMonster<br />
+	Excel is Awesome, we'll show you: <a href="../../introduction.html">Introduction</a> &bull; <a href="../../basics.html">Basics</a> &bull; <a href="../../functions.html">Functions</a> &bull; <a href="../../data-analysis.html">Data Analysis</a> &bull; <a href="../../vba.html">VBA</a></p>
+</div>
+<!-- end #footer -->
+
+<script type="text/javascript">
+  
+  $(function() { (adsbygoogle = window.adsbygoogle || []).push({}); });
+  $(function() { (adsbygoogle = window.adsbygoogle || []).push({}); });
+  
+</script>
+
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"rayId":"8c78d3b329dbb8d2","version":"2024.8.0","serverTiming":{"name":{"cfExtPri":true,"cfL4":true}},"token":"c707dde3711e49e3a0cbf0020eef6a91","b":1}' crossorigin="anonymous"></script>
+</body>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H0MBKVX9SV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-H0MBKVX9SV');
+</script>
+
+<!-- Mirrored from www.Advanced Excel for Data Analysis/vba/examples/weekdays.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 23 Sep 2024 07:44:48 GMT -->
+</html>

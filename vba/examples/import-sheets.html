@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+
+
+<!-- Mirrored from www.Advanced Excel for Data Analysis/vba/examples/import-sheets.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 23 Sep 2024 07:43:39 GMT -->
+<head>
+
+<title>Import Sheets using Excel VBA (In Easy Steps)</title>
+<meta name="keywords" content="import sheets, excel vba, from other excel files, into one excel file, dir function, directory, closed, copy method, paste after, last worksheet, do while loop, screen updating, displaying alerts">
+<meta name="description" content="Below we will look at a program in Excel VBA that imports sheets from other Excel files into one Excel file.">
+
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="index, follow">
+<META content=EN-US name=LANGUAGE>
+<meta property="og:title" content="Import Sheets using Excel VBA">
+<meta property="og:url" content="import-sheets.html">
+<meta property="og:type" content="article">
+<meta property="fb:admins" content="100003702321830">
+<meta property="og:description" content="Learn how to create a program in Excel VBA that imports sheets from other Excel files into one Excel file.">
+<meta property="og:image" content="../../smi/vba/examples/import-sheets-2.png"/>
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@ExcelEasy">
+<meta name="twitter:image" content="../../smi/vba/examples/import-sheets-2.png">
+
+<link rel="preload" href="../../css/style.css" as="style">
+<link rel="preload" href="images/import-sheets/import-sheets-example.png" as="image">
+<link rel="preload" href="../../js/default.js" as="script">
+<link rel="preload" href="../../js/init.js" as="script">
+<script async src="../../../pagead2.googlesyndication.com/pagead/js/f5ca7.txt?client=ca-pub-1987456081350047765" data-overlays="bottom" crossorigin="anonymous"></script>
+<link rel="preload" href="../../css/style-medium.css" as="style" media="(max-width:961px)">
+<link rel="preload" href="../../css/style-small.css" as="style" media="(max-width:620px)">
+<link rel="stylesheet" href="../../css/style.css"/>
+<script src="../../js/default.js" type="text/javascript"></script>
+<script src="../../js/init.js" type="text/javascript"></script>
+<style type="text/css">
+.adslot { width: 336px; height: 280px; }
+@media (min-width:320px) { .adslot { width: 300px; height: 250px; } }
+@media (min-width:360px) and (orientation: portrait) { .adslot { width: 336px; height: 280px; } }
+@media (min-width:604px) { .adslot { width: 336px; height: 280px; } }
+</style>
+<noscript>
+    <link rel="stylesheet" href="../../css/skel.css" />
+    <link rel="stylesheet" href="../../css/style.css" />
+    <link rel="stylesheet" href="../../css/adslot.css" />
+</noscript>
+<link rel="icon" href="../../favicon-48x48.ico">
+<link rel="apple-touch-icon" href="../../apple-touch-icon.png">
+</head>
+<body>
+<header id="header">
+	<div class="container">
+		<span class="notranslate">
+			<div id="logo">
+				<a href="../../index.html"><img src="../../layout/excel-guides.svg" onerror="this.src='../../layout/excel-guides.png'" border="0" alt="Excel guides" title="Excel guides" width="1" height="1" /><h2>Excel</h2>&nbsp;&nbsp;<span class="easy">for Data Analysis</span></a>
+                <p>#1 <a href="../../index.html">Excel guides</a> on the go</p>
+		  	</div>            
+			<nav id="nav">
+				  <ul>
+                  <li><a href="../../index.html">Excel</a></li>
+                  <li><a href="../../introduction.html">Introduction</a></li>
+				  <li><a href="../../basics.html">Basics</a></li>
+				  <li><a href="../../functions.html">Functions</a></li>
+				  <li><a href="../../data-analysis.html">Data Analysis</a></li>
+                  <li><a href="../../vba.html">VBA</a></li>
+                  <li class="current_page_item"><a href="../../examples.html">300 Examples</a></li>
+                  <li><a href="../../ask-us.html">Ask us</a></li>
+                  </ul>
+				</nav>
+			</span>
+		</div>
+	</header>
+	<!-- end #header -->
+	<div class="container">
+		<div class="row 100%">
+			<div class="8u 12u(medium)">
+				<div class="post">
+						<h1 class="title" style="float:left;">Import Sheets</h1>
+						<div style="clear: both;">&nbsp;</div>
+<div class="entry">			
+			  <p>Below we will look at a program in <strong>Excel VBA</strong> that <strong>imports sheets from other Excel files into one Excel file</strong>.</p>
+              <p>Download Book4.xlsx, Book5.xlsx and add them to &quot;C:\test\&quot;</p>
+              <p>Situation:</p>
+			  <p><img src="images/import-sheets/import-sheets-example.png" alt="Import Sheets using Excel VBA" width="604" height="191" title="Import Sheets using Excel VBA" /></p>
+              
+
+     
+     
+     
+			  <p>Add the following code lines to the command button:</p>
+			  <p>1. First, we declare two variables of type String, a Worksheet object and one variable of type Integer.</p>
+			  <div class="code"><span class="predefined">Dim</span> directory <span class="predefined">As</span> <span class="predefined">String</span>, fileName <span class="predefined">As</span> <span class="predefined">String</span>, sheet <span class="predefined">As</span> Worksheet, total <span class="predefined">As</span> <span class="predefined">Integer</span></div>
+			  <p>2. Turn off screen updating and displaying alerts.</p>
+			  <div class="code">Application.ScreenUpdating = <span class="predefined">False</span><br />
+		      Application.DisplayAlerts = <span class="predefined">False</span></div>
+			  <p>3. Initialize the variable directory. We use the Dir function to find the first *.xl?? file stored in this directory.</p>
+			  <div class="code">directory = &quot;c:\test\&quot;<br />
+		      fileName = Dir(directory &amp; &quot;*.xl??&quot;)</div>
+			  <p>Note: The Dir function supports the use of multiple character (*) and single character (?) <a href="../../examples/wildcards.html">wildcards</a> to search for all different type of Excel files.</p>
+			  <p>4. The variable fileName now holds the name of the first Excel file found in the directory. Add a <a href="../loop.html#do-while-loop">Do While Loop</a>.</p>
+			  <div class="code"><span class="predefined">Do</span> <span class="predefined">While</span> fileName &lt;&gt; &quot;&quot;<br /><br />
+              <span class="predefined">Loop</span></div>
+			  <p>Add the following code lines (at 5, 6, 7 and 8) to the loop.</p>
+			  <p>5. There is no simple way to copy worksheets from closed Excel files. Therefore we open the Excel file.</p>
+			  <div class="code">Workbooks.Open (directory &amp; fileName)</div>
+			  <p>6. Import the sheets from the Excel file into import-sheet.xlsm.</p>
+			  <div class="code"><span class="predefined">For</span> <span class="predefined">Each</span> sheet <span class="predefined">In</span> Workbooks(fileName).Worksheets<br />
+              &nbsp;&nbsp;&nbsp;&nbsp;total = Workbooks(&quot;import-sheets.xlsm&quot;).Worksheets.count<br />
+              &nbsp;&nbsp;&nbsp;&nbsp;Workbooks(fileName).Worksheets(sheet.Name).Copy _<br />
+              &nbsp;&nbsp;&nbsp;&nbsp;after:=Workbooks(&quot;import-sheets.xlsm&quot;).Worksheets(total)<br />
+              <span class="predefined">Next</span> sheet</div>
+			  <p>Explanation: the variable total holds track of the total number of worksheets of import-sheet.xlsm. We use the Copy method of the Worksheet object to copy each worksheet and paste it after the last worksheet of import-sheets.xlsm.</p>
+			  <p>7. Close the Excel file.</p>
+			  <div class="code">Workbooks(fileName).Close</div>
+			  <p>8. The Dir function is a special function. To get the other Excel files, you can use the Dir function again with no arguments.</p>
+			  <div class="code">fileName = Dir()</div>
+			  <p>Note: When no more file names match, the Dir function returns a zero-length string (&quot;&quot;). As a result, Excel VBA will leave the Do While loop.</p>
+			  <p>9. Turn on screen updating and displaying alerts again (outside the loop).</p>
+			  <div class="code">Application.ScreenUpdating = <span class="predefined">True</span><br />
+		      Application.DisplayAlerts = <span class="predefined">True</span></div>
+			  <p>10. Test the program.</p>
+			  <p>Result:</p>
+			  <p><img src="images/import-sheets/import-sheets-result.png" alt="Import Sheets Result" width="604" height="191" title="Import Sheets Result" /></p>
+			  <div class="ad"><!-- Advanced Excel Pages End -->
+
+     
+     
+     data-ad-slot="4005850092"></ins>
+</div>
+            </div>
+			   </div>
+				<span class="invtab"><div class="post">
+					<div style="clear: both;"></div>
+                    <div class="entrylearn">  
+                  	<p align="left"><span class="buttonp"> <a href="programming-charts.html">7/8 Completed! Learn more about books and sheets &gt;<br /></a></span>Go to Next Guide: <a href="../range-object.html">Range Object</a></div>
+                  </div></span>
+                  </div>
+
+                  <div class="4u 12u(medium)">
+              <div id="search">
+              <div class="cse-branding-right" style="background-color:#FFFFFF;color:#000000">
+                <div class="cse-branding-form" style="margin-right:0px;">
+                  <form action="https://www.Advanced Excel for Data Analysis/search.html" id="cse-search-box">
+                    <div>
+                      <input type="hidden" name="cx" value="partner-pub-1987061359047735:3934495699" />
+                      <input type="hidden" name="cof" value="FORID:10" />
+                      <input type="hidden" name="ie" value="UTF-8" />
+                      <input type="text" name="q" placeholder="Explore Entire Guide" class="field" disabled />
+                      <span class="notranslate"><input type="submit" name="sa" value="Go" class="button" disabled /></span>
+                    </div>
+                  </form>
+                </div>
+                <div class="cse-branding-logo"></div>
+                <div class="cse-branding-text"></div>
+              </div>
+              </div>
+              <div id="sidebar">
+					<ul>
+				  	  <li>
+                        <h3>Guide</h3>
+						  <ul>
+							<li><a href="../workbook-worksheet-object.html">Workbook and Worksheet Object</a></li>
+                		  </ul>
+					  </li>
+				    </ul>
+			  </div>
+              <div id="sidebar">
+				  <ul><li>
+				      <h3><font color="#FF9900"><span class="notranslate">Learn more, it's easy</span></font></h3>
+				    </li>
+					  <li><ul>
+                        <li><a href="path-fullname.html">Path and FullName</a></li>
+                        <li><a href="close-open.html">Close and Open</a></li>
+                        <li><a href="loop-through-books-sheets.html">Loop through Books and Sheets</a></li>
+                        <li><a href="sales-calculator.html">Sales Calculator</a></li>
+                        <li><a href="files-in-a-directory.html">Files in a Directory</a></li>
+                        <li class="current_page_item"><a href="import-sheets.html">Import Sheets</a></li>
+                        <li><a href="programming-charts.html">Programming Charts</a></li>
+                        </ul>
+                    </li>
+                  </ul>
+			  </div>
+              <div id="sidebar">
+					<ul>
+				  	  <li>
+                        <h3><span class="notranslate"><font color="#8FAD22">Download Excel Files</font></span></h3>
+						  <ul>
+							<li><a href="excel-files/import-sheets.xlsm">import-sheets.xlsm</a></li>
+                            <li><a href="excel-files/Book4.xlsx">Book4.xlsx</a></li>
+                            <li><a href="excel-files/Book5.xlsx">Book5.xlsx</a></li>
+                    </ul>
+					  </li>
+				  </ul>
+			  </div>
+              <div id="sidebar">
+					<ul>
+				  	  <li>
+                        <h3>Next Guide</h3>
+						  <ul>
+							<li><a href="../range-object.html">Range Object</a></li>
+                    </ul>
+					  </li>
+				  </ul>
+			  </div>
+              <div id="sidebar">
+		      <h3><span class="notranslate"></span></h3>
+              <p style="padding-top:7px;padding-bottom:1px"><a href="https://facebook.com/thecodedragon" target="blank" rel="nofollow"><img src="../../layout/facebook-logo.png" onmouseover="this.src='../../layout/facebook-logo-onmouseover.png'" onmouseout="this.src='../../layout/facebook-logo.png'" width="30" height="30" border="0" alt="Advanced Excel on Facebook" title="Advanced Excel on Facebook" /></a> <a href="https://twitter.com/ceoofdss" target="blank" rel="nofollow"><img src="../../layout/x-logo.png" onmouseover="this.src='../../layout/x-logo-onmouseover.png'" onmouseout="this.src='../../layout/x-logo.png'" width="30" height="30" border="0" alt="Advanced Excel on X" title="Advanced Excel on X" /></a> <a href="https://www.pinterest.com/julisunkan" target="blank" rel="nofollow"><img src="../../layout/pinterest-logo.png" onmouseover="this.src='../../layout/pinterest-logo-onmouseover.png'" onmouseout="this.src='../../layout/pinterest-logo.png'" width="30" height="30" border="0" alt="Advanced Excel on Pinterest" title="Advanced Excel on Pinterest"></a> <a href="https://www.linkedin.com/in/digitalskeleton/" target="blank" rel="nofollow"><img src="../../layout/linkedin-logo.png" onmouseover="this.src='../../layout/linkedin-logo-onmouseover.png'" onmouseout="this.src='../../layout/linkedin-logo.png'" width="30" height="30" border="0" alt="Advanced Excel on LinkedIn" title="Advanced Excel on LinkedIn"></a></p>
+              </div>
+              <div id="sidebar">
+					<ul>
+				  	  <li>
+                        <h3><span class="notranslate">Become an Excel Pro</span></h3>
+						  <ul>
+                            <li><a href="../../examples.html">300 Examples</a></li>
+                          </ul>
+					  </li>
+				  </ul>
+			  </div>
+              <!-- end #sidebar -->
+			  <div style="clear: both;">&nbsp;</div>
+		  </div>
+		</div>
+	</div>
+	<!-- end #page -->
+</div>
+<div id="footer">
+	<p><a href="import-sheets.html">Import Sheets</a> &bull; &copy; AppMonster<br />
+	Excel is Awesome, we'll show you: <a href="../../introduction.html">Introduction</a> &bull; <a href="../../basics.html">Basics</a> &bull; <a href="../../functions.html">Functions</a> &bull; <a href="../../data-analysis.html">Data Analysis</a> &bull; <a href="../../vba.html">VBA</a></p>
+</div>
+<!-- end #footer -->
+
+<script type="text/javascript">
+  
+  $(function() { (adsbygoogle = window.adsbygoogle || []).push({}); });
+  $(function() { (adsbygoogle = window.adsbygoogle || []).push({}); });
+  
+</script>
+
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"rayId":"8c78d36aab089fc0","version":"2024.8.0","serverTiming":{"name":{"cfExtPri":true,"cfL4":true}},"token":"c707dde3711e49e3a0cbf0020eef6a91","b":1}' crossorigin="anonymous"></script>
+</body>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H0MBKVX9SV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-H0MBKVX9SV');
+</script>
+
+<!-- Mirrored from www.Advanced Excel for Data Analysis/vba/examples/import-sheets.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 23 Sep 2024 07:43:40 GMT -->
+</html>

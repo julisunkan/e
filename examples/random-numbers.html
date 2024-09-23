@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+
+
+<!-- Mirrored from www.Advanced Excel for Data Analysis/examples/random-numbers.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 23 Sep 2024 07:38:48 GMT -->
+<head>
+
+<title>Generate Random Numbers in Excel (In Easy Steps)</title>
+<meta name="keywords" content="random, rand, randbetween, function, excel, generate, random numbers, decimal, whole, numbers, between, randarray, integers, random number generator, press f9, no duplicates">
+<meta name="description" content="Excel has two very useful functions when it comes to generating random numbers. The RAND function generates a random decimal number between 0 and 1.">
+
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="index, follow">
+<META content=EN-US name=LANGUAGE>
+<meta property="og:title" content="Random Numbers in Excel">
+<meta property="og:url" content="random-numbers.html">
+<meta property="og:type" content="article">
+<meta property="fb:admins" content="100003702321830">
+<meta property="og:description" content="Excel has two very useful functions when it comes to generating random numbers. The RAND function generates a random decimal number between 0 and 1.">
+<meta property="og:image" content="../smi/examples/random-numbers.png"/>
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@ExcelEasy">
+<meta name="twitter:image" content="../smi/examples/random-numbers.png">
+
+<link rel="preload" href="../css/style.css" as="style">
+<link rel="preload" href="images/random-numbers/rand-function.png" as="image">
+<link rel="preload" href="../js/default.js" as="script">
+<link rel="preload" href="../js/init.js" as="script">
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f5ca7.txt?client=ca-pub-1987456081350047765" data-overlays="bottom" crossorigin="anonymous"></script>
+<link rel="preload" href="../css/style-medium.css" as="style" media="(max-width:961px)">
+<link rel="preload" href="../css/style-small.css" as="style" media="(max-width:620px)">
+<link rel="stylesheet" href="../css/style.css"/>
+<script src="../js/default.js" type="text/javascript"></script>
+<script src="../js/init.js" type="text/javascript"></script>
+<style type="text/css">
+.adslot { width: 336px; height: 280px; }
+@media (min-width:320px) { .adslot { width: 300px; height: 250px; } }
+@media (min-width:360px) and (orientation: portrait) { .adslot { width: 336px; height: 280px; } }
+@media (min-width:604px) { .adslot { width: 336px; height: 280px; } }
+</style>
+<noscript>
+    <link rel="stylesheet" href="../css/skel.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/adslot.css" />
+</noscript>
+<link rel="icon" href="../favicon-48x48.ico">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+</head>
+<body>
+<header id="header">
+	<div class="container">
+		<span class="notranslate">
+			<div id="logo">
+				<a href="../index.html"><img src="../layout/excel-guides.svg" onerror="this.src='../layout/excel-guides.png'" border="0" alt="Excel guides" title="Excel guides" width="1" height="1" /><h2>Excel</h2>&nbsp;&nbsp;<span class="easy">for Data Analysis</span></a>
+                <p>#1 <a href="../index.html">Excel guides</a> on the go</p>
+		  	</div>            
+			<nav id="nav">
+				  <ul>
+                  <li><a href="../index.html">Excel</a></li>
+                  <li><a href="../introduction.html">Introduction</a></li>
+				  <li><a href="../basics.html">Basics</a></li>
+				  <li><a href="../functions.html">Functions</a></li>
+				  <li><a href="../data-analysis.html">Data Analysis</a></li>
+                  <li><a href="../vba.html">VBA</a></li>
+                  <li class="current_page_item"><a href="../examples.html">300 Examples</a></li>
+                  <li><a href="../ask-us.html">Ask us</a></li>
+                  </ul>
+				</nav>
+			</span>
+		</div>
+	</header>
+	<!-- end #header -->
+	<div class="container">
+		<div class="row 100%">
+			<div class="8u 12u(medium)">
+				<div class="post">
+						<h1 class="title" style="float:left;">Random Numbers</h1>
+						<div style="clear: both;">&nbsp;</div>
+<div class="entry">
+<p class="spacing"><a href="#rand">Rand</a> | <a href="#randbetween">RandBetween</a> | <a href="#randarray">RandArray</a> | <a href="#random-number-generator">Random Number Generator</a></p>
+<p>Excel has two very useful functions when it comes to generating <strong>random numbers</strong>. <strong>RAND</strong> and <strong>RANDBETWEEN</strong>.</p>
+<h3><a name="rand" id="rand"></a>Rand</h3>
+              <p>The RAND function generates a random decimal number between 0 and 1.</p>
+              <p>1. Select cell A1.</p>
+              <p>2. Type =RAND() and press Enter. The RAND function takes no arguments.</p>
+              <p><img src="images/random-numbers/rand-function.png" alt="RAND function" width="604" height="107" title="RAND function" /></p>
+              
+
+     
+     
+     
+              <p>3. To generate a list of random numbers, select cell A1, click on the lower right corner of cell A1 and drag it down.</p>
+              <p><img src="images/random-numbers/list-of-random-numbers.png" alt="List of Random Numbers" width="604" height="247" title="List of Random Numbers" /></p>
+              <p>Note that cell A1 has changed. That is because random numbers change every time a cell on the sheet is calculated.</p>
+			  <p>4. If you want random numbers that remain constant once generated, simply copy the random numbers and paste them as values.</p>
+              <p><img src="images/random-numbers/paste-as-values.png" loading="lazy" alt="Paste As Values" width="604" height="407" title="Paste As Values" /></p>
+              <p>5. Select cell C1 and look at the formula bar. This cell holds a value now and not the RAND function.</p>
+              <p><img src="images/random-numbers/values.png" loading="lazy" alt="Values" width="604" height="227" title="Values" /></p>
+              <div class="ad"><!-- Advanced Excel Pages Middle -->
+
+     
+     
+     data-ad-slot="2529116896"></ins>
+</div>
+              <h3><a name="randbetween" id="randbetween"></a>RandBetween</h3>
+              <p>The RANDBETWEEN function generates a random whole number between two boundaries.</p>
+              <p>1. Select cell A1.</p>
+              <p>2. Type =RANDBETWEEN(50,75) and press Enter.</p>
+			  <p><img src="images/random-numbers/randbetween-function.png" loading="lazy" alt="RANDBETWEEN function" width="604" height="107" title="RANDBETWEEN function" /></p>
+			  <p>3. If you want to generate random decimal numbers between 50 and 75, modify the RAND function as follows:</p>
+              <p><img src="images/random-numbers/modified-rand-function.png" loading="lazy" alt="Modified RAND function" width="604" height="107" title="Modified RAND function" /></p>
+              <h3><a name="randarray" id="randarray"></a>RandArray</h3>
+              <p>If you have Excel 365 or Excel 2021, you can use the magic RANDARRAY function.</p>
+              <p>1. By default, the RANDARRAY function generates random decimal numbers between 0 and 1. The array below consists of 5 rows and 2 columns.</p>
+              <p><img src="images/random-numbers/randarray-function.png" loading="lazy" alt="RANDARRAY function" width="604" height="187" title="RANDARRAY function" /></p>
+              <p>Note: this dynamic array function, entered into cell A1, fills multiple cells. Wow! This behavior in Excel 365/2021 is called <a href="dynamic-arrays.html">spilling</a>.</p>
+			  <p>2. The RANDARRAY function below generates an array of decimal numbers, 1 row by 5 columns, between 99 and 100.</p>
+			  <p><img src="images/random-numbers/generate-random-decimal-numbers.png" loading="lazy" alt="Generate Random Decimal Numbers" width="604" height="107" title="Generate Random Decimal Numbers" /></p>
+              <p>3. The RANDARRAY function below generates an array of integers, 10 rows by 1 column, between 20 and 80.</p>
+              <p><img src="images/random-numbers/generate-random-integers.png" loading="lazy" alt="Generate Random Integers" width="604" height="287" title="Generate Random Integers" /></p>
+              <p>Note: the Boolean TRUE (fifth argument) tells the RANDARRAY function to return an array of integers.</p>
+			  <h3><a name="random-number-generator" id="random-number-generator"></a>Random Number Generator</h3>
+			  <p>To create a <strong>random number generator in Excel</strong>, simply press F9 or use VBA (our favorite).</p>
+			  <p>1. Select cell A1.</p>
+              <p>2. Type =RANDBETWEEN(0,100) and press Enter.</p>
+			  <p>3. Select cell A1, click on the lower right corner of cell A1 and drag it down to cell A10.</p>
+			  <p><img src="images/random-numbers/random-numbers-between-0-and-100.png" loading="lazy" alt="Random Numbers Between 0 and 100" width="604" height="307" title="Random Numbers Between 0 and 100" /></p>
+			  <p>4. Press F9 to generate new random numbers repeatedly.</p>
+			  <p><img src="images/random-numbers/random-number-generator.png" loading="lazy" alt="Random Number Generator in Excel" width="604" height="287" title="Random Number Generator in Excel" /></p>
+			  <p>5. To generate random numbers with no duplicates, combine UNIQUE with RANDARRAY.</p>
+			  <p><img src="images/random-numbers/generate-random-numbers-with-no-duplicates.png" loading="lazy" alt="Generate Random Numbers with No Duplicates" width="604" height="287" title="Generate Random Numbers with No Duplicates" /></p>
+			  <p>Note: press F9 to refresh the random numbers. Sometimes you will see an array that consists of fewer than 10 numbers (when the RANDARRAY function generates duplicates).</p>
+			  <p>You can also use VBA to create a random number generator in Excel. This approach enables you to quickly produce random numbers that remain constant once generated.</p>
+			  <p>1. Select a range of any size! (for example, the range A1:D10).</p>
+			  <p>2. Execute the following code lines:</p>
+			  <div class="code"><span class="predefined">Dim</span> rng <span class="predefined">As</span> Range, cell <span class="predefined">As</span> Range<br /><br />
+			  <span class="predefined">Set</span> rng = Selection<br /><br />
+			  <span class="predefined">For</span> <span class="predefined">Each</span> cell <span class="predefined">In</span> rng<br />
+			  &nbsp;&nbsp;&nbsp;&nbsp;cell.Value = WorksheetFunction.RandBetween(0, 100)<br />
+              <span class="predefined">Next</span> cell</div>
+			  <p>Result.</p>
+			  <p><img src="images/random-numbers/random-number-generator-vba.png" loading="lazy" alt="Random Number Generator (VBA)" width="604" height="287" title="Random Number Generator (VBA)" /></p>
+			  <p>Note: if you're new to VBA, we're here to help you <a href="../vba/create-a-macro.html">create and execute a macro</a>.</p>
+			  <div class="ad"><!-- Advanced Excel Pages End -->
+
+     
+     
+     data-ad-slot="4005850092"></ins>
+</div>
+            </div>
+			   </div>
+				<span class="invtab"><div class="post">
+					<div style="clear: both;"></div>
+                    <div class="entrylearn">  
+                  <p align="left"><span class="buttonp"> <a href="rank.html">4/14 Completed! Learn more about statistical functions &gt;<br />
+                    </a></span>Go to Next Guide: <a href="../functions/round.html">Round</a></div>
+                  </div></span>
+                  </div>
+                  <div class="4u 12u(medium)">
+              <div id="search">
+              <div class="cse-branding-right" style="background-color:#FFFFFF;color:#000000">
+                <div class="cse-branding-form" style="margin-right:0px;">
+                  <form action="https://www.Advanced Excel for Data Analysis/search.html" id="cse-search-box">
+                    <div>
+                      <input type="hidden" name="cx" value="partner-pub-1987061359047735:3934495699" />
+                      <input type="hidden" name="cof" value="FORID:10" />
+                      <input type="hidden" name="ie" value="UTF-8" />
+                      <input type="text" name="q" placeholder="Explore Entire Guide" class="field" disabled />
+                      <span class="notranslate"><input type="submit" name="sa" value="Go" class="button" disabled /></span>
+                    </div>
+                  </form>
+                </div>
+                <div class="cse-branding-logo"></div>
+                <div class="cse-branding-text"></div>
+              </div>
+              </div>
+              <div id="sidebar">
+					<ul>
+				  	  <li>
+                        <h3>Guide</h3>
+						  <ul>
+							<li><a href="../functions/statistical-functions.html">Statistical Functions</a></li>
+                    </ul>
+					  </li>
+				  </ul>
+			  </div>
+              <div id="sidebar">
+				  <ul><li>
+				      <h3><font color="#FF9900"><span class="notranslate">Learn more, it's easy</span></font></h3>
+				    </li>
+					  <li><ul>                    
+                        <li><a href="average.html">Average</a></li>
+                        <li><a href="negative-numbers-to-zero.html">Negative Numbers to Zero</a></li>
+                        <li class="current_page_item"><a href="random-numbers.html">Random Numbers</a></li>
+                        <li><a href="rank.html">Rank</a></li>
+                        <li><a href="percentiles-quartiles.html">Percentiles and Quartiles</a></li>
+                        <li><a href="box-whisker-plot.html">Box and Whisker Plot</a></li>
+                        <li><a href="averageif.html">AverageIf</a></li>
+                        <li><a href="forecast.html">Forecast</a></li>
+                        <li><a href="maxifs-minifs.html">MaxIfs and MinIfs</a></li>
+                        <li><a href="weighted-average.html">Weighted Average</a></li>
+                        <li><a href="mode.html">Mode</a></li> 
+                        <li><a href="standard-deviation.html">Standard Deviation</a></li>
+                        <li><a href="frequency.html">Frequency</a></li>  
+                        </ul>
+                    </li>
+                  </ul>
+			  </div>
+              <div id="sidebar">
+					<ul>
+				  	  <li>
+                        <h3><span class="notranslate"><font color="#8FAD22">Download Excel File</font></span></h3>
+						  <ul>
+							<li><a href="excel-files/random-numbers.xlsx">random-numbers.xlsx</a></li>
+                    </ul>
+					  </li>
+				  </ul>
+			  </div>
+              <div id="sidebar">
+					<ul>
+				  	  <li>
+                        <h3>Next Guide</h3>
+						  <ul>
+							<li><a href="../functions/round.html">Round</a></li>
+                    </ul>
+					  </li>
+				  </ul>
+			  </div>
+              <div id="sidebar">
+		      <h3><span class="notranslate"></span></h3>
+              <p style="padding-top:7px;padding-bottom:1px"><a href="https://facebook.com/thecodedragon" target="blank" rel="nofollow"><img src="../layout/facebook-logo.png" onmouseover="this.src='../layout/facebook-logo-onmouseover.png'" onmouseout="this.src='../layout/facebook-logo.png'" width="30" height="30" border="0" alt="Advanced Excel on Facebook" title="Advanced Excel on Facebook" /></a> <a href="https://twitter.com/ceoofdss" target="blank" rel="nofollow"><img src="../layout/x-logo.png" onmouseover="this.src='../layout/x-logo-onmouseover.png'" onmouseout="this.src='../layout/x-logo.png'" width="30" height="30" border="0" alt="Advanced Excel on X" title="Advanced Excel on X" /></a> <a href="https://www.pinterest.com/julisunkan" target="blank" rel="nofollow"><img src="../layout/pinterest-logo.png" onmouseover="this.src='../layout/pinterest-logo-onmouseover.png'" onmouseout="this.src='../layout/pinterest-logo.png'" width="30" height="30" border="0" alt="Advanced Excel on Pinterest" title="Advanced Excel on Pinterest"></a> <a href="https://www.linkedin.com/in/digitalskeleton/" target="blank" rel="nofollow"><img src="../layout/linkedin-logo.png" onmouseover="this.src='../layout/linkedin-logo-onmouseover.png'" onmouseout="this.src='../layout/linkedin-logo.png'" width="30" height="30" border="0" alt="Advanced Excel on LinkedIn" title="Advanced Excel on LinkedIn"></a></p>
+              </div>
+              <div id="sidebar">
+					<ul>
+				  	  <li>
+                        <h3><span class="notranslate">Become an Excel Pro</span></h3>
+						  <ul>
+                            <li><a href="../examples.html">300 Examples</a></li>
+                          </ul>
+					  </li>
+				  </ul>
+			  </div>
+              <!-- end #sidebar -->
+			  <div style="clear: both;">&nbsp;</div>
+		  </div>
+		</div>
+	</div>
+	<!-- end #page -->
+</div>
+<div id="footer">
+	<p><a href="random-numbers.html">Random Numbers</a> &bull; &copy; AppMonster<br />
+	Excel is Awesome, we'll show you: <a href="../introduction.html">Introduction</a> &bull; <a href="../basics.html">Basics</a> &bull; <a href="../functions.html">Functions</a> &bull; <a href="../data-analysis.html">Data Analysis</a> &bull; <a href="../vba.html">VBA</a></p>
+</div>
+<!-- end #footer -->
+
+<script type="text/javascript">
+  
+  $(function() { (adsbygoogle = window.adsbygoogle || []).push({}); });
+  $(function() { (adsbygoogle = window.adsbygoogle || []).push({}); });
+  $(function() { (adsbygoogle = window.adsbygoogle || []).push({}); });
+  
+</script>
+
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"rayId":"8c78d2baf81e9fc0","version":"2024.8.0","serverTiming":{"name":{"cfExtPri":true,"cfL4":true}},"token":"c707dde3711e49e3a0cbf0020eef6a91","b":1}' crossorigin="anonymous"></script>
+</body>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H0MBKVX9SV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-H0MBKVX9SV');
+</script>
+
+<!-- Mirrored from www.Advanced Excel for Data Analysis/examples/random-numbers.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 23 Sep 2024 07:38:51 GMT -->
+</html>

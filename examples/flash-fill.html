@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+
+
+<!-- Mirrored from www.Advanced Excel for Data Analysis/examples/flash-fill.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 23 Sep 2024 07:31:15 GMT -->
+<head>
+
+<title>Flash Fill in Excel (In Easy Steps)</title>
+<meta name="keywords" content="flash fill, excel, automatically, extract, combine, data, flash fill example, reformat, rearrange, flash fill limitations, recognizes, pattern, decimal numbers, does not automatically update, source data changes">
+<meta name="description" content="Flash fill is a great Excel tool. Learn how to use flash fill to automatically extract data, combine data, and much more.">
+
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="index, follow">
+<META content=EN-US name=LANGUAGE>
+<meta property="og:title" content="Flash Fill in Excel">
+<meta property="og:url" content="flash-fill.html">
+<meta property="og:type" content="article">
+<meta property="fb:admins" content="100003702321830">
+<meta property="og:description" content="Flash fill is a great Excel tool. Learn how to use flash fill to automatically extract data, combine data, and much more.">
+<meta property="og:image" content="../smi/examples/flash-fill.png"/>
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@ExcelEasy">
+<meta name="twitter:image" content="../smi/examples/flash-fill.png">
+
+<link rel="preload" href="../css/style.css" as="style">
+<link rel="preload" href="images/flash-fill/flash-fill-example-1.png" as="image">
+<link rel="preload" href="../js/default.js" as="script">
+<link rel="preload" href="../js/init.js" as="script">
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f5ca7.txt?client=ca-pub-1987456081350047765" data-overlays="bottom" crossorigin="anonymous"></script>
+<link rel="preload" href="../css/style-medium.css" as="style" media="(max-width:961px)">
+<link rel="preload" href="../css/style-small.css" as="style" media="(max-width:620px)">
+<link rel="stylesheet" href="../css/style.css"/>
+<script src="../js/default.js" type="text/javascript"></script>
+<script src="../js/init.js" type="text/javascript"></script>
+<style type="text/css">
+.adslot { width: 336px; height: 280px; }
+@media (min-width:320px) { .adslot { width: 300px; height: 250px; } }
+@media (min-width:360px) and (orientation: portrait) { .adslot { width: 336px; height: 280px; } }
+@media (min-width:604px) { .adslot { width: 336px; height: 280px; } }
+</style>
+<noscript>
+    <link rel="stylesheet" href="../css/skel.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/adslot.css" />
+</noscript>
+<link rel="icon" href="../favicon-48x48.ico">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+</head>
+<body>
+<header id="header">
+	<div class="container">
+		<span class="notranslate">
+			<div id="logo">
+				<a href="../index.html"><img src="../layout/excel-guides.svg" onerror="this.src='../layout/excel-guides.png'" border="0" alt="Excel guides" title="Excel guides" width="1" height="1" /><h2>Excel</h2>&nbsp;&nbsp;<span class="easy">for Data Analysis</span></a>
+                <p>#1 <a href="../index.html">Excel guides</a> on the go</p>
+		  	</div>            
+			<nav id="nav">
+				  <ul>
+                  <li><a href="../index.html">Excel</a></li>
+                  <li><a href="../introduction.html">Introduction</a></li>
+				  <li><a href="../basics.html">Basics</a></li>
+				  <li><a href="../functions.html">Functions</a></li>
+				  <li><a href="../data-analysis.html">Data Analysis</a></li>
+                  <li><a href="../vba.html">VBA</a></li>
+                  <li class="current_page_item"><a href="../examples.html">300 Examples</a></li>
+                  <li><a href="../ask-us.html">Ask us</a></li>
+                  </ul>
+				</nav>
+			</span>
+		</div>
+	</header>
+	<!-- end #header -->
+	<div class="container">
+		<div class="row 100%">
+			<div class="8u 12u(medium)">
+				<div class="post">
+						<h1 class="title" style="float:left;">Flash Fill</h1>
+						<div style="clear: both;">&nbsp;</div>
+<div class="entry">
+<p class="spacing"><a href="#example-1">Example 1</a> | <a href="#example-2">Example 2</a> | <a href="#example-3">Example 3</a> | <a href="#example-4">Example 4</a> | <a href="#example-5">Example 5</a> | <a href="#flash-fill-limitations">Flash Fill Limitations</a></p>
+<p>Flash fill is a great Excel tool. Learn how to use <strong>flash fill</strong> to automatically extract data, combine data, and much more.</p>
+<h3><a name="example-1" id="example-1"></a>Example 1</h3>
+<p><strong>Use flash fill in Excel</strong> to extract the numbers in column A below.</p>
+<p>1. First, tell Excel what you want to do by entering the value 4645 into cell B1.</p>
+<p><img src="images/flash-fill/flash-fill-example-1.png" alt="Flash Fill Example 1" width="604" height="161" title="Flash Fill Example 1" /></p>
+
+
+     
+     
+     
+<p>2. On the Data tab, in the Data Tools group, click Flash Fill (or press CTRL + E).</p>
+<p><img src="images/flash-fill/click-flash-fill.png" alt="Click Flash Fill" width="446" height="100" title="Click Flash Fill" /></p>
+<p>Result:</p>
+<p><img src="images/flash-fill/flash-fill-result-1.png" alt="Flash Fill in Excel" width="604" height="161" title="Flash Fill in Excel" /></p>
+<p></p>
+<h3><a name="example-2" id="example-2"></a>Example 2</h3>
+<p><strong>Use flash fill in Excel</strong> to combine the last names in column A below and the first names in column B below to create email addresses.</p>
+<p>1. First, tell Excel what you want to do by entering a correct email address in cell C1.</p>
+<p><img src="images/flash-fill/flash-fill-example-2.png" loading="lazy" alt="Flash Fill Example 2" width="604" height="161" title="Flash Fill Example 2" /></p>
+<p>2. On the Data tab, in the Data Tools group, click Flash Fill (or press CTRL + E).</p>
+<p><img src="images/flash-fill/click-flash-fill.png" loading="lazy" alt="Click Flash Fill" width="446" height="100" title="Click Flash Fill" /></p>
+<p>Result:</p>
+<p><img src="images/flash-fill/flash-fill-result-2.png" loading="lazy" alt="Flash Fill in Excel" width="604" height="161" title="Flash Fill in Excel" /></p>
+<div class="ad"><!-- Advanced Excel Pages Middle -->
+
+     
+     
+     data-ad-slot="2529116896"></ins>
+</div>
+<h3><a name="example-3" id="example-3"></a>Example 3</h3>
+<p><strong>Use flash fill in Excel</strong> to reformat the numbers in column A below.</p>
+<p>1. First, tell Excel what you want to do by entering a correct social security number in cell B1.</p>
+<p><img src="images/flash-fill/flash-fill-example-3.png" loading="lazy" alt="Flash Fill Example 3" width="604" height="161" title="Flash Fill Example 3" /></p>
+<p>2. On the Data tab, in the Data Tools group, click Flash Fill (or press CTRL + E).</p>
+<p><img src="images/flash-fill/click-flash-fill.png" loading="lazy" alt="Click Flash Fill" width="446" height="100" title="Click Flash Fill" /></p>
+<p>Result:</p>
+<p><img src="images/flash-fill/flash-fill-result-3.png" loading="lazy" alt="Flash Fill in Excel" width="604" height="161" title="Flash Fill in Excel" /></p>
+<h3><a name="example-4" id="example-4"></a>Example 4</h3>
+<p><strong>Use flash fill in Excel</strong> to rearrange the numbers in column A below.</p>
+<p>1. First, tell Excel what you want to do by entering a new credit card number in cell B1 (for example, swap the first 4 numbers with the last 4 numbers).</p>
+<p><img src="images/flash-fill/flash-fill-example-4.png" loading="lazy" alt="Flash Fill Example 4" width="604" height="161" title="Flash Fill Example 4" /></p>
+<p>2. On the Data tab, in the Data Tools group, click Flash Fill (or press CTRL + E).</p>
+<p><img src="images/flash-fill/click-flash-fill.png" loading="lazy" alt="Click Flash Fill" width="446" height="100" title="Click Flash Fill" /></p>
+<p>Result:</p>
+<p><img src="images/flash-fill/flash-fill-result-4.png" loading="lazy" alt="Flash Fill in Excel" width="604" height="161" title="Flash Fill in Excel" /></p>
+<!--<div class="ad">Excel Pages Middle
+
+     
+     
+     data-ad-slot="2529116896"></ins>
+</div>-->
+<h3><a name="example-5" id="example-5"></a>Example 5</h3>
+<p><strong>Use flash fill in Excel</strong> to extract letters from text strings.</p>
+<p>1. First, tell Excel what you want to do by entering the letters from the first text string in cell B1.</p>
+<p><img src="images/flash-fill/flash-fill-example-5.png" loading="lazy" alt="Flash Fill Example 5" width="604" height="161" title="Flash Fill Example 5" /></p>
+<p>2. On the Data tab, in the Data Tools group, click Flash Fill (or press CTRL + E).</p>
+<p><img src="images/flash-fill/click-flash-fill.png" loading="lazy" alt="Click Flash Fill" width="446" height="100" title="Click Flash Fill" /></p>
+<p>Result:</p>
+<p><img src="images/flash-fill/flash-fill-result-5.png" loading="lazy" alt="Flash Fill in Excel" width="604" height="161" title="Flash Fill in Excel" /></p>
+<h3><a name="flash-fill-limitations" id="flash-fill-limitations"></a>Flash Fill Limitations</h3>
+<p>Flash fill in Excel only works when it recognizes a pattern, and sometimes needs a little help. For example, use flash fill in Excel to extract the numbers in column A below.</p>
+<p>1. First, tell Excel what you want to do by entering the value 130 into cell B1.</p>
+<p><img src="images/flash-fill/flash-fill-example-6.png" loading="lazy" alt="Flash Fill Example 6" width="604" height="161" title="Flash Fill Example 6" /></p>
+<p>2. On the Data tab, in the Data Tools group, click Flash Fill (or press CTRL + E).</p>
+<p><img src="images/flash-fill/click-flash-fill.png" loading="lazy" alt="Click Flash Fill" width="446" height="100" title="Click Flash Fill" /></p>
+<p>Result:</p>
+<p><img src="images/flash-fill/flash-fill-result-6.png" loading="lazy" alt="Flash Fill in Excel" width="604" height="161" title="Flash Fill in Excel" /></p>
+<p>Note: flash fill did not correctly extract the decimal numbers (only the digits after the decimal point).</p>
+<p>3. Immediately after executing step 2, change the value in cell B3 to 26.2 and Excel will correctly extract all other decimal numbers for you.</p>
+<p><img src="images/flash-fill/flash-fill-changed-cells.png" loading="lazy" alt="Flash Fill Changed Cells" width="604" height="161" title="Flash Fill Changed Cells" /></p>
+<p>Finally, flash fill does not automatically update your results when your source data changes.</p>
+<p>4. For example, if you change the number in cell A1 to 200, Excel will not update the number in cell B1.</p>
+<p><img src="images/flash-fill/flash-fill-does-not-update-when-source-data-changes.png" loading="lazy" alt="Flash Fill Does Not Update When Source Data Changes" width="604" height="161" title="Flash Fill Does Not Update When Source Data Changes" /></p>
+<div class="ad"><!-- Advanced Excel Pages End -->
+
+     
+     
+     data-ad-slot="4005850092"></ins>
+</div>
+</div>
+			   </div>
+				<span class="invtab"><div class="post">
+					<div style="clear: both;"></div>
+                    <div class="entrylearn">  
+                  <p align="left"><span class="buttonp"> <a href="move-columns.html">10/12 Completed! Learn much more about ranges &gt;<br />
+                  </a></span>Go to Next Guide: <a href="../introduction/formulas-functions.html">Formulas and Functions</a></div>
+                  </div></span>
+                  </div>
+                  <div class="4u 12u(medium)">
+              <div id="search">
+              <div class="cse-branding-right" style="background-color:#FFFFFF;color:#000000">
+                <div class="cse-branding-form" style="margin-right:0px;">
+                  <form action="https://www.Advanced Excel for Data Analysis/search.html" id="cse-search-box">
+                    <div>
+                      <input type="hidden" name="cx" value="partner-pub-1987061359047735:3934495699" />
+                      <input type="hidden" name="cof" value="FORID:10" />
+                      <input type="hidden" name="ie" value="UTF-8" />
+                      <input type="text" name="q" placeholder="Explore Entire Guide" class="field" disabled />
+                      <span class="notranslate"><input type="submit" name="sa" value="Go" class="button" disabled /></span>
+                    </div>
+                  </form>
+                </div>
+                <div class="cse-branding-logo"></div>
+                <div class="cse-branding-text"></div>
+              </div>
+              </div>
+              <div id="sidebar">
+					<ul>
+				  	  <li>
+                        <h3>Guide</h3>
+						  <ul>
+							<li><a href="../introduction/range.html">Range</a></li>
+                    </ul>
+					  </li>
+				  </ul>
+			  </div>
+              <div id="sidebar">
+				  <ul><li>
+				      <h3><font color="#FF9900"><span class="notranslate">Learn more, it's easy</span></font></h3>
+				    </li>
+					  <li><ul>
+                        <li><a href="autofill.html">AutoFill</a></li>
+                        <li><a href="fibonacci-sequence.html">Fibonacci Sequence</a></li>
+                        <li><a href="custom-lists.html">Custom Lists</a></li>
+                        <li><a href="hide-columns-rows.html">Hide Columns or Rows</a></li>
+                        <li><a href="skip-blanks.html">Skip Blanks</a></li>
+                        <li><a href="autofit.html">AutoFit</a></li>
+                        <li><a href="transpose.html">Transpose</a></li>
+                        <li><a href="split-cells.html">Split Cells</a></li>
+                        <li class="current_page_item"><a href="flash-fill.html">Flash Fill</a></li>
+                        <li><a href="move-columns.html">Move Columns</a></li>
+						<li><a href="row-function.html">ROW function</a></li>
+                        </ul>
+                    </li>
+                  </ul>
+			  </div>
+              <div id="sidebar">
+					<ul>
+				  	  <li>
+                        <h3><span class="notranslate"><font color="#8FAD22">Download Excel File</font></span></h3>
+						  <ul>
+							<li><a href="excel-files/flash-fill.xlsx">flash-fill.xlsx</a></li>
+                    </ul>
+					  </li>
+				  </ul>
+			  </div>
+              <div id="sidebar">
+					<ul>
+				  	  <li>
+                        <h3>Next Guide</h3>
+						  <ul>
+							<li><a href="../introduction/formulas-functions.html">Formulas and Functions</a></li>
+                    </ul>
+					  </li>
+				  </ul>
+			  </div>
+              <div id="sidebar">
+		      <h3><span class="notranslate"></span></h3>
+              <p style="padding-top:7px;padding-bottom:1px"><a href="https://facebook.com/thecodedragon" target="blank" rel="nofollow"><img src="../layout/facebook-logo.png" onmouseover="this.src='../layout/facebook-logo-onmouseover.png'" onmouseout="this.src='../layout/facebook-logo.png'" width="30" height="30" border="0" alt="Advanced Excel on Facebook" title="Advanced Excel on Facebook" /></a> <a href="https://twitter.com/ceoofdss" target="blank" rel="nofollow"><img src="../layout/x-logo.png" onmouseover="this.src='../layout/x-logo-onmouseover.png'" onmouseout="this.src='../layout/x-logo.png'" width="30" height="30" border="0" alt="Advanced Excel on X" title="Advanced Excel on X" /></a> <a href="https://www.pinterest.com/julisunkan" target="blank" rel="nofollow"><img src="../layout/pinterest-logo.png" onmouseover="this.src='../layout/pinterest-logo-onmouseover.png'" onmouseout="this.src='../layout/pinterest-logo.png'" width="30" height="30" border="0" alt="Advanced Excel on Pinterest" title="Advanced Excel on Pinterest"></a> <a href="https://www.linkedin.com/in/digitalskeleton/" target="blank" rel="nofollow"><img src="../layout/linkedin-logo.png" onmouseover="this.src='../layout/linkedin-logo-onmouseover.png'" onmouseout="this.src='../layout/linkedin-logo.png'" width="30" height="30" border="0" alt="Advanced Excel on LinkedIn" title="Advanced Excel on LinkedIn"></a></p>
+              </div>
+              <div id="sidebar">
+					<ul>
+				  	  <li>
+                        <h3><span class="notranslate">Become an Excel Pro</span></h3>
+						  <ul>
+                            <li><a href="../examples.html">300 Examples</a></li>
+                          </ul>
+					  </li>
+				  </ul>
+			  </div>
+              <!-- end #sidebar -->
+			  <div style="clear: both;">&nbsp;</div>
+		  </div>
+		</div>
+	</div>
+	<!-- end #page -->
+</div>
+<div id="footer">
+	<p><a href="flash-fill.html">Flash Fill</a> &bull; &copy; AppMonster<br />
+	Excel is Awesome, we'll show you: <a href="../introduction.html">Introduction</a> &bull; <a href="../basics.html">Basics</a> &bull; <a href="../functions.html">Functions</a> &bull; <a href="../data-analysis.html">Data Analysis</a> &bull; <a href="../vba.html">VBA</a></p>
+</div>
+<!-- end #footer -->
+
+<script type="text/javascript">
+  
+  $(function() { (adsbygoogle = window.adsbygoogle || []).push({}); });
+  $(function() { (adsbygoogle = window.adsbygoogle || []).push({}); });
+  //$(function() { (adsbygoogle = window.adsbygoogle || []).push({}); });
+  $(function() { (adsbygoogle = window.adsbygoogle || []).push({}); });
+  
+</script>
+
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"rayId":"8c78d1bc78079fc0","version":"2024.8.0","serverTiming":{"name":{"cfExtPri":true,"cfL4":true}},"token":"c707dde3711e49e3a0cbf0020eef6a91","b":1}' crossorigin="anonymous"></script>
+</body>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H0MBKVX9SV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-H0MBKVX9SV');
+</script>
+
+<!-- Mirrored from www.Advanced Excel for Data Analysis/examples/flash-fill.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 23 Sep 2024 07:31:19 GMT -->
+</html>

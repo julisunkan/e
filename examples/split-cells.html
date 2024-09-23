@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+
+
+<!-- Mirrored from www.Advanced Excel for Data Analysis/examples/split-cells.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 23 Sep 2024 07:31:10 GMT -->
+<head>
+
+<title>How to Split Cells in Excel (In Easy Steps)</title>
+<meta name="keywords" content="split cells, excel, merge cells, split the contents of a cell, multiple cells, text to columns, flash fill, formulas, delimiters, separate, split data into multiple columns, textsplit function">
+<meta name="description" content="To split a cell in Excel, add a new column, change the column widths and merge cells. To split the contents of a cell into multiple cells, use the Text to Columns wizard, flash fill or formulas.">
+
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="index, follow">
+<META content=EN-US name=LANGUAGE>
+<meta property="og:title" content="Split Cells in Excel">
+<meta property="og:url" content="split-cells.html">
+<meta property="og:type" content="article">
+<meta property="fb:admins" content="100003702321830">
+<meta property="og:description" content="To split a cell in Excel, add a new column, change the column widths and merge cells. To split the contents of a cell into multiple cells, use the Text to Columns wizard, flash fill or formulas.">
+<meta property="og:image" content="../smi/examples/split-cells.png"/>
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@ExcelEasy">
+<meta name="twitter:image" content="../smi/examples/split-cells.png">
+
+<link rel="preload" href="../css/style.css" as="style">
+<link rel="preload" href="images/split-cells/split-cell-b3.png" as="image">
+<link rel="preload" href="../js/default.js" as="script">
+<link rel="preload" href="../js/init.js" as="script">
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f5ca7.txt?client=ca-pub-1987456081350047765" data-overlays="bottom" crossorigin="anonymous"></script>
+<link rel="preload" href="../css/style-medium.css" as="style" media="(max-width:961px)">
+<link rel="preload" href="../css/style-small.css" as="style" media="(max-width:620px)">
+<link rel="stylesheet" href="../css/style.css"/>
+<script src="../js/default.js" type="text/javascript"></script>
+<script src="../js/init.js" type="text/javascript"></script>
+<style type="text/css">
+.adslot { width: 336px; height: 280px; }
+@media (min-width:320px) { .adslot { width: 300px; height: 250px; } }
+@media (min-width:360px) and (orientation: portrait) { .adslot { width: 336px; height: 280px; } }
+@media (min-width:604px) { .adslot { width: 336px; height: 280px; } }
+</style>
+<noscript>
+    <link rel="stylesheet" href="../css/skel.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/adslot.css" />
+</noscript>
+<link rel="icon" href="../favicon-48x48.ico">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+</head>
+<body>
+<header id="header">
+	<div class="container">
+		<span class="notranslate">
+			<div id="logo">
+				<a href="../index.html"><img src="../layout/excel-guides.svg" onerror="this.src='../layout/excel-guides.png'" border="0" alt="Excel guides" title="Excel guides" width="1" height="1" /><h2>Excel</h2>&nbsp;&nbsp;<span class="easy">for Data Analysis</span></a>
+                <p>#1 <a href="../index.html">Excel guides</a> on the go</p>
+		  	</div>            
+			<nav id="nav">
+				  <ul>
+                  <li><a href="../index.html">Excel</a></li>
+                  <li><a href="../introduction.html">Introduction</a></li>
+				  <li><a href="../basics.html">Basics</a></li>
+				  <li><a href="../functions.html">Functions</a></li>
+				  <li><a href="../data-analysis.html">Data Analysis</a></li>
+                  <li><a href="../vba.html">VBA</a></li>
+                  <li class="current_page_item"><a href="../examples.html">300 Examples</a></li>
+                  <li><a href="../ask-us.html">Ask us</a></li>
+                  </ul>
+				</nav>
+			</span>
+		</div>
+	</header>
+	<!-- end #header -->
+	<div class="container">
+		<div class="row 100%">
+			<div class="8u 12u(medium)">
+				<div class="post">
+						<h1 class="title" style="float:left;">Split Cells</h1>
+						<div style="clear: both;">&nbsp;</div>
+<div class="entry">
+<p class="spacing"><a href="#split-cell">Split a Cell</a> | <a href="#text-to-columns">Text to Columns</a> | <a href="#flash-fill">Flash Fill</a> | <a href="#formulas-to-split-cells">Formulas to Split Cells</a></p>
+<p>To <strong>split a cell in Excel</strong>, add a new column, change the column widths and merge cells. To split the contents of a cell into multiple cells, use the Text to Columns wizard, flash fill or formulas.</p>
+<h3><a name="split-cell" id="split-cell"></a>Split a Cell</h3>
+<p>Use the following trick to "split" a cell in Excel.</p>
+<p>1. For example, task B starts at 13:00 and requires 2 hours to complete.</p>
+<p><img src="images/split-cells/split-cell-b3.png" alt="Split Cell B3" width="604" height="121" title="Split Cell B3" /></p>
+<p>Suppose task B starts at 13:30. We would like to split cell B3 and color the right half.</p>
+
+
+     
+     
+     
+<p>2. Select column C.</p>
+<p><img src="images/split-cells/select-column.png" alt="Select Column" width="604" height="121" title="Select Column" /></p>
+<p>3. Right click, and then click Insert.</p>
+<p><img src="images/split-cells/click-insert.png" alt="Click Insert" width="137" height="300" title="Click Insert" /></p>
+<p>Result:</p>
+<p><img src="images/split-cells/inserted-column.png" loading="lazy" alt="Inserted Column" width="604" height="121" title="Inserted Column" /></p>
+<p>4. The default width of a column is 64 pixels. Change the width of column B and C to 32 pixels.</p>
+<p><img src="images/split-cells/change-column-widths.png" loading="lazy" alt="Change Column Widths" width="604" height="167" title="Change Column Widths" /></p>
+<p>5. Select cell B1 and cell C1.</p>
+<p>6. On the Home tab, in the Alignment group, click the down arrow next to Merge & Center and click Merge Cells.</p>
+<p><img src="images/split-cells/merge-cells.png" loading="lazy" alt="Merge Cells" width="286" height="180" title="Merge Cells" /></p>
+<p>Result:</p>
+<p><img src="images/split-cells/merged-cells.png" loading="lazy" alt="Merged Cells" width="604" height="121" title="Merged Cells" /></p>
+<p>7. Repeat steps 5-6 for cell B2 and cell C2 (and cell B4 and cell C4).</p>
+<p>8. Change the background color of cell B3 to No Fill.</p>
+<p>Result:</p>
+<p><img src="images/split-cells/split-cell.png" loading="lazy" alt="Split Cell" width="604" height="121" title="Split Cell" /></p>
+<p>Note: suppose task A ends at 15:30. Use the trick explained above to "split" cell E2. Download the Excel file and give it a try.</p>
+<div class="ad"><!-- Advanced Excel Pages Middle -->
+
+     
+     
+     data-ad-slot="2529116896"></ins>
+</div>
+<h3><a name="text-to-columns" id="text-to-columns"></a>Text to Columns</h3>
+<p>To <strong>split the contents of a cell into multiple cells</strong>, use the Text to Columns wizard. For example, let's split full names into last and first names.</p>
+<p>1. Select the range with full names.</p>
+<p><img src="images/split-cells/text-to-columns-example.png" loading="lazy" alt="Text to Columns Example" width="604" height="287" title="Text to Columns Example" /></p>
+<p>2. On the Data tab, in the Data Tools group, click Text to Columns.</p>
+<p><img src="images/split-cells/click-text-to-columns.png" loading="lazy" alt="Click Text to Columns" width="446" height="100" title="Click Text to Columns" /></p>
+<p>The following dialog box appears.</p>
+<p>3. Choose Delimited and click Next.</p>
+<p><img src="images/text-to-columns/convert-text-to-columns-wizard-step-1.png" loading="lazy" alt="Convert Text to Columns Wizard - Step 1" width="507" height="413" title="Convert Text to Columns Wizard - Step 1" /></p>
+<p>4. Clear all the check boxes under Delimiters except for the Comma and Space check box.</p>
+<p>5. Click Finish.</p>
+<p><img src="images/text-to-columns/convert-text-to-columns-wizard-step-2.png" loading="lazy" alt="Convert Text to Columns Wizard - Step 2" width="507" height="413" title="Convert Text to Columns Wizard - Step 2" /></p>
+<p>Result:</p>
+<p><img src="images/split-cells/split-full-names.png" loading="lazy" alt="Split Full Names" width="604" height="287" title="Split Full Names" /></p>
+<p>Note: this example has commas and spaces as delimiters. You may have other delimiters in your data. Experiment by checking and unchecking the different check boxes. You get a live preview of how your data will be separated.</p>
+<!--<div class="ad">Excel Pages Middle
+
+     
+     
+     data-ad-slot="2529116896"></ins>
+</div>-->
+<h3><a name="flash-fill" id="flash-fill"></a>Flash Fill</h3>
+<p>Do you like Magic? Instead of using the Text to Columns wizard, use flash fill to quickly <strong>split data into multiple columns</strong>.</p>
+<p>1. First, split the contents of one cell into multiple cells.</p>
+<p><img src="images/split-cells/flash-fill-example.png" loading="lazy" alt="Flash Fill Example" width="604" height="161" title="Flash Fill Example" /></p>
+<p>2. Select cell B1 and press CTRL + E (flash fill shortcut).</p>
+<p><img src="images/split-cells/split-data-into-multiple-columns-1.png" loading="lazy" alt="Split Data Into Multiple Columns" width="604" height="161" title="Split Data Into Multiple Columns" /></p>
+<p>3. Select cell C1 and press CTRL + E.</p>
+<p><img src="images/split-cells/split-data-into-multiple-columns-2.png" loading="lazy" alt="Split Data Into Multiple Columns" width="604" height="161" title="Split Data Into Multiple Columns" /></p>
+<p>4. Select cell D1 and press CTRL + E.</p>
+<p><img src="images/split-cells/split-data-into-multiple-columns-3.png" loading="lazy" alt="Split Data Into Multiple Columns" width="604" height="161" title="Split Data Into Multiple Columns" /></p>
+<p>Note: flash fill in Excel only works when it recognizes a pattern. Download the Excel file and give it a try. Visit our page about <a href="flash-fill.html">Flash Fill</a> to learn more about this great Excel tool.</p>
+<!--<div class="ad">Excel Pages Middle
+
+     
+     
+     data-ad-slot="2529116896"></ins>
+</div>-->
+<h3><a name="formulas-to-split-cells" id="formulas-to-split-cells"></a>Formulas to Split Cells</h3>
+<p>One drawback when using these tools is that the output will not automatically update when the source data changes. Create formulas to overcome this limitation. Let's split full names into first and last names.</p>
+<p>1. The formula below returns the first name.</p>
+<p><img src="images/split-cells/first-name.png" loading="lazy" alt="First Name" width="604" height="227" title="First Name" /></p>
+<p>2. The formula below returns the last name.</p>
+<p><img src="images/split-cells/last-name.png" loading="lazy" alt="Last Name" width="604" height="227" title="Last Name" /></p>
+<p>3. Select the range B2:C2 and drag it down.</p>
+<p><img src="images/split-cells/formulas-to-split-cells.png" loading="lazy" alt="Formulas to Split Cells" width="604" height="247" title="Formulas to Split Cells" /></p>
+<p>Note: visit our page about <a href="separate-strings.html">separating strings</a> to understand the logic behind these formulas.</p>
+<p>4. If you have Excel 365, use the new <a href="textsplit.html">TEXTSPLIT function</a> to split text into rows or columns using delimiters.</p>
+<p><img src="images/split-cells/textsplit-function.png" loading="lazy" alt="TEXTSPLIT function" width="604" height="227" title="TEXTSPLIT function" /></p>
+<p>Note: the TEXTSPLIT function, entered into cell B2, fills multiple cells (B2 and C2). Wow! This behavior is called <a href="dynamic-arrays.html">spilling</a>.</p>
+<div class="ad"><!-- Advanced Excel Pages End -->
+
+     
+     
+     data-ad-slot="4005850092"></ins>
+</div>
+            </div>
+			   </div>
+				<span class="invtab"><div class="post">
+					<div style="clear: both;"></div>
+                    <div class="entrylearn">  
+                  <p align="left"><span class="buttonp"> <a href="flash-fill.html">9/12 Completed! Learn much more about ranges &gt;<br />
+                  </a></span>Go to Next Guide: <a href="../introduction/formulas-functions.html">Formulas and Functions</a></div>
+                  </div></span>
+                  </div>
+                  <div class="4u 12u(medium)">
+              <div id="search">
+              <div class="cse-branding-right" style="background-color:#FFFFFF;color:#000000">
+                <div class="cse-branding-form" style="margin-right:0px;">
+                  <form action="https://www.Advanced Excel for Data Analysis/search.html" id="cse-search-box">
+                    <div>
+                      <input type="hidden" name="cx" value="partner-pub-1987061359047735:3934495699" />
+                      <input type="hidden" name="cof" value="FORID:10" />
+                      <input type="hidden" name="ie" value="UTF-8" />
+                      <input type="text" name="q" placeholder="Explore Entire Guide" class="field" disabled />
+                      <span class="notranslate"><input type="submit" name="sa" value="Go" class="button" disabled /></span>
+                    </div>
+                  </form>
+                </div>
+                <div class="cse-branding-logo"></div>
+                <div class="cse-branding-text"></div>
+              </div>
+              </div>
+              <div id="sidebar">
+					<ul>
+				  	  <li>
+                        <h3>Guide</h3>
+						  <ul>
+							<li><a href="../introduction/range.html">Range</a></li>
+                    </ul>
+					  </li>
+				  </ul>
+			  </div>
+              <div id="sidebar">
+				  <ul><li>
+				      <h3><font color="#FF9900"><span class="notranslate">Learn more, it's easy</span></font></h3>
+				    </li>
+					  <li><ul>
+                        <li><a href="autofill.html">AutoFill</a></li>
+                        <li><a href="fibonacci-sequence.html">Fibonacci Sequence</a></li>
+                        <li><a href="custom-lists.html">Custom Lists</a></li>
+                        <li><a href="hide-columns-rows.html">Hide Columns or Rows</a></li>
+                        <li><a href="skip-blanks.html">Skip Blanks</a></li>
+                        <li><a href="autofit.html">AutoFit</a></li>
+                        <li><a href="transpose.html">Transpose</a></li>
+                        <li class="current_page_item"><a href="split-cells.html">Split Cells</a></li>
+                        <li><a href="flash-fill.html">Flash Fill</a></li>
+                        <li><a href="move-columns.html">Move Columns</a></li>
+						<li><a href="row-function.html">ROW function</a></li>
+                        </ul>
+                    </li>
+                  </ul>
+			  </div>
+              <div id="sidebar">
+					<ul>
+				  	  <li>
+                        <h3><span class="notranslate"><font color="#8FAD22">Download Excel File</font></span></h3>
+						  <ul>
+							<li><a href="excel-files/split-cells.xlsx">split-cells.xlsx</a></li>
+                    </ul>
+					  </li>
+				  </ul>
+			  </div>
+              <div id="sidebar">
+					<ul>
+				  	  <li>
+                        <h3>Next Guide</h3>
+						  <ul>
+							<li><a href="../introduction/formulas-functions.html">Formulas and Functions</a></li>
+                    </ul>
+					  </li>
+				  </ul>
+			  </div>
+              <div id="sidebar">
+		      <h3><span class="notranslate"></span></h3>
+              <p style="padding-top:7px;padding-bottom:1px"><a href="https://facebook.com/thecodedragon" target="blank" rel="nofollow"><img src="../layout/facebook-logo.png" onmouseover="this.src='../layout/facebook-logo-onmouseover.png'" onmouseout="this.src='../layout/facebook-logo.png'" width="30" height="30" border="0" alt="Advanced Excel on Facebook" title="Advanced Excel on Facebook" /></a> <a href="https://twitter.com/ceoofdss" target="blank" rel="nofollow"><img src="../layout/x-logo.png" onmouseover="this.src='../layout/x-logo-onmouseover.png'" onmouseout="this.src='../layout/x-logo.png'" width="30" height="30" border="0" alt="Advanced Excel on X" title="Advanced Excel on X" /></a> <a href="https://www.pinterest.com/julisunkan" target="blank" rel="nofollow"><img src="../layout/pinterest-logo.png" onmouseover="this.src='../layout/pinterest-logo-onmouseover.png'" onmouseout="this.src='../layout/pinterest-logo.png'" width="30" height="30" border="0" alt="Advanced Excel on Pinterest" title="Advanced Excel on Pinterest"></a> <a href="https://www.linkedin.com/in/digitalskeleton/" target="blank" rel="nofollow"><img src="../layout/linkedin-logo.png" onmouseover="this.src='../layout/linkedin-logo-onmouseover.png'" onmouseout="this.src='../layout/linkedin-logo.png'" width="30" height="30" border="0" alt="Advanced Excel on LinkedIn" title="Advanced Excel on LinkedIn"></a></p>
+              </div>
+              <div id="sidebar">
+					<ul>
+				  	  <li>
+                        <h3><span class="notranslate">Become an Excel Pro</span></h3>
+						  <ul>
+                            <li><a href="../examples.html">300 Examples</a></li>
+                          </ul>
+					  </li>
+				  </ul>
+			  </div>
+              <!-- end #sidebar -->
+			  <div style="clear: both;">&nbsp;</div>
+		  </div>
+		</div>
+	</div>
+	<!-- end #page -->
+</div>
+<div id="footer">
+	<p><a href="split-cells.html">Split Cells</a> &bull; &copy; AppMonster<br />
+	Excel is Awesome, we'll show you: <a href="../introduction.html">Introduction</a> &bull; <a href="../basics.html">Basics</a> &bull; <a href="../functions.html">Functions</a> &bull; <a href="../data-analysis.html">Data Analysis</a> &bull; <a href="../vba.html">VBA</a></p>
+</div>
+<!-- end #footer -->
+
+<script type="text/javascript">
+  
+  $(function() { (adsbygoogle = window.adsbygoogle || []).push({}); });
+  $(function() { (adsbygoogle = window.adsbygoogle || []).push({}); });
+  //$(function() { (adsbygoogle = window.adsbygoogle || []).push({}); });
+  //$(function() { (adsbygoogle = window.adsbygoogle || []).push({}); });
+  $(function() { (adsbygoogle = window.adsbygoogle || []).push({}); });
+  
+</script>
+
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"rayId":"8c78d1bb2e0f9fc0","version":"2024.8.0","serverTiming":{"name":{"cfExtPri":true,"cfL4":true}},"token":"c707dde3711e49e3a0cbf0020eef6a91","b":1}' crossorigin="anonymous"></script>
+</body>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H0MBKVX9SV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-H0MBKVX9SV');
+</script>
+
+<!-- Mirrored from www.Advanced Excel for Data Analysis/examples/split-cells.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 23 Sep 2024 07:31:15 GMT -->
+</html>

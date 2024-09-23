@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+
+
+<!-- Mirrored from www.Advanced Excel for Data Analysis/vba/examples/interactive-userform.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 23 Sep 2024 07:45:34 GMT -->
+<head>
+
+<title>Interactive Userform in Excel VBA (In Easy Steps)</title>
+<meta name="keywords" content="interactive userform, excel vba, record, id, worksheet, edit, add, record, clear, close, form, change event, sub, controls collection, load, empty row, exist">
+<meta name="description" content="Below we will look at a program in Excel VBA that creates an interactive Userform.">
+
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="index, follow">
+<META content=EN-US name=LANGUAGE>
+<meta property="og:title" content="Interactive Userform in Excel VBA">
+<meta property="og:url" content="interactive-userform.html">
+<meta property="og:type" content="article">
+<meta property="fb:admins" content="100003702321830">
+<meta property="og:description" content="Learn how to create a program in Excel VBA that creates an interactive Userform.">
+<meta property="og:image" content="../../smi/vba/examples/interactive-userform-2.png"/>
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@ExcelEasy">
+<meta name="twitter:image" content="../../smi/vba/examples/interactive-userform-2.png">
+
+<link rel="preload" href="../../css/style.css" as="style">
+<link rel="preload" href="images/interactive-userform/interactive-userform-1.png" as="image">
+<link rel="preload" href="../../js/default.js" as="script">
+<link rel="preload" href="../../js/init.js" as="script">
+<script async src="../../../pagead2.googlesyndication.com/pagead/js/f5ca7.txt?client=ca-pub-1987456081350047765" data-overlays="bottom" crossorigin="anonymous"></script>
+<link rel="preload" href="../../css/style-medium.css" as="style" media="(max-width:961px)">
+<link rel="preload" href="../../css/style-small.css" as="style" media="(max-width:620px)">
+<link rel="stylesheet" href="../../css/style.css"/>
+<script src="../../js/default.js" type="text/javascript"></script>
+<script src="../../js/init.js" type="text/javascript"></script>
+<style type="text/css">
+.adslot { width: 336px; height: 280px; }
+@media (min-width:320px) { .adslot { width: 300px; height: 250px; } }
+@media (min-width:360px) and (orientation: portrait) { .adslot { width: 336px; height: 280px; } }
+@media (min-width:604px) { .adslot { width: 336px; height: 280px; } }
+</style>
+<noscript>
+    <link rel="stylesheet" href="../../css/skel.css" />
+    <link rel="stylesheet" href="../../css/style.css" />
+    <link rel="stylesheet" href="../../css/adslot.css" />
+</noscript>
+<link rel="icon" href="../../favicon-48x48.ico">
+<link rel="apple-touch-icon" href="../../apple-touch-icon.png">
+</head>
+<body>
+<header id="header">
+	<div class="container">
+		<span class="notranslate">
+			<div id="logo">
+				<a href="../../index.html"><img src="../../layout/excel-guides.svg" onerror="this.src='../../layout/excel-guides.png'" border="0" alt="Excel guides" title="Excel guides" width="1" height="1" /><h2>Excel</h2>&nbsp;&nbsp;<span class="easy">for Data Analysis</span></a>
+                <p>#1 <a href="../../index.html">Excel guides</a> on the go</p>
+		  	</div>            
+			<nav id="nav">
+				  <ul>
+                  <li><a href="../../index.html">Excel</a></li>
+                  <li><a href="../../introduction.html">Introduction</a></li>
+				  <li><a href="../../basics.html">Basics</a></li>
+				  <li><a href="../../functions.html">Functions</a></li>
+				  <li><a href="../../data-analysis.html">Data Analysis</a></li>
+                  <li><a href="../../vba.html">VBA</a></li>
+                  <li class="current_page_item"><a href="../../examples.html">300 Examples</a></li>
+                  <li><a href="../../ask-us.html">Ask us</a></li>
+                  </ul>
+				</nav>
+			</span>
+		</div>
+	</header>
+	<!-- end #header -->
+	<div class="container">
+		<div class="row 100%">
+			<div class="8u 12u(medium)">
+				<div class="post">
+						<h1 class="title" style="float:left;">Interactive Userform</h1>
+						<div style="clear: both;">&nbsp;</div>
+<div class="entry">
+  <p>Below we will look at a program in <strong>Excel VBA</strong> that creates an <strong>interactive Userform</strong>. The Userform we are going to create looks as follows:</p>
+  <p><img src="images/interactive-userform/interactive-userform-1.png" alt="Excel VBA Interactive Userform" width="604" height="421" title="Excel VBA Interactive Userform" /></p>
+  
+
+     
+     
+     
+  <p>Explanation: whenever you enter a value in the ID text box, Excel VBA loads the corresponding record. When you click the Edit / Add button, Excel VBA edits the record on the sheet or adds the record when the ID does not yet exist. The Clear button clears all the text boxes. The Close button closes the Userform.</p>
+  <p>To create this Userform, execute the following steps.</p>
+  <p>1. Open the <a href="../create-a-macro.html#visual-basic-editor">Visual Basic Editor</a>. If the Project Explorer is not visible, click View, Project Explorer.</p>
+  <p>2. Click Insert, Userform. If the Toolbox does not appear automatically, click View, Toolbox. Your screen should be set up as below.</p>
+  <p><img src="../images/userform/userform-screen-setup.png" alt="Userform Screen Setup in Excel VBA" width="604" height="407" title="Userform Screen Setup in Excel VBA" /></p>
+  <p>3. Add the labels, text boxes (first at the top, the second below the first, and so on) and command buttons. Once this has been completed, the result should be consistent with the picture of the Userform shown earlier. For example, create a text box control by clicking on TextBox  from the Toolbox. Next, you can drag a text box on the Userform.</p>
+  <p>4. You can change the names and the captions of the controls. Names are used in the Excel VBA code. Captions are those that appear on your screen. It is good practice to change the names of the controls, but it is not necessary here because we only have a few controls in this example. To change the caption of the labels, text boxes and command buttons, click View, Properties Window and click on each control.</p>
+  <p>5. To show the Userform, place a <a href="../create-a-macro.html#command-button">command button</a> on your worksheet and add the following code line:</p>
+  <div class="code"><span class="predefined">Private</span> <span class="predefined">Sub</span> CommandButton1_Click()<br /><br />
+  UserForm1.Show<br /><br />
+  <span class="predefined">End</span> <span class="predefined">Sub</span></div>
+  <p>We are now going to create the Sub UserForm_Initialize. When you use the Show method for the Userform, this sub will automatically be executed.</p>
+  <p>6. Open the <a href="../create-a-macro.html#visual-basic-editor">Visual Basic Editor</a>.</p>
+  <p>7. In the Project Explorer, right click on UserForm1 and then click View Code.</p>
+  <p>8. Choose Userform from the left drop-down list. Choose Initialize from the right drop-down list.</p>
+  <p>9. Add the following code line:</p>
+  <div class="code"><span class="predefined">Private</span> <span class="predefined">Sub</span> UserForm_Initialize()<br /><br />
+  TextBox1.SetFocus<br /><br />
+  <span class="predefined">End</span> <span class="predefined">Sub</span></div>
+  <p>Explanation: this code line sets the focus on the first text box as this is where we want to start when the Userform is loaded.</p>
+  <p>We have now created the first part of the Userform. Although it looks neat already, nothing will happen yet when we enter a value in the ID text box or when we click one of the command buttons.</p>
+  <div class="ad"><!-- Advanced Excel Pages Middle -->
+
+     
+     
+     data-ad-slot="2529116896"></ins>
+</div>
+  <p>10. In the Project Explorer, right click on UserForm1 and then click View Code.</p>
+  <p>11. Choose TextBox1 from the left drop-down list. Choose Change from the right drop-down list.</p>
+  <p>12. Add the following code line:</p>
+  <div class="code"><span class="predefined">Private</span> <span class="predefined">Sub</span> TextBox1_Change()<br /><br />
+  GetData<br /><br />
+  <span class="predefined">End</span> <span class="predefined">Sub</span></div>
+  <p>13. In the Project Explorer, double click on UserForm1.</p>
+  <p>14. Double click on the Edit / Add command button.</p>
+  <p>15. Add the following code line:</p>
+  <div class="code"><span class="predefined">Private</span> <span class="predefined">Sub</span> CommandButton1_Click()<br /><br />
+  EditAdd<br /><br />
+  <span class="predefined">End</span> <span class="predefined">Sub</span></div>
+  <p>16. Double click on the Clear command button.</p>
+  <p>17. Add the following code line:</p>
+  <div class="code"><span class="predefined">Private</span> <span class="predefined">Sub</span> CommandButton2_Click()<br /><br />
+  ClearForm<br /><br />
+  <span class="predefined">End</span> <span class="predefined">Sub</span></div>
+  <p>Explanation: these subs call other subs we are going to create in a second.</p>
+  <p>18. Double click on the Close command button.</p>
+  <p>19. Add the following code line:</p>
+  <div class="code"><span class="predefined">Private</span> <span class="predefined">Sub</span> CommandButton3_Click()<br /><br />
+  Unload Me<br /><br />
+  <span class="predefined">End</span> <span class="predefined">Sub</span></div>
+  <p>Explanation: this code line closes the Userform.</p>
+  <p>Time to create the  subs. You can go through our <a href="../function-sub.html">Function and Sub</a> Guide to learn more about subs.  If you are in a hurry, simply place the following subs into a module (In the Visual Basic Editor, click Insert, Module).</p>
+  <p>20. First, declare three variables of type Integer and one variable of type Boolean. Declare the variables in the General Declarations section (at the top of the module). This way you only have to  declare the variables once and you can use them in multiple subs.</p>
+  <div class="code"><span class="predefined">Dim</span> id <span class="predefined">As</span> <span class="predefined">Integer</span>, i <span class="predefined">As</span> <span class="predefined">Integer</span>, j <span class="predefined">As</span> <span class="predefined">Integer</span>, flag <span class="predefined">As</span> <span class="predefined">Boolean</span></div>
+  <p>21. Add the GetData sub.</p>
+  <div class="code"><span class="predefined">Sub</span> GetData()<br /><br />
+  <span class="predefined">If</span> IsNumeric(UserForm1.TextBox1.Value) <span class="predefined">Then</span><br />
+  &nbsp;&nbsp;&nbsp;&nbsp;flag = <span class="predefined">False</span><br />
+  &nbsp;&nbsp;&nbsp;&nbsp;i = 0<br />
+  &nbsp;&nbsp;&nbsp;&nbsp;id = UserForm1.TextBox1.Value<br /><br />
+  &nbsp;&nbsp;&nbsp;&nbsp;<span class="predefined">Do</span> <span class="predefined">While</span> Cells(i + 1, 1).Value &lt;&gt; &quot;&quot;<br /><br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="predefined">If</span> Cells(i + 1, 1).Value = id <span class="predefined">Then</span><br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;flag = <span class="predefined">True</span><br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="predefined">For</span> j = 2 <span class="predefined">To</span> 3<br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;UserForm1.Controls(&quot;TextBox&quot; &amp; j).Value = Cells(i + 1, j).Value<br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="predefined">Next</span> j<br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="predefined">End</span> <span class="predefined">If</span><br /><br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;i = i + 1<br /><br />
+  &nbsp;&nbsp;&nbsp;&nbsp;<span class="predefined">Loop</span><br /><br />
+  &nbsp;&nbsp;&nbsp;&nbsp;<span class="predefined">If</span> flag = <span class="predefined">False</span> <span class="predefined">Then</span><br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="predefined">For</span> j = 2 <span class="predefined">To</span> 3<br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;UserForm1.Controls("TextBox" & j).Value = ""<br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="predefined">Next</span> j<br />
+  &nbsp;&nbsp;&nbsp;&nbsp;<span class="predefined">End</span> <span class="predefined">If</span><br /><br />
+  <span class="predefined">Else</span><br />
+  &nbsp;&nbsp;&nbsp;&nbsp;ClearForm<br />
+  <span class="predefined">End</span> <span class="predefined">If</span><br /><br />
+  <span class="predefined">End</span> <span class="predefined">Sub</span></div>
+  <p>Explanation: If the ID text box contains a numeric value, Excel VBA searches for the ID and loads the corresponding record. We use the <a href="controls-collection.html">Controls Collection</a> to easily loop through text boxes. If Excel VBA cannot find the ID (flag is still False), it empties the second and third text box. If the ID text box does not contain a numeric value, Excel VBA calls the ClearForm sub.</p>
+  <p>22. Add the ClearForm sub.</p>
+  <div class="code"><span class="predefined">Sub</span> ClearForm()<br /><br />
+  <span class="predefined">For</span> j = 1 <span class="predefined">To</span> 3<br />
+  &nbsp;&nbsp;&nbsp;&nbsp;UserForm1.Controls(&quot;TextBox&quot; &amp; j).Value = &quot;&quot;<br />
+  <span class="predefined">Next</span> j<br /><br />
+  <span class="predefined">End</span> <span class="predefined">Sub</span></div>
+  <p>Explanation: Excel VBA clears all the text boxes.</p>
+  <p>23. Add the EditAdd sub.</p>
+  <div class="code"><span class="predefined">Sub</span> EditAdd()<br /><br />
+  <span class="predefined">Dim</span> emptyRow <span class="predefined">As</span> <span class="predefined">Long</span><br /><br />
+  <span class="predefined">If</span> UserForm1.TextBox1.Value <> "" <span class="predefined">Then</span><br />
+  &nbsp;&nbsp;&nbsp;&nbsp;flag = <span class="predefined">False</span><br />
+  &nbsp;&nbsp;&nbsp;&nbsp;i = 0<br />
+  &nbsp;&nbsp;&nbsp;&nbsp;id = UserForm1.TextBox1.Value<br />
+  &nbsp;&nbsp;&nbsp;&nbsp;emptyRow = WorksheetFunction.CountA(Range(&quot;A:A&quot;)) + 1<br /><br />
+  &nbsp;&nbsp;&nbsp;&nbsp;<span class="predefined">Do</span> <span class="predefined">While</span> Cells(i + 1, 1).Value &lt;&gt; &quot;&quot;<br /><br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="predefined">If</span> Cells(i + 1, 1).Value = id <span class="predefined">Then</span><br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;flag = <span class="predefined">True</span><br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="predefined">For</span> j = 2 <span class="predefined">To</span> 3<br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Cells(i + 1, j).Value = UserForm1.Controls(&quot;TextBox&quot; &amp; j).Value<br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="predefined">Next</span> j<br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="predefined">End</span> <span class="predefined">If</span><br /><br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;i = i + 1<br /><br />
+  &nbsp;&nbsp;&nbsp;&nbsp;<span class="predefined">Loop</span><br /><br />
+  &nbsp;&nbsp;&nbsp;&nbsp;<span class="predefined">If</span> flag = <span class="predefined">False</span> <span class="predefined">Then</span><br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="predefined">For</span> j = 1 <span class="predefined">To</span> 3<br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Cells(emptyRow, j).Value = UserForm1.Controls(&quot;TextBox&quot; &amp; j).Value<br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="predefined">Next</span> j<br />
+  &nbsp;&nbsp;&nbsp;&nbsp;<span class="predefined">End</span> <span class="predefined">If</span><br /><br />
+  <span class="predefined">End</span> <span class="predefined">If</span><br /><br />
+  <span class="predefined">End</span> <span class="predefined">Sub</span></div>
+  <p>Explanation: If the ID text box is not empty, Excel VBA edits the record on the sheet (the opposite of loading a record as we have seen earlier). If Excel VBA cannot find the ID (flag is still False), it adds the record to the next empty row. The variable emptyRow is the first empty row and increases every time a record is added.</p>
+  <p>24. Exit the Visual Basic Editor, enter the labels shown below into row 1 and test the Userform.</p>
+  <p><img src="images/interactive-userform/interactive-userform-2.png" loading="lazy" alt="Excel VBA Interactive Userform" width="604" height="421" title="Excel VBA Interactive Userform" /></p>
+  <div class="ad"><!-- Advanced Excel Pages End -->
+
+     
+     
+     data-ad-slot="4005850092"></ins>
+</div>
+            </div>
+			   </div>
+				<span class="invtab"><div class="post">
+					<div style="clear: both;"></div>
+                    <div class="entrylearn">  
+                  	<p align="left"><span class="buttonp"> <a href="../userform.html">11/11 Completed! Learn much more about userforms &gt;<br /></a></span>Go to Next Guide: <a href="../../introduction/range.html">Range</a></div>
+                  </div></span>
+                  </div>
+                  <div class="4u 12u(medium)">
+              <div id="search">
+              <div class="cse-branding-right" style="background-color:#FFFFFF;color:#000000">
+                <div class="cse-branding-form" style="margin-right:0px;">
+                  <form action="https://www.Advanced Excel for Data Analysis/search.html" id="cse-search-box">
+                    <div>
+                      <input type="hidden" name="cx" value="partner-pub-1987061359047735:3934495699" />
+                      <input type="hidden" name="cof" value="FORID:10" />
+                      <input type="hidden" name="ie" value="UTF-8" />
+                      <input type="text" name="q" placeholder="Explore Entire Guide" class="field" disabled />
+                      <span class="notranslate"><input type="submit" name="sa" value="Go" class="button" disabled /></span>
+                    </div>
+                  </form>
+                </div>
+                <div class="cse-branding-logo"></div>
+                <div class="cse-branding-text"></div>
+              </div>
+              </div>
+              <div id="sidebar">
+					<ul>
+				  	  <li>
+                        <h3>Guide</h3>
+						  <ul>
+							<li><a href="../userform.html">Userform</a></li>
+               		    </ul>
+					  </li>
+				    </ul>
+			  </div>
+              <div id="sidebar">
+					<ul><li>
+				      <h3><font color="#FF9900"><span class="notranslate">Learn more, it's easy</span></font></h3>
+				    </li>
+					  <li><ul>
+                        <li><a href="userform-ranges.html">Userform and Ranges</a></li>
+                        <li><a href="currency-converter.html">Currency Converter</a></li>
+                        <li><a href="progress-indicator.html">Progress Indicator</a></li>
+                        <li><a href="multiple-list-box-selections.html">Multiple List Box Selections</a></li>
+                        <li><a href="multicolumn-combo-box.html">Multicolumn Combo Box</a></li>
+                        <li><a href="dependent-combo-boxes.html">Dependent Combo Boxes</a></li>
+                        <li><a href="loop-through-controls.html">Loop through Controls</a></li>
+                        <li><a href="controls-collection.html">Controls Collection</a></li>
+                        <li><a href="userform-with-multiple-pages.html">Userform with Multiple Pages</a></li>
+                        <li class="current_page_item"><a href="interactive-userform.html">Interactive Userform</a></li>
+                        </ul>
+                    </li>
+                  </ul>
+			  </div>
+              <div id="sidebar">
+					<ul>
+				  	  <li>
+                        <h3><span class="notranslate"><font color="#8FAD22">Download Excel File</font></span></h3>
+						  <ul>
+							<li><a href="excel-files/interactive-userform.xlsm">interactive-userform.xlsm</a></li>
+                    </ul>
+					  </li>
+				  </ul>
+			  </div>
+              <div id="sidebar">
+					<ul>
+				  	  <li>
+                        <h3>Next Guide</h3>
+						  <ul>
+							<li><a href="../../introduction/range.html">Range</a></li>
+                    </ul>
+					  </li>
+				  </ul>
+			  </div>
+              <div id="sidebar">
+		      <h3><span class="notranslate"></span></h3>
+              <p style="padding-top:7px;padding-bottom:1px"><a href="https://facebook.com/thecodedragon" target="blank" rel="nofollow"><img src="../../layout/facebook-logo.png" onmouseover="this.src='../../layout/facebook-logo-onmouseover.png'" onmouseout="this.src='../../layout/facebook-logo.png'" width="30" height="30" border="0" alt="Advanced Excel on Facebook" title="Advanced Excel on Facebook" /></a> <a href="https://twitter.com/ceoofdss" target="blank" rel="nofollow"><img src="../../layout/x-logo.png" onmouseover="this.src='../../layout/x-logo-onmouseover.png'" onmouseout="this.src='../../layout/x-logo.png'" width="30" height="30" border="0" alt="Advanced Excel on X" title="Advanced Excel on X" /></a> <a href="https://www.pinterest.com/julisunkan" target="blank" rel="nofollow"><img src="../../layout/pinterest-logo.png" onmouseover="this.src='../../layout/pinterest-logo-onmouseover.png'" onmouseout="this.src='../../layout/pinterest-logo.png'" width="30" height="30" border="0" alt="Advanced Excel on Pinterest" title="Advanced Excel on Pinterest"></a> <a href="https://www.linkedin.com/in/digitalskeleton/" target="blank" rel="nofollow"><img src="../../layout/linkedin-logo.png" onmouseover="this.src='../../layout/linkedin-logo-onmouseover.png'" onmouseout="this.src='../../layout/linkedin-logo.png'" width="30" height="30" border="0" alt="Advanced Excel on LinkedIn" title="Advanced Excel on LinkedIn"></a></p>
+              </div>
+              <div id="sidebar">
+					<ul>
+				  	  <li>
+                        <h3><span class="notranslate">Become an Excel Pro</span></h3>
+						  <ul>
+                            <li><a href="../../examples.html">300 Examples</a></li>
+                          </ul>
+					  </li>
+				  </ul>
+			  </div>
+              <!-- end #sidebar -->
+			  <div style="clear: both;">&nbsp;</div>
+		  </div>
+		</div>
+	</div>
+	<!-- end #page -->
+</div>
+<div id="footer">
+	<p><a href="interactive-userform.html">Interactive Userform</a> &bull; &copy; AppMonster<br />
+	Excel is Awesome, we'll show you: <a href="../../introduction.html">Introduction</a> &bull; <a href="../../basics.html">Basics</a> &bull; <a href="../../functions.html">Functions</a> &bull; <a href="../../data-analysis.html">Data Analysis</a> &bull; <a href="../../vba.html">VBA</a></p>
+</div>
+<!-- end #footer -->
+
+<script type="text/javascript">
+  
+  $(function() { (adsbygoogle = window.adsbygoogle || []).push({}); });
+  $(function() { (adsbygoogle = window.adsbygoogle || []).push({}); });
+  $(function() { (adsbygoogle = window.adsbygoogle || []).push({}); });
+  
+</script>
+
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"rayId":"8c78d3eecd749fc0","version":"2024.8.0","serverTiming":{"name":{"cfExtPri":true,"cfL4":true}},"token":"c707dde3711e49e3a0cbf0020eef6a91","b":1}' crossorigin="anonymous"></script>
+</body>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H0MBKVX9SV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-H0MBKVX9SV');
+</script>
+
+<!-- Mirrored from www.Advanced Excel for Data Analysis/vba/examples/interactive-userform.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 23 Sep 2024 07:45:35 GMT -->
+</html>

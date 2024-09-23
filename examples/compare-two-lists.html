@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+
+
+<!-- Mirrored from www.Advanced Excel for Data Analysis/examples/compare-two-lists.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 23 Sep 2024 07:41:06 GMT -->
+<head>
+
+<title>Compare Two Lists in Excel (In Simple Steps)</title>
+<meta name="keywords" content="compare two lists, excel, conditional formatting, new rule, countif, formula, format, firstlist, secondlist">
+<meta name="description" content="This page describes how to compare two lists in Excel using conditional formatting and COUNTIF. For example, let's compare two lists of NFL teams.">
+
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="index, follow">
+<META content=EN-US name=LANGUAGE>
+<meta property="og:title" content="Compare Two Lists in Excel">
+<meta property="og:url" content="compare-two-lists.html">
+<meta property="og:type" content="article">
+<meta property="fb:admins" content="100003702321830">
+<meta property="og:description" content="This page describes how to compare two lists in Excel using conditional formatting and COUNTIF. For example, let's compare two lists of NFL teams.">
+<meta property="og:image" content="../smi/examples/compare-two-lists.png"/>
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@ExcelEasy">
+<meta name="twitter:image" content="../smi/examples/compare-two-lists.png">
+
+<link rel="preload" href="../css/style.css" as="style">
+<link rel="preload" href="images/compare-two-lists/compare-two-lists-example.png" as="image">
+<link rel="preload" href="../js/default.js" as="script">
+<link rel="preload" href="../js/init.js" as="script">
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f5ca7.txt?client=ca-pub-1987456081350047765" data-overlays="bottom" crossorigin="anonymous"></script>
+<link rel="preload" href="../css/style-medium.css" as="style" media="(max-width:961px)">
+<link rel="preload" href="../css/style-small.css" as="style" media="(max-width:620px)">
+<link rel="stylesheet" href="../css/style.css"/>
+<script src="../js/default.js" type="text/javascript"></script>
+<script src="../js/init.js" type="text/javascript"></script>
+<style type="text/css">
+.adslot { width: 336px; height: 280px; }
+@media (min-width:320px) { .adslot { width: 300px; height: 250px; } }
+@media (min-width:360px) and (orientation: portrait) { .adslot { width: 336px; height: 280px; } }
+@media (min-width:604px) { .adslot { width: 336px; height: 280px; } }
+</style>
+<noscript>
+    <link rel="stylesheet" href="../css/skel.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/adslot.css" />
+</noscript>
+<link rel="icon" href="../favicon-48x48.ico">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+</head>
+<body>
+<header id="header">
+	<div class="container">
+		<span class="notranslate">
+			<div id="logo">
+				<a href="../index.html"><img src="../layout/excel-guides.svg" onerror="this.src='../layout/excel-guides.png'" border="0" alt="Excel guides" title="Excel guides" width="1" height="1" /><h2>Excel</h2>&nbsp;&nbsp;<span class="easy">for Data Analysis</span></a>
+                <p>#1 <a href="../index.html">Excel guides</a> on the go</p>
+		  	</div>            
+			<nav id="nav">
+				  <ul>
+                  <li><a href="../index.html">Excel</a></li>
+                  <li><a href="../introduction.html">Introduction</a></li>
+				  <li><a href="../basics.html">Basics</a></li>
+				  <li><a href="../functions.html">Functions</a></li>
+				  <li><a href="../data-analysis.html">Data Analysis</a></li>
+                  <li><a href="../vba.html">VBA</a></li>
+                  <li class="current_page_item"><a href="../examples.html">300 Examples</a></li>
+                  <li><a href="../ask-us.html">Ask us</a></li>
+                  </ul>
+				</nav>
+			</span>
+		</div>
+	</header>
+	<!-- end #header -->
+	<div class="container">
+		<div class="row 100%">
+			<div class="8u 12u(medium)">
+				<div class="post">
+						<h1 class="title" style="float:left;">Compare Two Lists</h1>
+						<div style="clear: both;">&nbsp;</div>
+<div class="entry">
+<p>This page describes how to <strong>compare two lists in Excel</strong> using conditional formatting and COUNTIF. For example, let's compare two lists of NFL teams.</p>
+<p><img src="images/compare-two-lists/compare-two-lists-example.png" alt="Compare Two Lists Example" width="387" height="441" title="Compare Two Lists Example" /></p>
+
+
+     
+     
+     
+<p>To highlight the teams in the <strong>first list</strong> that are not in the <strong>second list</strong>, execute the following steps.</p>
+<p>1. First, select the range A1:A18 and <a href="named-range.html">name</a> it firstList, select the range B1:B20 and name it secondList.</p>
+<p>2. Next, select the range A1:A18.</p>
+<p>3. On the Home tab, in the Styles group, click Conditional Formatting.</p>
+<p><img src="images/compare-two-lists/click-conditional-formatting.png" alt="Click Conditional Formatting" width="591" height="100" title="Click Conditional Formatting" ></p>
+<p>4. Click New Rule.</p>
+<p><img src="images/compare-two-lists/new-rule.png" loading="lazy" alt="New Rule" width="184" height="300" title="New Rule" /></p>
+<p>5. Select 'Use a formula to determine which cells to format'.</p>
+<p>6. Enter the formula =<a href="countif.html">COUNTIF</a>(secondList,A1)=0</p>
+<p>7. Select a formatting style and click OK.</p>
+<p><img src="images/compare-two-lists/use-a-formula.png" loading="lazy" alt="Use a Formula" width="373" height="366" title="Use a Formula" /></p>
+<p>Result. Miami Dolphins and Tennessee Titans are not in the second list.</p>
+<p><img src="images/compare-two-lists/first-list-result.png" loading="lazy" alt="First List Result" width="387" height="441" title="First List Result" /></p>
+<p>Explanation: =<a href="countif.html">COUNTIF</a>(secondList,A1) counts the number of teams in secondList that are equal to the team in cell A1. If COUNTIF(secondList,A1) = 0, the team in cell A1 is not in the second list. As a result, Excel fills the cell with a blue background color. Always write the formula for the upper-left cell in the selected range (A1:A18). Excel automatically copies the formula to the other cells. Thus, cell A2 contains the formula =COUNTIF(secondList,A2)=0, cell A3 contains the formula =COUNTIF(secondList,A3)=0, etc.</p>
+<p>8. To highlight the teams in the second list that are not in the first list, select the range B1:B20, create a new rule using the formula =COUNTIF(firstList,B1)=0, and set the format to orange fill.</p>
+<p>Result. Denver Broncos, Arizona Cardinals, Minnesota Vikings and Pittsburgh Steelers are not in the first list.</p>
+<p><img src="images/compare-two-lists/compare-two-lists-result.png" loading="lazy" alt="Compare Two Lists in Excel" width="387" height="441" title="Compare Two Lists in Excel" /></p>
+              <div class="ad"><!-- Advanced Excel Pages End -->
+
+     
+     
+     data-ad-slot="4005850092"></ins>
+</div>
+            </div>
+			   </div>
+				<span class="invtab"><div class="post">
+					<div style="clear: both;"></div>
+                    <div class="entrylearn">  
+                  <p align="left"><span class="buttonp"> <a href="conflicting-rules.html">8/10 Completed! Learn more about conditional formatting &gt;<br />
+                    </a></span>Go to Next Guide: <a href="../data-analysis/charts.html">Charts</a></div>
+                  </div></span>
+                  </div>
+                  <div class="4u 12u(medium)">
+              <div id="search">
+              <div class="cse-branding-right" style="background-color:#FFFFFF;color:#000000">
+                <div class="cse-branding-form" style="margin-right:0px;">
+                  <form action="https://www.Advanced Excel for Data Analysis/search.html" id="cse-search-box">
+                    <div>
+                      <input type="hidden" name="cx" value="partner-pub-1987061359047735:3934495699" />
+                      <input type="hidden" name="cof" value="FORID:10" />
+                      <input type="hidden" name="ie" value="UTF-8" />
+                      <input type="text" name="q" placeholder="Explore Entire Guide" class="field" disabled />
+                      <span class="notranslate"><input type="submit" name="sa" value="Go" class="button" disabled /></span>
+                    </div>
+                  </form>
+                </div>
+                <div class="cse-branding-logo"></div>
+                <div class="cse-branding-text"></div>
+              </div>
+              </div>
+              <div id="sidebar">
+					<ul>
+				  	  <li>
+                        <h3>Guide</h3>
+						  <ul>
+							<li><a href="../data-analysis/conditional-formatting.html">Conditional Formatting</a></li>
+                    </ul>
+					  </li>
+				  </ul>
+			  </div>
+              <div id="sidebar">
+				  <ul><li>
+				      <h3><font color="#FF9900"><span class="notranslate">Learn more, it's easy</span></font></h3>
+				    </li>
+					  <li><ul>
+                        <li><a href="manage-rules.html">Manage Rules</a></li>
+                        <li><a href="data-bars.html">Data Bars</a></li>
+                        <li><a href="color-scales.html">Color Scales</a></li>
+                        <li><a href="icon-sets.html">Icon Sets</a></li>
+                        <li><a href="find-duplicates.html">Find Duplicates</a></li>
+                        <li><a href="shade-alternate-rows.html">Shade Alternate Rows</a></li>
+                        <li class="current_page_item"><a href="compare-two-lists.html">Compare Two Lists</a></li>
+                        <li><a href="conflicting-rules.html">Conflicting Rules</a></li>
+                        <li><a href="heat-map.html">Heat Map</a></li>
+                        </ul>
+                    </li>
+                  </ul>
+			  </div>
+              <div id="sidebar">
+					<ul>
+				  	  <li>
+                        <h3><span class="notranslate"><font color="#8FAD22">Download Excel File</font></span></h3>
+						  <ul>
+							<li><a href="excel-files/compare-two-lists.xlsx">compare-two-lists.xlsx</a></li>
+                    </ul>
+					  </li>
+				  </ul>
+			  </div>
+              <div id="sidebar">
+					<ul>
+				  	  <li>
+                        <h3>Next Guide</h3>
+						  <ul>
+							<li><a href="../data-analysis/charts.html">Charts</a></li>
+                    </ul>
+					  </li>
+				  </ul>
+			  </div>
+              <div id="sidebar">
+		      <h3><span class="notranslate"></span></h3>
+              <p style="padding-top:7px;padding-bottom:1px"><a href="https://facebook.com/thecodedragon" target="blank" rel="nofollow"><img src="../layout/facebook-logo.png" onmouseover="this.src='../layout/facebook-logo-onmouseover.png'" onmouseout="this.src='../layout/facebook-logo.png'" width="30" height="30" border="0" alt="Advanced Excel on Facebook" title="Advanced Excel on Facebook" /></a> <a href="https://twitter.com/ceoofdss" target="blank" rel="nofollow"><img src="../layout/x-logo.png" onmouseover="this.src='../layout/x-logo-onmouseover.png'" onmouseout="this.src='../layout/x-logo.png'" width="30" height="30" border="0" alt="Advanced Excel on X" title="Advanced Excel on X" /></a> <a href="https://www.pinterest.com/julisunkan" target="blank" rel="nofollow"><img src="../layout/pinterest-logo.png" onmouseover="this.src='../layout/pinterest-logo-onmouseover.png'" onmouseout="this.src='../layout/pinterest-logo.png'" width="30" height="30" border="0" alt="Advanced Excel on Pinterest" title="Advanced Excel on Pinterest"></a> <a href="https://www.linkedin.com/in/digitalskeleton/" target="blank" rel="nofollow"><img src="../layout/linkedin-logo.png" onmouseover="this.src='../layout/linkedin-logo-onmouseover.png'" onmouseout="this.src='../layout/linkedin-logo.png'" width="30" height="30" border="0" alt="Advanced Excel on LinkedIn" title="Advanced Excel on LinkedIn"></a></p>
+              </div>
+              <div id="sidebar">
+					<ul>
+				  	  <li>
+                        <h3><span class="notranslate">Become an Excel Pro</span></h3>
+						  <ul>
+                            <li><a href="../examples.html">300 Examples</a></li>
+                          </ul>
+					  </li>
+				  </ul>
+			  </div>
+              <!-- end #sidebar -->
+			  <div style="clear: both;">&nbsp;</div>
+		  </div>
+		</div>
+	</div>
+	<!-- end #page -->
+</div>
+<div id="footer">
+	<p><a href="compare-two-lists.html">Compare Two Lists</a> &bull; &copy; AppMonster<br />
+	Excel is Awesome, we'll show you: <a href="../introduction.html">Introduction</a> &bull; <a href="../basics.html">Basics</a> &bull; <a href="../functions.html">Functions</a> &bull; <a href="../data-analysis.html">Data Analysis</a> &bull; <a href="../vba.html">VBA</a></p>
+</div>
+<!-- end #footer -->
+
+<script type="text/javascript">
+  
+  $(function() { (adsbygoogle = window.adsbygoogle || []).push({}); });
+  $(function() { (adsbygoogle = window.adsbygoogle || []).push({}); });
+  
+</script>
+
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"rayId":"8c78d30d0c87b8d2","version":"2024.8.0","serverTiming":{"name":{"cfExtPri":true,"cfL4":true}},"token":"c707dde3711e49e3a0cbf0020eef6a91","b":1}' crossorigin="anonymous"></script>
+</body>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H0MBKVX9SV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-H0MBKVX9SV');
+</script>
+
+<!-- Mirrored from www.Advanced Excel for Data Analysis/examples/compare-two-lists.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 23 Sep 2024 07:41:08 GMT -->
+</html>

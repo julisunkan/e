@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+
+
+<!-- Mirrored from www.Advanced Excel for Data Analysis/vba/examples/files-in-a-directory.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 23 Sep 2024 07:43:37 GMT -->
+<head>
+
+<title>Files in a Directory in Excel VBA (In Easy Steps)</title>
+<meta name="keywords" content="loop through, excel files, directory, excel vba, workbooks, worksheets, closed, dir function">
+<meta name="description" content="Below we will look at a program in Excel VBA that loops through all closed workbooks and worksheets in a directory, and displays all the names.">
+
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="index, follow">
+<META content=EN-US name=LANGUAGE>
+<meta property="og:title" content="Files in a Directory in Excel VBA">
+<meta property="og:url" content="files-in-a-directory.html">
+<meta property="og:type" content="article">
+<meta property="fb:admins" content="100003702321830">
+<meta property="og:description" content="Learn how to create a program in Excel VBA that loops through all closed workbooks and worksheets in a directory, and displays all the names.">
+<meta property="og:image" content="../../smi/vba/examples/files-in-a-directory-2.png"/>
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@ExcelEasy">
+<meta name="twitter:image" content="../../smi/vba/examples/files-in-a-directory-2.png">
+
+<link rel="preload" href="../../css/style.css" as="style">
+<link rel="preload" href="images/files-in-a-directory/files-in-a-directory-example.png" as="image">
+<link rel="preload" href="../../js/default.js" as="script">
+<link rel="preload" href="../../js/init.js" as="script">
+<script async src="../../../pagead2.googlesyndication.com/pagead/js/f5ca7.txt?client=ca-pub-1987456081350047765" data-overlays="bottom" crossorigin="anonymous"></script>
+<link rel="preload" href="../../css/style-medium.css" as="style" media="(max-width:961px)">
+<link rel="preload" href="../../css/style-small.css" as="style" media="(max-width:620px)">
+<link rel="stylesheet" href="../../css/style.css"/>
+<script src="../../js/default.js" type="text/javascript"></script>
+<script src="../../js/init.js" type="text/javascript"></script>
+<style type="text/css">
+.adslot { width: 336px; height: 280px; }
+@media (min-width:320px) { .adslot { width: 300px; height: 250px; } }
+@media (min-width:360px) and (orientation: portrait) { .adslot { width: 336px; height: 280px; } }
+@media (min-width:604px) { .adslot { width: 336px; height: 280px; } }
+</style>
+<noscript>
+    <link rel="stylesheet" href="../../css/skel.css" />
+    <link rel="stylesheet" href="../../css/style.css" />
+    <link rel="stylesheet" href="../../css/adslot.css" />
+</noscript>
+<link rel="icon" href="../../favicon-48x48.ico">
+<link rel="apple-touch-icon" href="../../apple-touch-icon.png">
+</head>
+<body>
+<header id="header">
+	<div class="container">
+		<span class="notranslate">
+			<div id="logo">
+				<a href="../../index.html"><img src="../../layout/excel-guides.svg" onerror="this.src='../../layout/excel-guides.png'" border="0" alt="Excel guides" title="Excel guides" width="1" height="1" /><h2>Excel</h2>&nbsp;&nbsp;<span class="easy">for Data Analysis</span></a>
+                <p>#1 <a href="../../index.html">Excel guides</a> on the go</p>
+		  	</div>            
+			<nav id="nav">
+				  <ul>
+                  <li><a href="../../index.html">Excel</a></li>
+                  <li><a href="../../introduction.html">Introduction</a></li>
+				  <li><a href="../../basics.html">Basics</a></li>
+				  <li><a href="../../functions.html">Functions</a></li>
+				  <li><a href="../../data-analysis.html">Data Analysis</a></li>
+                  <li><a href="../../vba.html">VBA</a></li>
+                  <li class="current_page_item"><a href="../../examples.html">300 Examples</a></li>
+                  <li><a href="../../ask-us.html">Ask us</a></li>
+                  </ul>
+				</nav>
+			</span>
+		</div>
+	</header>
+	<!-- end #header -->
+	<div class="container">
+		<div class="row 100%">
+			<div class="8u 12u(medium)">
+				<div class="post">
+						<h1 class="title" style="float:left;">Files in a Directory</h1>
+						<div style="clear: both;">&nbsp;</div>
+<div class="entry">			
+			  <p>Below we will look at a program in <strong>Excel VBA</strong> that <strong>loops through all closed workbooks and worksheets</strong> in a <strong>directory</strong>, and displays all the names.</p>
+			  <p>Download Book1.xlsx, Book2.xlsx, Book3.xlsx, Book4.xlsx and Book5.xlsx and add them to "C:\test\"</p>
+              <p>Situation:</p>
+			  <p><img src="images/files-in-a-directory/files-in-a-directory-example.png" alt="Files in a Directory Example" width="604" height="121" title="Files in a Directory Example" /></p>
+              
+
+     
+     
+     
+			  <p>Add the following code lines to the command button:</p>
+			  <p>1. First, we declare two variables of type String, a Worksheet object and two variables of type Integer.</p>
+			  <div class="code"><span class="predefined">Dim</span> directory <span class="predefined">As</span> <span class="predefined">String</span>, fileName <span class="predefined">As</span> <span class="predefined">String</span>, sheet <span class="predefined">As</span> Worksheet, i <span class="predefined">As</span> <span class="predefined">Integer</span>, j <span class="predefined">As</span> <span class="predefined">Integer</span></div>
+			  <p>2. To avoid screen flicker, turn off screen updating.</p>
+			  <div class="code">Application.ScreenUpdating = <span class="predefined">False</span></div>
+			  <p>3. Initialize the variable directory. We use the Dir function to find the first *.xl?? file stored in this directory.</p>
+			  <div class="code">directory = &quot;c:\test\&quot;<br />
+		      fileName = Dir(directory &amp; &quot;*.xl??&quot;)</div>
+			  <p>Note: the Dir function supports the use of multiple character (*) and single character (?) <a href="../../examples/wildcards.html">wildcards</a> to search for all different type of Excel files.</p>
+			  <p>4. The variable fileName now holds the name of the first Excel file found in the directory. Add a <a href="../loop.html#do-while-loop">Do While Loop</a>.</p>
+			  <div class="code"><span class="predefined">Do</span> <span class="predefined">While</span> fileName &lt;&gt; &quot;&quot;<br /><br />
+              <span class="predefined">Loop</span></div>
+			  <p>Add the following code lines (at 5, 6, 7, 8 and 9) to the loop.</p>
+			  <p>5. Initialize the variables of type Integer and add the name of the Excel file to the first column of row i.</p>
+			  <div class="code"> i = i + 1<br />
+              j = 2<br />
+              Cells(i, 1) = fileName</div>
+			  <p>6. There is no simple way to extract data (or sheet names) from closed Excel files. Therefore, we open the Excel file.</p>
+			  <div class="code">Workbooks.Open (directory &amp; fileName)</div>
+			  <p>7. Add all the sheet names of the Excel file to the other columns of row i.</p>
+			  <div class="code"><span class="predefined">For</span> <span class="predefined">Each</span> sheet <span class="predefined">In</span> Workbooks(fileName).Worksheets<br />
+              &nbsp;&nbsp;&nbsp;&nbsp;Workbooks(&quot;files-in-a-directory.xlsm&quot;).Worksheets(1).Cells(i, j).Value = sheet.Name<br />
+              &nbsp;&nbsp;&nbsp;&nbsp;j = j + 1<br />
+              <span class="predefined">Next</span> sheet</div>
+			  <p>8. Close the Excel file.</p>
+			  <div class="code">Workbooks(fileName).Close</div>
+			  <p>9. The Dir function is a special function. To get the other Excel files, you can use the Dir function again with no arguments.</p>
+			  <div class="code">fileName = Dir()</div>
+			  <p>Note: when no more file names match, the Dir function returns a zero-length string (&quot;&quot;). As a result, Excel VBA will leave the Do While loop.</p>
+			  <p>10. Turn on screen updating again (outside the loop).</p>
+			  <div class="code">Application.ScreenUpdating = <span class="predefined">True</span></div>
+			  <p>11. Test the program.</p>
+			  <p>Result:</p>
+			  <p><img src="images/files-in-a-directory/files-in-a-directory-result.png" alt="Files in a Directory in Excel VBA" width="604" height="161" title="Files in a Directory in Excel VBA" /></p>
+              <div class="ad"><!-- Advanced Excel Pages End -->
+
+     
+     
+     data-ad-slot="4005850092"></ins>
+</div>
+            </div>
+			   </div>
+				<span class="invtab"><div class="post">
+					<div style="clear: both;"></div>
+                    <div class="entrylearn">  
+                  	<p align="left"><span class="buttonp"> <a href="import-sheets.html">6/8 Completed! Learn more about books and sheets &gt;<br /></a></span>Go to Next Guide: <a href="../range-object.html">Range Object</a></div>
+                  </div></span>
+                  </div>
+
+                  <div class="4u 12u(medium)">
+              <div id="search">
+              <div class="cse-branding-right" style="background-color:#FFFFFF;color:#000000">
+                <div class="cse-branding-form" style="margin-right:0px;">
+                  <form action="https://www.Advanced Excel for Data Analysis/search.html" id="cse-search-box">
+                    <div>
+                      <input type="hidden" name="cx" value="partner-pub-1987061359047735:3934495699" />
+                      <input type="hidden" name="cof" value="FORID:10" />
+                      <input type="hidden" name="ie" value="UTF-8" />
+                      <input type="text" name="q" placeholder="Explore Entire Guide" class="field" disabled />
+                      <span class="notranslate"><input type="submit" name="sa" value="Go" class="button" disabled /></span>
+                    </div>
+                  </form>
+                </div>
+                <div class="cse-branding-logo"></div>
+                <div class="cse-branding-text"></div>
+              </div>
+              </div>
+              <div id="sidebar">
+					<ul>
+				  	  <li>
+                        <h3>Guide</h3>
+						  <ul>
+							<li><a href="../workbook-worksheet-object.html">Workbook and Worksheet Object</a></li>
+                		  </ul>
+					  </li>
+				    </ul>
+			  </div>
+              <div id="sidebar">
+				  <ul><li>
+				      <h3><font color="#FF9900"><span class="notranslate">Learn more, it's easy</span></font></h3>
+				    </li>
+					  <li><ul>
+                        <li><a href="path-fullname.html">Path and FullName</a></li>
+                        <li><a href="close-open.html">Close and Open</a></li>
+                        <li><a href="loop-through-books-sheets.html">Loop through Books and Sheets</a></li>
+                        <li><a href="sales-calculator.html">Sales Calculator</a></li>
+                        <li class="current_page_item"><a href="files-in-a-directory.html">Files in a Directory</a></li>
+                        <li><a href="import-sheets.html">Import Sheets</a></li>
+                        <li><a href="programming-charts.html">Programming Charts</a></li>
+                        </ul>
+                    </li>
+                  </ul>
+			  </div>
+              <div id="sidebar">
+					<ul>
+				  	  <li>
+                        <h3><span class="notranslate"><font color="#8FAD22">Download Excel Files</font></span></h3>
+						  <ul>
+							<li><a href="excel-files/files-in-a-directory.xlsm">files-in-a-directory.xlsm</a></li>
+                            <li><a href="excel-files/Book1.xlsx">Book1.xlsx</a></li>
+                            <li><a href="excel-files/Book2.xlsx">Book2.xlsx</a></li>
+                            <li><a href="excel-files/Book3.xlsx">Book3.xlsx</a></li>
+                            <li><a href="excel-files/Book4.xlsx">Book4.xlsx</a></li>
+                            <li><a href="excel-files/Book5.xlsx">Book5.xlsx</a></li>
+                    </ul>
+					  </li>
+				  </ul>
+			  </div>
+              <div id="sidebar">
+					<ul>
+				  	  <li>
+                        <h3>Next Guide</h3>
+						  <ul>
+							<li><a href="../range-object.html">Range Object</a></li>
+                    </ul>
+					  </li>
+				  </ul>
+			  </div>
+              <div id="sidebar">
+		      <h3><span class="notranslate"></span></h3>
+              <p style="padding-top:7px;padding-bottom:1px"><a href="https://facebook.com/thecodedragon" target="blank" rel="nofollow"><img src="../../layout/facebook-logo.png" onmouseover="this.src='../../layout/facebook-logo-onmouseover.png'" onmouseout="this.src='../../layout/facebook-logo.png'" width="30" height="30" border="0" alt="Advanced Excel on Facebook" title="Advanced Excel on Facebook" /></a> <a href="https://twitter.com/ceoofdss" target="blank" rel="nofollow"><img src="../../layout/x-logo.png" onmouseover="this.src='../../layout/x-logo-onmouseover.png'" onmouseout="this.src='../../layout/x-logo.png'" width="30" height="30" border="0" alt="Advanced Excel on X" title="Advanced Excel on X" /></a> <a href="https://www.pinterest.com/julisunkan" target="blank" rel="nofollow"><img src="../../layout/pinterest-logo.png" onmouseover="this.src='../../layout/pinterest-logo-onmouseover.png'" onmouseout="this.src='../../layout/pinterest-logo.png'" width="30" height="30" border="0" alt="Advanced Excel on Pinterest" title="Advanced Excel on Pinterest"></a> <a href="https://www.linkedin.com/in/digitalskeleton/" target="blank" rel="nofollow"><img src="../../layout/linkedin-logo.png" onmouseover="this.src='../../layout/linkedin-logo-onmouseover.png'" onmouseout="this.src='../../layout/linkedin-logo.png'" width="30" height="30" border="0" alt="Advanced Excel on LinkedIn" title="Advanced Excel on LinkedIn"></a></p>
+              </div>
+              <div id="sidebar">
+					<ul>
+				  	  <li>
+                        <h3><span class="notranslate">Become an Excel Pro</span></h3>
+						  <ul>
+                            <li><a href="../../examples.html">300 Examples</a></li>
+                          </ul>
+					  </li>
+				  </ul>
+			  </div>
+              <!-- end #sidebar -->
+			  <div style="clear: both;">&nbsp;</div>
+		  </div>
+		</div>
+	</div>
+	<!-- end #page -->
+</div>
+<div id="footer">
+	<p><a href="files-in-a-directory.html">Files in a Directory</a> &bull; &copy; AppMonster<br />
+	Excel is Awesome, we'll show you: <a href="../../introduction.html">Introduction</a> &bull; <a href="../../basics.html">Basics</a> &bull; <a href="../../functions.html">Functions</a> &bull; <a href="../../data-analysis.html">Data Analysis</a> &bull; <a href="../../vba.html">VBA</a></p>
+</div>
+<!-- end #footer -->
+
+<script type="text/javascript">
+  
+  $(function() { (adsbygoogle = window.adsbygoogle || []).push({}); });
+  $(function() { (adsbygoogle = window.adsbygoogle || []).push({}); });
+  
+</script>
+
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"rayId":"8c78d36969079fc0","version":"2024.8.0","serverTiming":{"name":{"cfExtPri":true,"cfL4":true}},"token":"c707dde3711e49e3a0cbf0020eef6a91","b":1}' crossorigin="anonymous"></script>
+</body>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H0MBKVX9SV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-H0MBKVX9SV');
+</script>
+
+<!-- Mirrored from www.Advanced Excel for Data Analysis/vba/examples/files-in-a-directory.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 23 Sep 2024 07:43:39 GMT -->
+</html>

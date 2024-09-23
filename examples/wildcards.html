@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+
+
+<!-- Mirrored from www.Advanced Excel for Data Analysis/examples/wildcards.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 23 Sep 2024 07:33:20 GMT -->
+<head>
+
+<title>Wildcards in Excel (In Easy Steps)</title>
+<meta name="keywords" content="wildcard character, excel, question mark, asterisk, one character, two characters, zero or more characters, start, end, contain, tilde, wildcards, formulas, filters">
+<meta name="description" content="Excel has 3 wildcards. A question mark (?) matches exactly one character. An asterisk (*) matches zero or more characters. And a tilde (~).">
+
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="index, follow">
+<META content=EN-US name=LANGUAGE>
+<meta property="og:title" content="Wildcards in Excel">
+<meta property="og:url" content="wildcards.html">
+<meta property="og:type" content="article">
+<meta property="fb:admins" content="100003702321830">
+<meta property="og:description" content="Excel has 3 wildcards. A question mark (?) matches exactly one character. An asterisk (*) matches zero or more characters. And a tilde (~).">
+<meta property="og:image" content="../smi/examples/wildcards.png"/>
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@ExcelEasy">
+<meta name="twitter:image" content="../smi/examples/wildcards.png">
+
+<link rel="preload" href="../css/style.css" as="style">
+<link rel="preload" href="images/wildcards/wildcard-character.png" as="image">
+<link rel="preload" href="../js/default.js" as="script">
+<link rel="preload" href="../js/init.js" as="script">
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f5ca7.txt?client=ca-pub-1987456081350047765" data-overlays="bottom" crossorigin="anonymous"></script>
+<link rel="preload" href="../css/style-medium.css" as="style" media="(max-width:961px)">
+<link rel="preload" href="../css/style-small.css" as="style" media="(max-width:620px)">
+<link rel="stylesheet" href="../css/style.css"/>
+<script src="../js/default.js" type="text/javascript"></script>
+<script src="../js/init.js" type="text/javascript"></script>
+<style type="text/css">
+.adslot { width: 336px; height: 280px; }
+@media (min-width:320px) { .adslot { width: 300px; height: 250px; } }
+@media (min-width:360px) and (orientation: portrait) { .adslot { width: 336px; height: 280px; } }
+@media (min-width:604px) { .adslot { width: 336px; height: 280px; } }
+</style>
+<noscript>
+    <link rel="stylesheet" href="../css/skel.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/adslot.css" />
+</noscript>
+<link rel="icon" href="../favicon-48x48.ico">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+</head>
+<body>
+<header id="header">
+	<div class="container">
+		<span class="notranslate">
+			<div id="logo">
+				<a href="../index.html"><img src="../layout/excel-guides.svg" onerror="this.src='../layout/excel-guides.png'" border="0" alt="Excel guides" title="Excel guides" width="1" height="1" /><h2>Excel</h2>&nbsp;&nbsp;<span class="easy">for Data Analysis</span></a>
+                <p>#1 <a href="../index.html">Excel guides</a> on the go</p>
+		  	</div>            
+			<nav id="nav">
+				  <ul>
+                  <li><a href="../index.html">Excel</a></li>
+                  <li><a href="../introduction.html">Introduction</a></li>
+				  <li><a href="../basics.html">Basics</a></li>
+				  <li><a href="../functions.html">Functions</a></li>
+				  <li><a href="../data-analysis.html">Data Analysis</a></li>
+                  <li><a href="../vba.html">VBA</a></li>
+                  <li class="current_page_item"><a href="../examples.html">300 Examples</a></li>
+                  <li><a href="../ask-us.html">Ask us</a></li>
+                  </ul>
+				</nav>
+			</span>
+		</div>
+	</header>
+	<!-- end #header -->
+	<div class="container">
+		<div class="row 100%">
+			<div class="8u 12u(medium)">
+				<div class="post">
+						<h1 class="title" style="float:left;">Wildcards</h1>
+			    <div style="clear: both;">&nbsp;</div>
+<div class="entry">
+<p class="spacing"><a href="#one-character">One Character</a> | <a href="#two-characters">Two Characters</a> | <a href="#zero-or-more-characters">Zero or More Characters</a> | <a href="#start-with">Start With</a> | <a href="#end-with">End With</a> | <a href="#tilde">Tilde</a> | <a href="#contain">Contain</a></p>
+<p><strong>Excel</strong> has 3 <strong>wildcards</strong>. A question mark (?) matches exactly one character. An asterisk (*) matches zero or more characters. And a <a href="#tilde">tilde</a> (~).</p>
+<p>Press CTRL + F to launch the Find and Replace dialog box.</p>
+<h3><a name="one-character" id="one-character"></a>One Character</h3>
+<p>A single question mark (?) matches exactly one (any) character.</p>
+<p><img src="images/wildcards/wildcard-character.png" alt="Wildcard Character in Excel" width="604" height="421" title="Wildcard Character in Excel" /></p>
+<p>Note: check "Match entire cell contents" to exclude partial matches (we want to count cells).</p>
+
+
+     
+     
+     
+<h3><a name="two-characters" id="two-characters"></a>Two Characters</h3>
+<p>Use two question marks (??) to match any two characters.</p>
+<p><img src="images/wildcards/two-characters.png" alt="Two Characters" width="604" height="421" title="Two Characters" /></p>
+<h3><a name="zero-or-more-characters" id="zero-or-more-characters"></a>Zero or More Characters</h3>
+<p>An asterisk (*) matches a series of zero or more characters.</p>
+<p><img src="images/wildcards/zero-or-more-characters.png" loading="lazy" alt="Zero or More Characters" width="604" height="421" title="Zero or More Characters" /></p>
+<h3><a name="start-with" id="start-with"></a>Start With</h3>
+<p>Use a* to find all cells that start with the letter a.</p>
+<p><img src="images/wildcards/start-with.png" loading="lazy" alt="Start With" width="604" height="421" title="Start With" /></p>
+<p>Note: if we check "Math case", a* will not find "AB" in cell A2.</p>
+<div class="ad"><!-- Advanced Excel Pages Middle -->
+
+     
+     
+     data-ad-slot="2529116896"></ins>
+</div>
+<h3><a name="end-with" id="end-with"></a>End With</h3>
+<p>Use *cd to find all cells that end with the text "cd".</p>
+<p><img src="images/wildcards/end-with.png" loading="lazy" alt="End With" width="604" height="421" title="End With" /></p>
+<h3><a name="tilde" id="tilde"></a>Tilde</h3>
+<p>To find question marks or asterisks, precede the <strong>question mark</strong> or <strong>asterisk</strong> with a tilde (~). For example, use *~? to find all cells that end with a question mark.</p>
+<p><img src="images/wildcards/tilde.png" loading="lazy" alt="Tilde" width="604" height="421" title="Tilde" /></p>
+<p>Note: ~? finds a literal question mark. ~* finds a literal asterisk. ~~ finds a literal tilde.</p>
+<h3><a name="contain" id="contain"></a>Contain</h3>
+<p>Use *bc* to find all cells that contain "bc".</p>
+<p><img src="images/wildcards/contain.png" loading="lazy" alt="Contain" width="604" height="421" title="Contain" /></p>
+<p>Note: download the <a href="excel-files/wildcards.xlsx">Excel file</a> and give it a try. Practice makes perfect. Also learn how to use <a href="countif.html#text-tricks">wildcards in formulas</a> and how to use <a href="number-text-filters.html#text-filter">wildcards in filters</a>.</p>
+<div class="ad"><!-- Advanced Excel Pages End -->
+
+     
+     
+     data-ad-slot="4005850092"></ins>
+</div>
+            </div>
+			   </div>
+				<span class="invtab"><div class="post">
+					<div style="clear: both;"></div>
+                    <div class="entrylearn">  
+                  <p align="left"><span class="buttonp"> <a href="delete-blank-rows.html">3/7 Completed! Learn more about finding & selecting &gt;<br />
+                  </a></span>Go to Next Guide: <a href="../basics/templates.html">Templates</a></div>
+                  </div></span>
+                  </div>
+                  <div class="4u 12u(medium)">
+              <div id="search">
+              <div class="cse-branding-right" style="background-color:#FFFFFF;color:#000000">
+                <div class="cse-branding-form" style="margin-right:0px;">
+                  <form action="https://www.Advanced Excel for Data Analysis/search.html" id="cse-search-box">
+                    <div>
+                      <input type="hidden" name="cx" value="partner-pub-1987061359047735:3934495699" />
+                      <input type="hidden" name="cof" value="FORID:10" />
+                      <input type="hidden" name="ie" value="UTF-8" />
+                      <input type="text" name="q" placeholder="Explore Entire Guide" class="field" disabled />
+                      <span class="notranslate"><input type="submit" name="sa" value="Go" class="button" disabled /></span>
+                    </div>
+                  </form>
+                </div>
+                <div class="cse-branding-logo"></div>
+                <div class="cse-branding-text"></div>
+              </div>
+              </div>
+              <div id="sidebar">
+					<ul>
+				  	  <li>
+                        <h3>Guide</h3>
+						  <ul>
+							<li><a href="../basics/find-select.html">Find & Select</a></li>
+                    </ul>
+					  </li>
+				  </ul>
+			  </div>
+              <div id="sidebar">
+				  <ul><li>
+				      <h3><font color="#FF9900"><span class="notranslate">Learn more, it's easy</span></font></h3>
+				    </li>
+					  <li><ul>
+                        <li><a href="find-features.html">Find Features</a></li>
+						<li class="current_page_item"><a href="wildcards.html">Wildcards</a></li>
+                        <li><a href="delete-blank-rows.html">Delete Blank Rows</a></li>
+                        <li><a href="row-differences.html">Row Differences</a></li>
+                        <li><a href="copy-visible-cells-only.html">Copy Visible Cells Only</a></li>
+                        <li><a href="search-box.html">Search Box</a></li>
+                        </ul>
+                    </li>
+                  </ul>
+			  </div>
+              <div id="sidebar">
+					<ul>
+				  	  <li>
+                        <h3><span class="notranslate"><font color="#8FAD22">Download Excel File</font></span></h3>
+						  <ul>
+							<li><a href="excel-files/wildcards.xlsx">wildcards.xlsx</a></li>
+                    </ul>
+					  </li>
+				  </ul>
+			  </div>
+              <div id="sidebar">
+					<ul>
+				  	  <li>
+                        <h3>Next Guide</h3>
+						  <ul>
+							<li><a href="../basics/templates.html">Templates</a></li>
+                    </ul>
+					  </li>
+				  </ul>
+			  </div>
+              <div id="sidebar">
+		      <h3><span class="notranslate"></span></h3>
+              <p style="padding-top:7px;padding-bottom:1px"><a href="https://facebook.com/thecodedragon" target="blank" rel="nofollow"><img src="../layout/facebook-logo.png" onmouseover="this.src='../layout/facebook-logo-onmouseover.png'" onmouseout="this.src='../layout/facebook-logo.png'" width="30" height="30" border="0" alt="Advanced Excel on Facebook" title="Advanced Excel on Facebook" /></a> <a href="https://twitter.com/ceoofdss" target="blank" rel="nofollow"><img src="../layout/x-logo.png" onmouseover="this.src='../layout/x-logo-onmouseover.png'" onmouseout="this.src='../layout/x-logo.png'" width="30" height="30" border="0" alt="Advanced Excel on X" title="Advanced Excel on X" /></a> <a href="https://www.pinterest.com/julisunkan" target="blank" rel="nofollow"><img src="../layout/pinterest-logo.png" onmouseover="this.src='../layout/pinterest-logo-onmouseover.png'" onmouseout="this.src='../layout/pinterest-logo.png'" width="30" height="30" border="0" alt="Advanced Excel on Pinterest" title="Advanced Excel on Pinterest"></a> <a href="https://www.linkedin.com/in/digitalskeleton/" target="blank" rel="nofollow"><img src="../layout/linkedin-logo.png" onmouseover="this.src='../layout/linkedin-logo-onmouseover.png'" onmouseout="this.src='../layout/linkedin-logo.png'" width="30" height="30" border="0" alt="Advanced Excel on LinkedIn" title="Advanced Excel on LinkedIn"></a></p>
+              </div>
+			  <div id="sidebar">
+              <ul><li></li>
+		        <li>
+		          <h3><span class="notranslate">Most Popular</span></h3>
+	            </li>
+		        <li><ul>
+                        <li><a href="../data-analysis/pivot-tables.html">Pivot Tables</a></li>
+                        <li><a href="vlookup.html">Vlookup</a></li>
+                        <li><a href="../introduction/formulas-functions.html">Formulas and Functions</a></li>
+                        <li><a href="../data-analysis/charts.html">Charts</a></li>
+                        <li><a href="../data-analysis/conditional-formatting.html">Conditional Formatting</a></li>
+                        <li><a href="find-duplicates.html">Find Duplicates</a></li>
+                        <li><a href="if.html">If</a></li>
+                        <li><a href="drop-down-list.html">Drop-down List</a></li>
+						<li><a href="countif.html">Countif</a></li>
+                        <li><a href="index-match.html">Index and Match</a></li>
+                        </ul>
+			    </li>
+              </ul>
+              </div>
+              <div id="sidebar">
+					<ul>
+				  	  <li>
+                        <h3><span class="notranslate">Become an Excel Pro</span></h3>
+						  <ul>
+                            <li><a href="../examples.html">300 Examples</a></li>
+                          </ul>
+					  </li>
+				  </ul>
+			  </div>
+              <!-- end #sidebar -->
+			  <div style="clear: both;">&nbsp;</div>
+		  </div>
+		</div>
+	</div>
+	<!-- end #page -->
+</div>
+<div id="footer">
+	<p><a href="wildcards.html">Wildcards</a> &bull; &copy; AppMonster<br />
+	Excel is Awesome, we'll show you: <a href="../introduction.html">Introduction</a> &bull; <a href="../basics.html">Basics</a> &bull; <a href="../functions.html">Functions</a> &bull; <a href="../data-analysis.html">Data Analysis</a> &bull; <a href="../vba.html">VBA</a></p>
+</div>
+<!-- end #footer -->
+
+<script type="text/javascript">
+  
+  $(function() { (adsbygoogle = window.adsbygoogle || []).push({}); });
+  $(function() { (adsbygoogle = window.adsbygoogle || []).push({}); });
+  $(function() { (adsbygoogle = window.adsbygoogle || []).push({}); });
+  
+</script>
+
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"rayId":"8c78d2024d3db8d2","version":"2024.8.0","serverTiming":{"name":{"cfExtPri":true,"cfL4":true}},"token":"c707dde3711e49e3a0cbf0020eef6a91","b":1}' crossorigin="anonymous"></script>
+</body>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H0MBKVX9SV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-H0MBKVX9SV');
+</script>
+
+<!-- Mirrored from www.Advanced Excel for Data Analysis/examples/wildcards.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 23 Sep 2024 07:33:22 GMT -->
+</html>

@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+
+
+<!-- Mirrored from www.Advanced Excel for Data Analysis/vba/examples/userform-with-multiple-pages.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 23 Sep 2024 07:45:32 GMT -->
+<head>
+
+<title>Userform with Multiple Pages in Excel VBA (In Easy Steps)</title>
+<meta name="keywords" content="userform, excel vba, multiple pages, multipage control, images, page 1, page 2, save">
+<meta name="description" content="Below we will look at a program in Excel VBA which creates a Userform that contains multiple pages. This userform also contains images.">
+
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="index, follow">
+<META content=EN-US name=LANGUAGE>
+<meta property="og:title" content="Userform with Multiple Pages in Excel VBA">
+<meta property="og:url" content="userform-with-multiple-pages.html">
+<meta property="og:type" content="article">
+<meta property="fb:admins" content="100003702321830">
+<meta property="og:description" content="Learn how to create a program in Excel VBA which creates a Userform that contains multiple pages. This userform also contains images.">
+<meta property="og:image" content="../../smi/vba/examples/userform-with-multiple-pages-2.png"/>
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@ExcelEasy">
+<meta name="twitter:image" content="../../smi/vba/examples/userform-with-multiple-pages-2.png">
+
+<link rel="preload" href="../../css/style.css" as="style">
+<link rel="preload" href="images/userform-with-multiple-pages/userform-page1.png" as="image">
+<link rel="preload" href="../../js/default.js" as="script">
+<link rel="preload" href="../../js/init.js" as="script">
+<script async src="../../../pagead2.googlesyndication.com/pagead/js/f5ca7.txt?client=ca-pub-1987456081350047765" data-overlays="bottom" crossorigin="anonymous"></script>
+<link rel="preload" href="../../css/style-medium.css" as="style" media="(max-width:961px)">
+<link rel="preload" href="../../css/style-small.css" as="style" media="(max-width:620px)">
+<link rel="stylesheet" href="../../css/style.css"/>
+<script src="../../js/default.js" type="text/javascript"></script>
+<script src="../../js/init.js" type="text/javascript"></script>
+<style type="text/css">
+.adslot { width: 336px; height: 280px; }
+@media (min-width:320px) { .adslot { width: 300px; height: 250px; } }
+@media (min-width:360px) and (orientation: portrait) { .adslot { width: 336px; height: 280px; } }
+@media (min-width:604px) { .adslot { width: 336px; height: 280px; } }
+</style>
+<noscript>
+    <link rel="stylesheet" href="../../css/skel.css" />
+    <link rel="stylesheet" href="../../css/style.css" />
+    <link rel="stylesheet" href="../../css/adslot.css" />
+</noscript>
+<link rel="icon" href="../../favicon-48x48.ico">
+<link rel="apple-touch-icon" href="../../apple-touch-icon.png">
+</head>
+<body>
+<header id="header">
+	<div class="container">
+		<span class="notranslate">
+			<div id="logo">
+				<a href="../../index.html"><img src="../../layout/excel-guides.svg" onerror="this.src='../../layout/excel-guides.png'" border="0" alt="Excel guides" title="Excel guides" width="1" height="1" /><h2>Excel</h2>&nbsp;&nbsp;<span class="easy">for Data Analysis</span></a>
+                <p>#1 <a href="../../index.html">Excel guides</a> on the go</p>
+		  	</div>            
+			<nav id="nav">
+				  <ul>
+                  <li><a href="../../index.html">Excel</a></li>
+                  <li><a href="../../introduction.html">Introduction</a></li>
+				  <li><a href="../../basics.html">Basics</a></li>
+				  <li><a href="../../functions.html">Functions</a></li>
+				  <li><a href="../../data-analysis.html">Data Analysis</a></li>
+                  <li><a href="../../vba.html">VBA</a></li>
+                  <li class="current_page_item"><a href="../../examples.html">300 Examples</a></li>
+                  <li><a href="../../ask-us.html">Ask us</a></li>
+                  </ul>
+				</nav>
+			</span>
+		</div>
+	</header>
+	<!-- end #header -->
+	<div class="container">
+		<div class="row 100%">
+			<div class="8u 12u(medium)">
+				<div class="post">
+						<h1 class="title" style="float:left;">Userform with Multiple Pages</h1>
+						<div style="clear: both;">&nbsp;</div>
+<div class="entry">
+<p>Below we will look at a program in Excel VBA which creates a Userform that contains multiple pages. This userform also contains images.</p>
+<p>The Multipage Control contains two pages. At page 1, the user can fill in his/her personal information. At page 2, the user can indicate which painting he/she likes the most.</p>
+<p><img src="images/userform-with-multiple-pages/userform-page1.png" alt="Userform Page 1" width="298" height="482" title="Userform Page 1" /> <img src="images/userform-with-multiple-pages/userform-page2.png" alt="Userform Page 2" width="298" height="482" title="Userform Page 2" /></p>
+
+
+     
+     
+     
+<p>To create this Userform, execute the following steps.</p>
+<p>1. Open the <a href="../create-a-macro.html#visual-basic-editor">Visual Basic Editor</a>. If the Project Explorer is not visible, click View, Project Explorer.</p>
+<p>2. Click Insert, Userform. If the Toolbox does not appear automatically, click View, Toolbox. Your screen should be set up as below.</p>
+<p><img src="../images/userform/userform-screen-setup.png" alt="Userform Screen Setup in Excel VBA" width="604" height="407" title="Userform Screen Setup in Excel VBA" /></p>
+<p>3. Add the Multipage control, labels, text boxes (first at the top, the second below the first), frame, option buttons (first at the left, the second at the right), list box, Image control and command button. Once this has been completed, the result should be consistent with the empty version of the Userform shown earlier. For example, create a Multipage control  by clicking on Multipage  from the Toolbox. Next, you can drag a Multipage control  on the Userform. When you arrive at the Gender frame, remember to draw this frame first before you place the two option buttons in it.</p>
+<p>4. You can change the names and the captions of the controls. Names are used in the Excel VBA code. Captions are those that appear on your screen. It is good practice to change the names of the controls, but it is not necessary here because we only have a few controls in this example. To change the caption of the Userform, Multipage tabs, labels, frame, option buttons and command button, click View, Properties Window and click on each control.</p>
+<p>5. To show the Userform, place a <a href="../create-a-macro.html#command-button">command button</a> on your worksheet and add the following code line:</p>
+<div class="code"><span class="predefined">Private</span> <span class="predefined">Sub</span> CommandButton1_Click()<br /><br />
+UserForm1.Show<br /><br />
+<span class="predefined">End</span> <span class="predefined">Sub</span></div>
+<p>We are now going to create the Sub UserForm_Initialize. When you use the Show method for the Userform, this sub will automatically be executed.</p>
+<p>6. Open the <a href="../create-a-macro.html#visual-basic-editor">Visual Basic Editor</a>.</p>
+<p>7. In the Project Explorer, right click on UserForm1 and then click View Code.</p>
+<p>8. Choose Userform from the left drop-down list. Choose Initialize from the right drop-down list.</p>
+<p>9. Add the following code lines:</p>
+<div class="code"><span class="predefined">Private</span> <span class="predefined">Sub</span> UserForm_Initialize()<br /><br />
+<span class="predefined">With</span> ListBox1<br />
+&nbsp;&nbsp;&nbsp;&nbsp;.AddItem &quot;Mountains&quot;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;.AddItem &quot;Sunset&quot;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;.AddItem &quot;Beach&quot;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;.AddItem &quot;Winter&quot;<br />
+<span class="predefined">End</span> <span class="predefined">With</span><br /><br />
+<span class="predefined">End</span> <span class="predefined">Sub</span></div>
+<p>Explanation: the list box on page 2 will be filled.</p>
+<p>We have now created the first part of the Userform. Although it looks neat already, nothing will happen yet when we select an item from the list box or when we click on the OK button.</p>
+<div class="ad"><!-- Advanced Excel Pages Middle -->
+
+     
+     
+     data-ad-slot="2529116896"></ins>
+</div>
+<p>10. Download the images (right side of this page) and add them to &quot;C:\test\&quot;</p>
+<p>11. In the Project Explorer, double click on UserForm1.</p>
+<p>12. Double click on the list box.</p>
+<p>13. Add the following code lines:</p>
+<div class="code"><span class="predefined">Private</span> <span class="predefined">Sub</span> ListBox1_Click()<br /><br />
+<span class="predefined">If</span> ListBox1.ListIndex = 0 <span class="predefined">Then</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;Image1.Picture = LoadPicture(&quot;C:\test\Mountains.jpg&quot;)<br />
+<span class="predefined">End</span> <span class="predefined">If</span><br /><br />
+<span class="predefined">If</span> ListBox1.ListIndex = 1 <span class="predefined">Then</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;Image1.Picture = LoadPicture(&quot;C:\test\Sunset.jpg&quot;)<br />
+<span class="predefined">End</span> <span class="predefined">If</span><br /><br />
+<span class="predefined">If</span> ListBox1.ListIndex = 2 <span class="predefined">Then</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;Image1.Picture = LoadPicture(&quot;C:\test\Beach.jpg&quot;)<br />
+<span class="predefined">End</span> <span class="predefined">If</span><br /><br />
+<span class="predefined">If</span> ListBox1.ListIndex = 3 <span class="predefined">Then</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;Image1.Picture = LoadPicture(&quot;C:\test\Winter.jpg&quot;)<br />
+<span class="predefined">End</span> <span class="predefined">If</span><br /><br />
+<span class="predefined">End</span> <span class="predefined">Sub</span></div>
+<p>Explanation: these code lines load a picture depending on the selected item in the list box.</p>
+<p>14. Double click on the OK button.</p>
+<p>15. Add the following code lines:</p>
+<div class="code"><span class="predefined">Private</span> <span class="predefined">Sub</span> CommandButton1_Click()<br /><br />
+<span class="predefined">Dim</span> emptyRow <span class="predefined">As</span> <span class="predefined">Long</span><br /><br />
+<span class="comment">'Make Sheet1 active</span><br />
+Sheet1.Activate<br /><br />
+<span class="comment">'Determine emptyRow</span><br />
+emptyRow = WorksheetFunction.CountA(Range(&quot;A:A&quot;)) + 1<br /><br />
+<span class="comment">'Transfer information</span><br />
+Cells(emptyRow, 1).Value = TextBox1.Value<br />
+Cells(emptyRow, 2).Value = TextBox2.Value<br /><br />
+<span class="predefined">If</span> OptionButton1.Value = <span class="predefined">True</span> <span class="predefined">Then</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;Cells(emptyRow, 3).Value = &quot;Male&quot;<br />
+<span class="predefined">Else</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;Cells(emptyRow, 3).Value = &quot;Female&quot;<br />
+<span class="predefined">End</span> <span class="predefined">If</span><br /><br />
+Cells(emptyRow, 4).Value = ListBox1.Value<br /><br />
+<span class="comment">'Close Userform</span><br />
+Unload Me<br /><br />
+<span class="predefined">End</span> <span class="predefined">Sub</span></div>
+<p>Explanation: first, we activate Sheet1. Next, we determine emptyRow. The variable emptyRow is the first empty row and increases every time a record is added. Next, we transfer the information from the Userform to the specific columns of emptyRow. Finally, we close the Userform.</p>
+<p>16. Exit the Visual Basic Editor, enter the labels shown below into row 1 and test the Userform.</p>
+<p>Result:</p>
+<p><img src="images/userform-with-multiple-pages/test-userform.png" loading="lazy" alt="Test the Userform" width="604" height="161" title="Test the Userform" /></p>
+<div class="ad"><!-- Advanced Excel Pages End -->
+
+     
+     
+     data-ad-slot="4005850092"></ins>
+</div>
+            </div>
+			   </div>
+				<span class="invtab"><div class="post">
+					<div style="clear: both;"></div>
+                    <div class="entrylearn">  
+                  	<p align="left"><span class="buttonp"> <a href="interactive-userform.html">10/11 Completed! Learn much more about userforms &gt;<br /></a></span>Go to Next Guide: <a href="../../introduction/range.html">Range</a></div>
+                  </div></span>
+                  </div>
+                  <div class="4u 12u(medium)">
+              <div id="search">
+              <div class="cse-branding-right" style="background-color:#FFFFFF;color:#000000">
+                <div class="cse-branding-form" style="margin-right:0px;">
+                  <form action="https://www.Advanced Excel for Data Analysis/search.html" id="cse-search-box">
+                    <div>
+                      <input type="hidden" name="cx" value="partner-pub-1987061359047735:3934495699" />
+                      <input type="hidden" name="cof" value="FORID:10" />
+                      <input type="hidden" name="ie" value="UTF-8" />
+                      <input type="text" name="q" placeholder="Explore Entire Guide" class="field" disabled />
+                      <span class="notranslate"><input type="submit" name="sa" value="Go" class="button" disabled /></span>
+                    </div>
+                  </form>
+                </div>
+                <div class="cse-branding-logo"></div>
+                <div class="cse-branding-text"></div>
+              </div>
+              </div>
+              <div id="sidebar">
+					<ul>
+				  	  <li>
+                        <h3>Guide</h3>
+						  <ul>
+							<li><a href="../userform.html">Userform</a></li>
+               		    </ul>
+					  </li>
+				    </ul>
+			  </div>
+              <div id="sidebar">
+					<ul><li>
+				      <h3><font color="#FF9900"><span class="notranslate">Learn more, it's easy</span></font></h3>
+				    </li>
+					  <li><ul>
+                        <li><a href="userform-ranges.html">Userform and Ranges</a></li>
+                        <li><a href="currency-converter.html">Currency Converter</a></li>
+                        <li><a href="progress-indicator.html">Progress Indicator</a></li>
+                        <li><a href="multiple-list-box-selections.html">Multiple List Box Selections</a></li>
+                        <li><a href="multicolumn-combo-box.html">Multicolumn Combo Box</a></li>
+                        <li><a href="dependent-combo-boxes.html">Dependent Combo Boxes</a></li>
+                        <li><a href="loop-through-controls.html">Loop through Controls</a></li>
+                        <li><a href="controls-collection.html">Controls Collection</a></li>
+                        <li class="current_page_item"><a href="userform-with-multiple-pages.html">Userform with Multiple Pages</a></li>
+                        <li><a href="interactive-userform.html">Interactive Userform</a></li>
+                        </ul>
+                    </li>
+                  </ul>
+			  </div>
+              <div id="sidebar">
+					<ul>
+				  	  <li>
+                        <h3><span class="notranslate"><font color="#8FAD22">Download Excel File</font></span></h3>
+						  <ul>
+							<li><a href="excel-files/userform-with-multiple-pages.xlsm">userform-with-multiple-pages.xlsm</a></li>
+                        </ul>
+                        <h3><span class="notranslate">Download Images</span></h3>
+						  <ul>
+							<li><a href="images/userform-with-multiple-pages/mountains.jpg">mountains.jpg</a></li>
+                            <li><a href="images/userform-with-multiple-pages/sunset.jpg">sunset.jpg</a></li>
+                            <li><a href="images/userform-with-multiple-pages/beach.jpg">beach.jpg</a></li>
+                            <li><a href="images/userform-with-multiple-pages/winter.jpg">winter.jpg</a></li>
+					    </ul>
+					  </li>
+					  </li>
+				  </ul>
+			  </div>
+              <div id="sidebar">
+					<ul>
+				  	  <li>
+                        <h3>Next Guide</h3>
+						  <ul>
+							<li><a href="../../introduction/range.html">Range</a></li>
+                    </ul>
+					  </li>
+				  </ul>
+			  </div>
+              <div id="sidebar">
+		      <h3><span class="notranslate"></span></h3>
+              <p style="padding-top:7px;padding-bottom:1px"><a href="https://facebook.com/thecodedragon" target="blank" rel="nofollow"><img src="../../layout/facebook-logo.png" onmouseover="this.src='../../layout/facebook-logo-onmouseover.png'" onmouseout="this.src='../../layout/facebook-logo.png'" width="30" height="30" border="0" alt="Advanced Excel on Facebook" title="Advanced Excel on Facebook" /></a> <a href="https://twitter.com/ceoofdss" target="blank" rel="nofollow"><img src="../../layout/x-logo.png" onmouseover="this.src='../../layout/x-logo-onmouseover.png'" onmouseout="this.src='../../layout/x-logo.png'" width="30" height="30" border="0" alt="Advanced Excel on X" title="Advanced Excel on X" /></a> <a href="https://www.pinterest.com/julisunkan" target="blank" rel="nofollow"><img src="../../layout/pinterest-logo.png" onmouseover="this.src='../../layout/pinterest-logo-onmouseover.png'" onmouseout="this.src='../../layout/pinterest-logo.png'" width="30" height="30" border="0" alt="Advanced Excel on Pinterest" title="Advanced Excel on Pinterest"></a> <a href="https://www.linkedin.com/in/digitalskeleton/" target="blank" rel="nofollow"><img src="../../layout/linkedin-logo.png" onmouseover="this.src='../../layout/linkedin-logo-onmouseover.png'" onmouseout="this.src='../../layout/linkedin-logo.png'" width="30" height="30" border="0" alt="Advanced Excel on LinkedIn" title="Advanced Excel on LinkedIn"></a></p>
+              </div>
+              <div id="sidebar">
+					<ul>
+				  	  <li>
+                        <h3><span class="notranslate">Become an Excel Pro</span></h3>
+						  <ul>
+                            <li><a href="../../examples.html">300 Examples</a></li>
+                          </ul>
+					  </li>
+				  </ul>
+			  </div>
+              <!-- end #sidebar -->
+			  <div style="clear: both;">&nbsp;</div>
+		  </div>
+		</div>
+	</div>
+	<!-- end #page -->
+</div>
+<div id="footer">
+	<p><a href="userform-with-multiple-pages.html">Userform with Multiple Pages</a> &bull; &copy; AppMonster<br />
+	Excel is Awesome, we'll show you: <a href="../../introduction.html">Introduction</a> &bull; <a href="../../basics.html">Basics</a> &bull; <a href="../../functions.html">Functions</a> &bull; <a href="../../data-analysis.html">Data Analysis</a> &bull; <a href="../../vba.html">VBA</a></p>
+</div>
+<!-- end #footer -->
+
+<script type="text/javascript">
+  
+  $(function() { (adsbygoogle = window.adsbygoogle || []).push({}); });
+  $(function() { (adsbygoogle = window.adsbygoogle || []).push({}); });
+  $(function() { (adsbygoogle = window.adsbygoogle || []).push({}); });
+  
+</script>
+
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"rayId":"8c78d3ed8b089fc0","version":"2024.8.0","serverTiming":{"name":{"cfExtPri":true,"cfL4":true}},"token":"c707dde3711e49e3a0cbf0020eef6a91","b":1}' crossorigin="anonymous"></script>
+</body>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H0MBKVX9SV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-H0MBKVX9SV');
+</script>
+
+<!-- Mirrored from www.Advanced Excel for Data Analysis/vba/examples/userform-with-multiple-pages.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 23 Sep 2024 07:45:34 GMT -->
+</html>

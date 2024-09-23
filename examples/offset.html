@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+
+
+<!-- Mirrored from www.Advanced Excel for Data Analysis/examples/offset.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 23 Sep 2024 07:37:56 GMT -->
+<head>
+
+<title>How to use the Excel OFFSET function (In Easy Steps)</title>
+<meta name="keywords" content="offset, function, excel, rows, columns, height, width, omitted, cell, range, below, right, above, left, negative, sum offset formula, array formula, excel 365, offset function, spilling">
+<meta name="description" content="The OFFSET function in Excel returns a cell or range of cells that is a specified number of rows and columns from a cell or range of cells.">
+
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="index, follow">
+<META content=EN-US name=LANGUAGE>
+<meta property="og:title" content="OFFSET function in Excel">
+<meta property="og:url" content="offset.html">
+<meta property="og:type" content="article">
+<meta property="fb:admins" content="100003702321830">
+<meta property="og:description" content="The OFFSET function in Excel returns a cell or range of cells that is a specified number of rows and columns from a cell or range of cells.">
+<meta property="og:image" content="../smi/examples/offset.png"/>
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@ExcelEasy">
+<meta name="twitter:image" content="../smi/examples/offset.png">
+
+<link rel="preload" href="../css/style.css" as="style">
+<link rel="preload" href="images/offset/offset-cell-example.png" as="image">
+<link rel="preload" href="../js/default.js" as="script">
+<link rel="preload" href="../js/init.js" as="script">
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f5ca7.txt?client=ca-pub-1987456081350047765" data-overlays="bottom" crossorigin="anonymous"></script>
+<link rel="preload" href="../css/style-medium.css" as="style" media="(max-width:961px)">
+<link rel="preload" href="../css/style-small.css" as="style" media="(max-width:620px)">
+<link rel="stylesheet" href="../css/style.css"/>
+<script src="../js/default.js" type="text/javascript"></script>
+<script src="../js/init.js" type="text/javascript"></script>
+<style type="text/css">
+.adslot { width: 336px; height: 280px; }
+@media (min-width:320px) { .adslot { width: 300px; height: 250px; } }
+@media (min-width:360px) and (orientation: portrait) { .adslot { width: 336px; height: 280px; } }
+@media (min-width:604px) { .adslot { width: 336px; height: 280px; } }
+</style>
+<noscript>
+    <link rel="stylesheet" href="../css/skel.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/adslot.css" />
+</noscript>
+<link rel="icon" href="../favicon-48x48.ico">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+</head>
+<body>
+<header id="header">
+	<div class="container">
+		<span class="notranslate">
+			<div id="logo">
+				<a href="../index.html"><img src="../layout/excel-guides.svg" onerror="this.src='../layout/excel-guides.png'" border="0" alt="Excel guides" title="Excel guides" width="1" height="1" /><h2>Excel</h2>&nbsp;&nbsp;<span class="easy">for Data Analysis</span></a>
+                <p>#1 <a href="../index.html">Excel guides</a> on the go</p>
+		  	</div>            
+			<nav id="nav">
+				  <ul>
+                  <li><a href="../index.html">Excel</a></li>
+                  <li><a href="../introduction.html">Introduction</a></li>
+				  <li><a href="../basics.html">Basics</a></li>
+				  <li><a href="../functions.html">Functions</a></li>
+				  <li><a href="../data-analysis.html">Data Analysis</a></li>
+                  <li><a href="../vba.html">VBA</a></li>
+                  <li class="current_page_item"><a href="../examples.html">300 Examples</a></li>
+                  <li><a href="../ask-us.html">Ask us</a></li>
+                  </ul>
+				</nav>
+			</span>
+		</div>
+	</header>
+	<!-- end #header -->
+	<div class="container">
+		<div class="row 100%">
+			<div class="8u 12u(medium)">
+				<div class="post">
+						<h1 class="title" style="float:left;">OFFSET</h1>
+						<div style="clear: both;">&nbsp;</div>
+<div class="entry">
+<p class="spacing"><a href="#return-a-cell">Return a Cell</a> | <a href="#return-a-range">Return a Range</a> | <a href="#negative-offset">Negative Offset</a></p>
+<p>The <strong>OFFSET function</strong> in <strong>Excel</strong> returns a cell or range of cells that is a specified number of rows and columns from a cell or range of cells.</p>
+<h3><a name="return-a-cell" id="return-a-cell"></a>Return a Cell</h3>
+<p>First, let's use the OFFSET function in Excel to return a cell. Here we go.</p>
+<p>1. The OFFSET function below returns the cell that is 3 rows below and 2 columns to the right of cell A2. The OFFSET function returns a cell because the height and width are both set to 1.</p>
+<p><img src="images/offset/offset-cell-example.png" alt="Offset Cell Example" width="604" height="367" title="Offset Cell Example" /></p>
+
+
+     
+     
+     
+<p>Result:</p>
+<p><img src="images/offset/offset-cell-result.png" alt="Offset Cell Result" width="604" height="367" title="Offset Cell Result" /></p>
+<p>The last 2 arguments of the OFFSET function are optional. When height and width are omitted, the new reference has the same height and width as the starting reference (first argument).</p>
+<p>2. For example, the OFFSET function below returns the cell that is 12 rows below and 0 columns to the right of cell A2.</p>
+<p><img src="images/offset/height-width-omitted.png" loading="lazy" alt="Height and Width Omitted" width="604" height="367" title="Height and Width Omitted" /></p>
+<p>Result:</p>
+<p><img src="images/offset/simple-offset-function.png" loading="lazy" alt="Simple OFFSET function" width="604" height="367" title="Simple OFFSET function" /></p>
+<div class="ad"><!-- Advanced Excel Pages Middle -->
+
+     
+     
+     data-ad-slot="2529116896"></ins>
+</div>
+<h3><a name="return-a-range" id="return-a-range"></a>Return a Range</h3>
+<p>Alright. Let's now use the OFFSET function in Excel to return a range (two or more cells).</p>
+<p>1. The OFFSET function below returns the 1 x 2 range that is 8 rows below and 1 column to the right of cell A2. The SUM function calculates the sum of this range.</p>
+<p><img src="images/offset/offset-range-example.png" loading="lazy" alt="Offset Range Example" width="604" height="367" title="Offset Range Example" /></p>
+<p>Result:</p>
+<p><img src="images/offset/offset-range-result.png" loading="lazy" alt="Offset Range Result" width="604" height="367" title="Offset Range Result" /></p>
+<p>The last 2 arguments of the OFFSET function are optional (as previously mentioned). When height and width are omitted, the new reference has the same height and width as the starting reference (first argument).</p>
+<p>2. For example, the OFFSET function below returns the range that is 4 rows below and 0 columns to the right of the range B2:C2. The SUM function calculates the sum of this range.</p>
+<p><img src="images/offset/range-as-starting-point.png" loading="lazy" alt="Range as Starting Point" width="604" height="367" title="Range as Starting Point" /></p>
+<p>Result:</p>
+<p><img src="images/offset/sum-offset-formula.png" loading="lazy" alt="SUM OFFSET formula" width="604" height="367" title="SUM OFFSET formula" /></p>
+<!--<div class="ad">Excel Pages Middle
+
+     
+     
+     data-ad-slot="2529116896"></ins>
+</div>-->
+<p>3. The OFFSET function below returns the range that is 4 rows below and 0 columns to the right of the range B2:C2. This time without a SUM function.</p>
+<p><img src="images/offset/offset-as-array-formula-example.png" loading="lazy" alt="OFFSET as Array Formula Example" width="604" height="367" title="OFFSET as Array Formula Example" /></p>
+<p>Result:</p>
+<p><img src="images/offset/offset-as-array-formula-result.png" loading="lazy" alt="OFFSET as Array Formula Result" width="604" height="367" title="OFFSET as Array Formula Result" /></p>
+<p>Note: before inserting this formula, select the range E8:F8 (or another range of the same size). Finish by pressing CTRL + SHIFT + ENTER. The formula bar indicates that this is an array formula by enclosing it in curly braces {}. To delete this array formula, select the range E8:F8 and press Delete.</p>
+<p>4. If you have Excel 365 or Excel 2021, simply select cell E8, enter the OFFSET function and press Enter. Bye bye curly braces.</p>
+<p><img src="images/offset/dynamic-array-formula.png" loading="lazy" alt="Dynamic Array Formula" width="604" height="367" title="Dynamic Array Formula" /></p>
+<p>Note: the OFFSET function, entered into cell E8, fills multiple cells. Wow! This behavior in Excel 365/2021 is called <a href="dynamic-arrays.html">spilling</a>.</p>
+<h3><a name="negative-offset" id="negative-offset"></a>Negative Offset</h3>
+<p>If you want to return a cell or range of cells that is a specified number of rows above or columns to the left, use negative numbers.</p>
+<p>The OFFSET function below returns the cell that is 12 rows above and 1 column to the left of cell C14.</p>
+<p><img src="images/offset/negative-offset-example.png" loading="lazy" alt="Negative OFFSET example" width="604" height="367" title="Negative OFFSET example" /></p>
+<p>Result:</p>
+<p><img src="images/offset/negative-offset-result.png" loading="lazy" alt="Negative OFFSET result" width="604" height="367" title="Negative OFFSET result" /></p>
+<div class="ad"><!-- Advanced Excel Pages End -->
+
+     
+     
+     data-ad-slot="4005850092"></ins>
+</div>
+            </div>
+			   </div>
+				<span class="invtab"><div class="post">
+					<div style="clear: both;"></div>
+                    <div class="entrylearn">  
+                  <p align="left"><span class="buttonp"> <a href="case-sensitive-lookup.html">6/15 Completed! Learn more about lookup & reference &gt;<br />
+                  </a></span>Go to Next Guide: <a href="../functions/financial-functions.html">Financial Functions</a></div>
+                  </div></span>
+                  </div>
+                  <div class="4u 12u(medium)">
+              <div id="search">
+              <div class="cse-branding-right" style="background-color:#FFFFFF;color:#000000">
+                <div class="cse-branding-form" style="margin-right:0px;">
+                  <form action="https://www.Advanced Excel for Data Analysis/search.html" id="cse-search-box">
+                    <div>
+                      <input type="hidden" name="cx" value="partner-pub-1987061359047735:3934495699" />
+                      <input type="hidden" name="cof" value="FORID:10" />
+                      <input type="hidden" name="ie" value="UTF-8" />
+                      <input type="text" name="q" placeholder="Explore Entire Guide" class="field" disabled />
+                      <span class="notranslate"><input type="submit" name="sa" value="Go" class="button" disabled /></span>
+                    </div>
+                  </form>
+                </div>
+                <div class="cse-branding-logo"></div>
+                <div class="cse-branding-text"></div>
+              </div>
+              </div>
+              <div id="sidebar">
+					<ul>
+				  	  <li>
+                        <h3>Guide</h3>
+						  <ul>
+							<li><a href="../functions/lookup-reference-functions.html">Lookup & Reference Functions</a></li>
+                    </ul>
+					  </li>
+				  </ul>
+			  </div>
+              <div id="sidebar">
+				  <ul><li>
+				      <h3><font color="#FF9900"><span class="notranslate">Learn more, it's easy</span></font></h3>
+				    </li>
+					  <li><ul>
+                        <li><a href="vlookup.html">Vlookup</a></li>
+                        <li><a href="tax-rates.html">Tax Rates</a></li>
+                        <li><a href="index-match.html">Index and Match</a></li>
+                        <li><a href="two-way-lookup.html">Two-way Lookup</a></li>
+                        <li class="current_page_item"><a href="offset.html">Offset</a></li>
+                        <li><a href="case-sensitive-lookup.html">Case-sensitive Lookup</a></li>
+                        <li><a href="left-lookup.html">Left Lookup</a></li>
+                        <li><a href="locate-maximum-value.html">Locate Maximum Value</a></li>
+                        <li><a href="indirect.html">Indirect</a></li>
+                        <li><a href="two-column-lookup.html">Two-column Lookup</a></li>
+                        <li><a href="closest-match.html">Closest Match</a></li>
+                        <li><a href="compare-two-columns.html">Compare Two Columns</a></li>
+                        <li><a href="xlookup.html">Xlookup</a></li>
+						<li><a href="xmatch.html">Xmatch</a></li>
+                        </ul>
+                    </li>
+                  </ul>
+			  </div>
+              <div id="sidebar">
+					<ul>
+				  	  <li>
+                        <h3><span class="notranslate"><font color="#8FAD22">Download Excel File</font></span></h3>
+						  <ul>
+							<li><a href="excel-files/offset.xlsx">offset.xlsx</a></li>
+                    </ul>
+					  </li>
+				  </ul>
+			  </div>
+              <div id="sidebar">
+					<ul>
+				  	  <li>
+                        <h3>Next Guide</h3>
+						  <ul>
+							<li><a href="../functions/financial-functions.html">Financial Functions</a></li>
+                    </ul>
+					  </li>
+				  </ul>
+			  </div>
+              <div id="sidebar">
+		      <h3><span class="notranslate"></span></h3>
+              <p style="padding-top:7px;padding-bottom:1px"><a href="https://facebook.com/thecodedragon" target="blank" rel="nofollow"><img src="../layout/facebook-logo.png" onmouseover="this.src='../layout/facebook-logo-onmouseover.png'" onmouseout="this.src='../layout/facebook-logo.png'" width="30" height="30" border="0" alt="Advanced Excel on Facebook" title="Advanced Excel on Facebook" /></a> <a href="https://twitter.com/ceoofdss" target="blank" rel="nofollow"><img src="../layout/x-logo.png" onmouseover="this.src='../layout/x-logo-onmouseover.png'" onmouseout="this.src='../layout/x-logo.png'" width="30" height="30" border="0" alt="Advanced Excel on X" title="Advanced Excel on X" /></a> <a href="https://www.pinterest.com/julisunkan" target="blank" rel="nofollow"><img src="../layout/pinterest-logo.png" onmouseover="this.src='../layout/pinterest-logo-onmouseover.png'" onmouseout="this.src='../layout/pinterest-logo.png'" width="30" height="30" border="0" alt="Advanced Excel on Pinterest" title="Advanced Excel on Pinterest"></a> <a href="https://www.linkedin.com/in/digitalskeleton/" target="blank" rel="nofollow"><img src="../layout/linkedin-logo.png" onmouseover="this.src='../layout/linkedin-logo-onmouseover.png'" onmouseout="this.src='../layout/linkedin-logo.png'" width="30" height="30" border="0" alt="Advanced Excel on LinkedIn" title="Advanced Excel on LinkedIn"></a></p>
+              </div>
+              <div id="sidebar">
+					<ul>
+				  	  <li>
+                        <h3><span class="notranslate">Become an Excel Pro</span></h3>
+						  <ul>
+                            <li><a href="../examples.html">300 Examples</a></li>
+                          </ul>
+					  </li>
+				  </ul>
+			  </div>
+              <!-- end #sidebar -->
+			  <div style="clear: both;">&nbsp;</div>
+		  </div>
+		</div>
+	</div>
+	<!-- end #page -->
+</div>
+<div id="footer">
+	<p><a href="offset.html">Offset</a> &bull; &copy; AppMonster<br />
+	Excel is Awesome, we'll show you: <a href="../introduction.html">Introduction</a> &bull; <a href="../basics.html">Basics</a> &bull; <a href="../functions.html">Functions</a> &bull; <a href="../data-analysis.html">Data Analysis</a> &bull; <a href="../vba.html">VBA</a></p>
+</div>
+<!-- end #footer -->
+
+<script type="text/javascript">
+  
+  $(function() { (adsbygoogle = window.adsbygoogle || []).push({}); });
+  $(function() { (adsbygoogle = window.adsbygoogle || []).push({}); });
+  //$(function() { (adsbygoogle = window.adsbygoogle || []).push({}); });
+  $(function() { (adsbygoogle = window.adsbygoogle || []).push({}); });
+  
+</script>
+
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"rayId":"8c78d29ca876b8d2","version":"2024.8.0","serverTiming":{"name":{"cfExtPri":true,"cfL4":true}},"token":"c707dde3711e49e3a0cbf0020eef6a91","b":1}' crossorigin="anonymous"></script>
+</body>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H0MBKVX9SV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-H0MBKVX9SV');
+</script>
+
+<!-- Mirrored from www.Advanced Excel for Data Analysis/examples/offset.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 23 Sep 2024 07:37:59 GMT -->
+</html>
